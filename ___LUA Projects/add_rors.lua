@@ -1,4 +1,4 @@
---Adds custom Regiments of Renown to specified factions
+-- Adds custom Regiments of Renown to specified factions
 local function out(t) ModLog("all_add_custom_ror_wh_all_threes " .. tostring(t) .. " ####") end
 
 local function all_add_custom_ror_wh_all_threes()
@@ -5739,7 +5739,8 @@ local function all_add_custom_ror_wh_all_threes()
                 trr = "",
                 replen = true,
                 merc_group = "wh2_dlc15_hef_mon_war_lions_of_chrace_ror_0"
-            }};
+            }
+        };
         -- Loop for the table above
         for i = 1, #cror_list do
             local faction_name = cror_list[i].faction_key; -- Faction whose pool the unit(s) should be added to
@@ -5756,8 +5757,7 @@ local function all_add_custom_ror_wh_all_threes()
             local replen = cror_list[i].replen; -- Allow replenishment of partial units
             local merc_group_key = cror_list[i].merc_group; -- key used in mercenary_unit_groups_tables can most of the time be the same has main_unit key
             -- Adding the listed unit to the listed faction in the above table
-           cm:add_unit_to_faction_mercenary_pool(faction, unit_key, pool, unit_count, rcp, munits, murpt, frr, srr, trr,
-                replen, merc_group_key);
+            cm:add_unit_to_faction_mercenary_pool(faction, unit_key, pool, unit_count, rcp, munits, murpt, frr, srr, trr, replen, merc_group_key);
             -- Debug message for log
             out("CROR add_all_custom_ror_JM 476: adding the custom ror unit " .. unit_key .. " to " .. faction_name);
         end
@@ -5766,6 +5766,4 @@ local function all_add_custom_ror_wh_all_threes()
     end
 end
 
-cm:add_first_tick_callback(function()
-    all_add_custom_ror_wh_all_threes()
-end);
+cm:add_first_tick_callback(function() all_add_custom_ror_wh_all_threes() end);
