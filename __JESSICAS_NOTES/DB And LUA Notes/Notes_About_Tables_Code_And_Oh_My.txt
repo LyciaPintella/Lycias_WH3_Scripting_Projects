@@ -1,0 +1,4 @@
+If you wanna change the army setup as you say, you need to adjust the cdir_military_generator_template_ratios table. In your case I would create new unit group keys, assign them to the units you want in that group, e.g. elite units, basic units, and set the ratio accordingly. The AI tries to setup their army according to that ratio, if they have those units available to build. They will however always try to recruit the unit from the unit group which has the highest value set in the cdir_military_generator_unit_qualities table.
+
+
+script/_lib/lib_campaign_manager.lua

@@ -1,0 +1,22 @@
+!!AI_Army_task_JM.pack
+
+script/all_scripted.lua
+	Edited the logging code here to only have one log file.
+script/campaign/wh_campaign_experience_triggers.lua
+
+script/campaign/mod/!add_horde_cap.lua
+	Attempts to buff AI Chaos and Beastman factions (disabled. But it DOES declare several wars between the AI on turn one.
+script/campaign/wh_campaign_experience_triggers.lua
+	Enables full battle XP for reinforcing generals.
+
+Prison_Of_Athen_Tamara_Tweaks_Jess_Modded.pack
+	script/campaign/wh2_dlc15_eltharion_lair.lua
+
+Alarielle_power_of_nature_15_turns.pack
+	script/campaign/wh2_dlc10_alarielle.lua
+
+agarast_drop_chance_tweaker_JM_Add_Crafted_Elf_Items.pack
+	script/campaign/wh3_campaign_magic_items.lua
+
+add_all_mods_custom_ror_JM.pack
+	script/campaign/mod/all_add_custom_ror_wh_threes.lua - adds multiple rors to the recruitment pool

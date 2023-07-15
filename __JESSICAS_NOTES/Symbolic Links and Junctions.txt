@@ -1,0 +1,3 @@
+New-Item -ItemType Junction -Path "Script" -Target "D:\OneDrive\Documents\Warhammer III Projects\Scripting_Projects\Script"
+C:\Program Files\LinkShellExtension
+https://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html#junctions

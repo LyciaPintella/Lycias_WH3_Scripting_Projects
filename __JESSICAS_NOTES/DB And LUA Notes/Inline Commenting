@@ -1,0 +1,8 @@
+            if (current_faction:is_vassal_of(human_faction) == true) then
+			---[[
+				local current_faction
+				current_faction.allied_with(human_faction) == true) 
+			--]]
+			
+                ai_buff_level = ai_buff_level / 1.20
+            end

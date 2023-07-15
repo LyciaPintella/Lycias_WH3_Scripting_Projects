@@ -1,0 +1,111 @@
+Banners
+item wh_main_anc_magic_standard_banner_of_eternal_flame
+item wh_main_anc_magic_standard_banner_of_swiftness
+item wh2_main_anc_magic_standard_banner_of_ellyrion
+item wh2_main_anc_magic_standard_horn_of_isha
+item wh2_dlc10_anc_magic_standard_banner_of_avelorn
+
+
+item wh_main_anc_magic_standard_gleaming_pennant +4 leadership
+item wh_main_anc_magic_standard_rampagers_standard
+item wh_main_anc_magic_standard_razor_standard
+item wh_main_anc_magic_standard_scarecrow_banner
+item wh_main_anc_magic_standard_standard_of_discipline
+item wh_main_anc_magic_standard_wailing_banner   *terror
+item wh_main_anc_magic_standard_war_banner
+
+item wh_main_anc_magic_standard_rangers_standard
+
+Followers
+item wh2_main_anc_follower_hef_librarian *global winds, hero success chance.
+
+**Look up disciple of the phoenix - adds winds of magic max to army and research rate.
+
+STUDENT
+item wh_main_anc_follower_all_student
+
+item wh_main_anc_magic_standard_lichbone_pennant  *magic res and damage
+
+item wh2_main_anc_follower_hef_dragon_armourer    *Bonus vs large 14
+
+item wh2_main_anc_follower_hef_scout
+item wh2_main_anc_follower_hef_raven_keeper
+item wh2_main_anc_follower_hef_priestess_isha  *ATTRITION IMMUNITY
+item wh2_main_anc_follower_hef_priest_vaul *ATTRITION IMMUNITY
+
+*Public order followers:
+
+item wh2_main_anc_follower_hef_librarian    *global winds of magic
+item wh2_main_anc_follower_hef_shrine_keeper
+
+Public order combo
+item wh2_main_anc_follower_hef_wine_merchant    *eatainean vintner
+item wh2_main_anc_follower_hef_minstrel
+item wh2_main_anc_follower_hef_bard
+
+item wh2_main_anc_follower_hef_food_taster
+item wh2_main_anc_follower_hef_dragon_tamer   *10 MD for dragons
+item wh2_main_anc_follower_hef_assassin *ambush success chance
+
+item wh2_main_anc_follower_hef_counterspy *+6 MD vs dark elves, hero resist.
+
+*****
+ITEMS
+
+item wh_main_anc_arcane_item_forbidden_rod
+
+item wh3_main_anc_weapon_slaaneshs_blade
+
+item wh3_main_anc_weapon_skars_kraken_killer
+item wh3_main_anc_weapon_chainsword
+item wh3_main_anc_weapon_the_bane_spear
+item wh3_main_anc_weapon_gilellions_soulnetter
+
+wh2_dlc10_anc_weapon_the_widowmaker_1
+wh2_dlc10_anc_weapon_the_widowmaker_2
+wh2_dlc10_anc_weapon_the_widowmaker_3
+
+*****
+item wh_main_anc_weapon_sword_of_bloodshed
+item wh2_main_anc_weapon_blade_of_leaping_gold
+item wh2_main_anc_weapon_executioners_axe
+item wh_main_anc_weapon_obsidian_blade
+
+item wh2_main_anc_enchanted_item_moranions_wayshard *Vanguard deployment spearmen and archers
+
+item wh2_main_anc_armour_enchanted_ithilmar_breastplate
+item wh2_main_anc_talisman_vambraces_of_defence
+item wh2_main_anc_enchanted_item_ring_of_corin
+item stompies_anc_enchanted_caledors_shadow_cloak    *10 melee defense, speed
+item stompies_anc_enchanted_key_to_white_tower    *25% magic item find chance
+
+item wh2_main_anc_talisman_diamond_guardian_phoenix *10% mapwide physical resist.
+
+item wh2_main_anc_talisman_emerald_collar    *regen with ward save
+
+
+item wh2_main_anc_enchanted_item_khaines_ring_of_fury  *2x fiery spell cast
+item wh2_main_anc_enchanted_item_gilded_horn_of_galon_konook *2x golden hounds cast
+
+ARCANE ITEMS
+item wh2_dlc13_anc_arcane_item_amplifier  *30% cooldown to spells
+item stompies_anc_arcane_tome_of_arcane_knowledge *10% cooldown, -1 winds cost all spells.
+
+item wh2_main_anc_armour_shadow_armour  *Speed, vanguard deployment
+
+item wh2_dlc15_anc_enchanted_item_star_dragon_special   *20% ward save, chain lightning
+
+item wh_main_anc_enchanted_item_healing_potion
+item wh_main_anc_enchanted_item_potion_of_toughness
+item wh2_main_anc_enchanted_item_radiant_gem_of_hoeth *4x heals
+
+item stompies_anc_enchanted_glittering_helmet  *enc item with weapon str
+
+item wh2_main_anc_talisman_talisman_of_saphery      *green item, +5 MD
+
+item wh2_dlc09_anc_weapon_double_crescent_of_neru *green sword with melee defence
+item wh2_main_anc_enchanted_item_folariaths_robe *low damage tanky robe
+
+*melee defence
+item wh_main_anc_armour_charmed_shield
+item wh_main_anc_weapon_fencers_blades
