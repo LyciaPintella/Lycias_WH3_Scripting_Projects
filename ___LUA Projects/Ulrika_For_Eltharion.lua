@@ -1,12 +1,12 @@
-character_unlocking.urika_list = {
+Ulrika_Unlocking.character_list = {
      -- REQUIRED. List of all the characters to be used. Must match character names in character_data
      "ulrika"
 }
-character_unlocking.ulrika_data = {
+Ulrika_Unlocking.ulrika_data = {
      ulrika = {
-          condition_to_start_unlock = character_unlocking.character_unlock_condition_types.rank,
-          ai_condition_to_start_unlock = character_unlocking.character_unlock_condition_types.rank,
-          alternate_grant_condition = character_unlocking.character_alternate_grant_condition_types.dilemma_payload,
+          condition_to_start_unlock = Ulrika_Unlocking.character_unlock_condition_types.rank,
+          ai_condition_to_start_unlock = Ulrika_Unlocking.character_unlock_condition_types.rank,
+          alternate_grant_condition = Ulrika_Unlocking.character_alternate_grant_condition_types.dilemma_payload,
           unlock_rank = 11,
           has_spawned = false,
           name = "ulrika",
@@ -27,7 +27,7 @@ character_unlocking.ulrika_data = {
 
 local out = function(t) ModLog("Ulrika For Eltharion: " .. tostring(t) .. ".") end
 
-function character_unlocking:ulrika_has_valid_faction_in_campaign(character)
+function Ulrika_Unlocking:ulrika_has_valid_faction_in_campaign(character)
      local character_info = self.character_data[character]
      for i = 1, #character_info.allowed_factions do
           local faction_interface = cm:get_faction(character_info.allowed_factions[i])
@@ -36,7 +36,7 @@ function character_unlocking:ulrika_has_valid_faction_in_campaign(character)
      return false
 end
 
-function character_unlocking:get_ulrika_allowed_factions_list(character_data)
+function Ulrika_Unlocking:get_ulrika_allowed_factions_list(character_data)
      local allowed_factions = {}
      if character_data.override_allowed_factions then
           allowed_factions = character_data.override_allowed_factions
@@ -56,9 +56,9 @@ function character_unlocking:get_ulrika_allowed_factions_list(character_data)
      return allowed_factions
 end
 
-function character_unlocking:setup_ulrika_unlocking()
-     for i = 1, #self.urika_list do
-          local character = self.urika_list[i]
+function Ulrika_Unlocking:setup_Ulrika_Unlocking()
+     for i = 1, #self.character_list do
+          local character = self.character_list[i]
           local current_character = self.ulrika_data[character]
           -- Generate allowed factions list for character
           if current_character.allowed_factions == nil then
@@ -77,9 +77,9 @@ function character_unlocking:setup_ulrika_unlocking()
           end
      end
 end
-cm:add_first_tick_callback(function() character_unlocking:setup_ulrika_unlocking() end);
+cm:add_first_tick_callback(function() character_unlocking:setup_Ulrika_Unlocking() end);
 
-function character_unlocking:add_listeners_for_eltharion_rank_unlock(character)
+function Ulrika_Unlocking:add_listeners_for_eltharion_rank_unlock(character)
      out("Add Ulrika rank unlocking Listener")
      local character_info = self.ulrika_data[character]
      for i = 1, #character_info.allowed_factions do
@@ -93,7 +93,7 @@ function character_unlocking:add_listeners_for_eltharion_rank_unlock(character)
      end
 end
 
-function character_unlocking:spawn_ulrika_on_rank_up(character)
+function Ulrika_Unlocking:spawn_ulrika_on_rank_up(character)
      local character_info = self.ulrika_data[character]
      if character_info.has_spawned == false then
           for i = 1, #character_info.allowed_factions do
@@ -117,8 +117,8 @@ function character_unlocking:spawn_ulrika_on_rank_up(character)
 end
 
 cm:add_saving_game_callback(function(context)
-     for i = 1, #character_unlocking.ulrika_list do
-          local data = character_unlocking.ulrika_data[character_unlocking.ulrika_list[i]]
+     for i = 1, #Ulrika_Unlocking.character_list do
+          local data = Ulrika_Unlocking.ulrika_data[Ulrika_Unlocking.character_list[i]]
           cm:save_named_value(data.name .. ".factions_involved", data.factions_involved, context)
           cm:save_named_value(data.name .. ".has_spawned", data.has_spawned, context)
           if data.allowed_factions then cm:save_named_value(data.name .. ".allowed_factions", data.allowed_factions, context) end
@@ -127,8 +127,8 @@ end)
 
 cm:add_loading_game_callback(function(context)
      if cm:is_new_game() == false then
-          for i = 1, #character_unlocking.ulrika_list do
-               local data = character_unlocking.ulrika_data[character_unlocking.ulrika_list[i]]
+          for i = 1, #Ulrika_Unlocking.character_list do
+               local data = Ulrika_Unlocking.ulrika_data[Ulrika_Unlocking.character_list[i]]
                data.factions_involved = cm:load_named_value(data.name .. ".factions_involved", data.factions_involved, context)
                data.has_spawned = cm:load_named_value(data.name .. ".has_spawned", data.has_spawned, context)
                if data.allowed_factions then

@@ -163,7 +163,8 @@
             "Has_Logged",
             "Jadlog_Filename",
             "JadLogging_Enabled",
-            "JadLogFile_Made"
+            "JadLogFile_Made",
+            "Ulrika_Unlocking"
         ],
         "Lua.workspace.ignoreDir": [
             ".vscode",
