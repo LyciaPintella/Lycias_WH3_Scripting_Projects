@@ -456,7 +456,6 @@ end
 function character_unlocking:add_listeners_for_character_rank_unlock(character)
 	out("#### Add Legendary Hero unlocking Listeners ####")
 	local character_info = self.character_data[character]
-
 	for i = 1, #character_info.allowed_factions do
 		local faction_interface = cm:get_faction(character_info.allowed_factions[i])
 		out("faction_interface:name(): " .. faction_interface:name() .. ".")

@@ -223,5 +223,7 @@
         "vscode-lua-format.configPath": "I:\\Jessica Ariadne Murphy\\OneDrive\\Documents\\Warhammer III Projects\\Scripting_Projects\\.vscode\\vscode-lua-format-config.xml",
         "editor.indentSize": "tabSize",
         "cSpell.enabled": false,
+        "Lua.hover.enumsLimit": 25,
+        "Lua.hint.arrayIndex": "Enable",
     },
 }
