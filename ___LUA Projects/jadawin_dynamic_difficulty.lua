@@ -3,7 +3,7 @@ JadLogging_Enabled = true
 Jadlog_Filename = "Dynamic_Difficulty_Log.txt"
 Has_Logged = false
 
-local function out(t) ModLog("#### Dynamic Difficulty " .. tostring(t) .. " ####") end
+local function out(t) ModLog("Dynamic Difficulty: " .. tostring(t) .. ".") end
 
 local function JADSESSIONLOG()
      if not JadLogging_Enabled then return end
