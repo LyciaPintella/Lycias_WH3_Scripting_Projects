@@ -1,3 +1,4 @@
+Ulrika_Unlocking = {}
 Ulrika_Unlocking.character_list = {
      -- REQUIRED. List of all the characters to be used. Must match character names in character_data
      "ulrika"

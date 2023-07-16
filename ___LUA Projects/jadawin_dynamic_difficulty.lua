@@ -22,7 +22,7 @@ local function JADSESSIONLOG()
      JadLogFile_Made = true
 
      if popLog then
-          -- popLog:write("NEW SESSION [" .. logTimeStamp .. "] \n")
+          popLog:write("Welcome back! It's: [" .. logTimeStamp .. "] \n")
           popLog:flush()
           popLog:close()
      else
@@ -31,11 +31,10 @@ local function JADSESSIONLOG()
           JadLogging_Enabled = false
      end
 end
-
 JADSESSIONLOG()
 
 local function JADLOG(text)
-     out("JadLogFile_Made is " .. tostring(JadLogFile_Made) .. " . JadLogging_Enabled is " .. tostring(JadLogging_Enabled) .. " ####")
+     out("JADLOG(text): JadLogFile_Made is " .. tostring(JadLogFile_Made) .. " . JadLogging_Enabled is " .. tostring(JadLogging_Enabled) .. " ####")
 
      if not JadLogging_Enabled then return end
 
@@ -43,7 +42,7 @@ local function JADLOG(text)
      local logText = tostring(text)
      local popLog = io.open(Jadlog_Filename, "a+")
 
-     out("Jadlog_Filename is " .. Jadlog_Filename .. " . popLog is " .. tostring(popLog) .. " ####")
+     out("JADLOG(text): " .. "Jadlog_Filename is " .. Jadlog_Filename .. " . popLog is " .. tostring(popLog) .. " ####")
 
      if popLog then
           popLog:write("Dynamic Difficulty: " .. logText .. " [" .. logTimeStamp .. "] \n")
@@ -153,11 +152,10 @@ local function get_empire_score_player()
           for i = 0, owned_regions:num_items() - 1 do
                local region = owned_regions:item_at(i)
                if region:province_name() == "wh3_main_combi_province_albion" or region:province_name() == "wh3_main_combi_province_vanaheim_mountains" or
-                    region:province_name() == "wh3_main_combi_province_helspire_mountains" or region:province_name() ==
-                    "wh3_main_combi_province_ice_tooth_mountains" or region:province_name() == "wh3_main_combi_province_mountains_of_naglfari" or
-                    region:province_name() == "wh3_main_combi_province_trollheim_mountains" or region:province_name() ==
-                    "wh3_main_combi_province_mountains_of_hel" or region:province_name() == "wh3_main_combi_province_gianthome_mountains" or
-                    region:province_name() == "wh3_main_combi_province_goromadny_mountains" then
+                    region:province_name() == "wh3_main_combi_province_helspire_mountains" or region:province_name() == "wh3_main_combi_province_ice_tooth_mountains" or
+                    region:province_name() == "wh3_main_combi_province_mountains_of_naglfari" or region:province_name() ==
+                    "wh3_main_combi_province_trollheim_mountains" or region:province_name() == "wh3_main_combi_province_mountains_of_hel" or region:province_name() ==
+                    "wh3_main_combi_province_gianthome_mountains" or region:province_name() == "wh3_main_combi_province_goromadny_mountains" then
                     -- jlog("Region in Norsca found.")
                     empire_score = empire_score + 5
                else
@@ -366,11 +364,7 @@ core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return
                cm:apply_custom_effect_bundle_to_faction(effect_bundle_armies, current_faction)
 
                if current_faction_name == "wh_main_emp_empire" then
-                    jlog("Turn: # " .. turn_number .. " |  Difficulty: " .. player_difficulty .. " | Player Score: " .. player_score .. "| AI Buff Level: " ..
-                              ai_buff_level .. " | Income: " .. "+" .. effect_strength_tax_rate .. "%" .. " | Growth: " .. "+" .. effect_strength_growth ..
-                              " | Construction Cost: " .. effect_strength_construction .. "%" .. " | Recruit Cost: " .. effect_strength_recruit_cost ..
-                              " | Loot: " .. "+" .. effect_strength_battle_loot .. "%" .. " | Rank: " .. "+" .. recruit_rank .. " | Unit XP Per Turn: " .. "+" ..
-                              xp_gain_per_turn .. " | Replenishment: " .. "+" .. replenishment_bonus .. "% | Recruitment Slots: " .. "+" .. recruit_points_bonus)
+                    jlog("Turn: # " .. turn_number .. " |  Difficulty: " .. player_difficulty .. " | Player Score: " .. player_score .. "| AI Buff Level: " .. ai_buff_level .. " | Income: " .. "+" .. effect_strength_tax_rate .. "%" .. " | Growth: " .. "+" .. effect_strength_growth .. " | Construction Cost: " .. effect_strength_construction .. "%" .. " | Recruit Cost: " .. effect_strength_recruit_cost .. " | Loot: " .. "+" .. effect_strength_battle_loot .. "%" .. " | Rank: " .. "+" .. recruit_rank .. " | Unit XP Per Turn: " .. "+" .. xp_gain_per_turn .. " | Replenishment: " .. "+" .. replenishment_bonus .. "% | Recruitment Slots: " .. "+" .. recruit_points_bonus)
                end
           end, 0)
      end
