@@ -56,7 +56,7 @@ function Ulrika_Unlocking:get_ulrika_allowed_factions_list(character_data)
      return allowed_factions
 end
 
-function Ulrika_Unlocking:setup_Ulrika_Unlocking()
+function Ulrika_Unlocking:setup_Ulrika_unlocking()
      for i = 1, #self.character_list do
           local character = self.character_list[i]
           local current_character = self.character_data[character]
@@ -77,7 +77,7 @@ function Ulrika_Unlocking:setup_Ulrika_Unlocking()
           end
      end
 end
-cm:add_first_tick_callback(function() character_unlocking:setup_Ulrika_Unlocking() end);
+cm:add_first_tick_callback(function() Ulrika_Unlocking:setup_Ulrika_unlocking() end);
 
 function Ulrika_Unlocking:add_listeners_for_eltharion_rank_unlock(character)
      out("Add Ulrika rank unlocking Listener")
