@@ -233,7 +233,8 @@ core:add_listener("JDYNDIF_TURNSTART", "FactionTurnStart", function(context) ret
      cm:callback(function() if turn_number == 1 or not (cm:get_saved_value("jdyndif_mct_values_exist")) then read_mct_values(true) end end, 0.2)
 end, true)
 
--- add event
+out("Creating listener to apply effect bundles" .. "")
+jlog("Creating listener to apply effect bundles.")
 core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return not (context:faction()):is_human() end, function(context)
      local turn_number = (cm:model()):turn_number()
      local current_faction = context:faction()
@@ -289,6 +290,7 @@ core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return
                local replenishment_bonus = 0
                local ai_buff_level = player_score
 
+               out("Applying 10% penalty to bonuses for vassals of humans" .. "")
                if current_faction:is_vassal_of(human_faction) == true or current_faction:allied_with(human_faction) == true then
                     ai_buff_level = ai_buff_level / 1.10
                end
@@ -330,39 +332,36 @@ core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return
                if effect_strength_growth > 75 then effect_strength_growth = 75 end
 
                local effect_strength_construction = math.ceil(ai_buff_level * -3 * mod_construction * mod_extra_difficulty - 9)
-
                if effect_strength_construction < -75 then effect_strength_construction = -75 end
 
                local effect_strength_recruit_cost = math.ceil(ai_buff_level * -2 * mod_recruit_cost * mod_extra_difficulty - 5)
                if effect_strength_recruit_cost < -75 then effect_strength_recruit_cost = -75 end
 
-               local effect_bundle_government = cm:create_new_custom_effect_bundle("Dynamic_Difficulty_Government")
+               local Dynamic_Difficulty_Government = cm:create_new_custom_effect_bundle("effect_bundle_government")
 
-               effect_bundle_government:add_effect("wh_main_effect_economy_gdp_mod_all", "faction_to_region_own", effect_strength_tax_rate)
-               effect_bundle_government:add_effect("wh_main_effect_building_construction_cost_mod", "faction_to_region_own", effect_strength_construction)
-               effect_bundle_government:add_effect("wh_main_effect_province_growth_other", "faction_to_province_own", effect_strength_growth)
-               effect_bundle_government:set_duration(1)
-               cm:apply_custom_effect_bundle_to_faction(effect_bundle_government, current_faction)
+               Dynamic_Difficulty_Government:add_effect("wh_main_effect_economy_gdp_mod_all", "faction_to_region_own", effect_strength_tax_rate)
+               Dynamic_Difficulty_Government:add_effect("wh_main_effect_building_construction_cost_mod", "faction_to_region_own", effect_strength_construction)
+               Dynamic_Difficulty_Government:add_effect("wh_main_effect_province_growth_other", "faction_to_province_own", effect_strength_growth)
+               Dynamic_Difficulty_Government:set_duration(1)
+               cm:apply_custom_effect_bundle_to_faction(Dynamic_Difficulty_Government, current_faction)
 
-               local effect_bundle_armies = cm:create_new_custom_effect_bundle("Dynamic_Difficulty_Armies")
+               local Dynamic_Difficulty_Armies = cm:create_new_custom_effect_bundle("effect_bundle_armies")
 
-               effect_bundle_armies:add_effect("wh_main_effect_force_all_campaign_recruitment_cost_all", "faction_to_force_own", effect_strength_recruit_cost)
-               effect_bundle_armies:add_effect("wh_main_effect_agent_action_outcome_parent_army_xp_gain_factionwide", "faction_to_force_own", xp_gain_per_turn)
-               effect_bundle_armies:add_effect("wh_main_effect_force_all_campaign_experience_base_all", "faction_to_force_own", recruit_rank)
-               effect_bundle_armies:add_effect("wh_main_effect_force_all_campaign_post_battle_loot_mod", "faction_to_faction_own", effect_strength_battle_loot)
-
+               Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_recruitment_cost_all", "faction_to_force_own", effect_strength_recruit_cost)
+               Dynamic_Difficulty_Armies:add_effect("wh_main_effect_agent_action_outcome_parent_army_xp_gain_factionwide", "faction_to_force_own", xp_gain_per_turn)
+               Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_experience_base_all", "faction_to_force_own", recruit_rank)
+               Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_post_battle_loot_mod", "faction_to_faction_own", effect_strength_battle_loot)
                if cm:get_saved_value("jdyndif_enable_replenishment") then
-                    effect_bundle_armies:add_effect("wh2_main_effect_replenishment_characters", "faction_to_force_own", replenishment_bonus)
-                    effect_bundle_armies:add_effect("wh_main_effect_force_all_campaign_replenishment_rate", "faction_to_force_own", replenishment_bonus)
+                    Dynamic_Difficulty_Armies:add_effect("wh2_main_effect_replenishment_characters", "faction_to_force_own", replenishment_bonus)
+                    Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_replenishment_rate", "faction_to_force_own", replenishment_bonus)
                end
-
                if cm:get_saved_value("jdyndif_enable_recruitment") then
-                    effect_bundle_armies:add_effect("wh_main_effect_unit_recruitment_points", "faction_to_province_own", recruit_points_bonus)
+                    Dynamic_Difficulty_Armies:add_effect("wh_main_effect_unit_recruitment_points", "faction_to_province_own", recruit_points_bonus)
                end
+               Dynamic_Difficulty_Armies:set_duration(1)
+               cm:apply_custom_effect_bundle_to_faction(Dynamic_Difficulty_Armies, current_faction)
 
-               effect_bundle_armies:set_duration(1)
-               cm:apply_custom_effect_bundle_to_faction(effect_bundle_armies, current_faction)
-
+               out("Checking current AI faction turn to trigger logging" .. "")
                if current_faction_name == "wh_dlc07_vmp_von_carstein" or current_faction_name == "wh2_main_def_naggarond" or current_faction_name ==
                     "wh2_main_def_har_ganeth" then
                     jlog("Turn: # " .. turn_number .. " |  Difficulty: " .. player_difficulty .. " | Player Score: " .. player_score .. "| AI Buff Level: " ..
