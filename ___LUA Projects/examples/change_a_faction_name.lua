@@ -1,0 +1,1 @@
+cm:change_localised_faction_name("wh_main_emp_empire", "campaign_localised_strings_string_faction_name_empire");
