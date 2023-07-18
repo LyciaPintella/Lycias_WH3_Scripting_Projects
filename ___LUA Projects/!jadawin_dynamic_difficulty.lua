@@ -14,15 +14,15 @@ local function JADSESSIONLOG()
      out("JadLogFile_Made is " .. tostring(JadLogFile_Made) .. "")
 
      if not JadLogFile_Made then
-          out("popLog is " .. tostring(popLog) .. " JadLogFile_Made is " .. tostring(JadLogFile_Made) .. "")
+          --out("popLog is " .. tostring(popLog) .. " JadLogFile_Made is " .. tostring(JadLogFile_Made) .. "")
      else
-          out("popLog is " .. tostring(popLog) .. " JadLogFile_Made is " .. tostring(JadLogFile_Made) .. "")
+          --out("popLog is " .. tostring(popLog) .. " JadLogFile_Made is " .. tostring(JadLogFile_Made) .. "")
      end
 
      JadLogFile_Made = true
 
      if popLog then
-          popLog:write("New Session: [" .. logTimeStamp .. "] \n")
+          --popLog:write("New Session: [" .. logTimeStamp .. "] \n")
           popLog:flush()
           popLog:close()
      else
@@ -42,7 +42,7 @@ local function JADLOG(text)
      local logText = tostring(text)
      local popLog = io.open(Jadlog_Filename, "a+")
 
-     out("JADLOG(text): " .. "Jadlog_Filename is " .. Jadlog_Filename .. " . popLog is " .. tostring(popLog) .. " ####")
+     --out("JADLOG(text): " .. "Jadlog_Filename is " .. Jadlog_Filename .. " . popLog is " .. tostring(popLog) .. " ####")
 
      if popLog then
           popLog:write("Dynamic Difficulty: " .. logText .. " [" .. logTimeStamp .. "] \n")
@@ -233,8 +233,8 @@ core:add_listener("JDYNDIF_TURNSTART", "FactionTurnStart", function(context) ret
      cm:callback(function() if turn_number == 1 or not (cm:get_saved_value("jdyndif_mct_values_exist")) then read_mct_values(true) end end, 0.2)
 end, true)
 
-out("Creating listener to apply effect bundles" .. "")
-jlog("Creating listener to apply effect bundles.")
+--out("Creating listener to apply effect bundles" .. "")
+--jlog("Creating listener to apply effect bundles.")
 core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return not (context:faction()):is_human() end, function(context)
      local turn_number = (cm:model()):turn_number()
      local current_faction = context:faction()
@@ -256,25 +256,25 @@ core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return
 
                if combined_difficulty == -1 then -- Hard
                     player_difficulty = "hard"
-                    mod_construction = 2.0
-                    mod_recruit_cost = 2.0
-                    mod_tax_rate = 2.0
-                    mod_growth = 2.0
-                    mod_battle_loot = 2.0
+                    mod_construction = 1.4
+                    mod_recruit_cost = 1.4
+                    mod_tax_rate = 1.4
+                    mod_growth = 1.4
+                    mod_battle_loot = 1.4
                elseif combined_difficulty == -2 then -- Very Hard
                     player_difficulty = "vhard"
-                    mod_construction = 2.25
-                    mod_recruit_cost = 2.25
-                    mod_tax_rate = 2.25
-                    mod_growth = 2.25
-                    mod_battle_loot = 2.25
+                    mod_construction = 1.5
+                    mod_recruit_cost = 1.5
+                    mod_tax_rate = 1.5
+                    mod_growth = 1.5
+                    mod_battle_loot = 1.5
                elseif combined_difficulty == -3 then -- Legendary
                     player_difficulty = "legendary"
-                    mod_construction = 2.5
-                    mod_recruit_cost = 2.5
-                    mod_tax_rate = 2.5
-                    mod_growth = 2.5
-                    mod_battle_loot = 2.5
+                    mod_construction = 1.6
+                    mod_recruit_cost = 1.6
+                    mod_tax_rate = 1.6
+                    mod_growth = 1.6
+                    mod_battle_loot = 1.6
                elseif combined_difficulty == 1 then -- Easy
                     player_difficulty = "easy"
                     mod_construction = -0.5
@@ -290,26 +290,32 @@ core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return
                local replenishment_bonus = 0
                local ai_buff_level = player_score
 
-               out("Applying 10% penalty to bonuses for vassals of humans" .. "")
+               --out("Applying a 15% penalty to bonuses for vassals of humans" .. "")
                if current_faction:is_vassal_of(human_faction) == true or current_faction:allied_with(human_faction) == true then
-                    ai_buff_level = ai_buff_level / 1.10
+                    ai_buff_level = ai_buff_level / 1.15
                end
 
-               if ai_buff_level >= 12 and combined_difficulty < 0 then
+
+               if ai_buff_level >= 15 and combined_difficulty < 0 then
                     xp_gain_per_turn = 100 * math.abs(combined_difficulty)
                     recruit_rank = 2 * math.abs(combined_difficulty)
                     recruit_points_bonus = 3
-                    replenishment_bonus = 5
+                    replenishment_bonus = 3
+               elseif ai_buff_level >= 12 and combined_difficulty < 0 then
+                    xp_gain_per_turn = 100 * math.abs(combined_difficulty)
+                    recruit_rank = 2 * math.abs(combined_difficulty)
+                    recruit_points_bonus = 3
+                    replenishment_bonus = 2
                elseif ai_buff_level >= 9 and combined_difficulty < 0 then
                     xp_gain_per_turn = 100 * math.abs(combined_difficulty)
                     recruit_rank = 2 * math.abs(combined_difficulty)
-                    recruit_points_bonus = 3
-                    replenishment_bonus = 4
+                    recruit_points_bonus = 2
+                    replenishment_bonus = 2
                elseif ai_buff_level >= 6 and combined_difficulty < 0 then
                     xp_gain_per_turn = 75 * math.abs(combined_difficulty)
                     recruit_rank = math.ceil(0 * math.abs(combined_difficulty))
                     recruit_points_bonus = 2
-                    replenishment_bonus = 2
+                    replenishment_bonus = 1
                elseif ai_buff_level >= 3 and combined_difficulty < 0 then
                     xp_gain_per_turn = 50 * math.abs(combined_difficulty)
                     recruit_rank = math.abs(combined_difficulty)
@@ -322,19 +328,19 @@ core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return
                     mod_extra_difficulty = cm:get_saved_value("jdyndif_extra_difficulty") * 0.05 + 1
                end
 
-               local effect_strength_tax_rate = math.ceil(ai_buff_level * 4 * mod_tax_rate * mod_extra_difficulty + 5)
+               local effect_strength_tax_rate = math.ceil(ai_buff_level * 4 * mod_tax_rate * mod_extra_difficulty)
                if effect_strength_tax_rate > 175 then effect_strength_tax_rate = 175 end
 
-               local effect_strength_battle_loot = math.ceil(ai_buff_level * 4 * mod_battle_loot * mod_extra_difficulty + 10)
+               local effect_strength_battle_loot = math.ceil(ai_buff_level * 4 * mod_battle_loot * mod_extra_difficulty)
                if effect_strength_battle_loot > 175 then effect_strength_battle_loot = 175 end
 
-               local effect_strength_growth = math.ceil(ai_buff_level * 4 * mod_growth * mod_extra_difficulty + 12)
+               local effect_strength_growth = math.ceil(ai_buff_level * 4 * mod_growth * mod_extra_difficulty)
                if effect_strength_growth > 75 then effect_strength_growth = 75 end
 
-               local effect_strength_construction = math.ceil(ai_buff_level * -3 * mod_construction * mod_extra_difficulty - 9)
+               local effect_strength_construction = math.ceil(ai_buff_level * -4 * mod_construction * mod_extra_difficulty)
                if effect_strength_construction < -75 then effect_strength_construction = -75 end
 
-               local effect_strength_recruit_cost = math.ceil(ai_buff_level * -2 * mod_recruit_cost * mod_extra_difficulty - 5)
+               local effect_strength_recruit_cost = math.ceil(ai_buff_level * -4 * mod_recruit_cost * mod_extra_difficulty)
                if effect_strength_recruit_cost < -75 then effect_strength_recruit_cost = -75 end
 
                local Dynamic_Difficulty_Government = cm:create_new_custom_effect_bundle("effect_bundle_government")
@@ -361,15 +367,15 @@ core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return
                Dynamic_Difficulty_Armies:set_duration(1)
                cm:apply_custom_effect_bundle_to_faction(Dynamic_Difficulty_Armies, current_faction)
 
-               out("Checking current AI faction turn to trigger logging" .. "")
+               --out("Checking current AI faction turn to trigger logging" .. "")
                if current_faction_name == "wh_dlc07_vmp_von_carstein" or current_faction_name == "wh2_main_def_naggarond" or current_faction_name ==
                     "wh2_main_def_har_ganeth" then
                     jlog("Turn: # " .. turn_number .. " |  Difficulty: " .. player_difficulty .. " | Player Score: " .. player_score .. "| AI Buff Level: " ..
-                              ai_buff_level .. " | Income: " .. "+" .. effect_strength_tax_rate .. "%" .. " | Growth: " .. "+" .. effect_strength_growth ..
-                              " | Construction Cost: " .. effect_strength_construction .. "%" .. " | Recruit Cost: " .. effect_strength_recruit_cost .. " | Loot: " ..
-                              "+" .. effect_strength_battle_loot .. "%" .. " | Rank: " .. "+" .. recruit_rank .. " | Unit XP Per Turn: " .. "+" .. xp_gain_per_turn ..
-                              " | Replenishment: " .. "+" .. replenishment_bonus .. "% | Recruitment Slots: " .. "+" .. recruit_points_bonus)
-               end
+                         ai_buff_level .. " | Income: " .. "+" .. effect_strength_tax_rate .. "%" .. " | Growth: " .. "+" .. effect_strength_growth ..
+                         " | Construction Cost: " .. effect_strength_construction .. "%" .. " | Recruit Cost: " .. effect_strength_recruit_cost .. " | Loot: " ..
+                         "+" .. effect_strength_battle_loot .. "%" .. " | Rank: " .. "+" .. recruit_rank .. " | Unit XP Per Turn: " .. "+" .. xp_gain_per_turn ..
+                         " | Replenishment: " .. "+" .. replenishment_bonus .. "% | Recruitment Slots: " .. "+" .. recruit_points_bonus)
+               end;
           end, 0)
      end
 end, true)
