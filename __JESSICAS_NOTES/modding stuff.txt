@@ -59,7 +59,9 @@ https://regex101.com/r/fo3Fuk/1
 ^(?!.*0)(?!.*16)1
 wh_main_effect^(?=.*recruit).*
 
-^(?!.*vassal)
+****************
+^(?!.*very).*high4
+****************
 
 ^wh2_dlc15(?!.*_cha_)(?!.*_boss)(?!.*_summoned).*
 
