@@ -227,5 +227,8 @@
         "Lua.hover.enumsLimit": 25,
         "Lua.hint.arrayIndex": "Enable",
         "editor.defaultFormatter": "Koihik.vscode-lua-format",
+        "files.watcherExclude": {
+            "**/../warhammer_3/**": true
+        },
     },
 }

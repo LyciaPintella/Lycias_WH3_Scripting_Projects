@@ -31,18 +31,18 @@ local out = function(t) ModLog("Ulrika For Eltharion: " .. tostring(t) .. ".") e
 function Ulrika_Unlocking:ulrika_has_valid_faction_in_campaign(character)
      local character_info = self.character_data[character]
      local allowed_factions = self:get_ulrika_allowed_factions_list(character_info)
+     out("34: #allowed_factions: " .. #allowed_factions .. "")
      for i = 1, #allowed_factions do
           local faction_interface = cm:get_faction(allowed_factions[i])
           if faction_interface then
                if not faction_interface:is_null_interface() then
-                    out("38: Ulrika has a valid faction")
+                    out("39: Ulrika has a valid faction")
                     return true
                end
           end
      end
-     out("43: character_info.override_allowed_factions: " .. character_info.override_allowed_factions .. "")
+     out("44: character_info.override_allowed_factions: " .. character_info.override_allowed_factions .. "")
      for i = 1, #character_info.override_allowed_factions do
-
           local faction_interface = cm:get_faction(character_info.override_allowed_factions[i])
           if faction_interface then
                if not faction_interface:is_null_interface() then
