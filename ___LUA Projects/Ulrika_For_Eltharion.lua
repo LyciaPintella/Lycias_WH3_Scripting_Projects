@@ -25,7 +25,7 @@ Ulrika_Unlocking.character_data = {
           alt_reward_dilemma_triggered = false
      }
 }
-
+--cm:trigger_dilemma("wh2_main_hef_yvresse", "wh3_dlc23_neu_ulrika_choice")
 local out = function(t) ModLog("Ulrika For Eltharion: " .. tostring(t) .. ".") end
 
 function Ulrika_Unlocking:ulrika_has_valid_faction_in_campaign(character)
@@ -60,7 +60,8 @@ function Ulrika_Unlocking:get_ulrika_allowed_factions_list(character_data)
           allowed_factions = Ulrika_Unlocking.character_data.override_allowed_factions
      else
           for _, v in ipairs(character_data.allowed_cultures) do
-               local culture_to_allowed_factions = self:get_ulrika_allowed_factions_list(v, character_data.non_playable_factions_allowed)
+               local culture_to_allowed_factions = self:get_ulrika_allowed_factions_list(v,
+                    character_data.non_playable_factions_allowed)
                out("64: #culture_to_allowed_factions: " .. #culture_to_allowed_factions .. "")
                for i = 1, #culture_to_allowed_factions do
                     -- Don't setup missions for characters a player wouldn't be able to spawn due to lacking the DLC permissions.
@@ -90,8 +91,9 @@ function Ulrika_Unlocking:setup_ulrika_unlocking()
                     if main_faction then
                          main_faction_human = main_faction:is_human()
                     end
-                    if cm:is_new_game() and main_faction_human then self:spawn_hero(
-                         current_character.starting_owner_faction, character)
+                    if cm:is_new_game() and main_faction_human then
+                         self:spawn_hero(
+                              current_character.starting_owner_faction, character)
                     end
                else
                     if current_character.condition_to_start_unlock == self.character_unlock_condition_types.rank then
@@ -102,6 +104,7 @@ function Ulrika_Unlocking:setup_ulrika_unlocking()
           end
      end
 end
+
 cm:add_first_tick_callback(function() Ulrika_Unlocking:setup_ulrika_unlocking() end);
 
 function Ulrika_Unlocking:add_listeners_for_eltharion_rank_unlock(character)
@@ -126,17 +129,18 @@ function Ulrika_Unlocking:spawn_ulrika_on_rank_up(character)
                if cm:get_faction(character_info.allowed_factions[i]):is_human() then
                     cm:add_faction_turn_start_listener_by_name("spawn_ulrika_on_rank_up",
                          character_info.allowed_factions[i], function(context)
-                         if character_info.has_spawned == false then
-                              local faction = context:faction()
-                              local faction_name = faction:name()
-                              out("132: character_info.factions_involved[faction_name]: " .. character_info.factions_involved[faction_name] .. "")
-                              if character_info.factions_involved[faction_name] ~= true and faction:faction_leader():rank() >= character_info.unlock_rank then
-                                   character_info.factions_involved[faction_name] = true
-                                   out("135: Legendary Characters: Spawning Ulrika!")
-                                   cm:trigger_dilemma(faction:name(), "wh3_dlc23_neu_ulrika_choice")
+                              if character_info.has_spawned == false then
+                                   local faction = context:faction()
+                                   local faction_name = faction:name()
+                                   out("132: character_info.factions_involved[faction_name]: " ..
+                                   character_info.factions_involved[faction_name] .. "")
+                                   if character_info.factions_involved[faction_name] ~= true and faction:faction_leader():rank() >= character_info.unlock_rank then
+                                        character_info.factions_involved[faction_name] = true
+                                        out("135: Legendary Characters: Spawning Ulrika!")
+                                        cm:trigger_dilemma(faction:name(), "wh3_dlc23_neu_ulrika_choice")
+                                   end
                               end
-                         end
-                    end, true)
+                         end, true)
                end
           end
      end
@@ -147,8 +151,10 @@ cm:add_saving_game_callback(function(context)
           local data = Ulrika_Unlocking.character_data[Ulrika_Unlocking.character_list[i]]
           cm:save_named_value(data.name .. ".factions_involved", data.factions_involved, context)
           cm:save_named_value(data.name .. ".has_spawned", data.has_spawned, context)
-          if data.allowed_factions then cm:save_named_value(data.name .. ".allowed_factions", data.allowed_factions,
-                    context) end
+          if data.allowed_factions then
+               cm:save_named_value(data.name .. ".allowed_factions", data.allowed_factions,
+                    context)
+          end
      end
 end)
 

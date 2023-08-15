@@ -256,25 +256,25 @@ core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return
 
                if combined_difficulty == -1 then -- Hard
                     player_difficulty = "hard"
-                    mod_construction = 1.4
-                    mod_recruit_cost = 1.4
-                    mod_tax_rate = 1.4
-                    mod_growth = 1.4
-                    mod_battle_loot = 1.4
-               elseif combined_difficulty == -2 then -- Very Hard
-                    player_difficulty = "vhard"
-                    mod_construction = 1.5
-                    mod_recruit_cost = 1.5
-                    mod_tax_rate = 1.5
-                    mod_growth = 1.5
-                    mod_battle_loot = 1.5
-               elseif combined_difficulty == -3 then -- Legendary
-                    player_difficulty = "legendary"
                     mod_construction = 1.6
                     mod_recruit_cost = 1.6
                     mod_tax_rate = 1.6
                     mod_growth = 1.6
                     mod_battle_loot = 1.6
+               elseif combined_difficulty == -2 then -- Very Hard
+                    player_difficulty = "vhard"
+                    mod_construction = 1.7
+                    mod_recruit_cost = 1.7
+                    mod_tax_rate = 1.7
+                    mod_growth = 1.7
+                    mod_battle_loot = 1.7
+               elseif combined_difficulty == -3 then -- Legendary
+                    player_difficulty = "legendary"
+                    mod_construction = 1.8
+                    mod_recruit_cost = 1.8
+                    mod_tax_rate = 1.8
+                    mod_growth = 1.8
+                    mod_battle_loot = 1.8
                elseif combined_difficulty == 1 then -- Easy
                     player_difficulty = "easy"
                     mod_construction = -0.5
@@ -372,7 +372,7 @@ core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return
                     "wh2_main_def_har_ganeth" then
                     jlog("Turn: # " .. turn_number .. " |  Difficulty: " .. player_difficulty .. " | Player Score: " .. player_score .. "| AI Buff Level: " ..
                          ai_buff_level .. " | Income: " .. "+" .. effect_strength_tax_rate .. "%" .. " | Growth: " .. "+" .. effect_strength_growth ..
-                         " | Construction Cost: " .. effect_strength_construction .. "%" .. " | Recruit Cost: " .. effect_strength_recruit_cost .. " | Loot: " ..
+                         " | Construction Cost: " .. effect_strength_construction .. "%" .. " | Recruit Cost: " .. effect_strength_recruit_cost .. "%" .. " | Loot: " ..
                          "+" .. effect_strength_battle_loot .. "%" .. " | Rank: " .. "+" .. recruit_rank .. " | Unit XP Per Turn: " .. "+" .. xp_gain_per_turn ..
                          " | Replenishment: " .. "+" .. replenishment_bonus .. "% | Recruitment Slots: " .. "+" .. recruit_points_bonus)
                end;
