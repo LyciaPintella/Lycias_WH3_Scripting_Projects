@@ -1,0 +1,8 @@
+"bad_legend_defeated_traits.lua"
+----
+C:\Program Files (x86)\Steam\steamapps\common\Total War WARHAMMER III\data\!!!3_legendary_guys.pack
+
+"mon_ror.lua"
+----
+C:\Program Files (x86)\Steam\steamapps\common\Total War WARHAMMER III\data\@Ascopa_Monumental_Unit_Pack.pack
+

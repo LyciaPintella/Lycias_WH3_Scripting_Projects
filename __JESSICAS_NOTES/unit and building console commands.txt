@@ -1,3 +1,59 @@
+Helping Bretonnia:
+
+abandon
+primary 2
+bb wh_main_brt_stables_1
+
+gr wh_main_brt_bastonne
+gr wh2_main_brt_knights_of_origo
+gr wh2_dlc14_brt_chevaliers_de_lyonesse
+gr wh_main_brt_carcassonne
+gr wh3_main_brt_aquitaine
+	bb wh_main_special_bordeleaux_vineyards_1
+	bb wh_main_special_bordeleaux_vineyards_4
+gr wh_main_brt_artois
+gr wh_main_brt_lyonesse
+	bb wh2_main_brt_resource_pastures_1
+gr wh_main_brt_bretonnia
+gr mixer_brt_quenelles
+	bb wh2_main_brt_resource_pastures_1
+
+bb wh_main_brt_stables_5
+bb wh_main_brt_walls_3
+bb wh_main_brt_farm_3
+bb wh_main_brt_farm_extra_2
+bb wh_main_brt_garrison_2
+bb wh_main_brt_smiths_2
+bb wh_main_brt_worship_3
+
+bb wh2_main_brt_resource_pottery_3
+bb wh2_main_brt_resource_pastures_3
+bb wh2_main_brt_resource_dyes_3
+bb wh2_main_brt_resource_timber_3
+bb wh2_main_brt_resource_furs_3
+bb bb wh2_main_brt_resource_marble_3
+
+
+gr wh2_main_brt_knights_of_the_flame
+gr wh2_main_brt_thegans_crusaders
+gr wh_main_brt_parravon
+gr wh_main_brt_bordeleaux
+gr mixer_brt_montfort
+gr mixer_brt_gisoreux
+gr mixer_brt_languille
+gr mixer_brt_brionne
+
+*BORDELEAUX
+bb wh_main_special_bordeleaux_vineyards_4
+
+*COURONNE
+bb wh_main_special_tournament_grounds
+bb wh_main_brt_legendary_grail_abbey
+
+*Carcasonne
+bb wh_main_brt_legendary_enchantress_tower
+
+
 Kislev
 wh3_main_ksl_cav_gryphon_legion_0
 wh3_main_ksl_cav_horse_archers_0
@@ -185,66 +241,12 @@ Imrik Confederation:
 bb wh2_main_hef_resource_iron_3
 bb wh2_main_hef_resource_animals_3
 
-Helping Bretonnia:
-
-abandon
-primary 2
-bb wh_main_brt_stables_1
-
-gr wh_main_brt_bastonne
-gr wh2_main_brt_knights_of_origo
-gr wh2_dlc14_brt_chevaliers_de_lyonesse
-gr wh_main_brt_carcassonne
-gr wh3_main_brt_aquitaine
-	bb wh_main_special_bordeleaux_vineyards_1
-	bb wh_main_special_bordeleaux_vineyards_4
-gr wh_main_brt_artois
-gr wh_main_brt_lyonesse
-	bb wh2_main_brt_resource_pastures_1
-gr wh_main_brt_bretonnia
-gr mixer_brt_quenelles
-	bb wh2_main_brt_resource_pastures_1
-
 Mousillon
 abandon
 gr mixer_msl_mallobaude
 primary 3
 bb mixu_msl_the_donjon_of_dol_1
 
-bb wh_main_brt_stables_5
-bb wh_main_brt_walls_3
-bb wh_main_brt_farm_3
-bb wh_main_brt_farm_extra_2
-bb wh_main_brt_garrison_2
-bb wh_main_brt_smiths_2
-bb wh_main_brt_worship_3
-
-bb wh2_main_brt_resource_pottery_3
-bb wh2_main_brt_resource_pastures_3
-bb wh2_main_brt_resource_dyes_3
-bb wh2_main_brt_resource_timber_3
-bb wh2_main_brt_resource_furs_3
-bb bb wh2_main_brt_resource_marble_3
-
-
-gr wh2_main_brt_knights_of_the_flame
-gr wh2_main_brt_thegans_crusaders
-gr wh_main_brt_parravon
-gr wh_main_brt_bordeleaux
-gr mixer_brt_montfort
-gr mixer_brt_gisoreux
-gr mixer_brt_languille
-gr mixer_brt_brionne
-
-*BORDELEAUX
-bb wh_main_special_bordeleaux_vineyards_4
-
-*COURONNE
-bb wh_main_special_tournament_grounds
-bb wh_main_brt_legendary_grail_abbey
-
-*Carcasonne
-bb wh_main_brt_legendary_enchantress_tower
 
 Helping Empire
 
@@ -290,7 +292,7 @@ bb wh_main_emp_resource_pastures_3
 
 Empire Landmarks
 
-  Altdorf 
+Altdorf
 bb wh2_main_special_altdorf_castle_reikguard
 bb wh2_main_special_altdorf_imperial_palace
 
@@ -340,7 +342,7 @@ bb wh3_main_ksl_walls_minor_2
 bb wh3_main_ksl_walls_major_3
 
 bb wh3_main_ksl_barracks_3
-bb wh3_main_ksl_city_town_watch_5 
+bb wh3_main_ksl_city_town_watch_5
 bb wh3_main_ksl_city_walls_4 -- does ammo
 
 bb wh3_main_ksl_ice_guard_2

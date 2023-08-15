@@ -226,5 +226,6 @@
         "cSpell.enabled": false,
         "Lua.hover.enumsLimit": 25,
         "Lua.hint.arrayIndex": "Enable",
+        "editor.defaultFormatter": "Koihik.vscode-lua-format",
     },
 }
