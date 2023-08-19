@@ -215,7 +215,7 @@
         "editor.formatOnType": true,
         "workbench.editor.labelFormat": "medium",
         "powershell.cwd": "d:\\OneDrive\\Documents\\Warhammer III Projects\\Scripting_Projects",
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": false,
         "Lua.diagnostics.enable": true,
         "Lua.diagnostics.workspaceEvent": "OnChange",
         "Lua.completion.displayContext": 350,
@@ -230,5 +230,7 @@
         "files.watcherExclude": {
             "**/../warhammer_3/**": true
         },
+        "editor.formatOnSaveMode": "modificationsIfAvailable",
+        "editor.tabSize": 5,
     },
 }

@@ -370,11 +370,8 @@ core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return
                --out("Checking current AI faction turn to trigger logging" .. "")
                if current_faction_name == "wh_dlc07_vmp_von_carstein" or current_faction_name == "wh2_main_def_naggarond" or current_faction_name ==
                     "wh2_main_def_har_ganeth" then
-                    jlog("Turn: # " .. turn_number .. " |  Difficulty: " .. player_difficulty .. " | Player Score: " .. player_score .. "| AI Buff Level: " ..
-                         ai_buff_level .. " | Income: " .. "+" .. effect_strength_tax_rate .. "%" .. " | Growth: " .. "+" .. effect_strength_growth ..
-                         " | Construction Cost: " .. effect_strength_construction .. "%" .. " | Recruit Cost: " .. effect_strength_recruit_cost .. "%" .. " | Loot: " ..
-                         "+" .. effect_strength_battle_loot .. "%" .. " | Rank: " .. "+" .. recruit_rank .. " | Unit XP Per Turn: " .. "+" .. xp_gain_per_turn ..
-                         " | Replenishment: " .. "+" .. replenishment_bonus .. "% | Recruitment Slots: " .. "+" .. recruit_points_bonus)
+                    jlog("Turn: # " .. turn_number .. " |  Difficulty: " .. player_difficulty .. " | Player Score: " .. player_score .. "| AI Buff Level: " .. ai_buff_level .. " | Income: " .. "+" .. effect_strength_tax_rate .. "%" .. " | Growth: " .. "+" .. effect_strength_growth .. " | Construction Cost: " .. effect_strength_construction .. "%" .. " | Recruit Cost: " .. effect_strength_recruit_cost .. "%" .. " | Loot: " .. "+" .. effect_strength_battle_loot .. "%" .. " | Rank: " .. "+" .. recruit_rank .. " | Unit XP Per Turn: " ..
+                    "+" .. xp_gain_per_turn .. " | Replenishment: " .. "+" .. replenishment_bonus .. "% | Recruitment Slots: " .. "+" .. recruit_points_bonus)
                end;
           end, 0)
      end
