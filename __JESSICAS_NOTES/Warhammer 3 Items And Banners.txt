@@ -17,6 +17,11 @@ item wh_main_anc_magic_standard_war_banner
 item wh_main_anc_magic_standard_rangers_standard
 
 Followers
+crafteditemchanges.pack has the effects for some of these:
+
+* * Perfect Vigour
+item wh_main_anc_magic_standard_gleaming_pennant
+
 item wh2_main_anc_follower_hef_librarian *global winds, hero success chance.
 
 **Look up disciple of the phoenix - adds winds of magic max to army and research rate.
@@ -38,7 +43,7 @@ item wh2_main_anc_follower_hef_priest_vaul *ATTRITION IMMUNITY
 item wh2_main_anc_follower_hef_librarian    *global winds of magic
 item wh2_main_anc_follower_hef_shrine_keeper
 
-Public order combo
+*Public order combo
 item wh2_main_anc_follower_hef_wine_merchant    *eatainean vintner
 item wh2_main_anc_follower_hef_minstrel
 item wh2_main_anc_follower_hef_bard
@@ -50,20 +55,20 @@ item wh2_main_anc_follower_hef_assassin *ambush success chance
 item wh2_main_anc_follower_hef_counterspy *+6 MD vs dark elves, hero resist.
 
 *****
-ITEMS
+*ITEMS
 
 item wh_main_anc_arcane_item_forbidden_rod
 
-item wh3_main_anc_weapon_slaaneshs_blade
+*item wh3_main_anc_weapon_slaaneshs_blade
 
-item wh3_main_anc_weapon_skars_kraken_killer
-item wh3_main_anc_weapon_chainsword
-item wh3_main_anc_weapon_the_bane_spear
-item wh3_main_anc_weapon_gilellions_soulnetter
+*item wh3_main_anc_weapon_skars_kraken_killer
+*item wh3_main_anc_weapon_chainsword
+*item wh3_main_anc_weapon_the_bane_spear
+*item wh3_main_anc_weapon_gilellions_soulnetter
 
-wh2_dlc10_anc_weapon_the_widowmaker_1
-wh2_dlc10_anc_weapon_the_widowmaker_2
-wh2_dlc10_anc_weapon_the_widowmaker_3
+*wh2_dlc10_anc_weapon_the_widowmaker_1
+*wh2_dlc10_anc_weapon_the_widowmaker_2
+*wh2_dlc10_anc_weapon_the_widowmaker_3
 
 *****
 item wh_main_anc_weapon_sword_of_bloodshed
