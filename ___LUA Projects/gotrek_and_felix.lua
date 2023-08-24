@@ -138,7 +138,7 @@ function gotrek_setup()
                     if not gotrek_details.marker_pending then
                          gotrek_details.marker_pending = true
                          cm:trigger_dilemma(faction:name(), "wh2_pro08_dilemma_gotrek_felix")
-                         -- cm:trigger_dilemma(faction:name(), "wh3_dlc23_neu_ulrika_choice")
+                         --cm:trigger_dilemma("wh2_main_hef_yvresse", "wh3_dlc23_neu_ulrika_choice")
                     end
                end
           end
