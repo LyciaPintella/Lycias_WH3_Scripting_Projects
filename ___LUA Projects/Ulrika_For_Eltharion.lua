@@ -132,8 +132,7 @@ function Ulrika_Unlocking:spawn_ulrika_on_rank_up(character)
                               if character_info.has_spawned == false then
                                    local faction = context:faction()
                                    local faction_name = faction:name()
-                                   out("132: character_info.factions_involved[faction_name]: " ..
-                                   character_info.factions_involved[faction_name] .. "")
+                                   out("135: character_info.factions_involved[faction_name]: " .. character_info.factions_involved[faction_name] .. "")
                                    if character_info.factions_involved[faction_name] ~= true and faction:faction_leader():rank() >= character_info.unlock_rank then
                                         character_info.factions_involved[faction_name] = true
                                         out("135: Legendary Characters: Spawning Ulrika!")
