@@ -25,7 +25,6 @@ My Discord: https://discord.gg/UvsEYrBkAG
 
 
 
-character skill detail db table db/character_skill_level_details_tables should show the skill being unlocked one level below the reached criteria db table db/character_skills_to_level_reached_criterias_tables.
 
 Alshua:	It's something you could have done as part of your older Specialist mod right?  Looked through your workshop just now.  Maybe I need to teach you how to do that...
 

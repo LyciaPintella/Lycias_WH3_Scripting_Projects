@@ -232,5 +232,8 @@
         },
         "editor.formatOnSaveMode": "modificationsIfAvailable",
      "editor.tabSize": 5,
+     "[lua]": {
+          "editor.defaultFormatter": "Koihik.vscode-lua-format"
+     },
     },
 }

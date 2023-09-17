@@ -183,7 +183,7 @@ au wh2_dlc15_hef_veh_lion_chariot_of_chrace_0
 au wh2_main_hef_cav_silver_helms_1
 au wh2_main_hef_inf_spearmen_0
 au wh2_dlc15_hef_inf_silverin_guard_0
-au wh2_main_hef_inf_archers_0 2
+au wh2_main_hef_inf_archers_0
 au wh2_main_hef_inf_archers_1
 au wh2_dlc10_hef_inf_sisters_of_avelorn_0
 au wh2_main_hef_cav_ellyrian_reavers_1
