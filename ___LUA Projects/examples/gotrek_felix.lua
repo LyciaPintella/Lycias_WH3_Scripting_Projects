@@ -1,4 +1,4 @@
-local gotrek_turns_available = -1 -- Turns that Gotrek & Felix are available for the player after appearing 
+local gotrek_turns_available = -1 -- Turns that Gotrek & Felix are available for the player after appearing
 local gotrek_turns_available_ai = 20 -- Turns that Gotrek & Felix are available for the AI after appearing
 local gotrek_cooldown_turns = 10 -- Turns before Gotrek & Felix appear for the AI after the player has them
 local gotrek_cooldown_turns_ai = 10 -- Turns before Gotrek & Felix appear for the player after the AI has them
@@ -146,7 +146,7 @@ function gotrek_setup()
                     gotrek_details.marker_pending = true
                     cm:trigger_dilemma(faction:name(), "wh2_pro08_dilemma_gotrek_felix")
 					--removing the duplicate Ulrika event as I have another mod that adds her.
-                    --cm:trigger_dilemma(faction:name(), "wh3_dlc23_neu_ulrika_choice")
+                         --cm:trigger_dilemma("wh2_main_hef_yvresse", "wh3_dlc23_neu_ulrika_choice")
                 end
             end
         end
