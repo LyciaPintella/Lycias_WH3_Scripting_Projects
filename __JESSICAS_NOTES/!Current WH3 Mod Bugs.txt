@@ -1,1 +1,1 @@
-Lyra is missing the chariot charge skill from the chariot mod
+pit of shades text isn't updating when overcasting.
