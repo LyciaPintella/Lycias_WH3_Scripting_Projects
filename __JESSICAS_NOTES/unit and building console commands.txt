@@ -115,6 +115,11 @@ bb wh2_dlc10_special_world_root_entrance_3
 *Alarielle Sisters building
 bb wh2_dlc10_hef_handmaidens_alarielle
 
+*Alarielle Worldroot buildings
+wh2_dlc10_special_world_root_entrance_1
+wh2_dlc10_special_world_root_entrance_2
+wh2_dlc10_special_world_root_entrance_3
+
 *Alarielle Resources:
 bb wh2_main_hef_resource_animals_3
 

@@ -1,61 +1,6 @@
---adding dummy stuff to the tech mod so it can apply techs to custom heroes and lords.
-land_units_tables|main_units_tables|melee_weapons_tables|ui_unit_groupings_tables|unit_description_historical_texts_tables|unit_description_short_texts_tables|unit_attributes_groups|mounts|variants_tables|battle_entities|agent_culture_details|battlefiel_engines|warscape_animated_tables|missile_weapon|projectiles|agent_subtypes_tables
+wh2_dlc10_skill_hef_alith_anar_unique_no_rest_for_wicked
+wh2_dlc10_skill_innate_hef_handmaiden_battle_7_vigorous
+wh2_main_skill_innate_hef_noble_battle_7_vigorous
+wh2_main_skill_innate_hef_prince_battle_7_vigorous
 
-Expanded LSG Recruitment From Ports And Elven Colonies
-
-This mod expands port recruitment of Lothern Sea Guard to allow them to be recruited at a maximum level regular port (T5 in vanilla), or from The second level (tier 3) of the special ports located in Lothern, Copher, Dragon Isle, Marienburg, and Erengrad.
-
-Elven Colonies also get the shielded variant at level 4, though for the minor colony that means you will need a Tier 4 Minor Building Mod.
-
-Alarielle's True Power of Nature!
-
-This mod allows Alarielle to boost the entire Order Tide with Power of Nature. Included cultures: High Elves (duh), Lizardmen, Grand Cathay, Kislev, Wood Elves, Bretonnia, The Empire, and the Dawi.
-
-Tip: Ally with her and use the war coordination system to tell her to defend different regions one after another and she will do the rounds!
-
-Also use with: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2977110199]Alarielle - Power of Nature For All High Elves[/url]
-
-[b]Note: This is included in:  [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2977110097]Alarielle's Global World Torment And True Power of Nature Combined[/url]. Trying to load both mods together will break something, somewhere![/b]
-
-All I did was add hidden/disabled definitions for tier 4 minor settlements. Are you using a minor settlement mod? What happens if you load up without it? If you are using one, which one are you using? (So I can look at it).
-
-I know this mod isn't crashing on it's own because I can run it for hours. I need to know WHICH other mod you are using so I can figure out why my change broke it.
-[url=https://imgur.com/a/WPRMSy1]This is what I changed. Do you use anything else that might be mad about this?[/url]
-
-
-Growth And Build Time Reduction Added To Invocation of Asuryan
-
-This mod just makes the Invocation of Asuryan an amazing ritual for growing your lands by adding growth and build time reduction. Use it wisely!
-
-
-
-
-You might find these two mods useful given the changes to siege attrition in this mod: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2979219631URL]AI Willing To Siege Up To 6 Turns[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2964368078]Attrition Damage Values[/url], which sets attrition fairly high once it does kick in.
-
-AI Willing To Siege Up To 6 Turns
-
-This mod is designed to be used with the mods [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2976699590]Siege Attrition Tweaks[/url] (which prevents walled settlements from taking attrition for three turns) and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2964368078]Attrition Damage Values[/url], which sets attrition fairly high once it does kick in.
-
-
-Earlier Mounts For All Characters
-
-This mod reduces the level requirements for basic mounts to level one, and significantly reduces the level requirements of all other mounts. I really hate having my lords and heroes on foot; hopefully you will enjoy this too.
-
-
-unit_abilities_tooltip_text_wh2_pro08_character_abilities_helping_hand
-
-
-cm:spawn_army_starting_character_for_faction("wh2_main_def_deadwood_sentinels","names_name_14151540","wh2_main_def_deadwood_sentinels","","wh3_main_combi_region_the_frozen_city",50,50,true)
-
-
-AI Construction Priorities Reworked T4 Minor Settlements Compatibility Submod
-
-Use this submod in addition to the main mod if you run a tier 4 minor settlement mod. It contains logic tweaks to allow for some more building categories to be made in minor settlements since they can reach tier 4.
-
-
-								wh_main_sch_human_resource_pastures			CAI_SYNERGY_SCOPE_PROVINCEWIDE
-								wh_main_sch_human_resource_pastures_military			CAI_SYNERGY_SCOPE_PROVINCEWIDE
-
-wh_dlc05_sch_wef_resource_pastures			CAI_SYNERGY_SCOPE_PROVINCEWIDE
-wh_main_sch_human_resource_pastures			CAI_SYNERGY_SCOPE_PROVINCEWIDE
-wh_main_sch_human_resource_pastures_military			CAI_SYNERGY_SCOPE_PROVINCEWIDE
+enable	wh2_dlc10_effect_attribute_enable_perfect_vigour	mod_imperfectvigour_perfect_vigour_hef_heroes

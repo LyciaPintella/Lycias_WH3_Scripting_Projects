@@ -1,1 +1,0 @@
-pit of shades text isn't updating when overcasting.

@@ -2,7 +2,7 @@
 
 -- rite unlocking system
 rite_unlock = {
-     cm = false,
+     cm = true,
      faction_name = "",
      rite_key = "",
      event = "",
@@ -1125,7 +1125,7 @@ function rite_unlock_listeners()
                local current_rite_template = rite_templates[j];
                if current_faction:culture() == current_rite_template.culture and not current_faction:rituals():ritual_status(current_rite_template.rite_name):disabled() then
                     --BOOKMARK - gonna stop the game from disabling my rituals!
-                    --cm:lock_ritual(current_faction, current_rite_template.rite_name)
+                    --[[cm:lock_ritual(current_faction, current_rite_template.rite_name)
                     local rite = rite_unlock:new(
                          current_rite_template.rite_name,
                          current_rite_template.event_name,
@@ -1133,7 +1133,7 @@ function rite_unlock_listeners()
                          current_rite_template.show_unlock_message
                     )
 
-                    rite:start(human_factions[i]);
+                    rite:start(human_factions[i]);]]--
                end;
           end;
      end;

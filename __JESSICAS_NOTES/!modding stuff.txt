@@ -23,7 +23,35 @@ https://discord.com/channels/373745291289034763/1021079382422474812
 
 My Discord: https://discord.gg/UvsEYrBkAG
 
+effect scope for your heroes in local region
+character_to_character_regionwide
 
+martial mastery or prowess is setup under: db/land_units_to_unit_abilites_junctions_tables - it looks like this:
+
+wh2_main_unit_passive_martial_mastery	loupi_knights_of_anlec
+wh2_main_unit_passive_martial_prowess	loupi_shadow_warrior_1
+wh2_main_unit_passive_martial_prowess	loupi_ellyrian_lancers
+wh2_main_unit_passive_martial_prowess	loupi_chracian_pikes
+wh2_main_unit_passive_martial_prowess	loupi_dragon_prince_foot
+wh2_main_unit_passive_martial_prowess	loupi_shore_riders
+wh2_main_unit_passive_martial_prowess	loupi_saphery_pegasus
+wh2_main_unit_passive_martial_prowess	loupi_avelorn_cav
+wh2_main_unit_passive_martial_prowess	loupi_sea_ranger
+wh2_main_unit_passive_martial_prowess	loupi_eagle_riders
+wh2_main_unit_passive_martial_mastery	loupi_knights_of_anlec_ror
+wh2_main_unit_passive_martial_mastery	loupi_ellyrian_lancers_ror
+wh2_main_unit_passive_martial_mastery	loupi_chracian_pikes_ror
+wh2_main_unit_passive_martial_mastery	loupi_swordmaster_ror
+wh2_main_unit_passive_martial_prowess	loupi_eagle_claw_ror
+wh2_main_unit_passive_martial_mastery	loupi_dragon_gate_guard
+wh2_main_unit_passive_martial_mastery	loupi_sisters_avelorn_ror
+wh2_main_unit_passive_martial_mastery	loupi_tiranoc_ror
+wh2_main_unit_passive_martial_mastery	loupi_ulthane
+wh2_main_unit_passive_martial_prowess	loupi_mistwalkers
+
+then they need tyo be in the wh2_dlc15_hef_martial_passives unit set under db/unit_set_to_unit_junctions_tables.
+
+Yuan Bo  stole the high elves trade vision. Get it back!
 
 
 Alshua:	It's something you could have done as part of your older Specialist mod right?  Looked through your workshop just now.  Maybe I need to teach you how to do that...
