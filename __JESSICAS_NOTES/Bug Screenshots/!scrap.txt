@@ -1,0 +1,16 @@
+search term for masterworks of vaul's anvil currently.
+
+wh2_dlc11_effect_ability_enable_regeneration_at_sea
+
+use this for someone
+Crown_of_Command_and_Brass_Cleaver_New_Hero_Auras
+wh_dlc03_anc_weapon_the_brass_cleaver
+wh_main_anc_enchanted_item_crown_of_command
+brass_cleaver.png|crown_of_command.png
+2344313967
+
+These mods have updates in the workshop folder. They are backed up to: "D:\OneDrive\Jessica Ariadne Murphy\OneDrive\OneDrive Files\Warhammer III Backups\Warhammer III Mod Pack Files I Might Need Later\!These Mods Have Workshop Updates Available\Backup Copies From Data Folder"
+
+gra_holy_orders.pack
+ovn_grudgebringers.pack
+gra_grandmasters.pack
