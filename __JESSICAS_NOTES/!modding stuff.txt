@@ -1,3 +1,11 @@
+*qisaer / ChisarForest Walker can be found in: !!!lyh_hero.pack
+
+
+
+** THIS ITEM IS NO LONGER LISTED ON THE STEAM WORKSHOP: UlrikHD_Morathi_cult_of_pleasure_3.1.pack
+
+*Mounts can be found in: db/mounts_tables
+
 this search will let you get character mounts earlier:
 
 character_skill_level_details_tables|character_skills_to_level_reached_criterias_tables
@@ -5,64 +13,23 @@ character_skill_level_details_tables|character_skills_to_level_reached_criterias
 my brass cleaver effects are missing a CcoUnitAbility
 CcoSpecialAbilityPhaseStatEffectRecord
 
-
-
-
 The seed of rebirth passive is: wh_main_item_passive_seed_of_rebirth
 
-wh_dlc03_weapon_passive_the_brass_cleaverstat_melee_attack
+wh_dlc03_weapon_passive_the_brass_cleaver    stat_melee_attack
 
 The Ability Icon for The Brass Cleaver is: ui/battle ui/ability_icons/wh_magic_item_passive_weapon.png
 
 modifiable_unit_stats_tables - use these in: special_ability_phase_stat_effects_tables
 
 
+wh2_dlc11_effect_ability_enable_regeneration_at_sea
 
-db/unit_abilities_tables
-
-
-wh2_main_unit_passive_martial_prowess|wh2_main_unit_passive_martial_mastery|wh2_dlc15_unit_passive_grim_discipline|
-
-
-wh2_dlc15_effect_ability_disable_hef_passives_1|wh2_dlc15_effect_ability_disable_hef_passives_2
-
-wh2_dlc15_effect_ability_disable_hef_passives_1	wh2_main_unit_passive_martial_mastery	wh2_dlc15_hef_martial_passives
-wh2_dlc15_effect_ability_disable_hef_passives_2	wh2_main_unit_passive_martial_prowess	wh2_dlc15_hef_martial_passives
-
-Get-ChildItem -Recurse | Select-String "wh2_main_unit_passive_martial_prowess" -List | Select Path
-
-
-!!!1a_glf_unit_expansion.pack
-!!!lyh_hero.pack
-!ak_seapatrol.pack
-!heup_pegasus.pack
-!str_legendary.pack
-
-@Ascopa_Monumental_Unit_Pa...
-@com_why_did_i_port_this.pack
-@xou_high_elves.pack
-
-ab_mixu_legendary_lords.pack
-adv_CutContentRorsWh3.pack
-alivia_whiteLion.pack
-alshua_ellyrion.pack
-Lyla.pack
-
-crys_characters.pack
-fuch_highelves_griffon.pack
-nom_kou_squires.pack
-
-jade_vamp_pol_IotM.pack OR less_buff_vfx.pack OR loupi_ten_kingdoms_IE.pack OR moe_elf_lord.pack OR ovn_grudgebringers.pack OR "Rayes Extended Rosters Com" OR rhox_fried.pack OR singe_units_wh_all.pack OR UlrikHD_Morathi_cult_of_pl OR white_lion_rider.pack OR zSouls_DEF_Overhaul.pack OR zz_Martial_Mastery_From_Si
-
-
-
-
-
-
-
-
-
-
+use this for someone
+Crown_of_Command_and_Brass_Cleaver_New_Hero_Auras
+wh_dlc03_anc_weapon_the_brass_cleaver
+wh_main_anc_enchanted_item_crown_of_command
+brass_cleaver.png|crown_of_command.png
+2344313967
 
 
 stat_armour
@@ -204,6 +171,8 @@ wh_main_effect^(?=.*recruit).*
 ^(?!.*very).*high4
 ****************
 
+^character_skill_level_to_effects_junctions_tables|^unit_set_to_unit_junc|^land_units_tables|^effect_bonus_value_ids_unit_sets_tables|^effects_tables
+
 ^wh2_dlc15(?!.*_cha_)(?!.*_boss)(?!.*_summoned).*
 
 ^(?:.*recruit)(?:.*effect).*
@@ -248,3 +217,83 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/LyciaPintella/Warhammer_III_Script_Projects_And_Code_Library.git
 git push -u origin main
+
+
+UI Unit Groups:
+
+*Lords:
+lord_axe_dual
+lord_cavalry
+lord_cavalry_flying
+lord_cavalry_wolf
+lord_chariot
+lord_chs_kholek
+lord_dragon
+lord_griffon
+lord_halberd
+lord_infantry_axe
+lord_infantry_axe_great
+lord_infantry_hammer_great
+lord_infantry_lord_of_change
+lord_infantry_sword
+lord_infantry_sword_great
+lord_magic_chariot
+lord_shock_cavalry
+lord_wizard_beasts
+lord_wizard_big_waaagh
+lord_wizard_death
+lord_wizard_deep
+lord_wizard_fire
+lord_wizard_hashut
+lord_wizard_heavens
+lord_wizard_life
+lord_wizard_light
+lord_wizard_lil_waaagh
+lord_wizard_metal
+lord_wizard_mixed
+lord_wizard_nehekhara
+lord_wizard_runelord
+lord_wizard_shadows
+lord_wizard_vampires
+lord_wizard_vampires_shadows
+lord_wizard_wild
+wh2_dlc09_lord_infantry_spear
+wh2_dlc09_lord_tmb_warsphinx
+wh2_dlc10_lord_alith_anar_mirror
+wh2_dlc12_wizard_lord_kroak
+wh2_dlc14_lord_snikch
+wh2_dlc14_lord_spear_whip
+wh2_main_lord_cavalry_hybrid
+wh2_main_lord_infantry_hybrid
+wh2_main_lord_monstrous_infantry
+wh2_main_lord_wizard_dark
+wh2_main_lord_wizard_high
+wh2_main_lord_wizard_plague
+wh2_main_lord_wizard_ruin
+wh3_lord_wizard_great_maw
+wh3_lord_wizard_ice
+wh3_lord_wizard_nurgle
+wh3_lord_wizard_slaanesh
+wh3_lord_wizard_tempest
+wh3_lord_wizard_tzeentch
+wh3_lord_wizard_yang
+wh3_lord_wizard_yin
+wh3_main_cth_balloon_lord
+wh3_main_kho_bloodthirster_lord
+wh3_main_ksl_patriarch_lord
+wh3_main_tze_lord_of_change
+wh_dlc05_wef_glade_lord
+
+*Heroes
+chs_exalted_hero
+chs_exalted_hero_cavalry
+chs_exalted_hero_chariot
+chs_exalted_hero_manticore
+hero_infantry_axe
+hero_infantry_sword
+wh2_dlc14_def_hero_champion
+wh2_dlc17_lzd_hero_oracle
+wh2_main_hef_hero_champion
+wh2_main_hef_hero_loremaster
+wh2_main_lzd_hero_champion
+wh2_main_lzd_hero_spy
