@@ -1,0 +1,5 @@
+The magic item drop chances for arcane items are still bugged. The responsible script (wh3_campaign_magic_items.lua) does initially test if either the general or any heroes in the army are casters/can equip arcane items. When the items are supposed to be randomly rolled however the chosen item is required to be able to be equipped by the general, any heroes in the army are not tested. This means an army lead by a non-caster lord can't drop arcane items, even if there are multiple hero-level casters present. This is especially bad for races with no caster lords like the empire
+
+The High Elf Noble passive agent action "Increase Trade" (ie increase resource production) is using the "wh2_main_effect_region_tradable_resource_production" effect, which is tied to building sets in turn. the connected building sets however do not include the elven industry chain, which produces elven trinkets. Some other effects targeting resource productions might have the same problem
+
+The HE noble skill "Increase trade" is supposed to increase the passive effect, but it doesn't do anything currently.
