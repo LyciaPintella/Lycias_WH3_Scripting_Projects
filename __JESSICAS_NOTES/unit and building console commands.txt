@@ -92,7 +92,7 @@ bb wh_dlc06_grn_walls_1_wurrzag
 bb wh_main_special_savage_orc_camp_2
 bb wh_main_grn_industry_1
 
-High Elves
+*High Elves
 
 pooled resource
 res dd_hef_upgrades_splendour 25
