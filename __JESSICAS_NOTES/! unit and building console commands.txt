@@ -234,6 +234,29 @@ au wh2_dlc15_hef_mon_moon_dragon_imrik
 au wh2_dlc15_hef_mon_star_dragon_imrik
 au wh2_dlc15_hef_mon_sun_dragon_imrik
 
+*From Mods
+au singe_hef_swordsmen
+
+au loupi_dragon_prince_foot
+au loupi_tiranoc_ror
+au loupi_sea_ranger
+au loupi_mistwalkers
+au loupi_sisters_avelorn_ror
+au loupi_chracian_pikes_ror
+au loupi_chracian_pikes
+au loupi_shadow_warrior_1
+au loupi_silverin_ror
+au loupi_swordmaster_ror
+au loupi_ulthane
+au loupi_dragon_gate_guard
+au loupi_ellyrian_lancers
+au loupi_shore_riders
+au loupi_ellyrian_lancers_ror
+au loupi_avelorn_cav
+au loupi_knights_of_anlec_ror
+au loupi_saphery_pegasus
+au loupi_knights_of_anlec
+
 
 *Alarielle special building
 bb wh2_dlc10_special_world_root_entrance_3
