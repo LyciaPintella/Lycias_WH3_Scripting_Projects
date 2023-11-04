@@ -1,4 +1,4 @@
-local cmn = oz92_uitweaks_common
+local cmn = oz92_common()
 local mod_prefix = "lnh_tweak: "
 
 local function _get_checkbox()
@@ -103,7 +103,7 @@ local function _get_active_cqi()
           local lord_cqi = hero_ctx:Call("CommandingCharacterContext.CQI")
           return char_cqi, lord_cqi -- char is embedded hero
      end
-     return char_cqi, char_cqi      -- char is either a lord or lone hero
+     return char_cqi, char_cqi    -- char is either a lord or lone hero
 end
 
 local function _scroll_to_char(uic_id)
@@ -224,17 +224,11 @@ local function hide_or_show_embedded_heroes()
      local set_visible = not string.starts_with(checkbox_state, "selected")
      for i = 0, chars:ChildCount() - 1 do
           local char = UIComponent(chars:Find(i))
-          local rank = find_uicomponent(char, "rank")
-          local forces_icon = find_uicomponent(char, "forces_icon")
-          local is_transported = cmn:is_char_transported(char)
-          if char then --Jess Bookmark.
-               cmn:outd("Lycia: Just Good UI found a character. Are they transported?: " ..
-                    tostring(is_transported) .. ".")
+          if char then
                if cmn:is_char_transported(char) then
                     char:SetVisible(set_visible)
-               elseif ((not rank) or (not rank:Visible())) and forces_icon:Visible() then
-                    cmn:outd("Lycia: Just Good UI found a character with no rank and an army banner in the side panel!")
-                    char:SetVisible(false)
+               elseif cmn:is_patrol_army(char) then -- hides armies spawned by Hertz Province Patrols mod
+                    char:SetVisible(set_visible)
                end
           end
      end
