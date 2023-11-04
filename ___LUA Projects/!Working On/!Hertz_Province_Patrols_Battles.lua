@@ -29,15 +29,19 @@ local function hertz_patrol_death(winning_force, patrol_se, region)
      if target_is_patrol_force then
           if existing_patrol ~= false then
                -- Region patrol died in has another patrol in it. Triggering patrol died in the wrong region grabbing winning_force region.
-               province_regions = hertz_get_province_owned_regions(winning_force:region():province_name(),
+               province_regions = hertz_get_province_owned_regions(winning_force:region():province_name(),              
                     patrol_faction:name(), false);
                existing_patrol = get_province_patrol(winning_force:region():province_name(), patrol_faction)
-               -- BOOKMARK
+            -- BOOKMARK
+               out("Hertz Province Patrol - Winning faction: " .. winning_force:faction():name() ..
+               " Region owning faction is " .. winning_force:region():owning_faction():name() .. "")
                if existing_patrol == false and winning_force:faction():name() ~= winning_force:region():owning_faction():name() then
                     suitible_province_found = true;
                     target_region = winning_force:region();
                end;
-               -- BOOKMARK
+            -- BOOKMARK
+               out("Hertz Province Patrol - Winning faction: " .. winning_force:faction():name() ..
+               " Region owning faction is " .. winning_force:region():owning_faction():name() .. "")
           elseif winning_force:faction():name() ~= region:owning_faction():name() then
                -- Patrol died in region without another patrol in it. Grabbing province regions
                province_regions = hertz_get_province_owned_regions(region:province_name(), patrol_faction:name(), false);
