@@ -103,7 +103,7 @@ local function _get_active_cqi()
           local lord_cqi = hero_ctx:Call("CommandingCharacterContext.CQI")
           return char_cqi, lord_cqi -- char is embedded hero
      end
-     return char_cqi, char_cqi    -- char is either a lord or lone hero
+     return char_cqi, char_cqi      -- char is either a lord or lone hero
 end
 
 local function _scroll_to_char(uic_id)
@@ -228,7 +228,7 @@ local function hide_or_show_embedded_heroes()
                if cmn:is_char_transported(char) then
                     char:SetVisible(set_visible)
                elseif cmn:is_patrol_army(char) then -- hides armies spawned by Hertz Province Patrols mod
-                    char:SetVisible(set_visible)
+                    char:SetVisible(false)
                end
           end
      end
