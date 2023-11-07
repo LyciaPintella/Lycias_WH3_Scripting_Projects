@@ -78,12 +78,7 @@ function M:set_components_visible(uic, names, visible)
      end
 end
 
--- accepts CcoCampaignCharacter
-function M:get_general_military_ctx(ctx)
-     if ctx then
-          return ctx:Call("MilitaryForceContext")
-     end
-end
+-- accepts CcoCampaignCharacter self.owner.character_cqi
 
 -- accepts CcoCampaignCharacter
 function M:get_embedded_military_ctx(ctx)
@@ -101,7 +96,11 @@ end
 function M:is_char_transported(uic)
      return self:get_embedded_military_ctx(self:get_cco_char(uic))
 end
-
+function M:get_general_military_ctx(ctx)
+     if ctx then
+          return ctx:Call("MilitaryForceContext")
+     end
+end
 function M:is_patrol_army(uic)
      local ctx = self:get_general_military_ctx(self:get_cco_char(uic))
      if ctx then

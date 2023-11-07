@@ -1,0 +1,6 @@
+[ui] <496.6s>   Settlement selected [settlement:wh3_main_combi_region_lothern] in region [wh3_main_combi_region_lothern]
+[ui] <496.6s>
+[ui] <496.6s>   uicomponent button_cycle_right
+[ui] <496.6s>   	path from root:	root > settlement_panel > main_settlement_panel_header > header > button_cycle_right
+[ui] <496.6s>   	position on screen: [1260, 897], size: [49, 45], state: [hover], visible: [true], priority: [0], interactive: [true]
+[ui] <496.6s>   
