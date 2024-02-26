@@ -15,7 +15,7 @@
         "editor.suggest.localityBonus": true,
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "on",
-        "editor.wordBasedSuggestions": false,
+        "editor.wordBasedSuggestions": "off",
         "editor.parameterHints.enabled": true,
         "workbench.tree.indent": 20,
         "window.title": "${rootPath} : ${activeFolderMedium}\\${activeEditorShort} ${dirty}",

@@ -94,7 +94,7 @@ bb wh_main_grn_industry_1
 
 *High Elves
 
-pooled resource
+*pooled resource
 res dd_hef_upgrades_splendour 25
 
 Eltharion resource

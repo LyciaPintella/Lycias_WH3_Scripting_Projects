@@ -3,4 +3,4 @@ C:\Program Files\LinkShellExtension
 https://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html#junctions
 
 
-Get-ChildItem -Recurse | Select-String "bretonniatwo_rename_saved_game" -List | Select Path
+Get-ChildItem -Recurse | Select-String "land_units_onscreen_name_wh2_main_hef_inf_archers_1" -List | Select Path
