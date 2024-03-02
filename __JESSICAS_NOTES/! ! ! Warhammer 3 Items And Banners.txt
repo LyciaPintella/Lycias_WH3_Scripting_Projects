@@ -71,10 +71,10 @@ item wh_main_anc_arcane_item_forbidden_rod
 *wh2_dlc10_anc_weapon_the_widowmaker_3
 
 *****
-item wh_main_anc_weapon_sword_of_bloodshed
-item wh2_main_anc_weapon_blade_of_leaping_gold
-item wh2_main_anc_weapon_executioners_axe
-item wh_main_anc_weapon_obsidian_blade
+*item wh_main_anc_weapon_sword_of_bloodshed
+*item wh2_main_anc_weapon_blade_of_leaping_gold
+*item wh2_main_anc_weapon_executioners_axe
+*item wh_main_anc_weapon_obsidian_blade
 
 item wh2_main_anc_enchanted_item_moranions_wayshard *Vanguard deployment spearmen and archers
 

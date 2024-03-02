@@ -1,6 +1,10 @@
-local modSettings = {
-     enable_Bret_Barracks_Replacement = true,          -- Replace starting Bretonnian barracks with stables.
+local lockedSettings = {
+     enable_Bret_Barracks_Replacement = true, -- Replace starting Bretonnian barracks with stables.
 }
+
+local modSettings = {}
+
+if not get_mct then return end
 
 local regions = { "wh3_main_combi_region_couronne", "wh3_main_combi_region_miragliano",
      "wh3_main_combi_region_bordeleaux", "wh3_main_combi_region_lyonesse", "wh3_main_combi_region_copher",
@@ -57,7 +61,7 @@ local function loop_through_list()
 end
 
 local function initialize_bretonnian_barracks_replacement()
-     if modSettings.enable_Bret_Barracks_Replacement then
+     if lockedSettings.enable_Bret_Barracks_Replacement then
           local turn_number = cm:model():turn_number()
           cm:callback(function()
                if (turn_number == 1) then
@@ -94,43 +98,54 @@ local function get_finalized_mct_setting(mctMod, table, settingName)
      if setting then
           table[settingName] = setting:get_finalized_setting()
           if lockedSettings[settingName] then
-               -- setting:set_locked(true, common.get_localised_string("ace_btc_mct_setting_locked"))
                setting:set_locked(true,
                     "This setting may not be changed once the campaign has started. Changes must be made at the Main Menu before starting a campaign.")
           end
      end
 end
 
+
 local function get_mct_settings(context)
      -- Loads all of the MCT settings of this mod.
+
      local mctMod = context:mct():get_mod_by_key("ai_construction_priorities_reworked")
+
      if not mctMod then return end
-     for settingName, _ in sorted_pairs(modSettings) do
-          if type(modSettings[settingName]) == "table" then
-               for nestedSettingName, _ in sorted_pairs(modSettings[settingName]) do
-                    get_finalized_mct_setting(mctMod, modSettings[settingName], nestedSettingName)
+
+    for settingName, _ in sorted_pairs(modSettings) do
+        if type(modSettings[settingName]) == "table" then
+            for nestedSettingName, _ in sorted_pairs(modSettings[settingName]) do
+                get_finalized_mct_setting(mctMod, modSettings[settingName], nestedSettingName)
+            end
+        else
+            get_finalized_mct_setting(mctMod, modSettings, settingName)
+        end
+    end
+
+     for settingName, _ in sorted_pairs(lockedSettings) do
+          if type(lockedSettings[settingName]) == "table" then
+               for nestedSettingName, _ in sorted_pairs(lockedSettings[settingName]) do
+                    get_finalized_mct_setting(mctMod, lockedSettings[settingName], nestedSettingName)
                end
           else
-               get_finalized_mct_setting(mctMod, modSettings, settingName)
+               get_finalized_mct_setting(mctMod, lockedSettings, settingName)
           end
      end
 end
 
 
-local function initialize_mct()
-    local mod = get_mct():get_mod_by_key("ai_construction_priorities_reworked")
-    --modSettings.enable_Bret_Barracks_Replacement = mod:get_option_by_key("enable_Bret_Barracks_Replacement")
 
-    out("modSettings.enable_Bret_Barracks_Replacement " ..
-        tostring(modSettings.enable_Bret_Barracks_Replacement) .. "")
-end
+-- -------------------------------------------------------------------------- --
+--                                 Execution                                  --
+-- -------------------------------------------------------------------------- --
 
+
+-- If we have the MP MCT mod enabled we work with it.
 core:add_listener(
-     "ai_construction_priorities_reworked",
+     "ai_construction_priorities_reworked_mct",
      "MctInitialized",
      true,
      function(context)
-          out("AI Construction Priorities Reworked: MCT settings initialized " .. "")
           get_mct_settings(context)
           isUsingMCT = true
      end,
@@ -143,16 +158,11 @@ core:add_listener(
      "MctFinalized",
      true,
      function(context)
-          out("AI Construction Priorities Reworked: MCT settings finalized " .. "")
           get_mct_settings(context)
      end,
      true
 )
 
-cm:add_first_tick_callback(function()
-     initialize_mct()
-end);
-
-cm:add_first_tick_callback_new(function()
+cm:add_post_first_tick_callback(function()
      initialize_bretonnian_barracks_replacement()
 end)
