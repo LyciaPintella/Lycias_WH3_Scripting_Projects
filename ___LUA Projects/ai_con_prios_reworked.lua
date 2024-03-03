@@ -1,10 +1,10 @@
 local lockedSettings = {
-     enable_Bret_Barracks_Replacement = true, -- Replace starting Bretonnian barracks with stables.
+     enable_Bret_Barracks_Replacement = true -- Replace starting Bretonnian barracks with stables.
 }
 
-local modSettings = {}
-
-if not get_mct then return end
+local modSettings = {
+     enable_Dismantle_Growth = true
+}
 
 local regions = { "wh3_main_combi_region_couronne", "wh3_main_combi_region_miragliano",
      "wh3_main_combi_region_bordeleaux", "wh3_main_combi_region_lyonesse", "wh3_main_combi_region_copher",
@@ -61,6 +61,7 @@ local function loop_through_list()
 end
 
 local function initialize_bretonnian_barracks_replacement()
+     out("initialize_bretonnian_barracks_replacement called.")
      if lockedSettings.enable_Bret_Barracks_Replacement then
           local turn_number = cm:model():turn_number()
           cm:callback(function()
@@ -93,7 +94,8 @@ local function sorted_pairs(t)
 end
 
 local function get_finalized_mct_setting(mctMod, table, settingName)
-     -- Loads the finalized MCT setting of the given setting name, if found, then locks the setting to prevent changes to it if it should be locked.
+    -- Loads the finalized MCT setting of the given setting name, if found, then locks the setting to prevent changes to it if it should be locked.
+     out("get_finalized_mct_setting called")
      local setting = mctMod:get_option_by_key(settingName, true)
      if setting then
           table[settingName] = setting:get_finalized_setting()
@@ -107,27 +109,27 @@ end
 
 local function get_mct_settings(context)
      -- Loads all of the MCT settings of this mod.
+    local mctMod = context:mct():get_mod_by_key("ai_construction_priorities_reworked")
+     out("get_mct_settings called.")
+     for settingName, _ in sorted_pairs(modSettings) do
+          if type(modSettings[settingName]) == "table" then
+               for nestedSettingName, _ in sorted_pairs(modSettings[settingName]) do
+                    get_finalized_mct_setting(mctMod, modSettings[settingName], nestedSettingName)
+               end
+          else
+               get_finalized_mct_setting(mctMod, modSettings, settingName)
+          end
+     end
 
-     local mctMod = context:mct():get_mod_by_key("ai_construction_priorities_reworked")
-
-     if not mctMod then return end
-
-    for settingName, _ in sorted_pairs(modSettings) do
-        if type(modSettings[settingName]) == "table" then
-            for nestedSettingName, _ in sorted_pairs(modSettings[settingName]) do
-                get_finalized_mct_setting(mctMod, modSettings[settingName], nestedSettingName)
-            end
-        else
-            get_finalized_mct_setting(mctMod, modSettings, settingName)
-        end
-    end
 
      for settingName, _ in sorted_pairs(lockedSettings) do
           if type(lockedSettings[settingName]) == "table" then
-               for nestedSettingName, _ in sorted_pairs(lockedSettings[settingName]) do
-                    get_finalized_mct_setting(mctMod, lockedSettings[settingName], nestedSettingName)
+            for nestedSettingName, _ in sorted_pairs(lockedSettings[settingName]) do
+                    out("nested settings")
+                get_finalized_mct_setting(mctMod, lockedSettings[settingName], nestedSettingName)
                end
           else
+               out("Non nested setting")
                get_finalized_mct_setting(mctMod, lockedSettings, settingName)
           end
      end
@@ -163,6 +165,7 @@ core:add_listener(
      true
 )
 
-cm:add_post_first_tick_callback(function()
+cm:add_first_tick_callback_new(function()
+     out("First tick callback_new function is next.")
      initialize_bretonnian_barracks_replacement()
 end)
