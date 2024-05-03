@@ -8,8 +8,10 @@ local modSettings = {
 
 local regions = { "wh3_main_combi_region_couronne", "wh3_main_combi_region_miragliano",
      "wh3_main_combi_region_bordeleaux", "wh3_main_combi_region_lyonesse", "wh3_main_combi_region_copher",
-     "wh3_main_combi_region_zandri", "wh3_main_combi_region_castle_carcassonne" }
+     "wh3_main_combi_region_zandri", "wh3_main_combi_region_castle_carcassonne", "wh3_main_combi_region_castle_artois" }
+
 local function out(t) ModLog("AI Construction Priorities Reworked " .. tostring(t) .. ".") end
+
 local function add_building(slot)
      cm:callback(function()
           cm:region_slot_instantly_upgrade_building(slot, "wh_main_brt_stables_1")
@@ -94,7 +96,7 @@ local function sorted_pairs(t)
 end
 
 local function get_finalized_mct_setting(mctMod, table, settingName)
-    -- Loads the finalized MCT setting of the given setting name, if found, then locks the setting to prevent changes to it if it should be locked.
+     -- Loads the finalized MCT setting of the given setting name, if found, then locks the setting to prevent changes to it if it should be locked.
      out("get_finalized_mct_setting called")
      local setting = mctMod:get_option_by_key(settingName, true)
      if setting then
@@ -109,7 +111,7 @@ end
 
 local function get_mct_settings(context)
      -- Loads all of the MCT settings of this mod.
-    local mctMod = context:mct():get_mod_by_key("ai_construction_priorities_reworked")
+     local mctMod = context:mct():get_mod_by_key("ai_construction_priorities_reworked")
      out("get_mct_settings called.")
      for settingName, _ in sorted_pairs(modSettings) do
           if type(modSettings[settingName]) == "table" then
@@ -124,9 +126,9 @@ local function get_mct_settings(context)
 
      for settingName, _ in sorted_pairs(lockedSettings) do
           if type(lockedSettings[settingName]) == "table" then
-            for nestedSettingName, _ in sorted_pairs(lockedSettings[settingName]) do
+               for nestedSettingName, _ in sorted_pairs(lockedSettings[settingName]) do
                     out("nested settings")
-                get_finalized_mct_setting(mctMod, lockedSettings[settingName], nestedSettingName)
+                    get_finalized_mct_setting(mctMod, lockedSettings[settingName], nestedSettingName)
                end
           else
                out("Non nested setting")
@@ -134,13 +136,6 @@ local function get_mct_settings(context)
           end
      end
 end
-
-
-
--- -------------------------------------------------------------------------- --
---                                 Execution                                  --
--- -------------------------------------------------------------------------- --
-
 
 -- If we have the MP MCT mod enabled we work with it.
 core:add_listener(
@@ -153,7 +148,6 @@ core:add_listener(
      end,
      true
 )
-
 
 core:add_listener(
      "ai_construction_priorities_reworked_mct_setting_finalized",
