@@ -1,538 +1,301 @@
-local gotrek_turns_available = -1 -- Turns that Gotrek & Felix are available for the player after appearing
-local gotrek_turns_available_ai = 20 -- Turns that Gotrek & Felix are available for the AI after appearing
-local gotrek_cooldown_turns = 10 -- Turns before Gotrek & Felix appear for the AI after the player has them
-local gotrek_cooldown_turns_ai = 10 -- Turns before Gotrek & Felix appear for the player after the AI has them
-local gotrek_spawn_turn_ai = 10 -- The turn on which Gotrek & Felix will spawn if the feature is in AI only mode
-local gotrek_subculture_details = {
-     ["wh_main_sc_emp_empire"] = {"wh_main_emp_tavern_1"}, -- The buildings that can unlock the characters when playing as this subculture
-     ["wh_main_sc_brt_bretonnia"] = {"wh_main_brt_tavern_1"},
-     ["wh_main_sc_dwf_dwarfs"] = {"wh_main_dwf_tavern_1"},
-     ["wh_main_sc_teb_teb"] = {"wh_main_emp_tavern_1"},
-     ["wh3_main_sc_ksl_kislev"] = {"wh3_main_ksl_growth_recruit_cost_2"},
-     ["wh2_main_sc_hef_high_elves"] = {"wh2_main_hef_order_1"},
-     ["wh_dlc05_sc_wef_wood_elves"] = {"wh_dlc05_wef_public_order_2"},
-     ["wh2_main_sc_lzd_lizardmen"] = {"wh2_main_lzd_order_1"},
-     ["wh2_dlc09_sc_tmb_tomb_kings"] = {"wh2_dlc09_tmb_public_order_2"},
-     ["wh3_main_sc_cth_cathay"] = {"wh3_main_cth_growth_yin_2"}
+-- -------------------------------------------------------------------------- --
+--                   Confederation Includes Treasury (CIT)                    --
+-- -------------------------------------------------------------------------- --
+--
+-- When confederating a faction you gain their current treasury as well.
+
+-- TODO Implement new feature that increases the globalLimit for each army that was confederated.
+-- We'll likely have to just keep a running total of the number of armies each faction has at the start of each turn.
+
+
+-- -------------------------------------------------------------------------- --
+--                      CIT System Declarations                               --
+-- -------------------------------------------------------------------------- --
+
+
+-- Initialize the settings with default values.
+-- If MCT is used then some of these values will be overwritten by MCT.
+local modSettings = {
+     enableLogging       = false,              -- Allow a log file to be written.
+     logErrorsOnly       = false,              -- If logging is enabled, should we only log error messages?
+     logName             = "ace_confederate_treasury.txt",
+     includeAI           = true,               -- Whether or not the AI should also get the bonus background income when confederating.
+     includeTreasury     = true,               -- Whether or not confederation should also grant the confederated faction's treasury to the confederating faction.
+     includeAncillaries  = true,               -- Whether or not confederation should also grant all the ancillaries of the confederated faction.
+     uniquenessLimit     = 50,                 -- Items at or above this uniqness score will display an event notification to the player when received.
+     rdllLimit           = 10000,              -- The maximum amount of treasury granted to the confederating faction if the RDLL interaction mode is set to Limited.
+     rdllInteractionMode = "rdllModeLimit",    -- The interaction mode that determines how this mod interacts with the Recruit Defeated Legendary Lords (RDLL) mod.
+     globalLimit         = 30000,              -- The maximum amount of treasury granted to the confederating faction, regardless of RDLL mod.
 }
 
-local gotrek_return_events = {"emp", "brt", "dwf", "hef", "teb", "misc"}
-local gotrek_state = {building = 1, marker = 2, spawned = 3, spawned_ai = 4, cooldown = 5, cooldown_ai = 6}
-local gotrek_details = {
-     player_origin = false,
-     owner = false,
-     ai_only = false,
-     state = gotrek_state.building,
-     marker_pending = false,
-     level = 1,
-     cooldown = 0,
-     spawn_turn = 0,
-     gotrek_cqi = 0,
-     felix_cqi = 0,
-     spawn_cqi = 0,
-     start_event = 0,
-     current_event = 0
+-- This will be the number of seconds to wait before a the treasury is transferred.
+local treasuryTransferDelay = 1
+
+-- The following MCT settings may have a value of 0 or 1, with 0 indicating a setting is always locked at campaign start,
+-- and 1 indicating a setting is only locked in multiplayer.
+local lockedSettings = {
+     includeAI = 1,
 }
 
-function add_gotrek_felix_listeners()
-     out("#### Adding Gotrek & Felix Listeners ####")
 
-     if cm:is_new_game() then
-          if cm:get_local_faction(true) and cm:is_dlc_flag_enabled_by_anyone("TW_WH2_GOTREK_FELIX") then
-               gotrek_details.ai_only = false
-               gotrek_details.state = gotrek_state.building
-               gotrek_details.cooldown = 0
+-- -------------------------------------------------------------------------- --
+--                            Function Definitions                            --
+-- -------------------------------------------------------------------------- --
+
+
+local function sorted_pairs(t)
+     -- Provided by GPT-4. Sorting a dictionary is key to preventing desyncs in multiplayer.
+     -- Extract and sort the keys
+     local keys = {}
+     for k in pairs(t) do
+          table.insert(keys, k)
+     end
+     table.sort(keys)
+
+     -- Iterator function
+     local i = 0
+     return function()
+          i = i + 1
+          local key = keys[i]
+          if key then
+               return key, t[key]
+          end
+     end
+end
+
+
+local function ace_log(text, append)
+     -- Logging function that may only be called after/on first tick.
+
+     -- Set the optional parameter default value.
+     if append == nil then append = true end
+
+     -- Ensure we're allowed to write to the log, and that text is of type string.
+     if not modSettings.enableLogging or type(text) ~= "string" then return end
+
+     -- Ensure we're only logging errors, if that's what the settings call for.
+     if modSettings.enableLogging and modSettings.logErrorsOnly and not text:find("ERROR:") then return end
+
+     -- Choose the write mode.
+     local mode = append and "a" or "w"
+
+     -- Attempt to open the file.
+     local logFile, err = io.open(modSettings.logName, mode)
+     if not logFile then
+          return
+     end
+
+     -- Write to the file and close it.
+     if text == "" then
+          logFile:write("\n")
+     else
+          logFile:write("Turn " .. cm:turn_number() .. ": " .. text .. "\n")
+     end
+     logFile:close()
+end
+
+
+local function init()
+     -- We clear the log file each new game, or at least track when the script starts.
+     if cm:is_new_game() then ace_log("Script start.", false) else ace_log("Script start.") end
+
+
+     core:add_listener(
+          "ace_cit_grant_treasury",
+          "FactionJoinsConfederation",
+          function(context)
+               local isPlayer = context:confederation():is_human()
+               return isPlayer or (not isPlayer and modSettings.includeAI)
+          end,
+          function(context)
+               local confederator     = context:confederation()
+               local confederatorName = confederator:name()
+               local confederated     = context:faction()
+               local confederatedName = confederated:name()
+
+
+               --- TREASURY ---
+               -- We grant the confederating faction the confederated faction's treasury, if enabled in the mod settings.
+               if modSettings.includeTreasury then
+                    local treasury = confederated:treasury()
+
+
+                    -- We need to wait a bit for the RDLL mod to save a named value, if the mod is being used, before we check for it.
+                    -- So we start a callback to delay the treasury transfer until after the saved value would be saved, if at all.
+                    cm:callback(
+                         function()
+                              local confederatorName = confederatorName
+                              local confederatedName = confederatedName
+                              local gainAmount       = treasury
+                              local logText          = ""
+
+
+                              -- We respect the gain limits set by the player.
+                              if modSettings.globalLimit > 0 and gainAmount > modSettings.globalLimit then
+                                   gainAmount = modSettings.globalLimit
+                                   logText = " (Globally Limited)"
+                              end
+
+
+                              -- After the delay, we see if this confederation was through the RDLL mod.
+                              -- We do this by checking for a specific saved value RDLL generates when confederating.
+                              if cm:get_saved_value("rd_choice_0_" .. confederatedName) == false then
+                                   -- Then we modify the amount of treasury gained based on the RDLL mode.
+                                   if modSettings.rdllInteractionMode ~= "rdllModeDisable" then
+                                        -- If the RDLL mode is set to Limited we clamp the amout of treasury gained, if necessary.
+                                        if modSettings.rdllInteractionMode == "rdllModeLimit" then
+                                             logText = logText .. " (RDLL Mode Limited)"
+
+                                             if gainAmount > modSettings.rdllLimit then
+                                                  gainAmount = modSettings.rdllLimit
+                                             end
+                                        end
+                                   else
+                                        logText = logText .. " (RDLL Mode Disabled)"
+                                        gainAmount = 0
+                                   end
+                              end
+
+
+                              -- We grant the (potentially adjusted) treasury.
+                              cm:treasury_mod(confederatorName, gainAmount)
+                              ace_log(confederatorName ..
+                              " confederated " ..
+                              confederatedName .. ". Gaining their treasury of: " .. gainAmount .. logText)
+                         end,
+                         treasuryTransferDelay
+                    )
+               end
+
+
+               --- ANCILLARIES ---
+               -- We "transfer" all the ancillaries of the condeferated faction, if enabled in the mod settings.
+               if modSettings.includeAncillaries then
+                    local ancillaryCount         = common.get_context_value("CcoCampaignFaction",
+                         confederated:command_queue_index(), "AncillaryList.Size")
+                    local ancillaryKey           = nil
+                    local isTransferrable        = nil
+                    local uniquenessScore        = 0
+                    local isUniqueEnough         = false
+                    local transferredAncillaries = {
+                         -- Example:
+                         -- ancillaryKey = {
+                         --     count           = 0,
+                         --     isUniqueEnough  = false
+                         -- }
+                    }
+
+
+                    for i = 0, ancillaryCount - 1 do
+                         isTransferrable = common.get_context_value("CcoCampaignFaction",
+                              confederated:command_queue_index(),
+                              "AncillaryList.At(" .. i .. ").AncillaryRecordContext.Transferrable")
+                         uniquenessScore = common.get_context_value("CcoCampaignFaction",
+                              confederated:command_queue_index(),
+                              "AncillaryList.At(" .. i .. ").AncillaryRecordContext.UniquenessScore")
+                         isUniqueEnough  = uniquenessScore >= modSettings.uniquenessLimit
+
+
+                         -- We count the number of transferrable ancillaries,
+                         -- and record their keys and uniqueness score.
+                         if isTransferrable then
+                              ancillaryKey = common.get_context_value("CcoCampaignFaction",
+                                   confederated:command_queue_index(),
+                                   "AncillaryList.At(" .. i .. ").AncillaryRecordContext.Key")
+
+                              if not transferredAncillaries[ancillaryKey] then
+                                   transferredAncillaries[ancillaryKey] = {
+                                        count          = 1,
+                                        isUniqueEnough = isUniqueEnough
+                                   }
+                              else
+                                   transferredAncillaries[ancillaryKey].count = transferredAncillaries[ancillaryKey]
+                                   .count + 1
+                              end
+                         end
+                    end
+
+
+                    -- Finally we remove all the ancillaries from the original faction,
+                    -- and grant the same number of each to the confederating faction.
+                    for key, data in sorted_pairs(transferredAncillaries) do
+                         cm:force_remove_ancillary_from_faction(confederated, key)
+
+                         for x = 1, data.count do
+                              cm:add_ancillary_to_faction(confederator, key, data.isUniqueEnough)
+                         end
+
+                         ace_log(confederatorName .. " gained " .. data.count .. " " .. key)
+                    end
+               end
+          end,
+          true
+     )
+end
+
+
+local function get_finalized_mct_setting(mctMod, table, settingName)
+     -- Loads the finalized MCT setting of the given setting name, if found, then locks the setting to prevent changes to it if it should be locked.
+     local setting = mctMod:get_option_by_key(settingName, true)
+     if setting then
+          table[settingName] = setting:get_finalized_setting()
+          if lockedSettings[settingName] then
+               if lockedSettings[settingName] == 1 then
+               elseif lockedSettings[settingName] <= 0 then
+                    setting:set_locked(true,
+                         "This setting may not be changed once the campaign has started. Changes must be made at the Main Menu before starting a campaign.")
+               end
+          end
+     end
+end
+
+
+local function get_mct_settings(context)
+     -- Loads all of the MCT settings of this mod.
+
+     local mctMod = context:mct():get_mod_by_key("ace_confederate_treasury")
+
+     if not mctMod then return end
+
+     for settingName, _ in sorted_pairs(modSettings) do
+          if type(modSettings[settingName]) == "table" then
+               for nestedSettingName, _ in sorted_pairs(modSettings[settingName]) do
+                    get_finalized_mct_setting(mctMod, modSettings[settingName], nestedSettingName)
+               end
           else
-               -- we are in an autorun, or single player game where they do not own the content, so switch to ai only mode
-               gotrek_details.owner = gotrek_find_available_ai_faction()
-               gotrek_details.ai_only = true
-               gotrek_details.state = gotrek_state.cooldown
-               gotrek_details.cooldown = gotrek_spawn_turn_ai
-          end
-
-          gotrek_details.level = 1
-          gotrek_details.spawn_turn = 0
-          gotrek_details.gotrek_cqi = 0
-          gotrek_details.felix_cqi = 0
-     end
-
-     gotrek_setup()
-end
-
-function gotrek_find_available_ai_faction()
-     local faction_list = cm:model():world():faction_list()
-     local possible_factions = {}
-
-     for i = 0, faction_list:num_items() - 1 do
-          local faction = faction_list:item_at(i)
-
-          if not faction:is_human() and not faction:is_quest_battle_faction() and not faction:is_dead() then
-               local faction_key = faction:name()
-
-               if faction_key ~= "wh_main_emp_empire_separatists" and gotrek_subculture_details[faction:subculture()] then
-                    table.insert(possible_factions, faction_key)
-               end
-          end
-     end
-
-     return possible_factions[cm:random_number(#possible_factions)]
-end
-
-function gotrek_setup()
-     -- Building Completed
-     core:add_listener("gotrek_BuildingCompleted", "BuildingCompleted",
-                       function(context) return gotrek_details.state == gotrek_state.building and context:building():faction():is_human() end, function(context)
-          local building = context:building()
-          local faction = building:faction()
-
-          local buildings = gotrek_subculture_details[faction:subculture()]
-
-          if buildings then
-               for i = 1, #buildings do
-                    if buildings[i] == building:name() then
-                         local pos_x, pos_y = cm:find_valid_spawn_location_for_character_from_settlement(faction:name(), building:region():name(), false, true, 9)
-
-                         if pos_x > -1 then
-                              cm:add_interactable_campaign_marker("gotrek_marker", "gotrek_marker", pos_x, pos_y, 2)
-                              gotrek_details.state = gotrek_state.marker
-
-                              local function show_gotrek_and_felix_appear_event(event_faction, x, y)
-                                   cm:show_message_event_located(event_faction:name(),
-                                                                 "event_feed_strings_text_wh2_pro08_event_feed_string_scripted_event_gotrek_felix_title",
-                                                                 "event_feed_strings_text_wh2_pro08_event_feed_string_scripted_event_gotrek_felix_appear_primary_detail",
-                                                                 "event_feed_strings_text_wh2_pro08_event_feed_string_scripted_event_gotrek_felix_appear_secondary_detail",
-                                                                 x, y, false, 1308)
-                              end
-
-                              local team_mates = faction:team_mates()
-
-                              for j = 0, team_mates:num_items() - 1 do
-                                   local current_team_mate = team_mates:item_at(j)
-
-                                   if gotrek_subculture_details[current_team_mate:subculture()] then
-                                        show_gotrek_and_felix_appear_event(current_team_mate, pos_x, pos_y)
-                                   end
-                              end
-
-                              show_gotrek_and_felix_appear_event(faction, pos_x, pos_y)
-
-                              core:trigger_event("ScriptEventGotrekAndFelixPubBuilt")
-                         end
-                         break
-                    end
-               end
-          end
-     end, true)
-     -- Gotrek and Felix Listeners
-     -- Marker Entered
-     core:add_listener("gotrek_AreaEntered", "AreaEntered", function(context) return context:area_key() == "gotrek_marker" end, function(context)
-          local character = context:family_member():character()
-
-          if not character:is_null_interface() then
-               local faction = character:faction()
-
-               if faction:is_human() and gotrek_subculture_details[faction:subculture()] then
-                    gotrek_details.spawn_cqi = character:command_queue_index()
-                    gotrek_details.marker_pending = gotrek_details.marker_pending or false
-
-                    if not gotrek_details.marker_pending then
-                         gotrek_details.marker_pending = true
-                         cm:trigger_dilemma(faction:name(), "wh2_pro08_dilemma_gotrek_felix")
-                         --cm:trigger_dilemma("wh2_main_hef_yvresse", "wh3_dlc23_neu_ulrika_choice")
-                    end
-               end
-          end
-     end, true)
-
-     -- Dilemma Choice
-     core:add_listener("gotrek_DilemmaChoiceMadeEvent", "DilemmaChoiceMadeEvent", function(context) return context:dilemma() == "wh2_pro08_dilemma_gotrek_felix" end,
-                       function(context)
-          gotrek_details.marker_pending = false
-
-          if context:choice() == 0 then
-               local faction = context:faction()
-               local faction_name = faction:name()
-               gotrek_details.player_origin = faction_name
-               gotrek_details.owner = faction_name
-               local character = cm:get_character_by_cqi(gotrek_details.spawn_cqi)
-
-               if character then
-                    local pos_x, pos_y = cm:find_valid_spawn_location_for_character_from_character(faction_name, cm:char_lookup_str(character), true, 2)
-
-                    if pos_x > 1 then
-                         local function spawn_gotrek_and_felix_post_dilemma(intervention)
-                              -- Spawn Gotrek
-                              cm:spawn_unique_agent_at_character(faction:command_queue_index(), "wh2_pro08_neu_gotrek_hero", gotrek_details.spawn_cqi, true)
-                              cm:spawn_unique_agent_at_character(faction:command_queue_index(), "wh2_pro08_neu_felix_hero", gotrek_details.spawn_cqi, true)
-
-                              gotrek_details.state = gotrek_state.spawned
-                              gotrek_details.level = gotrek_details.level + 1
-                              gotrek_details.cooldown = gotrek_turns_available
-
-                              local incident_payload = cm:create_payload()
-                              local effect_bundle = cm:create_new_custom_effect_bundle("wh2_pro08_gotrek_felix_cooldown")
-                              effect_bundle:set_duration(gotrek_turns_available)
-                              incident_payload:effect_bundle_to_faction(effect_bundle)
-                              cm:trigger_custom_incident(faction_name, "wh2_pro08_incident_neu_unlocking", true, incident_payload)
-
-                              trigger_gotrek_and_felix_cutscene("gotrek_felix_arrival", gotrek_details.spawn_cqi, {pos_x, pos_y}, false, intervention)
-                         end
-
-                         if cm:is_multiplayer() then
-                              spawn_gotrek_and_felix_post_dilemma()
-                         else
-                              cm:trigger_transient_intervention("g_f_spawn_on_dilemma", function(intervention)
-                                   spawn_gotrek_and_felix_post_dilemma(intervention)
-                              end, BOOL_INTERVENTIONS_DEBUG, function(intervention)
-                                   -- allow transient scripted event to be shown while intervention is active
-                                   intervention:whitelist_events("faction_event_incidentevent_feed_target_incident_faction")
-                                   intervention:whitelist_events("faction_event_character_incidentevent_feed_target_incident_faction")
-                                   intervention:whitelist_events("faction_event_region_incidentevent_feed_target_incident_faction")
-                              end)
-                         end
-
-                         cm:remove_interactable_campaign_marker("gotrek_marker")
-                    end
-               end
-          end
-     end, true)
-
-     -- Set Character CQI's
-     core:add_listener("gotrek_or_felix_created", "CharacterCreated", function(context)
-          local character = context:character()
-          return character:character_subtype("wh2_pro08_neu_gotrek_hero") or character:character_subtype("wh2_pro08_neu_felix_hero")
-     end, function(context)
-          local character = context:character()
-          local char_lookup_str = cm:char_lookup_str(character)
-          local char_cqi = character:command_queue_index()
-
-          cm:callback(function()
-               cm:replenish_action_points(char_lookup_str)
-               cm:set_character_immortality(char_lookup_str, true)
-          end, 0.5)
-
-          if character:character_subtype("wh2_pro08_neu_gotrek_hero") then
-               -- Gotrek has spawned
-               gotrek_details.gotrek_cqi = char_cqi
-
-               cm:callback(function() cm:apply_effect_bundle_to_characters_force("wh2_pro08_gotrek_xp_sharing", char_cqi, 30, true) end, 0.5)
-
-               if gotrek_details.level == 2 then
-                    cm:force_add_trait(char_lookup_str, "wh2_pro08_trait_gotrek", true, 1)
-               elseif gotrek_details.level == 3 then
-                    cm:force_add_trait(char_lookup_str, "wh2_pro08_trait_gotrek", true, 2)
-               elseif gotrek_details.level >= 4 then
-                    cm:force_add_trait(char_lookup_str, "wh2_pro08_trait_gotrek", true, 3)
-               end
-          elseif character:character_subtype("wh2_pro08_neu_felix_hero") then
-               -- Felix has spawned
-               gotrek_details.felix_cqi = char_cqi
-
-               cm:callback(function()
-                    local felix_char = cm:get_character_by_cqi(gotrek_details.felix_cqi)
-
-                    -- check that Felix is still a valid char at this point
-                    if not felix_char or felix_char:is_null_interface() or felix_char:is_wounded() then return end
-
-                    local gotrek_char = cm:get_character_by_cqi(gotrek_details.gotrek_cqi)
-
-                    if gotrek_char and gotrek_char:has_military_force() then cm:embed_agent_in_force(felix_char, gotrek_char:military_force()) end
-               end, 0.5)
-
-               if gotrek_details.level == 2 then
-                    cm:force_add_trait(char_lookup_str, "wh2_pro08_trait_felix", true, 1)
-               elseif gotrek_details.level == 3 then
-                    cm:force_add_trait(char_lookup_str, "wh2_pro08_trait_felix", true, 2)
-               elseif gotrek_details.level >= 4 then
-                    cm:force_add_trait(char_lookup_str, "wh2_pro08_trait_felix", true, 3)
-               end
-          end
-     end, true)
-
-     -- Turns Available
-     core:add_listener("gotrek_FactionBeginTurnPhaseNormal", "FactionBeginTurnPhaseNormal", function(context)
-          return gotrek_details.owner and context:faction():name() == gotrek_details.owner and
-                      (gotrek_details.state == gotrek_state.spawned or gotrek_details.state == gotrek_state.spawned_ai) and gotrek_details.cooldown > 0
-     end, function(context)
-          gotrek_details.cooldown = gotrek_details.cooldown - 1
-
-          if gotrek_details.cooldown == 0 then
-               local gotrek_char = cm:get_character_by_cqi(gotrek_details.gotrek_cqi)
-               local gotrek_owner_is_human = cm:get_faction(gotrek_details.owner):is_human()
-
-               if not gotrek_owner_is_human or not gotrek_char then
-                    kill_gotrek_and_felix_characters()
-                    return
-               end
-
-               local function destroy_gotrek_and_felix_post_cooldown(intervention)
-                    -- verify that Gotrek exists on the map before proceeding
-                    if not gotrek_char then
-                         kill_gotrek_and_felix_characters()
-                         intervention:complete()
-                         return
-                    end
-
-                    cm:show_message_event(gotrek_details.owner, "event_feed_strings_text_wh2_pro08_event_feed_string_scripted_event_gotrek_felix_title",
-                                          "event_feed_strings_text_wh2_pro08_event_feed_string_scripted_event_gotrek_felix_leave_primary_detail",
-                                          "event_feed_strings_text_wh2_pro08_event_feed_string_scripted_event_gotrek_felix_leave_secondary_detail", false, 1309)
-
-                    if gotrek_owner_is_human then core:trigger_event("ScriptEventGotrekAndFelixDepart") end
-
-                    trigger_gotrek_and_felix_cutscene("gotrek_felix_departure", gotrek_details.gotrek_cqi,
-                                                      {gotrek_char:logical_position_x(), gotrek_char:logical_position_y()}, true, intervention)
-               end
-
-               if cm:is_multiplayer() then
-                    destroy_gotrek_and_felix_post_cooldown()
-               else
-                    -- wrap G + F leaving in an intervention, as it shows a cutscene
-                    cm:trigger_transient_intervention("g_f_leave_faction_turn_start",
-                                                      function(intervention) destroy_gotrek_and_felix_post_cooldown(intervention) end, BOOL_INTERVENTIONS_DEBUG,
-                                                      function(intervention)
-                         -- allow transient scripted event to be shown while intervention is active
-                         intervention:whitelist_events("scripted_transient_eventevent_feed_target_faction")
-                    end)
-               end
-          end
-     end, true)
-
-     -- Owner faction died
-     core:add_listener("gotrek_FactionBeginTurnPhaseNormalDead", "WorldStartRound", function()
-          if gotrek_details.owner then
-               local owner = cm:get_faction(gotrek_details.owner)
-
-               return gotrek_details.state == gotrek_state.spawned_ai and owner and (owner:is_null_interface() or owner:is_dead())
-          end
-     end, function() kill_gotrek_and_felix_characters() end, true)
-
-     -- Respawn after cooldown
-     core:add_listener("gotrek_FactionBeginTurnPhaseNormal", "WorldStartRound", function()
-          return gotrek_details.cooldown > 0 and (gotrek_details.state == gotrek_state.cooldown or gotrek_details.state == gotrek_state.cooldown_ai)
-     end, function()
-          gotrek_details.cooldown = gotrek_details.cooldown - 1
-
-          if gotrek_details.cooldown == 10 then
-               if gotrek_details.state == gotrek_state.cooldown then
-                    local faction = false
-
-                    if gotrek_details.owner then faction = cm:get_faction(gotrek_details.owner) end
-
-                    if not faction or not faction:is_human() or faction:is_dead() then
-                         faction = cm:get_faction(gotrek_find_available_ai_faction())
-                    end
-
-                    gotrek_details.owner = faction:name()
-
-                    -- Spawn them for the AI
-                    if faction:has_home_region() then
-                         local region_key = faction:home_region():name()
-                         local pos_x, pos_y = cm:find_valid_spawn_location_for_character_from_settlement(gotrek_details.owner, region_key, false, true, 3)
-
-                         if pos_x > 1 then
-                              -- Spawn Gotrek
-                              cm:spawn_unique_agent_at_character(faction:command_queue_index(), "wh2_pro08_neu_gotrek_hero", gotrek_details.spawn_cqi, true)
-                              cm:spawn_unique_agent_at_character(faction:command_queue_index(), "wh2_pro08_neu_felix_hero", gotrek_details.spawn_cqi, true)
-
-                              if gotrek_details.current_event == gotrek_details.start_event then
-                                   gotrek_details.start_event = cm:random_number(#gotrek_return_events)
-                                   gotrek_details.current_event = gotrek_details.start_event - 1
-                              end
-
-                              gotrek_details.current_event = gotrek_details.current_event + 1
-                         end
-
-                         gotrek_details.state = gotrek_state.spawned_ai
-                         gotrek_details.cooldown = gotrek_turns_available_ai
-                    end
-               elseif gotrek_details.state == gotrek_state.cooldown_ai then
-                    -- Spawn them for the player
-                    local faction = cm:get_faction(gotrek_details.player_origin)
-                    local region_list = faction:region_list()
-                    local possible_regions = {}
-
-                    -- build a list of regions that have adjacent regions at war
-                    for i = 0, region_list:num_items() - 1 do
-                         local current_region = region_list:item_at(i)
-                         local adjacent_regions = current_region:adjacent_region_list()
-
-                         for j = 1, adjacent_regions:num_items() - 1 do
-                              local adj_region = adjacent_regions:item_at(j)
-
-                              if not adj_region:is_abandoned() and adj_region:owning_faction():at_war_with(faction) then
-                                   table.insert(possible_regions, current_region)
-                                   break
-                              end
-                         end
-                    end
-
-                    -- if no regions were found, use the capital
-                    if #possible_regions == 0 and faction:has_home_region() then table.insert(possible_regions, faction:home_region()) end
-
-                    if #possible_regions > 0 then
-                         -- Spawn the marker
-                         local region = possible_regions[cm:random_number(#possible_regions)]
-                         local pos_x, pos_y = cm:find_valid_spawn_location_for_character_from_settlement(faction:name(), region:name(), false, true, 9)
-
-                         if pos_x > -1 then
-                              cm:add_interactable_campaign_marker("gotrek_marker", "gotrek_marker", pos_x, pos_y, 2)
-                              gotrek_details.state = gotrek_state.marker
-
-                              local function show_gotrek_and_felix_reappear_event(event_faction, x, y)
-                                   local event_num = gotrek_details.current_event or 1
-                                   local event_apx = gotrek_return_events[event_num] or "misc"
-
-                                   cm:show_message_event_located(event_faction:name(),
-                                                                 "event_feed_strings_text_wh2_pro08_event_feed_string_scripted_event_gotrek_felix_title",
-                                                                 "event_feed_strings_text_wh2_pro08_event_feed_string_scripted_event_gotrek_felix_reappear_" ..
-                                                                      event_apx .. "_primary_detail",
-                                                                 "event_feed_strings_text_wh2_pro08_event_feed_string_scripted_event_gotrek_felix_reappear_" ..
-                                                                      event_apx .. "_secondary_detail", x, y, false, 1308)
-                              end
-
-                              local team_mates = faction:team_mates()
-
-                              for j = 0, team_mates:num_items() - 1 do
-                                   local current_team_mate = team_mates:item_at(j)
-
-                                   if gotrek_subculture_details[current_team_mate:subculture()] then
-                                        show_gotrek_and_felix_reappear_event(current_team_mate, pos_x, pos_y)
-                                   end
-                              end
-
-                              show_gotrek_and_felix_reappear_event(faction, pos_x, pos_y)
-                         end
-                    else
-                         gotrek_details.state = gotrek_state.cooldown
-                         gotrek_details.cooldown = gotrek_cooldown_turns
-                    end
-               end
-          end
-     end, true)
-end
-
-function kill_gotrek_and_felix_characters()
-     if not (gotrek_details.state == gotrek_state.spawned or gotrek_details.state == gotrek_state.spawned_ai) then return end
-
-     local character_killed = false
-
-     cm:disable_event_feed_events(true, "wh_event_category_character", "", "")
-
-     local gotrek_char = cm:get_character_by_cqi(gotrek_details.gotrek_cqi)
-
-     if gotrek_char and not gotrek_char:is_null_interface() and gotrek_char:character_subtype("wh2_pro08_neu_gotrek_hero") then
-          -- Kill Gotrek
-          cm:set_character_immortality(cm:char_lookup_str(gotrek_details.gotrek_cqi), false)
-          cm:kill_character(gotrek_details.gotrek_cqi, false)
-
-          character_killed = true
-     end
-
-     local felix_char = cm:get_character_by_cqi(gotrek_details.felix_cqi)
-
-     if felix_char and not felix_char:is_null_interface() and felix_char:character_subtype("wh2_pro08_neu_felix_hero") then
-          -- Kill Felix
-          cm:set_character_immortality(cm:char_lookup_str(gotrek_details.felix_cqi), false)
-          cm:kill_character(gotrek_details.felix_cqi, false)
-
-          character_killed = true
-     end
-
-     cm:callback(function() cm:disable_event_feed_events(false, "wh_event_category_character", "", "") end, 0.2)
-
-     if character_killed then
-          if gotrek_details.state == gotrek_state.spawned or gotrek_details.ai_only then
-               -- A.I's turn to have them!
-               gotrek_details.owner = gotrek_find_available_ai_faction()
-               gotrek_details.state = gotrek_state.cooldown
-               gotrek_details.cooldown = gotrek_cooldown_turns
-          elseif gotrek_details.state == gotrek_state.spawned_ai then
-               -- The Player's turn to have them!
-               gotrek_details.owner = gotrek_details.player_origin
-               gotrek_details.state = gotrek_state.cooldown_ai
-               gotrek_details.cooldown = gotrek_cooldown_turns_ai
+               get_finalized_mct_setting(mctMod, modSettings, settingName)
           end
      end
 end
 
-function trigger_gotrek_and_felix_cutscene(key, cqi, loc, kill, intervention)
-     local gotrek = cm:get_character_by_cqi(cqi)
 
-     if gotrek and not gotrek:faction():is_human() then
-          if kill then kill_gotrek_and_felix_characters() end
 
-          if intervention then intervention:complete() end
+-- -------------------------------------------------------------------------- --
+--                                 Execution                                  --
+-- -------------------------------------------------------------------------- --
 
-          return
-     end
 
-     -- multiplayer, don't play the cutscene
-     if not intervention then
-          if kill then kill_gotrek_and_felix_characters() end
+-- If we have the MP MCT mod enabled we work with it.
+core:add_listener(
+     "ace_cit_mct",
+     "MctInitialized",
+     true,
+     function(context)
+          get_mct_settings(context)
+     end,
+     true
+)
 
-          return
-     end
 
-     local length = 20
-     cm:trigger_campaign_vo(key, cm:char_lookup_str(cqi), 3)
+core:add_listener(
+     "ace_cit_mct_setting_finalized",
+     "MctFinalized",
+     true,
+     function(context)
+          get_mct_settings(context)
+     end,
+     true
+)
 
-     local cam_skip_x, cam_skip_y, cam_skip_d, cam_skip_b, cam_skip_h = cm:get_camera_position()
-     cm:take_shroud_snapshot()
 
-     local gotrek_and_felix_cutscene = campaign_cutscene:new("gotrek_and_felix_cutscene", length, function()
-          cm:modify_advice(true)
-          cm:set_camera_position(cam_skip_x, cam_skip_y, cam_skip_d, cam_skip_b, cam_skip_h)
-          cm:restore_shroud_from_snapshot()
-          cm:fade_scene(1, 1)
-
-          -- complete supplied intervention
-          if intervention then cm:callback(function() intervention:complete() end, 1) end
-     end)
-
-     gotrek_and_felix_cutscene:set_skippable(true, function() gotrek_and_felix_cutscene_skipped(kill) end)
-     gotrek_and_felix_cutscene:set_skip_camera(cam_skip_x, cam_skip_y, cam_skip_d, cam_skip_b, cam_skip_h)
-     gotrek_and_felix_cutscene:set_disable_settlement_labels(false)
-     gotrek_and_felix_cutscene:set_dismiss_advice_on_end(true)
-
-     gotrek_and_felix_cutscene:action(function()
-          cm:fade_scene(0, 2)
-          cm:clear_infotext()
-     end, 0)
-
-     gotrek_and_felix_cutscene:action(function()
-          cm:show_shroud(false)
-
-          local x_pos, y_pos = cm:log_to_dis(loc[1], loc[2])
-          cm:set_camera_position(x_pos, y_pos, cam_skip_d, cam_skip_b, cam_skip_h)
-          cm:fade_scene(1, 2)
-     end, 2)
-
-     gotrek_and_felix_cutscene:action(function() cm:fade_scene(0, 1) end, length - 1)
-
-     gotrek_and_felix_cutscene:action(function()
-          cm:set_camera_position(cam_skip_x, cam_skip_y, cam_skip_d, cam_skip_b, cam_skip_h)
-          cm:fade_scene(1, 1)
-          if kill then kill_gotrek_and_felix_characters() end
-     end, length)
-
-     gotrek_and_felix_cutscene:start()
-
-     core:add_listener("skip_camera_after_vo_ended", "ScriptTriggeredVOFinished", true, function() gotrek_and_felix_cutscene:skip(false) end, true)
-end
-
-function gotrek_and_felix_cutscene_skipped(kill)
-     cm:override_ui("disable_advice_audio", true)
-
-     common.clear_advice_session_history()
-
-     cm:callback(function() cm:override_ui("disable_advice_audio", false) end, 0.5)
-     cm:restore_shroud_from_snapshot()
-     if kill then kill_gotrek_and_felix_characters() end
-end
-
---------------------------------------------------------------
------------------------ SAVING / LOADING ---------------------
---------------------------------------------------------------
-cm:add_saving_game_callback(function(context) cm:save_named_value("gotrek_details", gotrek_details, context) end)
-
-cm:add_loading_game_callback(function(context) gotrek_details = cm:load_named_value("gotrek_details", {}, context) end)
+cm:add_post_first_tick_callback(init)
