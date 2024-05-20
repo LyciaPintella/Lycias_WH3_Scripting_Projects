@@ -92,7 +92,7 @@ core:add_listener(
           if not (string.find(building_name, "resource") or slot_type == "primary" or slot_type == "port") then
                cm:region_slot_instantly_dismantle_building(slot_list:item_at(i))
                if new_owner_faction:is_human() then
-                    add_building(slot_list:item_at(i))
+                    --add_building(slot_list:item_at(i))
                end
           end
                                         end

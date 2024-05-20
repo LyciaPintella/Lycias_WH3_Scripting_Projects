@@ -1,44 +1,46 @@
 local function dismantle_growth(region_key)
-     out("Calling function remove_growth " .. "")
+     out("AI CPR: dismantle_growth for region " .. region_key)
      local region = cm:get_region(region_key)
      local slot_list = region:settlement():slot_list()
-          for i = 0, slot_list:num_items() - 1 do
-               if not slot_list:is_empty() then
-                    if slot_list:item_at(i):has_building() then
-                         local building_name = slot_list:item_at(i):building():name()
-                         if not string.find(building_name, "wh_main_brt_farm") and (string.find(building_name, "growth") or string.find(building_name, "farm")) then
-                              cm:region_slot_instantly_dismantle_building(slot_list:item_at(i))
-                         end
-                    end
+     for i = 0, slot_list:num_items() - 1 do
+          local slot = slot_list:item_at(i)
+          if slot:has_building() then
+               local building_name = slot:building():name()
+               -- matching growth buildings (not sure how to do it easily, so keep playing with the string matching)
+               if not string.find(building_name, "wh_main_brt_farm") and (string.find(building_name, "growth") or string.find(building_name, "farm")) then
+                    out("AI CPR: dismantle_growth removing building " .. building_name)
+                    cm:region_slot_instantly_dismantle_building(slot)
                end
           end
+     end
 end
+
 local function Growth_Listener()
      core:add_listener(
-          "DismantleGrowthListener",
+          "AI_CPR_DismantleGrowthListener",
           "BuildingCompleted",
           function(context)
-               return (
-                    context:building():slot():type() == "primary" and context:building():building_level() == 5
-               )
+               return context:building():slot():type() == "primary" and context:building():building_level() == 5
           end,
           function(context)
-               out("AI Construction Priorities Reworked: Dismantle Growth Listener found the following data about a tier 5 settlement: " ..
-                    context:building():region_key() ..
-                    context:building():region_key():province_regions() ..
-                    context:building():region_key():owning_faction():owned_regions())
-
                local region_owner = context:building():region():owning_faction()
+               local province = context:building():region():province()
+               out("AI CPR: DismantleGrowthListener T5 settlement reached in " ..
+               province:key() .. " for " .. region_owner:name())
+               -- if the region in which the T5 settlement is owned by the AI
                if not region_owner:is_human() then
-                    for _, current_province in model_pairs(region_owner:provinces()) do
-                         for _, current_region in model_pairs(current_province:owned_regions()) do
+                    -- loop through the regions of that province
+                    for _, current_region in model_pairs(province:regions()) do
+                         -- if the region is owned by the same owner as the primary
+                         if current_region:owning_faction():command_queue_index() == region_owner:command_queue_index() then
+                              -- remove growth buildings
                               dismantle_growth(current_region)
                          end
-
                     end
                end
           end,
           true
      )
 end
-cm:add_post_first_tick_callback(function() Growth_Listener() end)
+
+cm:add_first_tick_callback(Growth_Listener)
