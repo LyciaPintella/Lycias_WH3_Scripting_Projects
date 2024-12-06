@@ -1,0 +1,29 @@
+[ui] <496.6s>   Settlement selected [settlement:wh3_main_combi_region_lothern] in region [wh3_main_combi_region_lothern]
+[ui] <496.6s>
+[ui] <496.6s>   uicomponent button_cycle_right
+[ui] <496.6s>   	path from root:	root > settlement_panel > main_settlement_panel_header > header > button_cycle_right
+[ui] <496.6s>   	position on screen: [1260, 897], size: [49, 45], state: [hover], visible: [true], priority: [0], interactive: [true]
+[ui] <496.6s>
+
+
+[ui] <614.1s>   uicomponent square_building_button
+[ui] <614.1s>   	path from root:	root > settlement_panel > settlement_list > CcoCampaignSettlementwh3_main_combi_region_elessaeli > settlement_view > default_view > default_slots_list > CcoCampaignBuildingSlotregion_slot_1156 > slot_entry > square_building_button
+[ui] <614.1s>   	position on screen: [870, 1003], size: [474, 345], state: [built_panel_hover], visible: [true], priority: [70], interactive: [true]
+[ui] <614.1s>
+
+
+SCRIPT ERROR, timestamp <578.0s>
+ERROR: set_saved_value() called but supplied value [brt_title_holder_1] is not a boolean, number, string or a table
+
+
+stack traceback:
+	[string "script\_lib\lib_campaign_manager.lua"]:1795: in function 'set_saved_value'
+	[string "script\campaign\wh3_main_combi\mod\!!bretonniaone_combi.lua"]:578: in function 'bretonnia_rename_saved_game'
+	[string "script\campaign\wh3_main_combi\mod\!!bretonniaone_combi.lua"]:576: in function '?'
+
+
+
+[ui] <588.5s>   uicomponent square_building_button
+[ui] <588.5s>   	path from root:	root > settlement_panel > settlement_list > CcoCampaignSettlementwh3_main_combi_region_elessaeli > settlement_view > default_view > default_slots_list > CcoCampaignBuildingSlotregion_slot_1154 > slot_entry > square_building_button
+[ui] <588.5s>   	position on screen: [722, 1003], size: [474, 410], state: [built_panel_hover], visible: [true], priority: [70], interactive: [true]
+[ui] <588.5s>

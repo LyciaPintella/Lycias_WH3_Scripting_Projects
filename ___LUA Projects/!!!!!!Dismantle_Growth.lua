@@ -26,14 +26,17 @@ local function Growth_Listener()
                local region_owner = context:building():region():owning_faction()
                local province = context:building():region():province()
                out("AI CPR: DismantleGrowthListener T5 settlement reached in " ..
-               province:key() .. " for " .. region_owner:name())
+                    province:key() .. " for " .. region_owner:name())
                -- if the region in which the T5 settlement is owned by the AI
                if not region_owner:is_human() then
+                    out("AI CPR: dismantle_growth AI t5 settlement detected.")
                     -- loop through the regions of that province
                     for _, current_region in model_pairs(province:regions()) do
                          -- if the region is owned by the same owner as the primary
+                         out("AI CPR: Region owned by the same owner as the primary region that hit t5.")
                          if current_region:owning_faction():command_queue_index() == region_owner:command_queue_index() then
                               -- remove growth buildings
+                              out("AI CPR: Calling dismantle_growth.")
                               dismantle_growth(current_region)
                          end
                     end
