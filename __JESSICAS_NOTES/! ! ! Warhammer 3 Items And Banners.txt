@@ -66,6 +66,9 @@ item wh_main_anc_arcane_item_forbidden_rod
 *item wh3_main_anc_weapon_the_bane_spear
 *item wh3_main_anc_weapon_gilellions_soulnetter
 
+*item wh3_main_anc_follower_the_dark_princes_paramour
+*item wh3_main_anc_follower_personal_sycophant
+
 *wh2_dlc10_anc_weapon_the_widowmaker_1
 *wh2_dlc10_anc_weapon_the_widowmaker_2
 *wh2_dlc10_anc_weapon_the_widowmaker_3
@@ -88,6 +91,22 @@ item wh2_main_anc_talisman_diamond_guardian_phoenix *10% mapwide physical resist
 
 item wh2_main_anc_talisman_emerald_collar    *regen with ward save
 
+*KISLEV
+item wh3_main_anc_talisman_blizzard_broach - reduces enemy movement range
+* item wh3_main_anc_talisman_blood_of_the_motherland - regen md
+item wh_main_anc_talisman_seed_of_rebirth
+item wh_main_anc_talisman_talisman_of_preservation *16% Ward save
+item wh3_main_anc_arcane_item_snowflake_pendant
+item wh3_main_anc_weapon_the_rime_blade
+*regen aura item wh3_main_anc_weapon_dazhs_brazier
+
+item wh3_main_anc_follower_ksl_atamans_administrator
+item wh_main_anc_follower_all_men_kislevite_kossar
+
+*AGENT
+agent dignitary wh3_main_ksl_patriarch
+
+**end kislev
 
 item wh2_main_anc_enchanted_item_khaines_ring_of_fury  *2x fiery spell cast
 item wh2_main_anc_enchanted_item_gilded_horn_of_galon_konook *2x golden hounds cast
