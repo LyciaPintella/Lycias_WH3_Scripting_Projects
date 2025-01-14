@@ -354,7 +354,7 @@ Help Kislev:
 
 gr wh3_main_ksl_the_ice_court
 
-bb wh3_main_special_ksl_kislev_1_3
+bb wh3_main_special_ksl_kislev_1_3 **WONT SPAWN KATARIN IF BUILT WITH THIS COMMAND
 bb wh3_main_special_ksl_kislev_3_4
 
 bb wh3_main_ksl_city_gold_5

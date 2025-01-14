@@ -7,7 +7,7 @@ local function dismantle_growth(region_key)
           if slot:has_building() then
                local building_name = slot:building():name()
                -- matching growth buildings (not sure how to do it easily, so keep playing with the string matching)
-               if not string.find(building_name, "wh_main_brt_farm") and (string.find(building_name, "growth") or string.find(building_name, "farm")) then
+               if (string.find(building_name, "growth") or string.find(building_name, "farm")) and not string.find(building_name, "wh_main_brt_farm") then
                     out("AI CPR: dismantle_growth removing building " .. building_name)
                     cm:region_slot_instantly_dismantle_building(slot)
                end
@@ -26,17 +26,20 @@ local function Growth_Listener()
                local region_owner = context:building():region():owning_faction()
                local province = context:building():region():province()
                out("AI CPR: DismantleGrowthListener T5 settlement reached in " ..
-                    province:key() .. " for " .. region_owner:name())
+                    province:key() ..
+                    " for " .. region_owner:name() " region_owner:is_human() - " .. tostring(region_owner:is_human()))
                -- if the region in which the T5 settlement is owned by the AI
                if not region_owner:is_human() then
-                    out("AI CPR: dismantle_growth AI t5 settlement detected.")
                     -- loop through the regions of that province
+                    out("AI CPR: Region is owned by an AI faction.")
+                         -- if the region in which the T5 settlement is owned by the AI
                     for _, current_region in model_pairs(province:regions()) do
-                         -- if the region is owned by the same owner as the primary
-                         out("AI CPR: Region owned by the same owner as the primary region that hit t5.")
+                    -- if the region is owned by the same owner as the primary
+                         out(
+                         "AI CPR: current_region:owning_faction():command_queue_index() == region_owner:command_queue_index()" ..
+                              tostring(current_region:owning_faction():command_queue_index()) .. tostring(region_owner:command_queue_index()))
                          if current_region:owning_faction():command_queue_index() == region_owner:command_queue_index() then
                               -- remove growth buildings
-                              out("AI CPR: Calling dismantle_growth.")
                               dismantle_growth(current_region)
                          end
                     end

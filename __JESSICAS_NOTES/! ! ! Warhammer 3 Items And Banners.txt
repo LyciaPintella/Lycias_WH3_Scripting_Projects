@@ -98,7 +98,14 @@ item wh_main_anc_talisman_seed_of_rebirth
 item wh_main_anc_talisman_talisman_of_preservation *16% Ward save
 item wh3_main_anc_arcane_item_snowflake_pendant
 item wh3_main_anc_weapon_the_rime_blade
-*regen aura item wh3_main_anc_weapon_dazhs_brazier
+* item wh3_main_anc_weapon_dazhs_brazier regen aura
+
+* item wh3_main_anc_enchanted_item_balalaika_of_the_arari
+* item wh3_main_anc_armour_iron_ice_armour
+* item wh3_main_anc_talisman_blood_of_the_motherland
+
+* item wh3_main_anc_armour_wyrm_harness
+* item wh3_main_anc_weapon_wyrmspike
 
 item wh3_main_anc_follower_ksl_atamans_administrator
 item wh_main_anc_follower_all_men_kislevite_kossar
