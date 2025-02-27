@@ -56,6 +56,7 @@ bb wh_main_brt_legendary_enchantress_tower
 
 
 Kislev
+au wh3_dlc24_ksl_inf_kislevite_warriors
 au wh3_main_ksl_cav_gryphon_legion_0
 au wh3_main_ksl_cav_horse_archers_0
 au wh3_main_ksl_cav_horse_raiders_0
@@ -66,7 +67,7 @@ au wh3_main_ksl_inf_armoured_kossars_1
 au wh3_main_ksl_inf_ice_guard_0
 au wh3_main_ksl_inf_ice_guard_1
 au wh3_main_ksl_inf_kossars_0
-au wh3_main_ksl_inf_kossars_1 4
+au wh3_main_ksl_inf_kossars_1
 au wh3_main_ksl_inf_kossars_tutorial_0
 au wh3_main_ksl_inf_kossars_tutorial_1
 au wh3_main_ksl_inf_streltsi_0
@@ -82,9 +83,14 @@ au wh3_main_ksl_veh_heavy_war_sled_0
 au wh3_main_ksl_veh_light_war_sled_0
 au wh3_main_ksl_veh_little_grom_0
 
-*spear kossar ror au wh3_main_pro_ksl_inf_kossars_1_ 3
+*spear kossar ror
+au wh3_main_pro_ksl_inf_kossars_1_ 3
 au loupi_kis_gryphon 2
-*super cav au wh3_main_pro_ksl_cav_gryphon_legion_ror_0_ 2
+*super cav
+au wh3_main_pro_ksl_cav_gryphon_legion_ror_0_ 2
+
+*wolves of the goromandy streltsi
+au loupi_kis_streltsi 2
 
 Greenskins
 
