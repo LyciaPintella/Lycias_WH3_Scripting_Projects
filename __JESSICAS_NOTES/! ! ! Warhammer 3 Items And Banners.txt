@@ -96,20 +96,6 @@ item wh2_main_anc_talisman_emerald_collar    *regen with ward save
 RPFM Search Keys
 wh2_main_anc_enchanted_item|wh3_main_anc_enchanted_item|wh_main_anc_enchanted_item
 
-
-* item wh3_main_anc_talisman_blizzard_broach - reduces enemy movement range
-* item wh_main_anc_talisman_seed_of_rebirth
-* item wh_main_anc_talisman_talisman_of_preservation *16% Ward save
-* item wh3_main_anc_arcane_item_snowflake_pendant
-
-* 15 MA 15% Weapon Strength
-* item wh3_main_anc_weapon_the_rime_blade
-
-* regen aura
-* item wh3_main_anc_weapon_dazhs_brazier
-
-* item wh3_main_anc_enchanted_item_balalaika_of_the_arari
-
 *ITEM SET
 * item wh3_main_anc_armour_iron_ice_armour
 * item wh3_main_anc_weapon_frost_shard_glaive
@@ -120,18 +106,6 @@ wh2_main_anc_enchanted_item|wh3_main_anc_enchanted_item|wh_main_anc_enchanted_it
 * item wh_dlc03_anc_weapon_the_brass_cleaver OR item wh3_main_anc_weapon_dazhs_brazier
 * item wh3_main_anc_talisman_blood_of_the_motherland OR item wh_main_anc_talisman_the_white_cloak_of_ulric
 * item wh3_main_anc_enchanted_item_balalaika_of_the_arari OR item wh_main_anc_enchanted_item_crown_of_command
-
-* regen md
-* item wh3_main_anc_talisman_blood_of_the_motherland
-
-* ITEM SET
-* item wh3_main_anc_armour_wyrm_harness * 20% resist armor
-* item wh3_main_anc_weapon_wyrmspike 12 MD and 9 MA
-
-item wh_main_anc_weapon_sword_of_strife
-item wh_main_anc_weapon_fencers_blades
-item wh_main_anc_weapon_giant_blade
-item wh3_main_anc_weapon_the_rime_blade
 
 ***** ARMORS
 *Slow Aura
@@ -193,8 +167,30 @@ item wh_main_anc_arcane_item_scroll_of_shielding
 item wh_main_anc_arcane_item_tricksters_shard
 item wh_main_anc_arcane_item_wand_of_jet
 
+* item wh3_main_anc_talisman_blizzard_broach - reduces enemy movement range
+* item wh_main_anc_talisman_seed_of_rebirth
+* item wh_main_anc_talisman_talisman_of_preservation *16% Ward save
+* item wh3_main_anc_arcane_item_snowflake_pendant
 
+* 15 MA 15% Weapon Strength
+* item wh3_main_anc_weapon_the_rime_blade
 
+* regen aura
+* item wh3_main_anc_weapon_dazhs_brazier
+
+* item wh3_main_anc_enchanted_item_balalaika_of_the_arari
+
+* regen md
+* item wh3_main_anc_talisman_blood_of_the_motherland
+
+* ITEM SET
+* item wh3_main_anc_armour_wyrm_harness * 20% resist armor
+* item wh3_main_anc_weapon_wyrmspike 12 MD and 9 MA
+
+item wh_main_anc_weapon_sword_of_strife
+item wh_main_anc_weapon_fencers_blades
+item wh_main_anc_weapon_giant_blade
+item wh3_main_anc_weapon_the_rime_blade
 
 * MELEE DEFENCE AND WARD SAVE ITEM SET
 item wh3_main_anc_weapon_ursuns_claws
