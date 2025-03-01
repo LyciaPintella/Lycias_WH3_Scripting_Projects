@@ -46,6 +46,7 @@ item wh_main_anc_talisman_the_white_cloak_of_ulric
 **** ENCHANTED ITEMS
 item wh3_main_anc_enchanted_item_balalaika_of_the_arari
 item wh3_main_anc_enchanted_item_dreamwine
+* PERFECT VIGOUR AND REGEN PASSIVE
 item wh3_main_anc_enchanted_item_ever_full_kovsh
 item wh3_main_anc_enchanted_item_saint_annushkas_finger_bone
 item wh3_main_anc_enchanted_item_steppe_hunters_horn
@@ -90,6 +91,7 @@ item wh3_main_anc_follower_ksl_orthodoxy_cleric
 * 10% CAMPAIGN MOVEMENT RANGE
 item wh3_main_anc_follower_ksl_steppe_shepherd
 item wh3_main_anc_follower_ksl_veteran_warrior
+* +3 Public Order
 item wh3_main_anc_follower_ksl_vodka_distiller
 * +8 WINDS OF MAGIC
 item wh_main_anc_follower_all_hedge_wizard
@@ -142,7 +144,6 @@ item wh3_main_anc_follower_ksl_priest_of_ursun
 * -2 CORRUPTION
 item wh3_main_anc_follower_ksl_ritual_enforcer
 
-
 * TAX COMBO
 item wh_main_anc_follower_all_men_tollkeeper
 item wh3_main_anc_follower_ksl_tax_collector
@@ -181,7 +182,6 @@ item wh_main_anc_magic_standard_griffon_banner
 * IMBUES FLAMING ATTACKS
 item wh_main_anc_magic_standard_banner_of_eternal_flame
 
-
 * MAGIC RESIST
 item wh_main_anc_magic_standard_lichbone_pennant
 * CHARGE BONUS
@@ -192,9 +192,6 @@ item wh_main_anc_magic_standard_razor_standard
 
 * CAUSES FEAR AND TERROR
 item wh_main_anc_magic_standard_wailing_banner
-
-
-
 
 * item wh3_main_anc_talisman_blizzard_broach - reduces enemy movement range
 * item wh_main_anc_talisman_seed_of_rebirth
@@ -240,12 +237,6 @@ item wh_main_anc_follower_all_men_kislevite_kossar
 agent dignitary wh3_main_ksl_patriarch
 
 **end kislev
-
-
-
-
-
-
 
 Banners
 item wh_main_anc_magic_standard_banner_of_eternal_flame
