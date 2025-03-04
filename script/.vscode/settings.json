@@ -1,59 +1,53 @@
 {
-	"Lua.workspace.library": [
-		"D:/OneDrive/Documents/Warhammer III Projects/warhammer_3/tw_autogen/global/",
-		"D:/OneDrive/Documents/Warhammer III Projects/warhammer_3/tw_autogen/campaign/",
-		"D:/OneDrive/Documents/Warhammer III Projects/warhammer_3/tw_autogen/frontend/",
-		"D:/OneDrive/Documents/Warhammer III Projects/warhammer_3/tw_autogen/battle/"
-	],
-	"Lua.diagnostics.workspaceDelay": 500,
-	"Lua.diagnostics.workspaceRate": 20,
-	"Lua.runtime.version": "Lua 5.1",
-	"Lua.workspace.ignoreSubmodules": false,
-	"Lua.workspace.preloadFileSize": 1500,
-	"workbench.colorCustomizations": {
-		"activityBar.background": "#16276A",
-		"titleBar.activeBackground": "#1F3794",
-		"titleBar.activeForeground": "#FBFCFE"
-	},
-	"Lua.workspace.library": [
-		"D:/OneDrive/Documents/Warhammer III Projects/warhammer_3/mct/helpers",
-		"D:/OneDrive/Documents/Warhammer III Projects/warhammer_3/mct/includes",
-		"D:/OneDrive/Documents/Warhammer III Projects/warhammer_3/mct/modules/game_mod",
-		"D:/OneDrive/Documents/Warhammer III Projects/warhammer_3/mct/modules/game_mod/mod_object",
-		"D:/OneDrive/Documents/Warhammer III Projects/warhammer_3/mct/_lib/mod"
-	],
-	"Lua.codeLens.enable": true,
-	"[lua]": {
-		"editor.defaultFormatter": "yinfei.luahelper",
-		"editor.autoClosingBrackets": "always",
-		"editor.copyWithSyntaxHighlighting": true,
-	},
-	"luahelper.format.column_limit": 200,
-	"editor.defaultFormatter": "operali.lua-booster",
-	"Lua.completion.callSnippet": "Both",
-	"Lua.completion.displayContext": 5,
-	"Lua.hint.setType": true,
-	"diffEditor.wordWrap": "on",
-	"editor.wordWrap": "on",
-	"git.autofetch": true,
-	"search.searchEditor.reusePriorSearchConfiguration": true,
-	"npm.exclude": "",
-	"editor.formatOnSave": true,
-	"editor.formatOnPaste": true,
-	"editor.formatOnType": true,
-	"workbench.editor.labelFormat": "short",
-	"powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
-	"notebook.formatOnSave.enabled": true,
-	"bookmarks.experimental.enableNewStickyEngine": false,
-	"Lua.format.defaultConfig": {
-		"luahelper.format.column_limit": "200",
-		"lua.preferLuaCheckErrors": "true",
-		"lua.targetVersion": "5.1",
-		"lua.format.lineWidth": "175",
-		"lua.format.indentCount": "4",
-		"lua.format.singleQuote": "false",
-		"Lua.completion.autoRequire": "false",
-		"git.enableSmartCommit": "true",
-		"explorer.excludeGitIgnore": "true",
-	},
+     "Lua.workspace.library": [
+          "../warhammer_3/tw_autogen/global",
+          "../warhammer_3/tw_autogen/campaign/",
+          "../warhammer_3/tw_autogen/frontend/",
+          "../warhammer_3/tw_autogen/battle/",
+          "C:/Users/Jessica Murphy/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/argparse/module/library"
+     ],
+     "Lua.diagnostics.workspaceDelay": 500,
+     "Lua.diagnostics.workspaceRate": 20,
+     "Lua.runtime.version": "Lua 5.1",
+     "Lua.workspace.ignoreSubmodules": false,
+     "Lua.workspace.preloadFileSize": 1500,
+     "Lua.codeLens.enable": true,
+     "[lua]": {
+          "editor.autoClosingBrackets": "always",
+          "editor.copyWithSyntaxHighlighting": true,
+     },
+     "Lua.completion.callSnippet": "Both",
+     "Lua.completion.displayContext": 5,
+     "Lua.hint.setType": true,
+     "diffEditor.wordWrap": "on",
+     "editor.wordWrap": "on",
+     "git.autofetch": true,
+     "npm.exclude": "",
+     "editor.formatOnSave": true,
+     "editor.formatOnPaste": true,
+     "editor.formatOnType": true,
+     "Lua.format.defaultConfig": {
+          "luahelper.format.column_limit": "160"
+     },
+     "Lua.completion.autoRequire": false,
+     "git.enableSmartCommit": true,
+     "explorer.excludeGitIgnore": true,
+     "[jsonc]": {
+          "editor.defaultFormatter": "vscode.json-language-features"
+     },
+     "html.format.wrapLineLength": 160,
+     "Lua.diagnostics.disable": [
+          "lowercase-global",
+          "trailing-space",
+          "undefined-field",
+          "param-type-mismatch",
+          "redundant-parameter"
+     ],
+     "editor.wordWrapColumn": 160,
+     "files.exclude": {
+          "**/.git": false,
+          "**/.git*": true,
+          "**/README.md": false
+     },
+     "cSpell.enabled": false,
 }
