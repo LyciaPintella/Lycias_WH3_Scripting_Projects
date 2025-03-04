@@ -10,7 +10,7 @@ local function z_yuri_unlocked()
           cm:spawn_character_to_pool(target_faction, "names_name_2145104588", "", "", "", 18, true, "general",
                "wh3_main_pro_ksl_yuri_0", true, "")
           cm:set_saved_value("mod_yuri_spawn", true)
-    end;
+     end;
      -- Set Character CQI's
      core:add_listener(
           "gerik_created",
@@ -27,7 +27,7 @@ local function z_yuri_unlocked()
                cm:callback(
                     function()
                          cm:replenish_action_points(char_lookup_str)
-                         cm:set_character_immortality(char_lookup_str, true)
+                         --cm:set_character_immortality(char_lookup_str, true)
                     end,
                     0.5
                )

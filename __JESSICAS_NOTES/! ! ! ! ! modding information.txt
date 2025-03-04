@@ -1,26 +1,33 @@
+RR_Army_Trait.pack|ict_wh3_siege.pack|just_good_babysitter.pack|Murranji_land_encounters.pack|@red_hef_lords_public.pack|!obsidian_lustria_rises.pack|!!!3_legendary_guys.pack|loupi_ten_kingdoms_IE.pack|norsca_mod_unitpack.pack|!!!_chop_underways_compilation.pack|!!!COU_audio_reservoir.pack|!aa_derpy_hashut_legendary_lords.pack|aekold_anc_fix.pack|kho_wotanz_dlc26.pack
+
+
+
+
+
+
+Ilja of Murova is str_ilja in Legendary Characters.
+
+Alexander Joseph is glf_ksl_alexander_0 in the GLF Hero Expansion
+
+creatures_claws
+
+land_units_tables|unit_special_abilities_tables|battle_entities_tables
+
+wh_main_hero
+
+
+
 *qisaer / ChisarForest Walker can be found in: !!!lyh_hero.pack
-
-
-
 ** THIS ITEM IS NO LONGER LISTED ON THE STEAM WORKSHOP: UlrikHD_Morathi_cult_of_pleasure_3.1.pack
-
 *Mounts can be found in: db/mounts_tables
-
 this search will let you get character mounts earlier:
-
 character_skill_level_details_tables|character_skills_to_level_reached_criterias_tables
-
 my brass cleaver effects are missing a CcoUnitAbility
 CcoSpecialAbilityPhaseStatEffectRecord
-
 The seed of rebirth passive is: wh_main_item_passive_seed_of_rebirth
-
 wh_dlc03_weapon_passive_the_brass_cleaver    stat_melee_attack
-
 The Ability Icon for The Brass Cleaver is: ui/battle ui/ability_icons/wh_magic_item_passive_weapon.png
-
 modifiable_unit_stats_tables - use these in: special_ability_phase_stat_effects_tables
-
 
 wh2_dlc11_effect_ability_enable_regeneration_at_sea
 
