@@ -84,13 +84,18 @@ au wh3_main_ksl_veh_light_war_sled_0
 au wh3_main_ksl_veh_little_grom_0
 
 *spear kossar ror
-au wh3_main_pro_ksl_inf_kossars_1_ 3
+au wh3_main_pro_ksl_inf_kossars_1_ 6
 au loupi_kis_gryphon 2
 *super cav
 au wh3_main_pro_ksl_cav_gryphon_legion_ror_0_ 2
 
 *wolves of the goromandy streltsi
 au loupi_kis_streltsi 2
+
+* Hammer of the Patriarchs
+au wh3_main_pro_ksl_veh_little_grom_0_
+
+add xp 10000
 
 Greenskins
 
