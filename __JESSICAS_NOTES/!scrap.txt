@@ -1,2 +1,0 @@
-primary 5
-gr

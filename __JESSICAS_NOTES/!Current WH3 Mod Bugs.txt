@@ -1,5 +1,0 @@
-Pit of Shades:
-
-Ah youre right, its one of the skills i differentiated entirely with the debuff damage. The base damage and duration are the same but the anti-monster damage is doubled, so overcast will have significantly more effect against lords/monstrous without being that much more powerful against infantry (which it deletes anyway so no issue right?)
-
-lyra's war lion summonn shows a red x when trying to use it. Like it needs a special target.
