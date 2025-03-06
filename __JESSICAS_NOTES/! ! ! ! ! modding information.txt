@@ -1,19 +1,4 @@
-DISABLE Grimm Burloksson
-
-
-
-RR_Army_Trait.pack|ict_wh3_siege.pack|just_good_babysitter.pack|Murranji_land_encounters.pack|@red_hef_lords_public.pack|!obsidian_lustria_rises.pack|!!!3_legendary_guys.pack|loupi_ten_kingdoms_IE.pack|norsca_mod_unitpack.pack|!!!_chop_underways_compilation.pack|!!!COU_audio_reservoir.pack|!aa_derpy_hashut_legendary_lords.pack|aekold_anc_fix.pack|kho_wotanz_dlc26.pack
-
-
-
-
-
-
-
-
-
 Ilja of Murova is str_ilja in Legendary Characters.
-
 Alexander Joseph is glf_ksl_alexander_0 in the GLF Hero Expansion
 
 creatures_claws
@@ -103,21 +88,6 @@ effect scope for your heroes in local region
 character_to_character_regionwide
 
 *MULTIPLYING AREA RANGES ON SPELLS BY 1.35
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 martial mastery or prowess is setup under: db/land_units_to_unit_abilites_junctions_tables - it looks like this:
 
