@@ -56,6 +56,10 @@ bb wh_main_brt_legendary_enchantress_tower
 
 
 Kislev
+
+*res wh3_main_ksl_devotion 35 -- gives 35 devotion
+
+
 au wh3_dlc24_ksl_inf_kislevite_warriors
 au wh3_main_ksl_cav_gryphon_legion_0
 au wh3_main_ksl_cav_horse_archers_0

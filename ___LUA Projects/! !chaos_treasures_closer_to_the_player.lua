@@ -284,7 +284,7 @@ core:add_listener(
      function(context)
           local character = context:family_member():character();
           return not character:is_null_interface() and context:area_key():starts_with("wh3_main_freiya") and
-          cm:char_is_general_with_army(character);
+              cm:char_is_general_with_army(character);
      end,
      function(context)
           local character = context:family_member():character();
