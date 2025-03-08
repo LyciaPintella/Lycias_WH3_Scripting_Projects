@@ -26,15 +26,17 @@ local function JADSESSIONLOG()
           popLog:flush()
           popLog:close()
      else
-          script_error("WARNING: JADSESSIONLOG() could not open " .. Jadlog_Filename .. ". popLog is " .. tostring(popLog) ..
-                            ". Line 26. No mod log will be created past this point")
+          script_error("WARNING: JADSESSIONLOG() could not open " ..
+               Jadlog_Filename .. ". popLog is " .. tostring(popLog) ..
+               ". Line 26. No mod log will be created past this point")
           JadLogging_Enabled = false
      end
 end
 JADSESSIONLOG()
 
 local function JADLOG(text)
-     out("JADLOG(text): JadLogFile_Made is " .. tostring(JadLogFile_Made) .. " . JadLogging_Enabled is " .. tostring(JadLogging_Enabled) .. " ####")
+     out("JADLOG(text): JadLogFile_Made is " ..
+          tostring(JadLogFile_Made) .. " . JadLogging_Enabled is " .. tostring(JadLogging_Enabled) .. " ####")
 
      if not JadLogging_Enabled then return end
 
@@ -48,7 +50,8 @@ local function JADLOG(text)
           popLog:write("Dynamic Difficulty: " .. logText .. " [" .. logTimeStamp .. "] \n")
           popLog:flush()
      else
-          script_error("Dynamic Difficulty: WARNING: JADLOG() could not open " .. Jadlog_Filename .. ", no mod log will be created past this point")
+          script_error("Dynamic Difficulty: WARNING: JADLOG() could not open " ..
+               Jadlog_Filename .. ", no mod log will be created past this point")
           JadLogging_Enabled = false
      end
 end
@@ -60,9 +63,12 @@ local function read_mct_values(ignore_setting_lock)
      if mct_jdyndif then
           local mct_mymod = mct_jdyndif:get_mod_by_key("jadawin_dynamic_difficulty")
           if ignore_setting_lock or not (mct_mymod:get_option_by_key("settings_locked"):get_finalized_setting()) then
-               cm:set_saved_value("jdyndif_enable_replenishment", mct_mymod:get_option_by_key("enable_replenishment"):get_finalized_setting())
-               cm:set_saved_value("jdyndif_enable_recruitment", mct_mymod:get_option_by_key("enable_recruitment"):get_finalized_setting())
-               cm:set_saved_value("jdyndif_extra_difficulty", mct_mymod:get_option_by_key("extra_difficulty"):get_finalized_setting())
+               cm:set_saved_value("jdyndif_enable_replenishment",
+                    mct_mymod:get_option_by_key("enable_replenishment"):get_finalized_setting())
+               cm:set_saved_value("jdyndif_enable_recruitment",
+                    mct_mymod:get_option_by_key("enable_recruitment"):get_finalized_setting())
+               cm:set_saved_value("jdyndif_extra_difficulty",
+                    mct_mymod:get_option_by_key("extra_difficulty"):get_finalized_setting())
                cm:set_saved_value("jdyndif_mct_values_exist", true)
           end
      else
@@ -101,7 +107,8 @@ local function get_empire_score_player()
                     -- jlog("Horde found!")
                end
           end
-          local vassal_regions = cm:model():world():faction_by_key("wh2_dlc13_lzd_defenders_of_the_great_plan"):region_list()
+          local vassal_regions = cm:model():world():faction_by_key("wh2_dlc13_lzd_defenders_of_the_great_plan")
+              :region_list()
           empire_score = empire_score + (vassal_regions:num_items() * 5)
           -- jlog("Vassal has " .. (vassal_regions:num_items()) .. " regions.")
           empire_score = empire_score - 40
@@ -152,10 +159,10 @@ local function get_empire_score_player()
           for i = 0, owned_regions:num_items() - 1 do
                local region = owned_regions:item_at(i)
                if region:province_name() == "wh3_main_combi_province_albion" or region:province_name() == "wh3_main_combi_province_vanaheim_mountains" or
-                    region:province_name() == "wh3_main_combi_province_helspire_mountains" or region:province_name() == "wh3_main_combi_province_ice_tooth_mountains" or
-                    region:province_name() == "wh3_main_combi_province_mountains_of_naglfari" or region:province_name() ==
-                    "wh3_main_combi_province_trollheim_mountains" or region:province_name() == "wh3_main_combi_province_mountains_of_hel" or region:province_name() ==
-                    "wh3_main_combi_province_gianthome_mountains" or region:province_name() == "wh3_main_combi_province_goromadny_mountains" then
+                   region:province_name() == "wh3_main_combi_province_helspire_mountains" or region:province_name() == "wh3_main_combi_province_ice_tooth_mountains" or
+                   region:province_name() == "wh3_main_combi_province_mountains_of_naglfari" or region:province_name() ==
+                   "wh3_main_combi_province_trollheim_mountains" or region:province_name() == "wh3_main_combi_province_mountains_of_hel" or region:province_name() ==
+                   "wh3_main_combi_province_gianthome_mountains" or region:province_name() == "wh3_main_combi_province_goromadny_mountains" then
                     -- jlog("Region in Norsca found.")
                     empire_score = empire_score + 5
                else
@@ -170,12 +177,12 @@ local function get_empire_score_player()
           for i = 0, owned_regions:num_items() - 1 do
                local region = owned_regions:item_at(i)
                if region:name() == "wh3_main_combi_region_kings_glade" or region:name() == "wh3_main_combi_region_vauls_anvil_loren" or region:name() ==
-                    "wh3_main_combi_region_waterfall_palace" or region:name() == "wh3_main_combi_region_crag_halls_of_findol" or region:name() ==
-                    "wh3_main_combi_region_the_witchwood" or region:name() == "wh3_main_combi_region_gaean_vale" or region:name() ==
-                    "wh3_main_combi_region_laurelorn_forest" or region:name() == "wh3_main_combi_region_gryphon_wood" or region:name() ==
-                    "wh3_main_combi_region_forest_of_gloom" or region:name() == "wh3_main_combi_region_oreons_camp" or region:name() ==
-                    "wh3_main_combi_region_the_haunted_forest" or region:name() == "wh3_main_combi_region_jungles_of_chian" or region:name() ==
-                    "wh3_main_combi_region_the_sacred_pools" then
+                   "wh3_main_combi_region_waterfall_palace" or region:name() == "wh3_main_combi_region_crag_halls_of_findol" or region:name() ==
+                   "wh3_main_combi_region_the_witchwood" or region:name() == "wh3_main_combi_region_gaean_vale" or region:name() ==
+                   "wh3_main_combi_region_laurelorn_forest" or region:name() == "wh3_main_combi_region_gryphon_wood" or region:name() ==
+                   "wh3_main_combi_region_forest_of_gloom" or region:name() == "wh3_main_combi_region_oreons_camp" or region:name() ==
+                   "wh3_main_combi_region_the_haunted_forest" or region:name() == "wh3_main_combi_region_jungles_of_chian" or region:name() ==
+                   "wh3_main_combi_region_the_sacred_pools" then
                     -- jlog("WEF region found.")
                     empire_score = empire_score + 30
                else
@@ -228,151 +235,196 @@ core:add_listener("MCT_PANEL_OPENED_JDYNDIF", "MctPanelOpened", true, function(c
 end, true)
 
 -- event player starts turn
-core:add_listener("JDYNDIF_TURNSTART", "FactionTurnStart", function(context) return (context:faction():is_human()) end, function(context)
-     local turn_number = cm:model():turn_number()
-     cm:callback(function() if turn_number == 1 or not (cm:get_saved_value("jdyndif_mct_values_exist")) then read_mct_values(true) end end, 0.2)
-end, true)
+core:add_listener("JDYNDIF_TURNSTART", "FactionTurnStart", function(context) return (context:faction():is_human()) end,
+     function(context)
+          local turn_number = cm:model():turn_number()
+          cm:callback(
+               function() if turn_number == 1 or not (cm:get_saved_value("jdyndif_mct_values_exist")) then
+                         read_mct_values(true) end end,
+               0.2)
+     end, true)
 
 --out("Creating listener to apply effect bundles" .. "")
 --jlog("Creating listener to apply effect bundles.")
-core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return not (context:faction()):is_human() end, function(context)
-     local turn_number = (cm:model()):turn_number()
-     local current_faction = context:faction()
-     local current_faction_name = current_faction:name()
-     local human_faction_key = (cm:get_human_factions())[1]
-     local human_faction = ((cm:model()):world()):faction_by_key(human_faction_key)
+core:add_listener("JDYNDIF_EFFECT", "FactionTurnStart", function(context) return not (context:faction()):is_human() end,
+     function(context)
+          local turn_number = (cm:model()):turn_number()
+          local current_faction = context:faction()
+          local current_faction_name = current_faction:name()
+          local human_faction_key = (cm:get_human_factions())[1]
+          local human_faction = ((cm:model()):world()):faction_by_key(human_faction_key)
 
-     if current_faction_name ~= "rebels" then
-          cm:callback(function()
+          if current_faction_name ~= "rebels" then
+               cm:callback(function()
+                    local player_score = get_empire_score_player()
+                    local player_difficulty = "normal"
+                    local mod_construction = 1
+                    local mod_recruit_cost = 1
+                    local mod_tax_rate = 1
+                    local mod_growth = 1
+                    local mod_battle_loot = 1
+                    local combined_difficulty = cm:model():combined_difficulty_level()
 
-               local player_score = get_empire_score_player()
-               local player_difficulty = "normal"
-               local mod_construction = 1
-               local mod_recruit_cost = 1
-               local mod_tax_rate = 1
-               local mod_growth = 1
-               local mod_battle_loot = 1
-               local combined_difficulty = cm:model():combined_difficulty_level()
+                    if combined_difficulty == -1 then -- Hard
+                         player_difficulty = "hard"
+                         mod_construction = 1.6
+                         mod_recruit_cost = 1.6
+                         mod_tax_rate = 1.6
+                         mod_growth = 1.6
+                         mod_battle_loot = 1.6
+                    elseif combined_difficulty == -2 then -- Very Hard
+                         player_difficulty = "vhard"
+                         mod_construction = 1.7
+                         mod_recruit_cost = 1.7
+                         mod_tax_rate = 1.7
+                         mod_growth = 1.7
+                         mod_battle_loot = 1.7
+                    elseif combined_difficulty == -3 then -- Legendary
+                         player_difficulty = "legendary"
+                         mod_construction = 1.8
+                         mod_recruit_cost = 1.8
+                         mod_tax_rate = 1.8
+                         mod_growth = 1.8
+                         mod_battle_loot = 1.8
+                    elseif combined_difficulty == 1 then -- Easy
+                         player_difficulty = "easy"
+                         mod_construction = -0.5
+                         mod_recruit_cost = 0.5
+                         mod_tax_rate = 0.5
+                         mod_growth = 0.5
+                         mod_battle_loot = 0.5
+                    end
 
-               if combined_difficulty == -1 then -- Hard
-                    player_difficulty = "hard"
-                    mod_construction = 1.6
-                    mod_recruit_cost = 1.6
-                    mod_tax_rate = 1.6
-                    mod_growth = 1.6
-                    mod_battle_loot = 1.6
-               elseif combined_difficulty == -2 then -- Very Hard
-                    player_difficulty = "vhard"
-                    mod_construction = 1.7
-                    mod_recruit_cost = 1.7
-                    mod_tax_rate = 1.7
-                    mod_growth = 1.7
-                    mod_battle_loot = 1.7
-               elseif combined_difficulty == -3 then -- Legendary
-                    player_difficulty = "legendary"
-                    mod_construction = 1.8
-                    mod_recruit_cost = 1.8
-                    mod_tax_rate = 1.8
-                    mod_growth = 1.8
-                    mod_battle_loot = 1.8
-               elseif combined_difficulty == 1 then -- Easy
-                    player_difficulty = "easy"
-                    mod_construction = -0.5
-                    mod_recruit_cost = 0.5
-                    mod_tax_rate = 0.5
-                    mod_growth = 0.5
-                    mod_battle_loot = 0.5
-               end
+                    local xp_gain_per_turn = 0
+                    local recruit_rank = 0
+                    local recruit_points_bonus = 0
+                    local replenishment_bonus = 0
+                    local ai_buff_level = player_score
 
-               local xp_gain_per_turn = 0
-               local recruit_rank = 0
-               local recruit_points_bonus = 0
-               local replenishment_bonus = 0
-               local ai_buff_level = player_score
-
-               --out("Applying a 15% penalty to bonuses for vassals of humans" .. "")
-               if current_faction:is_vassal_of(human_faction) == true or current_faction:allied_with(human_faction) == true then
-                    ai_buff_level = ai_buff_level / 1.15
-               end
+                    --out("Applying a 15% penalty to bonuses for vassals of humans" .. "")
+                    if current_faction:is_vassal_of(human_faction) == true or current_faction:allied_with(human_faction) == true then
+                         ai_buff_level = ai_buff_level / 1.15
+                    end
 
 
-               if ai_buff_level >= 15 and combined_difficulty < 0 then
-                    xp_gain_per_turn = 100 * math.abs(combined_difficulty)
-                    recruit_rank = 2 * math.abs(combined_difficulty)
-                    recruit_points_bonus = 3
-                    replenishment_bonus = 3
-               elseif ai_buff_level >= 12 and combined_difficulty < 0 then
-                    xp_gain_per_turn = 100 * math.abs(combined_difficulty)
-                    recruit_rank = 2 * math.abs(combined_difficulty)
-                    recruit_points_bonus = 3
-                    replenishment_bonus = 2
-               elseif ai_buff_level >= 9 and combined_difficulty < 0 then
-                    xp_gain_per_turn = 100 * math.abs(combined_difficulty)
-                    recruit_rank = 2 * math.abs(combined_difficulty)
-                    recruit_points_bonus = 2
-                    replenishment_bonus = 2
-               elseif ai_buff_level >= 6 and combined_difficulty < 0 then
-                    xp_gain_per_turn = 75 * math.abs(combined_difficulty)
-                    recruit_rank = math.ceil(0 * math.abs(combined_difficulty))
-                    recruit_points_bonus = 2
-                    replenishment_bonus = 1
-               elseif ai_buff_level >= 3 and combined_difficulty < 0 then
-                    xp_gain_per_turn = 50 * math.abs(combined_difficulty)
-                    recruit_rank = math.abs(combined_difficulty)
-                    recruit_points_bonus = 1
-                    replenishment_bonus = 1
-               end
+                    if ai_buff_level >= 15 and combined_difficulty < 0 then
+                         xp_gain_per_turn = 100 * math.abs(combined_difficulty)
+                         recruit_rank = 2 * math.abs(combined_difficulty)
+                         recruit_points_bonus = 3
+                         replenishment_bonus = 3
+                    elseif ai_buff_level >= 12 and combined_difficulty < 0 then
+                         xp_gain_per_turn = 100 * math.abs(combined_difficulty)
+                         recruit_rank = 2 * math.abs(combined_difficulty)
+                         recruit_points_bonus = 3
+                         replenishment_bonus = 2
+                    elseif ai_buff_level >= 9 and combined_difficulty < 0 then
+                         xp_gain_per_turn = 100 * math.abs(combined_difficulty)
+                         recruit_rank = 2 * math.abs(combined_difficulty)
+                         recruit_points_bonus = 2
+                         replenishment_bonus = 2
+                    elseif ai_buff_level >= 6 and combined_difficulty < 0 then
+                         xp_gain_per_turn = 75 * math.abs(combined_difficulty)
+                         recruit_rank = math.ceil(0 * math.abs(combined_difficulty))
+                         recruit_points_bonus = 2
+                         replenishment_bonus = 1
+                    elseif ai_buff_level >= 3 and combined_difficulty < 0 then
+                         xp_gain_per_turn = 50 * math.abs(combined_difficulty)
+                         recruit_rank = math.abs(combined_difficulty)
+                         recruit_points_bonus = 1
+                         replenishment_bonus = 1
+                    end
 
-               local mod_extra_difficulty = 1
-               if cm:get_saved_value("jdyndif_extra_difficulty") > 0 then
-                    mod_extra_difficulty = cm:get_saved_value("jdyndif_extra_difficulty") * 0.05 + 1
-               end
+                    local mod_extra_difficulty = 1
+                    if cm:get_saved_value("jdyndif_extra_difficulty") > 0 then
+                         mod_extra_difficulty = cm:get_saved_value("jdyndif_extra_difficulty") * 0.05 + 1
+                    end
 
-               local effect_strength_tax_rate = math.ceil(ai_buff_level * 4 * mod_tax_rate * mod_extra_difficulty)
-               if effect_strength_tax_rate > 175 then effect_strength_tax_rate = 175 end
+                    local effect_strength_tax_rate = math.ceil(ai_buff_level * 4 * mod_tax_rate * mod_extra_difficulty)
+                    if effect_strength_tax_rate > 175 then effect_strength_tax_rate = 175 end
 
-               local effect_strength_battle_loot = math.ceil(ai_buff_level * 4 * mod_battle_loot * mod_extra_difficulty)
-               if effect_strength_battle_loot > 175 then effect_strength_battle_loot = 175 end
+                    local effect_strength_battle_loot = math.ceil(ai_buff_level * 4 * mod_battle_loot *
+                         mod_extra_difficulty)
+                    if effect_strength_battle_loot > 175 then effect_strength_battle_loot = 175 end
 
-               local effect_strength_growth = math.ceil(ai_buff_level * 4 * mod_growth * mod_extra_difficulty)
-               if effect_strength_growth > 75 then effect_strength_growth = 75 end
+                    local effect_strength_growth = math.ceil(ai_buff_level * 4 * mod_growth * mod_extra_difficulty)
+                    if effect_strength_growth > 75 then effect_strength_growth = 75 end
 
-               local effect_strength_construction = math.ceil(ai_buff_level * -4 * mod_construction * mod_extra_difficulty)
-               if effect_strength_construction < -75 then effect_strength_construction = -75 end
+                    local effect_strength_construction = math.ceil(ai_buff_level * -4 * mod_construction *
+                         mod_extra_difficulty)
+                    if effect_strength_construction < -75 then effect_strength_construction = -75 end
 
-               local effect_strength_recruit_cost = math.ceil(ai_buff_level * -4 * mod_recruit_cost * mod_extra_difficulty)
-               if effect_strength_recruit_cost < -75 then effect_strength_recruit_cost = -75 end
+                    local effect_strength_recruit_cost = math.ceil(ai_buff_level * -4 * mod_recruit_cost *
+                         mod_extra_difficulty)
+                    if effect_strength_recruit_cost < -75 then effect_strength_recruit_cost = -75 end
 
-               local Dynamic_Difficulty_Government = cm:create_new_custom_effect_bundle("effect_bundle_government")
+                    local Dynamic_Difficulty_Government = cm:create_new_custom_effect_bundle("effect_bundle_government")
 
-               Dynamic_Difficulty_Government:add_effect("wh_main_effect_economy_gdp_mod_all", "faction_to_region_own", effect_strength_tax_rate)
-               Dynamic_Difficulty_Government:add_effect("wh_main_effect_building_construction_cost_mod", "faction_to_region_own", effect_strength_construction)
-               Dynamic_Difficulty_Government:add_effect("wh_main_effect_province_growth_other", "faction_to_province_own", effect_strength_growth)
-               Dynamic_Difficulty_Government:set_duration(1)
-               cm:apply_custom_effect_bundle_to_faction(Dynamic_Difficulty_Government, current_faction)
+                    Dynamic_Difficulty_Government:add_effect("wh_main_effect_economy_gdp_mod_all",
+                         "faction_to_region_own", effect_strength_tax_rate)
+                    Dynamic_Difficulty_Government:add_effect("wh_main_effect_building_construction_cost_mod",
+                         "faction_to_region_own", effect_strength_construction)
+                    Dynamic_Difficulty_Government:add_effect("wh_main_effect_province_growth_other",
+                         "faction_to_province_own", effect_strength_growth)
+                    Dynamic_Difficulty_Government:set_duration(1)
+                    cm:apply_custom_effect_bundle_to_faction(Dynamic_Difficulty_Government, current_faction)
 
-               local Dynamic_Difficulty_Armies = cm:create_new_custom_effect_bundle("effect_bundle_armies")
+                    local Dynamic_Difficulty_Armies = cm:create_new_custom_effect_bundle("effect_bundle_armies")
 
-               Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_recruitment_cost_all", "faction_to_force_own", effect_strength_recruit_cost)
-               Dynamic_Difficulty_Armies:add_effect("wh_main_effect_agent_action_outcome_parent_army_xp_gain_factionwide", "faction_to_force_own", xp_gain_per_turn)
-               Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_experience_base_all", "faction_to_force_own", recruit_rank)
-               Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_post_battle_loot_mod", "faction_to_faction_own", effect_strength_battle_loot)
-               if cm:get_saved_value("jdyndif_enable_replenishment") then
-                    Dynamic_Difficulty_Armies:add_effect("wh2_main_effect_replenishment_characters", "faction_to_force_own", replenishment_bonus)
-                    Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_replenishment_rate", "faction_to_force_own", replenishment_bonus)
-               end
-               if cm:get_saved_value("jdyndif_enable_recruitment") then
-                    Dynamic_Difficulty_Armies:add_effect("wh_main_effect_unit_recruitment_points", "faction_to_province_own", recruit_points_bonus)
-               end
-               Dynamic_Difficulty_Armies:set_duration(1)
-               cm:apply_custom_effect_bundle_to_faction(Dynamic_Difficulty_Armies, current_faction)
+                    Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_recruitment_cost_all",
+                         "faction_to_force_own", effect_strength_recruit_cost)
+                    Dynamic_Difficulty_Armies:add_effect(
+                         "wh_main_effect_agent_action_outcome_parent_army_xp_gain_factionwide", "faction_to_force_own",
+                         xp_gain_per_turn)
+                    Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_experience_base_all",
+                         "faction_to_force_own", recruit_rank)
+                    Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_post_battle_loot_mod",
+                         "faction_to_faction_own", effect_strength_battle_loot)
+                    if cm:get_saved_value("jdyndif_enable_replenishment") then
+                         Dynamic_Difficulty_Armies:add_effect("wh2_main_effect_replenishment_characters",
+                              "faction_to_force_own", replenishment_bonus)
+                         Dynamic_Difficulty_Armies:add_effect("wh_main_effect_force_all_campaign_replenishment_rate",
+                              "faction_to_force_own", replenishment_bonus)
+                    end
+                    if cm:get_saved_value("jdyndif_enable_recruitment") then
+                         Dynamic_Difficulty_Armies:add_effect("wh_main_effect_unit_recruitment_points",
+                              "faction_to_province_own", recruit_points_bonus)
+                    end
+                    Dynamic_Difficulty_Armies:set_duration(1)
+                    cm:apply_custom_effect_bundle_to_faction(Dynamic_Difficulty_Armies, current_faction)
 
-               --out("Checking current AI faction turn to trigger logging" .. "")
-               if current_faction_name == "wh_dlc07_vmp_von_carstein" or current_faction_name == "wh2_main_def_naggarond" or current_faction_name ==
-                    "wh2_main_def_har_ganeth" then
-                    jlog("Turn: # " .. turn_number .. " |  Difficulty: " .. player_difficulty .. " | Player Score: " .. player_score .. "| AI Buff Level: " .. ai_buff_level .. " | Income: " .. "+" .. effect_strength_tax_rate .. "%" .. " | Growth: " .. "+" .. effect_strength_growth .. " | Construction Cost: " .. effect_strength_construction .. "%" .. " | Recruit Cost: " .. effect_strength_recruit_cost .. "%" .. " | Loot: " .. "+" .. effect_strength_battle_loot .. "%" .. " | Rank: " .. "+" .. recruit_rank .. " | Unit XP Per Turn: " ..
-                    "+" .. xp_gain_per_turn .. " | Replenishment: " .. "+" .. replenishment_bonus .. "% | Recruitment Slots: " .. "+" .. recruit_points_bonus)
-               end;
-          end, 0)
-     end
-end, true)
+                    --out("Checking current AI faction turn to trigger logging" .. "")
+                    if current_faction_name == "wh_dlc07_vmp_von_carstein" or current_faction_name == "wh2_main_def_naggarond" or current_faction_name ==
+                        "wh2_main_def_har_ganeth" then
+                         jlog("Turn: # " ..
+                              turn_number ..
+                              " |  Difficulty: " ..
+                              player_difficulty ..
+                              " | Player Score: " ..
+                              player_score ..
+                              "| AI Buff Level: " ..
+                              ai_buff_level ..
+                              " | Income: " ..
+                              "+" ..
+                              effect_strength_tax_rate ..
+                              "%" ..
+                              " | Growth: " ..
+                              "+" ..
+                              effect_strength_growth ..
+                              " | Construction Cost: " ..
+                              effect_strength_construction ..
+                              "%" ..
+                              " | Recruit Cost: " ..
+                              effect_strength_recruit_cost ..
+                              "%" ..
+                              " | Loot: " ..
+                              "+" ..
+                              effect_strength_battle_loot ..
+                              "%" .. " | Rank: " .. "+" .. recruit_rank .. " | Unit XP Per Turn: " ..
+                              "+" ..
+                              xp_gain_per_turn ..
+                              " | Replenishment: " ..
+                              "+" .. replenishment_bonus .. "% | Recruitment Slots: " .. "+" .. recruit_points_bonus)
+                    end;
+               end, 0)
+          end
+     end, true)

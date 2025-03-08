@@ -16,12 +16,16 @@ au wh3_dlc24_ksl_inf_akshina_ambushers_ror 4
 
 au wh3_main_pro_ksl_cav_war_bear_riders_1_ 3
 
+* Protectors of Erengrad (Streltsi) Medium range high damage Streltsi.
+* This is from Regiments of Renown - All Factions by Pwner1
 au wh3_main_pro_ksl_inf_streltsi_0_
 
 au wh3_main_pro_ksl_inf_ice_guard_ror_0_
 
 au wh3_main_pro_ksl_veh_little_grom_0_ 3
 
+* Wolves of the Goromadny (Streltsi), 180 range streltsi.
+* This is from Loupi's Regiments of Renown.
 au loupi_kis_streltsi 2
 
 add xp 500000
