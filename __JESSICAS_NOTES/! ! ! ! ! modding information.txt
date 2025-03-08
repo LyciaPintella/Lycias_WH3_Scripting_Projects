@@ -5,6 +5,11 @@ creatures_claws
 
 land_units_tables|unit_special_abilities_tables|battle_entities_tables
 
+projectiles_tables|land_units_tables|cdir_military_generator_unit_qualities_tables|battlefield_engines_tables|missile_weapon|main_units_tables|melee_weapons_tables
+character_skills_to_level_reached_criterias_tables|character_skill_level_details_tables
+
+cdir_military_generator_unit_qualities_tables
+
 wh_main_hero
 
 
@@ -18,6 +23,8 @@ my brass cleaver effects are missing a CcoUnitAbility
 CcoSpecialAbilityPhaseStatEffectRecord
 The seed of rebirth passive is: wh_main_item_passive_seed_of_rebirth
 wh_dlc03_weapon_passive_the_brass_cleaver    stat_melee_attack
+
+
 The Ability Icon for The Brass Cleaver is: ui/battle ui/ability_icons/wh_magic_item_passive_weapon.png
 modifiable_unit_stats_tables - use these in: special_ability_phase_stat_effects_tables
 

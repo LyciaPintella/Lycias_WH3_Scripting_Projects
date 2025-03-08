@@ -264,17 +264,19 @@ function mother_ostankya_features_ksl:initialise()
 			end,
 			function(context)
 				local mission_key = context:mission():mission_record_key()
-				local unlocked_hex_data = false
+                    local unlocked_hex_data_bool = false
+                    local unlocked_hex_data
 
 				-- lookup the respective hex data
 				for hex, data in pairs(self.hex_data) do
 					if data.mission[cm:get_campaign_name()] == mission_key then
-						unlocked_hex_data = data
+                              unlocked_hex_data = data
+                              unlocked_hex_data_bool = true
 						break
 					end
 				end
 
-				if unlocked_hex_data then
+                    if unlocked_hex_data_bool then
 					local faction = context:faction()
 					local faction_name = faction:name()
 					local count = cm:get_saved_value("hexes_unlocked_count_ksl") or 0
