@@ -7,7 +7,7 @@ au wh3_main_pro_ksl_inf_ice_guard_ror_0_ 4
 * The White Guard - Great Gryphon Legion RoR
 au wh3_main_pro_ksl_cav_gryphon_legion_ror_0_ 2
 
-
+* Regiments of Renown All Factions By Pwner1
 au wh3_main_pro_ksl_inf_kossars_1_ 8
 
 au wh3_main_pro_ksl_veh_heavy_war_sled_ror_0_ 4
