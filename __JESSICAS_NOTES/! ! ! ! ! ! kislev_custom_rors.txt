@@ -33,3 +33,5 @@ au loupi_kis_bear_rider 1
 au wh3_main_pro_ksl_inf_ice_guard_ror_0_ 4
 *Patriarch Spawn Command.
 agent dignitary wh3_main_ksl_patriarch
+
+Armored Kossars with Spears are in Ascopa's Monumental Unit Pack
