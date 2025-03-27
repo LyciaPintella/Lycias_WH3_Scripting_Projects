@@ -16,6 +16,10 @@ au loupi_kis_streltsi 2
 * This is from Regiments of Renown - All Factions by Pwner1
 au wh3_main_pro_ksl_inf_streltsi_0_ 2
 
+* This is from Regiments of Renown - All Factions by Pwner1
+Queen of the Oblast (Snow Leopard)
+au wh3_main_pro_ksl_mon_snow_leopard_ror_0_
+
 au wh3_main_pro_ksl_veh_heavy_war_sled_ror_0_ 4
 
 au wh3_dlc24_ksl_mon_the_things_in_the_woods_ror 4
