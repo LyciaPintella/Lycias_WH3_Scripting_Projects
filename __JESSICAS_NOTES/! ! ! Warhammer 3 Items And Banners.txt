@@ -1,4 +1,5 @@
 *KISLEV
+add xp 15000
 
 RPFM Search Keys
 wh2_main_anc_enchanted_item|wh3_main_anc_enchanted_item|wh_main_anc_enchanted_item
@@ -17,13 +18,14 @@ item wh3_main_anc_enchanted_item_balalaika_of_the_arari OR item wh_main_anc_ench
 ****ARMORS
 *Slow Aura
 item wh3_main_anc_armour_frost_shard_armour
-UNIQUE
+*UNIQUE
 item wh3_main_anc_armour_helm_of_draesca
+
 item wh3_main_anc_armour_iron_ice_armour
 item wh3_main_anc_armour_shield_of_sacrifice
 item wh3_main_anc_armour_wyrm_harness
 
-***WEAPONS
+
 item wh_main_anc_armour_armour_of_destiny
 item wh_main_anc_armour_armour_of_fortune
 item wh_main_anc_armour_armour_of_silvered_steel
@@ -35,6 +37,8 @@ item wh_main_anc_armour_the_armour_of_meteoric_iron
 *MD and Ward Save
 item wh_main_anc_armour_tricksters_helm
 
+***WEAPONS???
+
 ***TALISMANS
 item wh3_main_anc_talisman_blizzard_broach
 item wh3_main_anc_talisman_blood_of_the_motherland
@@ -45,6 +49,7 @@ item wh_main_anc_talisman_the_white_cloak_of_ulric
 
 ***ENCHANTED ITEMS
 item wh3_main_anc_enchanted_item_balalaika_of_the_arari
+*HI THERE DREAMWINE
 item wh3_main_anc_enchanted_item_dreamwine
 PERFECT VIGOUR AND REGEN PASSIVE
 item wh3_main_anc_enchanted_item_ever_full_kovsh
@@ -61,7 +66,7 @@ item wh_main_anc_enchanted_item_the_terrifying_mask_of_eee
 item wh_main_anc_enchanted_item_van_horstmanns_speculum
 
 ***ARCANE ITEMS
-DAMAGE AURA
+*DAMAGE AURA
 item wh3_main_anc_arcane_item_mirror_of_the_ice_queen
 item wh3_main_anc_arcane_item_snowflake_pendant
 item wh_main_anc_arcane_item_channelling_staff
@@ -78,6 +83,7 @@ item wh_main_anc_arcane_item_wand_of_jet
 ***FOLLOWRS AND BANNERS
 item wh3_main_anc_follower_ksl_akshina_informant
 item wh3_main_anc_follower_ksl_atamans_administrator
+
 10% UPKEEP REDUCTION 5% WEAPON STRENGTH FOR TZAR GUARD
 item wh3_main_anc_follower_ksl_knights_squire
 
@@ -86,10 +92,14 @@ item wh3_main_anc_follower_ksl_kvas_deye
 item wh3_main_anc_follower_ksl_nomad_riding_master
 10% HERO ACTION SUCCESS CHANGE
 item wh3_main_anc_follower_ksl_old_crone
+5% HERO ACTION SUCCESS CHANCE
 item wh3_main_anc_follower_ksl_orthodoxy_cleric
 
 10% CAMPAIGN MOVEMENT RANGE
 item wh3_main_anc_follower_ksl_steppe_shepherd
+10% CAMPAIGN MOVEMENT RANGE
+item wh_main_anc_follower_all_men_kislevite_kossar
+
 item wh3_main_anc_follower_ksl_veteran_warrior
 +3 Public Order
 item wh3_main_anc_follower_ksl_vodka_distiller
@@ -105,9 +115,10 @@ item wh3_main_anc_follower_ksl_knights_ward
 
 6% MAGIC ITEM FIND CHANCE
 item wh_main_anc_follower_all_men_bounty_hunter
+
+4 LEADERSHIP VS UNDEAD
 item wh_main_anc_follower_all_men_grave_robber
-10% CAMPAIGN MOVEMENT RANGE
-item wh_main_anc_follower_all_men_kislevite_kossar
+
 1.5% REPLENISHMENT RATE
 item wh_main_anc_follower_all_men_mercenary
 5% RECRUIT COST REDUCTION
@@ -125,11 +136,11 @@ item wh_main_anc_follower_all_men_rogue
 item wh_main_anc_follower_all_men_thug
 
 item wh_main_anc_follower_all_men_smuggler
-10% SIEGE ATTRITION RESISTANCE
+*10% SIEGE ATTRITION RESISTANCE
 item wh_main_anc_follower_all_men_soldier
 item wh_main_anc_follower_all_men_tomb_robber
 item wh_main_anc_follower_all_men_vagabond
-FACTIONWIDE MAGIC ITEM FIND CHANCE
+*FACTIONWIDE MAGIC ITEM FIND CHANCE
 item wh_main_anc_follower_all_men_valet
 
 item wh_main_anc_follower_all_student
@@ -155,12 +166,12 @@ item wh3_main_anc_magic_standard_banner_of_praag
 item wh_main_anc_magic_standard_war_banner
 PERFECT VIGOUR
 item wh_main_anc_magic_standard_gleaming_pennant
-8 MD 7 LEADERSHIO
+8 MD 7 LEADERSHIP
 item wh_main_anc_magic_standard_standard_of_discipline
 15 BONUS VS LARGE
 item wh_main_anc_magic_standard_scarecrow_banner
 
-SPECIAL SUPER BANNER
+*SPECIAL SUPER BANNER
 item wh3_main_anc_magic_standard_banner_of_the_orthodoxy
 
 31% MISSILE RESISTANCE
@@ -216,7 +227,6 @@ item wh3_main_anc_weapon_wyrmspike 12 MD and 9 MA
 item wh_main_anc_weapon_sword_of_strife
 item wh_main_anc_weapon_fencers_blades
 item wh_main_anc_weapon_giant_blade
-item wh3_main_anc_weapon_the_rime_blade
 
 MELEE DEFENCE AND WARD SAVE ITEM SET
 item wh3_main_anc_weapon_ursuns_claws
@@ -227,10 +237,10 @@ item wh_main_anc_enchanted_item_van_horstmanns_speculum
 item wh_main_anc_enchanted_item_the_other_tricksters_shard
 item wh_main_anc_enchanted_item_healing_potion
 
-UNIQUE PHYSICAL RESISTANCE ENCHANTED ITEM
+*UNIQUE PHYSICAL RESISTANCE ENCHANTED ITEM
 item wh3_main_anc_enchanted_item_dreamwine
 
-item wh3_main_anc_follower_ksl_atamans_administrator
+add xp 15000
 item wh_main_anc_follower_all_men_kislevite_kossar
 
 *AGENT

@@ -1,14 +1,16 @@
-agent dignitary wh3_main_ksl_patriarch
-
-au wh3_twa07_ksl_cav_war_bear_riders_ror_0 1
-au loupi_kis_bear_rider 1
-au wh3_main_pro_ksl_inf_ice_guard_ror_0_ 4
+add xp 15000
 
 * The White Guard - Great Gryphon Legion RoR
 au wh3_main_pro_ksl_cav_gryphon_legion_ror_0_ 2
 
 * Regiments of Renown All Factions By Pwner1
 au wh3_main_pro_ksl_inf_kossars_1_ 8
+
+au wh3_main_pro_ksl_veh_little_grom_0_
+
+* Wolves of the Goromadny (Streltsi), 180 range streltsi.
+* This is from Loupi's Regiments of Renown.
+au loupi_kis_streltsi 2
 
 au wh3_main_pro_ksl_veh_heavy_war_sled_ror_0_ 4
 
@@ -24,11 +26,10 @@ au wh3_main_pro_ksl_inf_streltsi_0_
 
 au wh3_main_pro_ksl_inf_ice_guard_ror_0_
 
-au wh3_main_pro_ksl_veh_little_grom_0_
-
-* Wolves of the Goromadny (Streltsi), 180 range streltsi.
-* This is from Loupi's Regiments of Renown.
-au loupi_kis_streltsi 2
-
-add xp 500000
 seekers of penance ror doesn't seem to have range increase from tech
+
+au wh3_twa07_ksl_cav_war_bear_riders_ror_0 1
+au loupi_kis_bear_rider 1
+au wh3_main_pro_ksl_inf_ice_guard_ror_0_ 4
+*Patriarch Spawn Command.
+agent dignitary wh3_main_ksl_patriarch
