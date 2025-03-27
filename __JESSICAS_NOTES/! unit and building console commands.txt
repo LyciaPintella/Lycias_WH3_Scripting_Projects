@@ -57,7 +57,7 @@ bb wh_main_brt_legendary_enchantress_tower
 
 Kislev
 
-*res wh3_main_ksl_devotion 35 -- gives 35 devotion
+*res wh3_main_ksl_devotion 375 -- gives 375 devotion
 
 
 au wh3_dlc24_ksl_inf_kislevite_warriors

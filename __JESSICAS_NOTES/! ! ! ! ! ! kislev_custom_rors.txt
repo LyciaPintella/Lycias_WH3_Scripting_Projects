@@ -28,7 +28,9 @@ au wh3_dlc24_ksl_inf_akshina_ambushers_ror 4
 
 au wh3_main_pro_ksl_cav_war_bear_riders_1_ 3
 
+* This is from Regiments of Renown - All Factions by Pwner1 - 0 has ranged, 1 does not.
 au wh3_main_pro_ksl_inf_ice_guard_ror_0_
+au wh3_main_pro_ksl_inf_ice_guard_ror_1_
 
 seekers of penance ror doesn't seem to have range increase from tech
 
