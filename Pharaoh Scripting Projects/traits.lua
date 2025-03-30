@@ -1791,7 +1791,7 @@ core:add_listener(
                ----------------------------
                ---- BUILT ANY BUILDING ----
                ----------------------------
-               hcp_main_give_trait(character, "phar_main_trait_cultured", 20, 5)
+               hcp_main_give_trait(character, "phar_main_trait_cultured", 20, 10)
           else
                out("No commander found in settlement")
           end
