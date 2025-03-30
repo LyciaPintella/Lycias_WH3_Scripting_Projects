@@ -6,6 +6,7 @@ au wh3_main_pro_ksl_cav_gryphon_legion_ror_0_ 2
 * Regiments of Renown All Factions By Pwner1
 au wh3_main_pro_ksl_inf_kossars_1_ 8
 
+* This is from Regiments of Renown - All Factions by Pwner1
 au wh3_main_pro_ksl_veh_little_grom_0_
 
 * Wolves of the Goromadny (Streltsi), 180 range streltsi.
