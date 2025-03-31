@@ -991,7 +991,7 @@ core:add_listener(
      "CharacterPostBattleRelease",
      true,
      function(context)
-          hcp_main_give_trait(context:character(), "phar_main_trait_merciful", 20, 25)
+          hcp_main_give_trait(context:character(), "phar_main_trait_merciful", 20, 15)
           out("HCP_post_battle_release")
      end,
      true
@@ -1002,7 +1002,7 @@ core:add_listener(
      "CharacterPostBattleEnslave",
      true,
      function(context)
-          hcp_main_give_trait(context:character(), "phar_main_trait_materialistic", 20, 25)
+          hcp_main_give_trait(context:character(), "phar_main_trait_materialistic", 20, 20)
           out("HCP_post_battle_enslave")
      end,
      true
@@ -1017,7 +1017,7 @@ core:add_listener(
                out("HCP_post_battle_slaughter_character_in_settlement")
                return
           else
-               hcp_main_give_trait(context:character(), "phar_main_trait_cruel", 20, 20)
+               hcp_main_give_trait(context:character(), "phar_main_trait_cruel", 20, 25)
                out("HCP_post_battle_slaughter")
           end
      end,
@@ -1077,7 +1077,7 @@ core:add_listener(
           local post_battle_option = context:occupation_decision_option()
 
           if post_battle_option == "occupation_decision_occupy" then
-               hcp_main_give_trait(context:character(), "hcp_trait_liberal", 20, 20);
+               hcp_main_give_trait(context:character(), "hcp_trait_liberal", 20, 15);
                out("hcp_character_occupied_settlement")
           end
      end,
@@ -1726,7 +1726,7 @@ core:add_listener(
                ---- BUILT MINES ----
                --------------------------
                if MINE_SUPERCHAINS_SET[superchain_key] then
-                    hcp_main_give_trait(character, "hcp_trait_miner", 20, 50)
+                    hcp_main_give_trait(character, "hcp_trait_miner", 20, 25)
                     out("hcp_miner: Applied hcp_trait_miner to " .. character:onscreen_name())
                else
                     out("hcp_miner: Building superchain not in MINE_SUPERCHAINS_SET")
@@ -1737,7 +1737,7 @@ core:add_listener(
                ---- BUILT SMUGGLERS' DEN ----
                ------------------------------
                if superchain_key == "phar_main_port_coast_derivative_type_a" or superchain_key == "phar_main_irsu_resource_production_port_coast_derivative_type_a" then
-                    hcp_main_give_trait(character, "hcp_trait_criminal", 20, 25)
+                    hcp_main_give_trait(character, "hcp_trait_criminal", 20, 20)
                     out("hcp_smuggler: built smugglers' den and applying trait to " .. character:onscreen_name())
                else
                     out("hcp_smuggler: smugglers' den not found")
@@ -1748,7 +1748,7 @@ core:add_listener(
                ---- BUILT SHRINE ----
                ----------------------
                if superchain_key == "phar_main_ers_shrine" then
-                    hcp_main_give_trait(character, "phar_main_trait_spiritual", 20, 25)
+                    hcp_main_give_trait(character, "phar_main_trait_spiritual", 20, 20)
                     out("hcp_builder: hcp_character_present_for_construction_of_shrine")
                end
 
@@ -1757,7 +1757,7 @@ core:add_listener(
                ---- BUILT TEMPLE ----
                ----------------------
                if superchain_key == "phar_main_religion_temple" or superchain_key == "phar_map_religion_dwelling_all" then
-                    hcp_main_give_trait(character, "phar_main_trait_spiritual", 20, 25)
+                    hcp_main_give_trait(character, "phar_main_trait_spiritual", 20, 20)
                     out("hcp_builder: hcp_character_present_for_construction_of_temple")
                end
 
@@ -1766,7 +1766,7 @@ core:add_listener(
                ---- BUILT ADMIN----
                --------------------
                if MANAGEMENT_BUILDING_SUPERCHAINS_SET[superchain_key] then
-                    hcp_main_give_trait(character, "hcp_trait_admin_good", 20, 25)
+                    hcp_main_give_trait(character, "hcp_trait_admin_good", 20, 20)
                     out("hcp_builder: Applied hcp_trait_admin_good to " .. character:onscreen_name())
                end
 
@@ -1775,7 +1775,7 @@ core:add_listener(
                ---- BUILT MILITARY ADMIN----
                ---------------------------------
                if MILITARY_ADMIN_BUILDINGS_SET[superchain_key] then
-                    hcp_main_give_trait(character, "hcp_trait_military_admin_good", 20, 25)
+                    hcp_main_give_trait(character, "hcp_trait_military_admin_good", 20, 20)
                     out("hcp_builder: Applied hcp_trait_admin_good to " .. character:onscreen_name())
                end
 
@@ -1784,7 +1784,7 @@ core:add_listener(
                ---- BUILT GOLD MINE ----
                -------------------------
                if GOLD_SUPERCHAINS_SET[superchain_key] then
-                    hcp_main_give_trait(character, "phar_main_trait_materialistic", 20, 10)
+                    hcp_main_give_trait(character, "phar_main_trait_materialistic", 20, 20)
                     out("hcp_builder: Applied phar_main_trait_materialistic to " .. character:onscreen_name())
                end
 
