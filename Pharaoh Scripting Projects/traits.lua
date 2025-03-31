@@ -1680,9 +1680,9 @@ core:add_listener(
      function(context)
           if context:region():settlement():has_commander() then
                local character = context:region():settlement():commander()
-               hcp_main_give_trait(character, "hcp_trait_disciplinarian", 20, 15)
-               hcp_main_give_trait(character, "hcp_trait_authoritarian", 20, 50)
-               hcp_main_give_trait(character, "hcp_trait_admin_bad", 20, 50)
+               hcp_main_give_trait(character, "hcp_trait_disciplinarian", 20, 25)
+               hcp_main_give_trait(character, "hcp_trait_authoritarian", 20, 15)
+               hcp_main_give_trait(character, "hcp_trait_admin_bad", 20, 15)
                out("hcp_REGION_REBELLED_AND_ATTEMPTED_TO_GIVE_TRAIT_TO_" ..
                     tostring(cm:char_lookup_str(character:command_queue_index())))
           end
@@ -2058,8 +2058,8 @@ core:add_listener(
                ---- SPENT TURN OUTSIDE OF SETTLEMENT ----
                ------------------------------------------
                ---handles feck and bad_disciplinarian
-               if not character:in_settlement() then
-                    hcp_main_give_trait(character, "hcp_trait_feck", 20, 1)
+               if not character:in_settlement() and cm:char_is_general_with_army(character) and character:military_force():active_stance() ~= "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MUSTER" then
+                    hcp_main_give_trait(character, "hcp_trait_feck", 20, 5)
                     --hcp_main_give_trait(character, "hcp_trait_bad_disciplinarian", 20, 1)
                     out(
                          "HCP: Character not in settlement with full action points, applying 'feck' and 'bad_disciplinarian' traits.")
@@ -2073,7 +2073,9 @@ core:add_listener(
               and character:has_region()
               and character:turns_in_own_regions() >= 10
               and character:in_settlement()
-              and character:military_force():active_stance() ~= "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MUSTER" then
+              and character:military_force():active_stance() ~= "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MUSTER"
+              and character:military_force():active_stance() ~= "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MARCH"
+              and character:military_force():active_stance() ~= "MILITARY_FORCE_SITUATIONAL_STANCE_LAY_SIEGE" then
                out("hcp_slothful_character_is_eligible_for_slothful")
 
                hcp_main_give_trait(character, "hcp_trait_slothful", 20, 5)
