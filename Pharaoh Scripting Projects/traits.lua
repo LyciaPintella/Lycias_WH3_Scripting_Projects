@@ -476,7 +476,7 @@ local MANAGEMENT_BUILDING_SUPERCHAINS_SET = {
 cm:add_first_tick_callback(function()
      -- Check if the config table exists to avoid any potential errors
      if campaign_traits and campaign_traits.config then
-          campaign_traits.config.max_num_traits = 20
+          campaign_traits.config.max_num_traits = 50
           out("HCP_max_num_traits has been set to " .. campaign_traits.config.max_num_traits)
      else
           out("HCP_Mod: Failed to find campaign_traits.config")
@@ -867,7 +867,7 @@ core:add_listener(
 
                if character:faction():name() == proposer:name() then
                     out("HCP_WAR_DECLARED! AGGRESSOR FACTION IS " .. tostring(character:faction():name()))
-                    hcp_main_give_trait(character, "hcp_trait_warmonger", 20, 15)
+                    hcp_main_give_trait(character, "hcp_trait_warmonger", 20, 20)
                end
           end
      end,
@@ -889,10 +889,10 @@ core:add_listener(
 
                if character:faction():name() == proposer:name() then
                     out("HCP_PEACE_TREATY_SIGNED! PROPOSER FACTION IS " .. tostring(character:faction():name()))
-                    hcp_main_give_trait(character, "hcp_trait_pacifist", 20, 10)
+                    hcp_main_give_trait(character, "hcp_trait_pacifist", 20, 20)
                elseif character:faction():name() == recipient:name() then
                     out("HCP_PEACE_TREATY_SIGNED! RECIPIENT FACTION IS " .. tostring(character:faction():name()))
-                    hcp_main_give_trait(character, "hcp_trait_pacifist", 20, 10)
+                    hcp_main_give_trait(character, "hcp_trait_pacifist", 20, 20)
                end
           end
      end,
@@ -974,8 +974,8 @@ core:add_listener(
 
           if (context:occupation_decision_option() == "occupation_decision_ers_raze_without_occupy" or context:occupation_decision_option() == "occupation_decision_ers_sack")
               and campaign_traits.check_if_region_slot_has_shrine(context:region_slot():building():chain()) then
-               hcp_main_give_trait(context:character(), "phar_main_trait_barbaric", 20, 15)
-               hcp_main_give_trait(context:character(), "phar_main_trait_underhanded", 20, 15)
+               hcp_main_give_trait(context:character(), "phar_main_trait_barbaric", 20, 25)
+               hcp_main_give_trait(context:character(), "phar_main_trait_underhanded", 20, 25)
                out("hcp_character_razed_shrine")
           end
      end,
@@ -991,7 +991,7 @@ core:add_listener(
      "CharacterPostBattleRelease",
      true,
      function(context)
-          hcp_main_give_trait(context:character(), "phar_main_trait_merciful", 20, 15)
+          hcp_main_give_trait(context:character(), "phar_main_trait_merciful", 20, 20)
           out("HCP_post_battle_release")
      end,
      true
@@ -1034,8 +1034,8 @@ core:add_listener(
      true,
      function(context)
           if cm:char_is_general_with_army(context:character()) then
-               hcp_main_give_trait(context:character(), "phar_main_trait_materialistic", 20, 20);
-               hcp_main_give_trait(context:character(), "hcp_trait_authoritarian", 20, 20);
+               hcp_main_give_trait(context:character(), "phar_main_trait_materialistic", 20, 35);
+               hcp_main_give_trait(context:character(), "hcp_trait_authoritarian", 20, 35);
                out("hcp_character_looted_settlement")
           end
      end,
@@ -1048,7 +1048,7 @@ core:add_listener(
      true,
      function(context)
           if cm:char_is_general_with_army(context:character()) then
-               hcp_main_give_trait(context:character(), "phar_main_trait_barbaric", 20, 20);
+               hcp_main_give_trait(context:character(), "phar_main_trait_barbaric", 20, 35);
                out("hcp_character_sacked_settlement")
           end
      end,
@@ -1061,7 +1061,7 @@ core:add_listener(
      true,
      function(context)
           if cm:char_is_general_with_army(context:character()) then
-               hcp_main_give_trait(context:character(), "phar_main_trait_barbaric", 20, 33);
+               hcp_main_give_trait(context:character(), "phar_main_trait_barbaric", 20, 50);
                hcp_main_give_trait(context:character(), "hcp_trait_authoritarian", 20, 3);
                out("hcp_character_razed_settlement")
           end
@@ -1077,7 +1077,7 @@ core:add_listener(
           local post_battle_option = context:occupation_decision_option()
 
           if post_battle_option == "occupation_decision_occupy" then
-               hcp_main_give_trait(context:character(), "hcp_trait_liberal", 20, 15);
+               hcp_main_give_trait(context:character(), "hcp_trait_liberal", 20, 20);
                out("hcp_character_occupied_settlement")
           end
      end,
@@ -1499,7 +1499,7 @@ core:add_listener(
                     local home = attacker:faction():home_region():settlement()
                     local distance = 2000
                     if distance and distance_squared(attacker:logical_position_x(), attacker:logical_position_y(), home:logical_position_x(), home:logical_position_y()) >= distance * distance then
-                         hcp_main_give_trait(attacker, "phar_main_trait_individualistic", 20, 20)
+                         hcp_main_give_trait(attacker, "phar_main_trait_individualistic", 20, 30)
                          out("hcp battle fought far from capital")
                     end
                end
@@ -1510,7 +1510,7 @@ core:add_listener(
                     local home = defender:faction():home_region():settlement()
                     local distance = 2000
                     if distance and distance_squared(defender:logical_position_x(), defender:logical_position_y(), home:logical_position_x(), home:logical_position_y()) >= distance * distance then
-                         hcp_main_give_trait(defender, "phar_main_trait_individualistic", 20, 20)
+                         hcp_main_give_trait(defender, "phar_main_trait_individualistic", 20, 30)
                          out("hcp battle fought far from capital")
                     end
                end
@@ -1524,14 +1524,14 @@ core:add_listener(
           --secodnary attackers
           local secondary_attackers = battle:secondary_attackers()
           if secondary_attackers:is_empty() then
-               hcp_main_give_trait(attacker, "phar_main_trait_individualistic", 20, 15)
+               hcp_main_give_trait(attacker, "phar_main_trait_individualistic", 20, 20)
                out("hcp battle fought alone")
           end
 
           -- secondary defenders
           local secondary_defenders = battle:secondary_defenders()
           if secondary_defenders:is_empty() then
-               hcp_main_give_trait(defender, "phar_main_trait_individualistic", 20, 15)
+               hcp_main_give_trait(defender, "phar_main_trait_individualistic", 20, 20)
                out("hcp battle fought alone")
           end
 
@@ -1545,7 +1545,7 @@ core:add_listener(
           if not secondary_attackers:is_empty() then
                for i = 0, secondary_attackers:num_items() - 1 do
                     local character = secondary_attackers:item_at(i)
-                    hcp_main_give_trait(attacker, "phar_main_trait_cooperative", 20, 15)
+                    hcp_main_give_trait(attacker, "phar_main_trait_cooperative", 20, 20)
                     out("hcp battle reinforced other army")
                end
           end
@@ -1554,7 +1554,7 @@ core:add_listener(
           if not secondary_defenders:is_empty() then
                for i = 0, secondary_defenders:num_items() - 1 do
                     local character = secondary_defenders:item_at(i)
-                    hcp_main_give_trait(defender, "phar_main_trait_cooperative", 20, 15)
+                    hcp_main_give_trait(defender, "phar_main_trait_cooperative", 20, 20)
                     out("hcp battle reinforced other army")
                end
           end
@@ -1564,18 +1564,18 @@ core:add_listener(
           ---- BEING REINFORCED BY OTHER ARMY ----
           ----------------------------------------
           local battle = context:pending_battle()
-          --secodnary attackers
+          --secondary attackers
           local secondary_attackers = battle:secondary_attackers()
           if not secondary_attackers:is_empty() and not battle:attacker():is_null_interface() then
-               hcp_main_give_trait(attacker, "phar_main_trait_cooperative", 20, 15)
-               hcp_main_give_trait(attacker, "hcp_trait_trusting", 20, 10)
+               hcp_main_give_trait(attacker, "phar_main_trait_cooperative", 20, 20)
+               hcp_main_give_trait(attacker, "hcp_trait_trusting", 20, 15)
                out("hcp battle reinforced by other army")
           end
           -- secondary defenders
           local secondary_defenders = battle:secondary_defenders()
           if not secondary_defenders:is_empty() and not battle:defender():is_null_interface() then
-               hcp_main_give_trait(defender, "phar_main_trait_cooperative", 20, 15)
-               hcp_main_give_trait(defender, "hcp_trait_trusting", 20, 10)
+               hcp_main_give_trait(defender, "phar_main_trait_cooperative", 20, 20)
+               hcp_main_give_trait(defender, "hcp_trait_trusting", 20, 15)
                out("hcp battle reinforced by other army")
           end
 
@@ -2205,20 +2205,20 @@ core:add_listener(
 
                -- RAIDING
                if stance == "MILITARY_FORCE_ACTIVE_STANCE_TYPE_LAND_RAID" then
-                    hcp_main_give_trait(character, "phar_main_trait_blunt", 20, 5);
+                    hcp_main_give_trait(character, "phar_main_trait_blunt", 20, 20);
                     -- AMBUSHING
                elseif stance == "MILITARY_FORCE_ACTIVE_STANCE_TYPE_AMBUSH" then
-                    hcp_main_give_trait(character, "phar_main_trait_underhanded", 20, 5);
+                    hcp_main_give_trait(character, "phar_main_trait_underhanded", 20, 20);
                     -- FORCED MARCH
                elseif stance == "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MARCH" then
-                    hcp_main_give_trait(character, "phar_main_trait_ambitious", 20, 5);
+                    hcp_main_give_trait(character, "phar_main_trait_ambitious", 20, 15);
                     -- ENCAMP
                elseif stance == "MILITARY_FORCE_ACTIVE_STANCE_TYPE_SET_CAMP" then
-                    hcp_main_give_trait(character, "phar_main_trait_content", 20, 5);
+                    hcp_main_give_trait(character, "phar_main_trait_content", 20, 30);
                     -- RECRUITING
                elseif stance == "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MUSTER" then
-                    hcp_main_give_trait(character, "hcp_trait_charismatic", 20, 2);
-                    hcp_main_give_trait(character, "hcp_trait_military_admin_good", 20, 1);
+                    hcp_main_give_trait(character, "hcp_trait_charismatic", 20, 10);
+                    hcp_main_give_trait(character, "hcp_trait_military_admin_good", 20, 5);
                end
           end
 
@@ -2230,7 +2230,7 @@ core:add_listener(
           local military_force = character:military_force()
           if not military_force:is_null_interface() then
                if military_force:will_suffer_any_attrition() then
-                    hcp_main_give_trait(character, "phar_main_trait_ambitious", 20, 5);
+                    hcp_main_give_trait(character, "phar_main_trait_ambitious", 20, 15);
                     out("HCP_character_suffered_attrition")
                end
           end
