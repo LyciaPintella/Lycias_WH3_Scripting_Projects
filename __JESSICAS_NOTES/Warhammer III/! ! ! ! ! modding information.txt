@@ -148,48 +148,7 @@ land_units_tables|main_units_tables|melee_weapons_tables|ui_unit_groupings_table
 
 
 
-REGEX TESTER
-https://regex101.com/r/cO8lqs/3
-https://regex101.com/r/fo3Fuk/1
 
-^.*hef(?=.*mount).*
-
-(^land_|^main_)units_tables$
-^(?!.*0)(?!.*16)1
-wh_main_effect^(?=.*recruit).*
-
-****************
-^(?!.*very).*high4
-****************
-
-^character_skill_level_to_effects_junctions_tables|^unit_set_to_unit_junc|^land_units_tables|^effect_bonus_value_ids_unit_sets_tables|^effects_tables
-
-^wh2_dlc15(?!.*_cha_)(?!.*_boss)(?!.*_summoned).*
-
-^(?:.*recruit)(?:.*effect).*
-
-Try this search on the above link:
-^(?:.*_mon_)(?!.*region_to_forces_ally_provincewide).*
-^.*mon(?!ed)(?!_prince)(?!.*dragon).* -- no dragons, dragon princes, or summoned units.
-
-^wh_dlc03_bst(?!.*_cha_).*
-	d(?!r)       matches a d only if is not followed by r, but r will not be part of the overall regex match -> Try it!
-
-^wh2_dlc14|wh2_dlc13|wh2_dlc12|wh2_dlc11|wh2_dlc10|wh2_dlc09(?!.*_cha_)(?!.*_boss)(?!.*summoned).*
-
-^(wh2_dlc14|wh2_dlc13|wh2_dlc12|wh2_dlc11|wh2_dlc10|wh2_dlc09)(?!.*_cha_)(?!.*_boss)(?!.*summoned)(?!.*noctilus).*
-
-^.*(?!.*_cha_)(_cav_|_mon_|_inf_).*
-^.*(mon)(?!.*_cha_).*
-^(?!.*_cha_).*
-
-^.*mon(?!.*ed).* -- find all monsters but no summoned.
-
-^(?!.*_cha_).*
-
-^[!](?!.*[!])
-
-^(?!.*region_to_forces_ally_provincewide)(?!.*force_building_to_force_in_sphere_of_influence_own)(?!.*faction_to_faction_own)(?!.*force_to_force_own)(?!.*factionwide)(?!.*hidden)(?!.*character).*
 
 Powershell
 New-Item -ItemType SymbolicLink -Path ".\data" -Target "D:\SteamLibrary\steamapps\common\Total War WARHAMMER III\Warhammer III Data Folder"
