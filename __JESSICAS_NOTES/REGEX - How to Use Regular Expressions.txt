@@ -1,5 +1,10 @@
+
+
+
 Visual Studio Code: Use regular expressions (REGEX) and review examples
 https://learn.microsoft.com/en-us/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2022#capture-groups-and-replacement-patterns
+
+
 
 -- Regex Notes
 ?: - Positive Lookahead
@@ -42,6 +47,17 @@ d(?!r)       matches a d only if is not followed by r, but r will not be part of
 To apply logical and (?=.*word1)(?=.*word2)(?=.*word3)
 To apply logical or (word1)|(word2)|(word3)
 
+^ Anchor to the beginning of the line
+$ Anchor to the end of the line
+
+(?=...) Positive lookahead, so the expression inside the parentheses must match next
+(?<=...) Positive lookbehind, so the expression inside the parentheses must match before
+(?!) Negative lookahead, so the expression inside the parentheses must not match next
+(?<!...) Negative lookbehind, so the expression inside the parentheses must not match before
+(?s) Dot matches newlines, so . matches any character including newlines
+(?x) Extended mode, so whitespace and comments are ignored
+(?m) Multiline mode, so ^ and $ match the beginning and end of each line, not just the beginning and end of the whole string
+(?i) Case insensitive matching
 
 ? CAPTURE ALL LINES THAT DO NOT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
 ? ^(?!\n)((?!.*_name|_title).*$)
@@ -52,6 +68,23 @@ To apply logical or (word1)|(word2)|(word3)
 ? (?=_name|_title) -- This one finds the words but doesn't highlight much.
 ? (?=.*_name)(?=.*_title) -- This one matches every preceeding letter.
 ? (?=.*_name|.*_title) -- This one also matches every preceeding letter.
+
+? CAPTURE ALL LINES THAT DO NOT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
+? ^(?!\n)((?!.*_name|_title).*$)
+
+? CAPTURE ALL LINES THAT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
+? ^(?!\n)((?:.*_name|_title).*$)
+
+? (?=_name|_title) -- This one finds the words but doesn't highlight much.
+? (?=.*_name)(?=.*_title) -- This one matches every preceeding letter.
+? (?=.*_name|.*_title) -- This one also matches every preceeding letter.
+
+Find Only The First Occurence Per Line
+! Matches up until the first comma!
+^([^,]+),
+
+
+# Warhammer III Searches
 
 REGEX TESTER
 https://regex101.com/r/cO8lqs/3
@@ -95,3 +128,51 @@ Try this search on the above link:
 ^[!](?!.*[!])
 
 ^(?!.*region_to_forces_ally_provincewide)(?!.*force_building_to_force_in_sphere_of_influence_own)(?!.*faction_to_faction_own)(?!.*force_to_force_own)(?!.*factionwide)(?!.*hidden)(?!.*character).*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
