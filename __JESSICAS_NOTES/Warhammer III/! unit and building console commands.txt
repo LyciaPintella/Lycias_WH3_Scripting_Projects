@@ -1,0 +1,543 @@
+Helping Bretonnia:
+
+abandon
+primary 2
+bb wh_main_brt_stables_1
+
+gr wh_main_brt_bastonne
+gr wh2_main_brt_knights_of_origo
+gr wh2_dlc14_brt_chevaliers_de_lyonesse
+gr wh_main_brt_carcassonne
+gr wh3_main_brt_aquitaine
+	bb wh_main_special_bordeleaux_vineyards_1
+	bb wh_main_special_bordeleaux_vineyards_4
+gr wh_main_brt_artois
+gr wh_main_brt_lyonesse
+	bb wh2_main_brt_resource_pastures_1
+gr wh_main_brt_bretonnia
+gr mixer_brt_quenelles
+	bb wh2_main_brt_resource_pastures_1
+
+bb wh_main_brt_stables_5
+bb wh_main_brt_barracks_4
+bb wh_main_brt_walls_3
+bb wh_main_brt_farm_3
+bb wh_main_brt_farm_extra_2
+bb wh_main_brt_garrison_2
+bb wh_main_brt_smiths_2
+bb wh_main_brt_worship_3
+
+bb wh2_main_brt_resource_pottery_3
+bb wh2_main_brt_resource_pastures_3
+bb wh2_main_brt_resource_dyes_3
+bb wh2_main_brt_resource_timber_3
+bb wh2_main_brt_resource_furs_3
+bb bb wh2_main_brt_resource_marble_3
+
+
+gr wh2_main_brt_knights_of_the_flame
+gr wh2_main_brt_thegans_crusaders
+gr wh_main_brt_parravon
+gr wh_main_brt_bordeleaux
+gr mixer_brt_montfort
+gr mixer_brt_gisoreux
+gr mixer_brt_languille
+gr mixer_brt_brionne
+
+*BORDELEAUX
+bb wh_main_special_bordeleaux_vineyards_4
+
+*COURONNE
+bb wh_main_special_tournament_grounds
+bb wh_main_brt_legendary_grail_abbey
+
+*Carcasonne
+bb wh_main_brt_legendary_enchantress_tower
+
+
+Kislev
+
+*res wh3_main_ksl_devotion 375 -- gives 375 devotion
+
+
+au wh3_dlc24_ksl_inf_kislevite_warriors
+au wh3_main_ksl_cav_gryphon_legion_0
+au wh3_main_ksl_cav_horse_archers_0
+au wh3_main_ksl_cav_horse_raiders_0
+au wh3_main_ksl_cav_war_bear_riders_1
+au wh3_main_ksl_cav_winged_lancers_0
+au wh3_main_ksl_inf_armoured_kossars_0
+au wh3_main_ksl_inf_armoured_kossars_1
+au wh3_main_ksl_inf_ice_guard_0
+au wh3_main_ksl_inf_ice_guard_1
+au wh3_main_ksl_inf_kossars_0
+au wh3_main_ksl_inf_kossars_1
+au wh3_main_ksl_inf_kossars_tutorial_0
+au wh3_main_ksl_inf_kossars_tutorial_1
+au wh3_main_ksl_inf_streltsi_0
+au wh3_main_ksl_inf_tzar_guard_0
+au wh3_main_ksl_inf_tzar_guard_1
+au wh3_main_ksl_mon_elemental_bear_0
+au wh3_main_ksl_mon_elemental_bear_summoned_0
+au wh3_main_ksl_mon_snow_leopard_0
+au wh3_main_ksl_mon_snow_leopard_summoned_0
+au wh3_main_ksl_mon_snow_leopard_summoned_1
+au wh3_main_ksl_mon_snow_leopard_summoned_2
+au wh3_main_ksl_veh_heavy_war_sled_0
+au wh3_main_ksl_veh_light_war_sled_0
+au wh3_main_ksl_veh_little_grom_0
+
+*spear kossar ror
+au wh3_main_pro_ksl_inf_kossars_1_ 6
+au loupi_kis_gryphon 2
+*super cav
+au wh3_main_pro_ksl_cav_gryphon_legion_ror_0_ 2
+
+*wolves of the goromandy streltsi
+au loupi_kis_streltsi 2
+
+* Hammer of the Patriarchs
+au wh3_main_pro_ksl_veh_little_grom_0_
+
+add xp 10000
+
+Greenskins
+
+Eltharion's trusty vassal:
+abandon
+gr wh_main_grn_orcs_of_the_bloody_hand
+primary 2
+bb wh_main_grn_farm_2
+bb wh_dlc06_grn_walls_1_wurrzag
+bb wh_main_special_savage_orc_camp_2
+bb wh_main_grn_industry_1
+
+*High Elves
+
+*pooled resource
+res dd_hef_upgrades_splendour 25
+
+Eltharion resource
+res wardens_supply 3
+
+Helping Elves
+
+gr wh2_main_hef_nagarythe
+gr wh2_main_hef_tiranoc
+gr wh2_main_hef_eataine
+gr wh2_main_hef_yvresse
+gr wh2_main_hef_chrace
+gr wh2_main_hef_avelorn
+
+*Alarielle special building
+bb wh2_dlc10_special_world_root_entrance_3
+
+*Alarielle Sisters building
+bb wh2_dlc10_hef_handmaidens_alarielle
+
+*Alarielle Worldroot buildings
+wh2_dlc10_special_world_root_entrance_1
+wh2_dlc10_special_world_root_entrance_2
+wh2_dlc10_special_world_root_entrance_3
+
+*Alarielle Resources:
+bb wh2_main_hef_resource_animals_3
+
+*Imrik special building:
+
+bb wh2_main_hef_order_5
+bb wh2_main_hef_industry_3
+bb wh2_main_hef_court_2
+bb wh2_main_hef_farm_3
+bb wh2_main_hef_embassy_1
+bb wh2_main_hef_defence_major_3
+bb wh2_main_hef_defence_minor_2
+bb wh2_main_hef_mages_3
+bb wh2_main_hef_smith_2
+bb wh2_main_hef_worship_3
+bb wh2_main_hef_barracks_3
+bb wh2_main_hef_stables_2
+bb wh2_main_hef_dragons_2
+
+bb wh2_main_hef_hunters_2
+bb wh2_dlc10_hef_hunters_3
+
+bb wh2_main_hef_resource_wood_3
+bb wh2_main_hef_barracks_3
+bb wh2_main_hef_industry_3
+
+Imrik Trade:
+bb wh2_main_hef_resource_animals_3
+bb wh2_main_hef_resource_iron_3
+bb wh2_main_hef_resource_dyes_3
+
+*special buildings
+bb wh2_dlc10_hef_aesanar_camp
+bb wh2_main_special_shrine_of_khaine_hef_1
+
+Sisters:
+bb wh2_dlc10_hef_hunters_3
+
+Recruit slot:
+bb wh2_main_hef_smith_2
+
+Walls:
+bb wh2_main_hef_defence_minor_2
+bb wh2_main_hef_defence_major_3
+
+au wh2_dlc10_hef_inf_the_scions_of_mathlann_ror_0
+au wh2_dlc10_hef_inf_the_storm_riders_ror_0
+au wh2_dlc15_hef_inf_archers_ror_0 7
+au wh2_dlc15_hef_mon_war_lions_of_chrace_ror_0
+au wh2_dlc10_hef_inf_the_silverpelts_ror_0 - puremane company
+au wh2_dlc10_hef_inf_everqueens_court_guards_ror_0
+au wh2_dlc10_hef_cav_the_heralds_of_the_wind_ror_0
+au wh2_dlc10_hef_cav_the_fireborn_ror_0
+au wh2_dlc10_hef_inf_keepers_of_the_flame_ror_0
+
+au wh2_dlc15_hef_inf_rangers_0
+au wh2_main_hef_inf_lothern_sea_guard_0
+au wh2_main_hef_inf_lothern_sea_guard_1
+au wh2_dlc10_hef_inf_sisters_of_avelorn_0
+au wh2_main_hef_inf_phoenix_guard
+au wh2_main_hef_inf_swordmasters_of_hoeth_0
+au wh2_main_hef_inf_white_lions_of_chrace_0
+au wh2_dlc15_hef_inf_silverin_guard_0
+au wh2_dlc15_hef_veh_lion_chariot_of_chrace_0
+
+au wh2_main_hef_cav_silver_helms_1
+au wh2_main_hef_inf_spearmen_0
+au wh2_dlc15_hef_inf_silverin_guard_0
+au wh2_main_hef_inf_archers_0
+au wh2_main_hef_inf_archers_1
+au wh2_dlc10_hef_inf_sisters_of_avelorn_0
+au wh2_main_hef_cav_ellyrian_reavers_1
+au wh2_main_hef_cav_ellyrian_reavers_0
+
+au wh2_main_hef_inf_gate_guard
+au wh2_main_hef_mon_great_eagle
+au wh2_main_hef_mon_moon_dragon
+au wh2_main_hef_mon_phoenix_flamespyre
+au wh2_main_hef_mon_phoenix_frostheart
+
+au wh2_main_hef_mon_star_dragon
+
+Mistwalkers:
+
+au wh2_dlc15_hef_inf_mistwalkers_spireguard_0
+au wh2_dlc15_hef_inf_mistwalkers_sentinels_0
+au wh2_dlc15_hef_inf_mistwalkers_faithbearers_0
+
+Alith Anar
+au wh2_dlc10_hef_inf_shadow_walkers_0
+au wh2_dlc10_hef_inf_shadow_warriors_0
+au wh2_dlc10_hef_inf_the_grey_ror_0
+
+au wh2_dlc10_hef_inf_sisters_of_avelorn_0
+
+Forest Spirits
+au wh2_dlc10_hef_mon_treeman_0
+au wh2_dlc10_hef_mon_treekin_0
+au wh2_dlc10_hef_inf_dryads_0
+
+au wh2_dlc10_hef_inf_the_silverpelts_ror_0
+au wh2_dlc10_hef_inf_the_storm_riders_ror_0
+au wh2_dlc10_hef_inf_keepers_of_the_flame_ror_0
+au wh2_dlc10_hef_inf_everqueens_court_guards_ror_0
+
+au wh2_dlc10_hef_cav_the_fireborn_ror_0
+
+Imrik's dragons
+au wh2_dlc15_hef_mon_black_dragon_imrik
+au wh2_dlc15_hef_mon_forest_dragon_imrik
+au wh2_dlc15_hef_mon_moon_dragon_imrik
+au wh2_dlc15_hef_mon_star_dragon_imrik
+au wh2_dlc15_hef_mon_sun_dragon_imrik
+
+*From Mods
+au singe_hef_swordsmen
+
+au loupi_dragon_prince_foot
+au loupi_tiranoc_ror
+au loupi_sea_ranger
+au loupi_mistwalkers
+au loupi_sisters_avelorn_ror
+au loupi_chracian_pikes_ror
+au loupi_chracian_pikes
+au loupi_shadow_warrior_1
+au loupi_silverin_ror
+au loupi_swordmaster_ror
+au loupi_ulthane
+au loupi_dragon_gate_guard
+au loupi_ellyrian_lancers
+au loupi_shore_riders
+au loupi_ellyrian_lancers_ror
+au loupi_avelorn_cav
+au loupi_knights_of_anlec_ror
+au loupi_saphery_pegasus
+au loupi_knights_of_anlec
+
+
+*Alarielle special building
+bb wh2_dlc10_special_world_root_entrance_3
+gr wh2_main_hef_avelorn
+
+T3 Sisters
+bb wh2_dlc10_hef_alarielle
+
+Imrik Confederation:
+bb wh2_main_hef_resource_iron_3
+bb wh2_main_hef_resource_animals_3
+
+Mousillon
+abandon
+gr mixer_msl_mallobaude
+primary 3
+bb mixu_msl_the_donjon_of_dol_1
+
+
+Helping Empire
+
+gr wh_main_emp_empire
+gr wh2_dlc13_emp_golden_order
+gr wh_main_emp_marienburg
+gr wh_main_emp_middenland
+gr wh_main_emp_nordland
+gr wh_main_emp_ostermark
+gr wh_main_emp_ostland
+gr wh_main_emp_stirland
+gr wh_main_emp_talabecland
+gr wh_main_emp_wissenland
+gr wh_main_emp_averland
+gr wh_main_emp_hochland
+gr wh2_main_emp_new_world_colonies
+gr wh2_main_emp_pirates_of_sartosa
+gr wh2_main_emp_sudenburg
+
+
+
+bb wh_main_emp_garrison_2
+bb wh_main_emp_walls_3
+
+bb wh_main_emp_farm_basic_3
+bb wh_main_emp_industry_basic_3
+
+
+bb wh2_main_emp_roads_2
+
+bb wh_main_emp_barracks_3
+bb wh_main_emp_stables_3
+
+bb wh_main_emp_forges_3
+bb wh_main_emp_smiths_2
+bb wh_main_emp_tavern_3
+bb wh_main_emp_wizards_2
+bb wh_main_emp_worship_3
+
+bb wh_main_emp_resource_pottery_3
+bb wh_main_emp_resource_pastures_3
+
+
+Empire Landmarks
+
+Altdorf
+bb wh2_main_special_altdorf_castle_reikguard
+bb wh2_main_special_altdorf_imperial_palace
+
+Pfeildorf
+bb wh2_main_special_solland_market_1
+
+North Marienburg
+bb wh_main_special_reiksfort
+
+HELP DWARFS
+
+bb wh2_main_special_brewery - which province does it go into?
+
+bb wh_dlc06_dwf_ranger_hub_2
+bb wh_main_dwf_industry_4
+bb wh_main_dwf_farm_4
+bb wh_main_dwf_resource_beer_4
+bb wh_main_dwf_barracks_3
+
+units
+au wh_pro04_brt_cav_questing_knights_ror_0 7
+au wh_dlc07_brt_inf_foot_squires_0
+au wh_dlc07_brt_inf_men_at_arms_1
+au wh_main_brt_inf_peasant_bowmen
+au wh_dlc07_brt_inf_battle_pilgrims_0
+au wh_dlc07_brt_inf_spearmen_at_arms_1
+au wh_main_brt_cav_knights_of_the_realm
+
+Help Kislev:
+
+gr wh3_main_ksl_the_ice_court
+
+bb wh3_main_special_ksl_kislev_1_3 **WONT SPAWN KATARIN IF BUILT WITH THIS COMMAND
+bb wh3_main_special_ksl_kislev_3_4
+
+bb wh3_main_ksl_city_gold_5
+bb wh3_main_ksl_city_build_growth_5  -- construction cost reduction
+bb wh3_main_ksl_city_recruit_growth_xp_5
+bb wh3_main_ksl_bears_2
+bb wh3_main_ksl_artillery_2
+
+bb wh3_main_ksl_growth_recruit_cost_3
+bb wh3_main_ksl_stables_2
+bb wh3_main_ksl_trade_order_5
+
+bb wh3_main_ksl_walls_minor_2
+bb wh3_main_ksl_walls_major_3
+
+bb wh3_main_ksl_barracks_3
+bb wh3_main_ksl_city_town_watch_5
+bb wh3_main_ksl_city_walls_4 -- does ammo
+
+bb wh3_main_ksl_ice_guard_2
+
+
+
+
+wh3_main_special_ksl_praag_1_1
+wh3_main_special_ksl_praag_1_2
+wh3_main_special_ksl_praag_2_1
+wh3_main_special_ksl_praag_2_2
+wh3_main_special_ksl_praag_2_3
+wh3_main_special_ksl_praag_3_1
+wh3_main_special_ksl_praag_3_2
+wh3_main_special_ksl_praag_3_3
+income
+bb wh3_main_ksl_trade_order_5
+
+Cathay
+
+bb wh3_main_cth_growth_yang_3
+bb wh3_main_cth_jade_barracks_3
+bb wh3_main_cth_gunners_3
+bb wh3_main_cth_cavalry_3
+bb wh3_main_ksl_barracks_3
+
+Help Southern Realms
+
+gr wh_main_teb_border_princes
+gr wh_main_teb_estalia
+gr wh_main_teb_tilea
+
+BRETONIA
+
+wh_main_brt_cav_knights_of_the_realm
+wh_dlc07_brt_cav_knights_errant_0
+wh_dlc07_brt_cav_questing_knights_0
+
+wh_dlc07_brt_cav_grail_guardians_0
+wh_main_brt_cav_pegasus_knights
+wh_main_brt_cav_grail_knights
+
+EMPIRE
+
+wh_main_emp_cav_empire_knights
+wh_main_emp_cav_reiksguard
+wh_dlc04_emp_cav_knights_blazing_sun_0
+
+wh_main_emp_cav_demigryph_knights_0
+wh_main_emp_cav_demigryph_knights_1
+
+GRAND CATHAY
+
+wh3_main_cth_inf_crane_gunners_0
+wh3_main_cth_inf_dragon_guard_crossbowmen_0
+wh3_main_cth_inf_jade_warrior_crossbowmen_0
+wh3_main_cth_inf_jade_warrior_crossbowmen_1
+wh3_main_cth_inf_peasant_archers_0
+
+wh3_main_cth_inf_dragon_guard_0
+wh3_main_cth_inf_jade_warriors_0
+wh3_main_cth_inf_jade_warriors_1
+wh3_main_cth_inf_peasant_spearmen_1
+bb wh3_main_cth_growth_yang_3
+bb wh3_main_cth_jade_barracks_3
+bb wh3_main_cth_gunners_3
+bb wh3_main_cth_cavalry_3
+
+KISLEV
+
+au wh3_main_ksl_cav_gryphon_legion_0
+au wh3_main_ksl_cav_horse_archers_0
+au wh3_main_ksl_cav_war_bear_riders_1
+au wh3_main_ksl_cav_winged_lancers_0
+
+au wh3_main_ksl_mon_snow_leopard_0
+
+au wh3_main_ksl_veh_heavy_war_sled_0
+au wh3_main_ksl_veh_light_war_sled_0
+
+au wh3_main_ksl_veh_little_grom_0
+
+au wh3_main_ksl_inf_kossars_0
+au wh3_main_ksl_inf_kossars_1
+
+au wh3_main_ksl_inf_armoured_kossars_0 3
+au wh3_main_ksl_inf_armoured_kossars_1
+
+DARK ELVES
+
+wh2_dlc10_def_cav_doomfire_warlocks_0
+wh2_dlc14_def_cav_scourgerunner_chariot_0
+wh2_main_def_cav_cold_one_chariot
+wh2_main_def_cav_cold_one_knights_0
+wh2_main_def_cav_cold_one_knights_1
+wh2_main_def_cav_dark_riders_0
+wh2_main_def_cav_dark_riders_1
+wh2_main_def_cav_dark_riders_2
+
+wh2_main_def_inf_bleakswords_0
+wh2_main_def_inf_dreadspears_0
+
+wh2_main_def_inf_black_ark_corsairs_0
+wh2_main_def_inf_black_ark_corsairs_1
+wh2_main_def_inf_black_guard_0
+wh2_main_def_inf_har_ganeth_executioners_0
+
+wh2_main_def_inf_darkshards_1
+wh2_main_def_inf_shades_0
+wh2_main_def_inf_shades_1
+wh2_main_def_inf_shades_2
+
+wh2_main_def_inf_witch_elves_0
+wh2_dlc10_def_inf_sisters_of_slaughter
+
+wh2_main_def_inf_harpies
+wh2_dlc10_def_mon_feral_manticore_0
+wh2_dlc10_def_mon_war_hydra_boss
+wh2_dlc14_def_mon_bloodwrack_medusa_0
+wh2_twa03_def_mon_war_mammoth_0
+wh2_twa03_def_mon_wolves_0
+
+wh2_main_def_mon_black_dragon
+wh2_main_def_mon_war_hydra
+wh2_dlc10_def_mon_kharibdyss_0
+
+wh3_main_cth_art_fire_rain_rocket_battery_0
+wh3_main_cth_art_grand_cannon_0
+
+DWARFS
+
+wh_dlc06_dwf_inf_bugmans_rangers_0
+wh_dlc06_dwf_inf_rangers_0
+wh_dlc06_dwf_inf_rangers_1
+wh_main_dwf_inf_thunderers_0
+wh_main_dwf_inf_quarrellers_0
+wh_main_dwf_inf_quarrellers_1
+
+wh_main_dwf_inf_dwarf_warrior_0
+wh_main_dwf_inf_dwarf_warrior_1
+wh_main_dwf_inf_longbeards
+
+wh_main_dwf_inf_hammerers
+wh_main_dwf_inf_ironbreakers
+wh_main_dwf_inf_longbeards_1
+wh_dlc06_dwf_inf_old_grumblers_0
+
+wh_main_dwf_inf_slayers
+wh2_dlc10_dwf_inf_giant_slayers
+

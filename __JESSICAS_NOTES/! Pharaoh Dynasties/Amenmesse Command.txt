@@ -1,0 +1,17 @@
+Amenmesse's command definition for passive and active modes.
+    activated = {
+        cooldown = 5,
+        texts = {
+            name = "phar_main_commands_use_amenmesse_title",
+            description = "phar_main_commands_use_amenmesse_desc",
+            effect_condition = "phar_main_commands_use_condition_amenmesse",
+        },
+    },
+    passive = {
+        windup = 5,
+        texts = {
+            name = "phar_main_commands_shemsu_amenmesse_title",
+            description = "phar_main_commands_shemsu_amenmesse_desc",
+        },
+        effect_bundle = { bundle_key = "phar_main_commands_amenmesse_shemsu_hor" },
+    }

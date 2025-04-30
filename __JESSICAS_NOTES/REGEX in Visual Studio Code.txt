@@ -1,0 +1,2 @@
+Visual Studio Code: Use regular expressions (REGEX) and review examples
+https://learn.microsoft.com/en-us/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2022#capture-groups-and-replacement-patterns

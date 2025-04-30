@@ -1568,14 +1568,14 @@ core:add_listener(
           local secondary_attackers = battle:secondary_attackers()
           if not secondary_attackers:is_empty() and not battle:attacker():is_null_interface() then
                hcp_main_give_trait(attacker, "phar_main_trait_cooperative", 20, 20)
-               hcp_main_give_trait(attacker, "hcp_trait_trusting", 20, 15)
+               hcp_main_give_trait(attacker, "hcp_trait_trusting", 20, 5)
                out("hcp battle reinforced by other army")
           end
           -- secondary defenders
           local secondary_defenders = battle:secondary_defenders()
           if not secondary_defenders:is_empty() and not battle:defender():is_null_interface() then
                hcp_main_give_trait(defender, "phar_main_trait_cooperative", 20, 20)
-               hcp_main_give_trait(defender, "hcp_trait_trusting", 20, 15)
+               hcp_main_give_trait(defender, "hcp_trait_trusting", 20, 5)
                out("hcp battle reinforced by other army")
           end
 

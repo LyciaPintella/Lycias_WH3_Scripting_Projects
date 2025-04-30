@@ -33,7 +33,7 @@ local ancillary_master_list = {
      --drinking establishments
      ["phar_main_all_province_management_happiness_type_c_3"] = { "phar_main_common_general_12", "phar_main_rare_19", "phar_main_rare_31", "phar_main_rare_42", "phar_main_rare_7", },
      ["phar_main_ram_province_management_production_boost_happiness_3"] = { "phar_main_common_general_12", "phar_main_rare_19", "phar_main_rare_31", "phar_main_rare_42", "phar_main_rare_7", },
-     --granary
+     --grant_units_to_character_by_position_from_faction                                                                               --the cook does nothing without a mod =)
      ["phar_main_all_resource_production_modifier_food_3"] = { "phar_main_common_general_23", "phar_main_common_general_29", "phar_main_common_general_3", "phar_sea_common_6", },
      ["phar_main_tausret_resource_production_modifier_food_3"] = { "phar_main_common_general_23", "phar_main_common_general_29", "phar_main_common_general_3", "phar_sea_common_6", },
      --bazaars
@@ -77,7 +77,7 @@ local ancillary_master_list = {
      ["phar_map_religion_cult_center_grand_temple_ninurta_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
      ["phar_map_religion_cult_center_grand_temple_poseidon_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
      ["phar_map_religion_cult_center_grand_temple_zeus_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     --royal bronzeworks
+     --royal bronze worker
      ["phar_main_all_resource_production_modifier_bronze_3"] = { "phar_main_common_armour_heavy", "phar_main_common_armour_light", "phar_main_common_armour_medium", },
      ["phar_main_tausret_resource_production_modifier_bronze_3"] = { "phar_main_common_armour_heavy", "phar_main_common_armour_light", "phar_main_common_armour_medium", },
      --champions hall

@@ -1,0 +1,4 @@
+Royal Bronze Worker (phar_main_all_resource_production_modifier_bronze_3): phar_main_common_armour_heavy, phar_main_common_armour_light, phar_main_common_armour_medium
+Royal Bronze Worker - Tausret (phar_main_tausret_resource_production_modifier_bronze_3): phar_main_common_armour_heavy, phar_main_common_armour_light, phar_main_common_armour_medium
+
+phar_main_all_resource_production_bronze_mine_derivative_type_a_2: 

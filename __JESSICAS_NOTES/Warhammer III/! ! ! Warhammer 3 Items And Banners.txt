@@ -1,0 +1,368 @@
+*KISLEV
+add xp 15000
+
+RPFM Search Keys
+wh2_main_anc_enchanted_item|wh3_main_anc_enchanted_item|wh_main_anc_enchanted_item
+
+*ITEM SET
+item wh3_main_anc_armour_iron_ice_armour
+item wh3_main_anc_weapon_frost_shard_glaive
+item wh3_main_anc_talisman_blizzard_broach
+
+Melee Auras Kit
+item wh3_main_anc_armour_iron_ice_armour OR item wh_main_anc_armour_helm_of_discord OR item wh_main_anc_armour_glittering_scales
+item wh_dlc03_anc_weapon_the_brass_cleaver OR item wh3_main_anc_weapon_dazhs_brazier
+item wh3_main_anc_talisman_blood_of_the_motherland OR item wh_main_anc_talisman_the_white_cloak_of_ulric
+item wh3_main_anc_enchanted_item_balalaika_of_the_arari OR item wh_main_anc_enchanted_item_crown_of_command
+
+****ARMORS
+*Slow Aura
+item wh3_main_anc_armour_frost_shard_armour
+*UNIQUE
+item wh3_main_anc_armour_helm_of_draesca
+
+item wh3_main_anc_armour_iron_ice_armour
+item wh3_main_anc_armour_shield_of_sacrifice
+item wh3_main_anc_armour_wyrm_harness
+
+
+item wh_main_anc_armour_armour_of_destiny
+item wh_main_anc_armour_armour_of_fortune
+item wh_main_anc_armour_armour_of_silvered_steel
+item wh_main_anc_armour_charmed_shield
+item wh_main_anc_armour_glittering_scales
+item wh_main_anc_armour_helm_of_discord
+item wh_main_anc_armour_shield_of_ptolos
+item wh_main_anc_armour_the_armour_of_meteoric_iron
+*MD and Ward Save
+item wh_main_anc_armour_tricksters_helm
+
+***WEAPONS???
+
+***TALISMANS
+item wh3_main_anc_talisman_blizzard_broach
+item wh3_main_anc_talisman_blood_of_the_motherland
+item wh3_main_anc_talisman_star_iron_ring
+item wh_main_anc_talisman_seed_of_rebirth
+item wh_main_anc_talisman_talisman_of_preservation
+item wh_main_anc_talisman_the_white_cloak_of_ulric
+
+***ENCHANTED ITEMS
+item wh3_main_anc_enchanted_item_balalaika_of_the_arari
+*HI THERE DREAMWINE
+item wh3_main_anc_enchanted_item_dreamwine
+PERFECT VIGOUR AND REGEN PASSIVE
+item wh3_main_anc_enchanted_item_ever_full_kovsh
+item wh3_main_anc_enchanted_item_saint_annushkas_finger_bone
+item wh3_main_anc_enchanted_item_steppe_hunters_horn
+item wh_main_anc_enchanted_item_crown_of_command
+item wh_main_anc_enchanted_item_healing_potion
+item wh_main_anc_enchanted_item_potion_of_foolhardiness
+item wh_main_anc_enchanted_item_potion_of_speed
+item wh_main_anc_enchanted_item_potion_of_strength
+item wh_main_anc_enchanted_item_potion_of_toughness
+item wh_main_anc_enchanted_item_the_other_tricksters_shard
+item wh_main_anc_enchanted_item_the_terrifying_mask_of_eee
+item wh_main_anc_enchanted_item_van_horstmanns_speculum
+
+***ARCANE ITEMS
+*DAMAGE AURA
+item wh3_main_anc_arcane_item_mirror_of_the_ice_queen
+item wh3_main_anc_arcane_item_snowflake_pendant
+item wh_main_anc_arcane_item_channelling_staff
+item wh_main_anc_arcane_item_earthing_rod
+item wh_main_anc_arcane_item_forbidden_rod
+item wh_main_anc_arcane_item_power_scroll
+item wh_main_anc_arcane_item_power_stone
+item wh_main_anc_arcane_item_sceptre_of_stability
+item wh_main_anc_arcane_item_scroll_of_leeching
+item wh_main_anc_arcane_item_scroll_of_shielding
+item wh_main_anc_arcane_item_tricksters_shard
+item wh_main_anc_arcane_item_wand_of_jet
+
+***FOLLOWRS AND BANNERS
+item wh3_main_anc_follower_ksl_akshina_informant
+item wh3_main_anc_follower_ksl_atamans_administrator
+
+10% UPKEEP REDUCTION 5% WEAPON STRENGTH FOR TZAR GUARD
+item wh3_main_anc_follower_ksl_knights_squire
+
+25% BONUS ALLEGIANCE POINTS
+item wh3_main_anc_follower_ksl_kvas_deye
+item wh3_main_anc_follower_ksl_nomad_riding_master
+10% HERO ACTION SUCCESS CHANGE
+item wh3_main_anc_follower_ksl_old_crone
+5% HERO ACTION SUCCESS CHANCE
+item wh3_main_anc_follower_ksl_orthodoxy_cleric
+
+10% CAMPAIGN MOVEMENT RANGE
+item wh3_main_anc_follower_ksl_steppe_shepherd
+10% CAMPAIGN MOVEMENT RANGE
+item wh_main_anc_follower_all_men_kislevite_kossar
+
+item wh3_main_anc_follower_ksl_veteran_warrior
++3 Public Order
+item wh3_main_anc_follower_ksl_vodka_distiller
++8 WINDS OF MAGIC
+item wh_main_anc_follower_all_hedge_wizard
+item wh_main_anc_follower_all_men_bailiff
+item wh_main_anc_follower_all_men_boatman
+
+-10% ENEMY HERO ACTION SUCCESS CHANCE
+item wh_main_anc_follower_all_men_bodyguard
+item wh_main_anc_follower_all_men_servant
+item wh3_main_anc_follower_ksl_knights_ward
+
+6% MAGIC ITEM FIND CHANCE
+item wh_main_anc_follower_all_men_bounty_hunter
+
+4 LEADERSHIP VS UNDEAD
+item wh_main_anc_follower_all_men_grave_robber
+
+1.5% REPLENISHMENT RATE
+item wh_main_anc_follower_all_men_mercenary
+5% RECRUIT COST REDUCTION
+item wh_main_anc_follower_all_men_militiaman
+10% EXTRA CAPTIVES IN BATTLE
+item wh_main_anc_follower_all_men_ogres_pit_fighter
+15% BONUS INCOME FROM RAIDING
+item wh_main_anc_follower_all_men_outlaw
+12% MAGIC ITEM STEAL CHANCE
+item wh_main_anc_follower_all_men_protagonist
+
+8% BONUS ASSASSINATION CHANCE
+item wh_main_anc_follower_all_men_rogue
+10% ASSASSINATION CHANCE BONUS
+item wh_main_anc_follower_all_men_thug
+
+item wh_main_anc_follower_all_men_smuggler
+*10% SIEGE ATTRITION RESISTANCE
+item wh_main_anc_follower_all_men_soldier
+item wh_main_anc_follower_all_men_tomb_robber
+item wh_main_anc_follower_all_men_vagabond
+*FACTIONWIDE MAGIC ITEM FIND CHANCE
+item wh_main_anc_follower_all_men_valet
+
+item wh_main_anc_follower_all_student
+
+ANTI CORRUPTION
+-5 CORRUPTION
+item wh3_main_anc_follower_ksl_priest_of_taal
+-3 CORRUPTION
+item wh_main_anc_follower_all_men_initiate
+item wh_main_anc_follower_all_men_zealot
+item wh3_main_anc_follower_ksl_priest_of_ursun
+-2 CORRUPTION
+item wh3_main_anc_follower_ksl_ritual_enforcer
+
+TAX COMBO
+item wh_main_anc_follower_all_men_tollkeeper
+item wh3_main_anc_follower_ksl_tax_collector
+
+****BANNERS
+REGEN WHEN BELOW HALF HEALTH
+item wh3_main_anc_magic_standard_banner_of_praag
+8 MA
+item wh_main_anc_magic_standard_war_banner
+PERFECT VIGOUR
+item wh_main_anc_magic_standard_gleaming_pennant
+8 MD 7 LEADERSHIP
+item wh_main_anc_magic_standard_standard_of_discipline
+15 BONUS VS LARGE
+item wh_main_anc_magic_standard_scarecrow_banner
+
+*SPECIAL SUPER BANNER
+item wh3_main_anc_magic_standard_banner_of_the_orthodoxy
+
+31% MISSILE RESISTANCE
+item wh3_main_anc_magic_standard_father_niklas_mantle
+
+SPEED GROUP
+10% AND VANGUARD DEPLOYMENT
+item wh_main_anc_magic_standard_rangers_standard
+15%
+item wh3_main_anc_magic_standard_standard_of_the_empty_steppe
+20%
+item wh_main_anc_magic_standard_steel_standard
+30%
+item wh_main_anc_magic_standard_banner_of_swiftness
+
+ENEMY LEADERSHIP -4
+item wh_main_anc_magic_standard_griffon_banner
+
+IMBUES FLAMING ATTACKS
+item wh_main_anc_magic_standard_banner_of_eternal_flame
+
+MAGIC RESIST
+item wh_main_anc_magic_standard_lichbone_pennant
+CHARGE BONUS
+item wh_main_anc_magic_standard_rampagers_standard
+
+8 ARMOUR PIERCING DAMAGE
+item wh_main_anc_magic_standard_razor_standard
+
+CAUSES FEAR AND TERROR
+item wh_main_anc_magic_standard_wailing_banner
+
+item wh3_main_anc_talisman_blizzard_broach - reduces enemy movement range
+item wh_main_anc_talisman_seed_of_rebirth
+item wh_main_anc_talisman_talisman_of_preservation *16% Ward save
+item wh3_main_anc_arcane_item_snowflake_pendant
+
+15 MA 15% Weapon Strength
+item wh3_main_anc_weapon_the_rime_blade
+
+regen aura
+item wh3_main_anc_weapon_dazhs_brazier
+
+item wh3_main_anc_enchanted_item_balalaika_of_the_arari
+
+regen md
+item wh3_main_anc_talisman_blood_of_the_motherland
+
+ITEM SET
+item wh3_main_anc_armour_wyrm_harness 20% resist armor
+item wh3_main_anc_weapon_wyrmspike 12 MD and 9 MA
+
+item wh_main_anc_weapon_sword_of_strife
+item wh_main_anc_weapon_fencers_blades
+item wh_main_anc_weapon_giant_blade
+
+MELEE DEFENCE AND WARD SAVE ITEM SET
+item wh3_main_anc_weapon_ursuns_claws
+item wh3_main_anc_armour_great_bear_pelt
+
+item wh3_main_anc_enchanted_item_ever_full_kovsh
+item wh_main_anc_enchanted_item_van_horstmanns_speculum
+item wh_main_anc_enchanted_item_the_other_tricksters_shard
+item wh_main_anc_enchanted_item_healing_potion
+
+*UNIQUE PHYSICAL RESISTANCE ENCHANTED ITEM
+item wh3_main_anc_enchanted_item_dreamwine
+
+add xp 15000
+item wh_main_anc_follower_all_men_kislevite_kossar
+
+*AGENT
+agent dignitary wh3_main_ksl_patriarch
+
+**end kislev
+
+Banners
+item wh_main_anc_magic_standard_banner_of_eternal_flame
+item wh_main_anc_magic_standard_banner_of_swiftness
+item wh2_main_anc_magic_standard_banner_of_ellyrion
+item wh2_main_anc_magic_standard_horn_of_isha
+item wh2_dlc10_anc_magic_standard_banner_of_avelorn
+
+
+item wh_main_anc_magic_standard_gleaming_pennant +4 leadership
+item wh_main_anc_magic_standard_rampagers_standard
+item wh_main_anc_magic_standard_razor_standard
+item wh_main_anc_magic_standard_scarecrow_banner
+item wh_main_anc_magic_standard_standard_of_discipline
+item wh_main_anc_magic_standard_wailing_banner   *terror
+item wh_main_anc_magic_standard_war_banner
+
+item wh_main_anc_magic_standard_rangers_standard
+
+Followers
+crafteditemchanges.pack has the effects for some of these:
+
+Perfect Vigour
+item wh_main_anc_magic_standard_gleaming_pennant
+
+item wh2_main_anc_follower_hef_librarian *global winds, hero success chance.
+
+**Look up disciple of the phoenix - adds winds of magic max to army and research rate.
+
+STUDENT
+item wh_main_anc_follower_all_student
+
+item wh_main_anc_magic_standard_lichbone_pennant  *magic res and damage
+
+item wh2_main_anc_follower_hef_dragon_armourer    *Bonus vs large 14
+
+item wh2_main_anc_follower_hef_scout
+item wh2_main_anc_follower_hef_raven_keeper
+item wh2_main_anc_follower_hef_priestess_isha  *ATTRITION IMMUNITY
+item wh2_main_anc_follower_hef_priest_vaul *ATTRITION IMMUNITY
+
+*Public order followers:
+
+item wh2_main_anc_follower_hef_librarian    *global winds of magic
+item wh2_main_anc_follower_hef_shrine_keeper
+
+*Public order combo
+item wh2_main_anc_follower_hef_wine_merchant    *eatainean vintner
+item wh2_main_anc_follower_hef_minstrel
+item wh2_main_anc_follower_hef_bard
+
+item wh2_main_anc_follower_hef_food_taster
+item wh2_main_anc_follower_hef_dragon_tamer   *10 MD for dragons
+item wh2_main_anc_follower_hef_assassin *ambush success chance
+
+item wh2_main_anc_follower_hef_counterspy *+6 MD vs dark elves, hero resist.
+
+*****
+*ITEMS
+
+item wh_main_anc_arcane_item_forbidden_rod
+
+*item wh3_main_anc_weapon_slaaneshs_blade
+
+*item wh3_main_anc_weapon_skars_kraken_killer
+*item wh3_main_anc_weapon_chainsword
+*item wh3_main_anc_weapon_the_bane_spear
+*item wh3_main_anc_weapon_gilellions_soulnetter
+
+*item wh3_main_anc_follower_the_dark_princes_paramour
+*item wh3_main_anc_follower_personal_sycophant
+
+*wh2_dlc10_anc_weapon_the_widowmaker_1
+*wh2_dlc10_anc_weapon_the_widowmaker_2
+*wh2_dlc10_anc_weapon_the_widowmaker_3
+
+*****
+*item wh_main_anc_weapon_sword_of_bloodshed
+*item wh2_main_anc_weapon_blade_of_leaping_gold
+*item wh2_main_anc_weapon_executioners_axe
+*item wh_main_anc_weapon_obsidian_blade
+
+item wh2_main_anc_enchanted_item_moranions_wayshard *Vanguard deployment spearmen and archers
+
+item wh2_main_anc_armour_enchanted_ithilmar_breastplate
+item wh2_main_anc_talisman_vambraces_of_defence
+item wh2_main_anc_enchanted_item_ring_of_corin
+item stompies_anc_enchanted_caledors_shadow_cloak    *10 melee defense, speed
+item stompies_anc_enchanted_key_to_white_tower    *25% magic item find chance
+
+item wh2_main_anc_talisman_diamond_guardian_phoenix *10% mapwide physical resist.
+
+item wh2_main_anc_talisman_emerald_collar    *regen with ward save
+
+item wh2_main_anc_enchanted_item_khaines_ring_of_fury  *2x fiery spell cast
+item wh2_main_anc_enchanted_item_gilded_horn_of_galon_konook *2x golden hounds cast
+
+ARCANE ITEMS
+item wh2_dlc13_anc_arcane_item_amplifier  *30% cooldown to spells
+item stompies_anc_arcane_tome_of_arcane_knowledge *10% cooldown, -1 winds cost all spells.
+
+item wh2_main_anc_armour_shadow_armour  *Speed, vanguard deployment
+
+item wh2_dlc15_anc_enchanted_item_star_dragon_special   *20% ward save, chain lightning
+
+item wh_main_anc_enchanted_item_healing_potion
+item wh_main_anc_enchanted_item_potion_of_toughness
+item wh2_main_anc_enchanted_item_radiant_gem_of_hoeth *4x heals
+
+item stompies_anc_enchanted_glittering_helmet  *enc item with weapon str
+
+item wh2_main_anc_talisman_talisman_of_saphery      *green item, +5 MD
+
+item wh2_dlc09_anc_weapon_double_crescent_of_neru *green sword with melee defence
+item wh2_main_anc_enchanted_item_folariaths_robe *low damage tanky robe
+
+*melee defence
+item wh_main_anc_armour_charmed_shield
+item wh_main_anc_weapon_fencers_blades

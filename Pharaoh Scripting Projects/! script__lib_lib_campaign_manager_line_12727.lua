@@ -12723,7 +12723,7 @@ function campaign_manager:get_regions_bonus_value(region, id)
 
      return region:bonus_values():scripted_value(id, "value");
 end;
-
+-- Lycia Bookmark!
 --- @function get_factions_bonus_value
 --- @desc Returns the scripted bonus value a supplied faction object has of a supplied id. It may also be supplied a faction key in place of a faction object.
 --- @p object faction interface or faction key

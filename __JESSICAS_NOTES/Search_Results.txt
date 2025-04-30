@@ -1,8 +1,0 @@
-"mon_ror.lua"
-@Ascopa_Monumental_Unit_Pack.pack
-
-Casedesus is from
-!heup_pegasus.pack
-
-Points on creation for a skill are under
-character_skill_nodes_tables

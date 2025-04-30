@@ -1,6 +1,0 @@
-[out] <845.4s>   shy:script_belongs_to wh3_main_ksl_the_ice_court
-[out] <845.4s>   shy is skv faction is false
-[out] <845.5s>   component_l_click_up_listener triggered
-[out] <845.5s>   Error: Component not found for path: settlement_panel -> settlement_list
-[out] <845.5s>   Error: Settlement list not found
-[out] <845.5s>   Error: CM object or region name is nil
