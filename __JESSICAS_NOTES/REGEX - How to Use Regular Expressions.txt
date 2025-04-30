@@ -1,0 +1,97 @@
+Visual Studio Code: Use regular expressions (REGEX) and review examples
+https://learn.microsoft.com/en-us/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2022#capture-groups-and-replacement-patterns
+
+-- Regex Notes
+?: - Positive Lookahead
+?! - Negative Lookahead
+
+^The        matches any string that starts with The
+end$        matches a string that ends with end
+^The end$   exact string match (starts and ends with The end)
+roar        matches any string that has the text roar in it
+
+
+a(bc) -- Perentheses create a capturing group with value bc
+a(b|c) -- Matches a string that has a followed by b or c (and captures b or c)
+a(?:bc)* -- Using ?: we disable the capturing group.
+a(?<foo>bc) -- Using ?<foo> we put a name to the group.
+
+\w         matches a word character (alphanumeric character plus underscore)
+
+     \b represents an anchor like caret (it is similar to $ and ^) matching positions where one side is a word character (like \w) and the other side is not a word character (for instance it may be the beginning of the string or a space character).
+
+     It comes with its negation, \B. This matches all positions where \b doesn’t match and could be if we want to find a search pattern fully surrounded by word characters.
+
+\babc\b          performs a "whole words only" search
+\Babc\B          matches only if the pattern is fully surrounded by word characters
+
+Back-references — \1
+([abc])\1              using \1 it matches the same text that was matched by the first capturing group
+([abc])([de])\2\1      we can use \2 (\3, \4, etc.) to identify the same text that was matched by the second (third, fourth, etc.) capturing group
+(?<foo>[abc])\k<foo>   we put the name foo to the group and we reference it later (\k<foo>). The result is the same of the first regex
+
+Look-ahead and Look-behind — (?=) and (?<=)
+d(?=r)       matches a d only if is followed by r, but r will not be part of the overall regex match
+(?<=r)d      matches a d only if is preceded by an r, but r will not be part of the overall regex match
+
+You can use also the negation operator!
+
+d(?!r)       matches a d only if is not followed by r, but r will not be part of the overall regex match
+(?<!r)d      matches a d only if is not preceded by an r, but r will not be part of the overall regex match
+
+To apply logical and (?=.*word1)(?=.*word2)(?=.*word3)
+To apply logical or (word1)|(word2)|(word3)
+
+
+? CAPTURE ALL LINES THAT DO NOT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
+? ^(?!\n)((?!.*_name|_title).*$)
+
+? CAPTURE ALL LINES THAT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
+? ^(?!\n)((?:.*_name|_title).*$)
+
+? (?=_name|_title) -- This one finds the words but doesn't highlight much.
+? (?=.*_name)(?=.*_title) -- This one matches every preceeding letter.
+? (?=.*_name|.*_title) -- This one also matches every preceeding letter.
+
+REGEX TESTER
+https://regex101.com/r/cO8lqs/3
+https://regex101.com/r/fo3Fuk/1
+
+^.*hef(?=.*mount).*
+
+(^land_|^main_)units_tables$
+^(?!.*0)(?!.*16)1
+wh_main_effect^(?=.*recruit).*
+
+****************
+^(?!.*very).*high4
+****************
+
+^character_skill_level_to_effects_junctions_tables|^unit_set_to_unit_junc|^land_units_tables|^effect_bonus_value_ids_unit_sets_tables|^effects_tables
+
+^wh2_dlc15(?!.*_cha_)(?!.*_boss)(?!.*_summoned).*
+
+^(?:.*recruit)(?:.*effect).*
+
+Try this search on the above link:
+^(?:.*_mon_)(?!.*region_to_forces_ally_provincewide).*
+^.*mon(?!ed)(?!_prince)(?!.*dragon).* -- no dragons, dragon princes, or summoned units.
+
+^wh_dlc03_bst(?!.*_cha_).*
+	d(?!r)       matches a d only if is not followed by r, but r will not be part of the overall regex match -> Try it!
+
+^wh2_dlc14|wh2_dlc13|wh2_dlc12|wh2_dlc11|wh2_dlc10|wh2_dlc09(?!.*_cha_)(?!.*_boss)(?!.*summoned).*
+
+^(wh2_dlc14|wh2_dlc13|wh2_dlc12|wh2_dlc11|wh2_dlc10|wh2_dlc09)(?!.*_cha_)(?!.*_boss)(?!.*summoned)(?!.*noctilus).*
+
+^.*(?!.*_cha_)(_cav_|_mon_|_inf_).*
+^.*(mon)(?!.*_cha_).*
+^(?!.*_cha_).*
+
+^.*mon(?!.*ed).* -- find all monsters but no summoned.
+
+^(?!.*_cha_).*
+
+^[!](?!.*[!])
+
+^(?!.*region_to_forces_ally_provincewide)(?!.*force_building_to_force_in_sphere_of_influence_own)(?!.*faction_to_faction_own)(?!.*force_to_force_own)(?!.*factionwide)(?!.*hidden)(?!.*character).*
