@@ -14,6 +14,16 @@ phar_main_rare_19_title: Storyteller
 phar_main_rare_17_title: Strongman
 phar_main_rare_18_title: Wise Nobleman
 phar_main_common_general_22_title: Scout
-Knowledge of the enemy's position, strength and movements is vital if total victory is indeed your goal.
+Knowledge of the enemy's position, strength and movements is vital                          ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+                         !!!!!BOOKMARK ITEM NAMES!!!!!
+                         !!!!!BOOKMARK ITEM NAMES!!!!!
+                         !!!!!BOOKMARK ITEM NAMES!!!!!
+                         !!!!!BOOKMARK ITEM NAMES!!!!!
+                         !!!!!BOOKMARK ITEM NAMES!!!!!
+                         !!!!!BOOKMARK ITEM NAMES!!!!!
+                         !!!!!BOOKMARK ITEM NAMES!!!!!
+                         !!!!!BOOKMARK ITEM NAMES!!!!!
+                         !!!!!BOOKMARK ITEM NAMES!!!!!
+                         !!!!!BOOKMARK ITEM NAMES!!!!!
+                         ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
- phar_main_ common_general_17

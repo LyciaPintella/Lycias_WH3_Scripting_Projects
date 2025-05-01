@@ -57,29 +57,29 @@ $ Anchor to the end of the line
 (?m) Multiline mode, so ^ and $ match the beginning and end of each line, not just the beginning and end of the whole string
 (?i) Case insensitive matching
 
-? CAPTURE ALL LINES THAT DO NOT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
-? ^(?!\n)((?!.*_name|_title).*$)
-
-? CAPTURE ALL LINES THAT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
-? ^(?!\n)((?:.*_name|_title).*$)
-
-? (?=_name|_title) -- This one finds the words but doesn't highlight much.
-? (?=.*_name)(?=.*_title) -- This one matches every preceeding letter.
-? (?=.*_name|.*_title) -- This one also matches every preceeding letter.
-
-? CAPTURE ALL LINES THAT DO NOT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
-? ^(?!\n)((?!.*_name|_title).*$)
-
-? CAPTURE ALL LINES THAT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
-? ^(?!\n)((?:.*_name|_title).*$)
-
-? (?=_name|_title) -- This one finds the words but doesn't highlight much.
-? (?=.*_name)(?=.*_title) -- This one matches every preceeding letter.
-? (?=.*_name|.*_title) -- This one also matches every preceeding letter.
-
 Find Only The First Occurence Per Line
 ! Matches up until the first comma!
 ^([^,]+),
+
+? CAPTURE ALL LINES THAT DO NOT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
+? ^(?!\n)((?!.*_name|_title).*$)
+
+? CAPTURE ALL LINES THAT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
+? ^(?!\n)((?:.*_name|_title).*$)
+
+? (?=_name|_title) -- This one finds the words but doesn't highlight much.
+? (?=.*_name)(?=.*_title) -- This one matches every preceeding letter.
+? (?=.*_name|.*_title) -- This one also matches every preceeding letter.
+
+? CAPTURE ALL LINES THAT DO NOT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
+? ^(?!\n)((?!.*_name|_title).*$)
+
+? CAPTURE ALL LINES THAT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
+? ^(?!\n)((?:.*_name|_title).*$)
+
+? (?=_name|_title) -- This one finds the words but doesn't highlight much.
+? (?=.*_name)(?=.*_title) -- This one matches every preceeding letter.
+? (?=.*_name|.*_title) -- This one also matches every preceeding letter.
 
 # Warhammer III Searches
 
