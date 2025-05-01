@@ -1,0 +1,19 @@
+phar_main_common_general_22|phar_main_common_general_24|phar_main_common_general_28|phar_main_common_general_7|phar_main_common_general_9|phar_main_rare_1
+
+phar_main_ancillaries_common_follower_field_advisor_title: Field Advisor
+phar_main_rare_8_title: Soothsayer
+
+phar_main_rare_10_title: Avid Collector
+phar_main_rare_16_title: Blind Veteran
+phar_main_rare_11_title: Diplomat
+phar_main_rare_15_title: Duellist
+phar_main_rare_13_title: Gem Merchant
+phar_main_rare_14_title: Saboteur
+phar_main_rare_12_title: Smuggler
+phar_main_rare_19_title: Storyteller
+phar_main_rare_17_title: Strongman
+phar_main_rare_18_title: Wise Nobleman
+phar_main_common_general_22_title: Scout
+Knowledge of the enemy's position, strength and movements is vital if total victory is indeed your goal.
+
+ phar_main_ common_general_17

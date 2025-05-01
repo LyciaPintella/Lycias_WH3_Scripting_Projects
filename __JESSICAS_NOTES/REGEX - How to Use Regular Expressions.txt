@@ -4,8 +4,6 @@
 Visual Studio Code: Use regular expressions (REGEX) and review examples
 https://learn.microsoft.com/en-us/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2022#capture-groups-and-replacement-patterns
 
-
-
 -- Regex Notes
 ?: - Positive Lookahead
 ?! - Negative Lookahead
@@ -82,7 +80,6 @@ $ Anchor to the end of the line
 Find Only The First Occurence Per Line
 ! Matches up until the first comma!
 ^([^,]+),
-
 
 # Warhammer III Searches
 

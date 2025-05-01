@@ -1,24 +1,1997 @@
-text/db/ui_text_replacements.lochas all the info
-text/db/ui_text_replacements.txt is jumbled.
 
---Regex Notes
-CAPTURE ALL LINES THAT DO NOT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
-^(?!\n)((?!.*_name|_title).*$)
-
-CAPTURE ALL LINES THAT HAVE _name OR _title IN THEM, IGNORING NEWLINES.
-^(?!\n)((?:.*_name|_title).*$)
+--[[
+? What items do buildings make ?
 
 
-                         !!!!!BOOKMARK NAMES!!!!!
-                         !!!!!BOOKMARK NAMES!!!!!
-                         !!!!!BOOKMARK NAMES!!!!!
-                         !!!!!BOOKMARK NAMES!!!!!
-                         !!!!!BOOKMARK NAMES!!!!!
-                         !!!!!BOOKMARK NAMES!!!!!
-                         !!!!!BOOKMARK NAMES!!!!!
-                         !!!!!BOOKMARK NAMES!!!!!
-                         !!!!!BOOKMARK NAMES!!!!!
-                         !!!!!BOOKMARK NAMES!!!!!
+Bronze Proving Hall (phar_main_all_resource_production_bronze_mine_derivative_type_a_2): phar_main_common_equipment_axe, phar_main_common_equipment_club, phar_main_common_equipment_spear, phar_main_common_equipment_khopesh, phar_main_common_equipment_sword
+
+Champion's Hall (phar_main_amenmesse_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_main_bay_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_main_canaan_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_main_hatti_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_main_irsu_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_main_kemet_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_main_kuru_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_main_kurunta_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_main_ramesses_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_main_seti_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_main_suppiluliuma_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_main_tausret_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_map_achean_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_map_ash_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_map_bab_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_map_elam_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_map_luwian_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_map_meso_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_map_mycenae_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_map_thracian_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_map_urartu_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+Champion's Hall (phar_map_wilusa_military_administration_unit_training_type_b_1): phar_main_common_general_11, phar_main_rare_15, phar_main_rare_16, phar_main_rare_17
+
+Grand Temple of Amun (phar_main_religion_cult_center_grand_temple_amun_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Anubis (phar_main_religion_cult_center_grand_temple_anubis_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Arinna (phar_main_religion_cult_center_grand_temple_arinna_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Asherah (phar_main_religion_cult_center_grand_temple_asherah_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Aten (phar_main_religion_cult_center_grand_temple_aten_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Baal (phar_main_religion_cult_center_grand_temple_baal_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of El (phar_main_religion_cult_center_grand_temple_el_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Horus (phar_main_religion_cult_center_grand_temple_horus_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Isis (phar_main_religion_cult_center_grand_temple_isis_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Kumarbi (phar_main_religion_cult_center_grand_temple_kumarbi_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Kurunta (phar_main_religion_cult_center_grand_temple_kurunta_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Moloch (phar_main_religion_cult_center_grand_temple_moloch_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Osiris (phar_main_religion_cult_center_grand_temple_osiris_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Ptah (phar_main_religion_cult_center_grand_temple_ptah_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Ra (phar_main_religion_cult_center_grand_temple_ra_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Set (phar_main_religion_cult_center_grand_temple_set_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Shaushka (phar_main_religion_cult_center_grand_temple_shaushka_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Tarhunz (phar_main_religion_cult_center_grand_temple_tarhunz_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Thoth (phar_main_religion_cult_center_grand_temple_thoth_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Yamm (phar_main_religion_cult_center_grand_temple_yamm_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Aphrodite (phar_map_religion_cult_center_grand_temple_aphrodite_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Apollo (phar_map_religion_cult_center_grand_temple_apollo_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Ares (phar_map_religion_cult_center_grand_temple_ares_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Ashur (phar_map_religion_cult_center_grand_temple_ashur_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Inshushinak (phar_map_religion_cult_center_grand_temple_inshushinak_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Ishtar (phar_map_religion_cult_center_grand_temple_ishtar_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Marduk (phar_map_religion_cult_center_grand_temple_marduk_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Ninurta (phar_map_religion_cult_center_grand_temple_ninurta_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Poseidon (phar_map_religion_cult_center_grand_temple_poseidon_1): phar_main_common_general_14, phar_main_common_general_15
+Grand Temple of Zeus (phar_map_religion_cult_center_grand_temple_zeus_1): phar_main_common_general_14, phar_main_common_general_15
+
+Native Barracks (Major Settlement) (phar_main_all_military_native_type_a_kush_4 as phar_main_all_military_native_type_a_all_4_title): phar_main_rare_4
+Native Barracks (Major Settlement) (phar_main_all_military_native_type_a_nubia_4 as phar_main_all_military_native_type_a_all_4_title): phar_main_rare_4
+Native Barracks (Major Settlement) (phar_map_all_military_native_type_a_haltamti_4): phar_main_rare_3, phar_main_rare_5
+Native Barracks (Major Settlement) (phar_map_all_military_native_type_a_mat_assur_4): phar_main_rare_3, phar_main_rare_5
+Native Barracks (Major Settlement) (phar_map_all_military_native_type_a_mat_tamti_4): phar_main_rare_3, phar_main_rare_5
+
+
+Bazaar of the Arts (phar_main_all_province_management_happiness_type_c_3): phar_main_common_general_12, phar_main_rare_19, phar_main_rare_31, phar_main_rare_42, phar_main_rare_7
+Damokoros' Road Infrastructure (phar_map_myc_province_management_roads_3): phar_main_common_general_22, phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
+Oxen Cart Assembly (phar_sea_peleset_province_management_movement_production_boost_3):  phar_sea_rare_9, phar_main_common_general_22, phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
+
+Granary (phar_main_all_resource_production_modifier_food_3): phar_main_common_general_23, phar_main_common_general_29, phar_main_common_general_3, phar_sea_common_6
+Provisioning Headquarters (phar_main_tausret_resource_production_modifier_food_3): phar_main_common_general_23, phar_main_common_general_29, phar_main_common_general_3, phar_sea_common_6
+
+Grand Bazaar (phar_main_all_resource_production_fruit_oasis_derivative_type_a_1): phar_main_common_general_20, phar_main_rare_10, phar_main_rare_13
+Grand Bazaar (phar_main_irsu_resource_production_fruit_oasis_derivative_type_a_1): phar_main_common_general_20, phar_main_rare_10, phar_main_rare_13
+
+House of Astrologers (phar_map_bab_province_management_influence_roads_type_a_3): phar_main_common_general_22, phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
+
+Palace of Pleasures (phar_map_bab_province_management_happiness_growth_type_a_3): phar_main_common_general_10, phar_main_rare_6, phar_main_rare_6, phar_sea_common_1, phar_sea_rare_8
+
+Pottery Markets (phar_main_all_landmark_production_boost_tarsus_1): phar_main_rare_37
+
+Royal Bronze Worker (phar_main_all_resource_production_modifier_bronze_3): phar_main_common_armour_heavy, phar_main_common_armour_light, phar_main_common_armour_medium
+Royal Bronze Worker - Tausret (phar_main_tausret_resource_production_modifier_bronze_3): phar_main_common_armour_heavy, phar_main_common_armour_light, phar_main_common_armour_medium
+
+Royal Goldsmith (phar_main_all_resource_production_modifier_gold_3): phar_main_rare_24, phar_main_rare_28
+Tausret's Goldsmiths (phar_main_tausret_resource_production_modifier_gold_3): phar_main_rare_24, phar_main_rare_28
+
+Royal Fishery (phar_main_all_resource_production_port_coast_2): phar_main_rare_27, phar_main_rare_40, phar_sea_common_2
+
+Royal Jeweller (phar_main_all_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30, phar_main_rare_38, phar_main_rare_43, phar_main_rare_49
+Royal Jeweller (phar_main_irsu_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30, phar_main_rare_38, phar_main_rare_43, phar_main_rare_49
+
+Smugglers' Market (phar_main_all_resource_production_port_coast_derivative_type_a_1): phar_main_common_general_1, phar_main_common_general_19, phar_main_common_general_2, phar_main_common_general_8, phar_main_rare_12, phar_main_rare_14, phar_main_rare_9
+
+Stone Carvers' District (phar_main_all_resource_production_stone_mine_derivative_type_a_1): phar_main_common_general_21, phar_main_rare_32
+Stone Carvers' District (phar_main_irsu_resource_production_stone_mine_derivative_type_a_1): phar_main_common_general_21, phar_main_rare_32
+
+Surgeon's Practice (phar_main_all_province_management_growth_type_a_3): phar_main_common_general_10, phar_main_rare_2, phar_main_rare_6, phar_sea_common_1, phar_sea_rare_8
+
+Translators Quarters (phar_main_all_province_management_main_building_poc_happiness_boost_1): common_general_17, common_general_25, common_general_26, common_general_27,
+main_rare_11
+
+Visitor's Quarters (phar_main_all_province_management_roads_3): phar_main_common_general_22, phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
+
+Wisdom Codexs (phar_main_all_province_management_main_building_poc_legitimacy_influence_boost_3): Field Advisor, Wise Nobleman, Soothsayer
+
+Woodcutters' District (phar_main_all_resource_production_wood_canaan_type_a_derivative_1): phar_main_common_equipment_bow, phar_main_common_equipment_chariot, phar_main_common_shield_large, phar_main_common_shield_medium, phar_main_common_shield_small
+Woodcutter's District (phar_main_all_resource_production_wood_canaan_type_a_derivative_1): phar_main_common_equipment_bow, phar_main_common_equipment_chariot, phar_main_common_shield_large, phar_main_common_shield_medium, phar_main_common_shield_small
+Woodcutter's District (phar_main_all_resource_production_wood_hatti_derivative_2): phar_main_common_equipment_bow, phar_main_common_equipment_chariot, phar_main_common_shield_large, phar_main_common_shield_medium, phar_main_common_shield_small
+Woodcutter's District (phar_map_all_resource_production_wood_mesopotamia_type_a_derivative_1): phar_main_common_equipment_bow, phar_main_common_equipment_chariot, phar_main_common_shield_large, phar_main_common_shield_medium, phar_main_common_shield_small
+Woodcutter's District (phar_map_wood_production_aegean_derivative_1): phar_main_common_equipment_bow, phar_main_common_equipment_chariot, phar_main_common_shield_large, phar_main_common_shield_medium, phar_main_common_shield_small
+Woodcutter's District (phar_map_wood_production_assuwa_derivative_1): phar_main_common_equipment_bow, phar_main_common_equipment_chariot, phar_main_common_shield_large, phar_main_common_shield_medium, phar_main_common_shield_small
+Woodcutter's District (phar_map_wood_production_thrace_derivative_1): phar_main_common_equipment_bow, phar_main_common_equipment_chariot, phar_main_common_shield_large, phar_main_common_shield_medium, phar_main_common_shield_small
+
+Wine Market (phar_main_ram_province_management_production_boost_happiness_3): phar_main_common_general_12, phar_main_rare_19, phar_main_rare_31, phar_main_rare_42, phar_main_rare_7
+]]--
+
+
+
+
+out("anc_mod: INIT.")
+local ancillary_master_list = {
+     --["building_id"] = {"anc1","anc2"}
+     --bronze proofing hall
+     ["phar_main_all_resource_production_bronze_mine_derivative_type_a_2"] = { "phar_main_common_equipment_axe", "phar_main_common_equipment_club", "phar_main_common_equipment_spear", "phar_main_common_equipment_khopesh", "phar_main_common_equipment_sword", },
+     --wisdom codices
+     ["phar_main_all_province_management_main_building_poc_legitimacy_influence_boost_3"] = { "phar_main_common_general_16", "phar_main_rare_18", "phar_main_rare_8", },
+     --translators quarters
+     ["phar_main_all_province_management_main_building_poc_happiness_boost_1"] = { "phar_main_common_general_17", "phar_main_common_general_25", "phar_main_common_general_26", "phar_main_common_general_27", "phar_main_rare_11", },
+     --tarsus pottery landmark
+     ["phar_main_all_landmark_production_boost_tarsus_1"] = { "phar_main_rare_37" },
+     --healer buildings
+     ["phar_main_all_province_management_growth_type_a_3"] = { "phar_main_common_general_10", "phar_main_rare_2", "phar_main_rare_6", "phar_sea_common_1", "phar_sea_rare_8", },
+     ["phar_map_bab_province_management_happiness_growth_type_a_3"] = { "phar_main_common_general_10", "phar_main_rare_6", "phar_main_rare_6", "phar_sea_common_1", "phar_sea_rare_8", },
+     --royal fisheries
+     ["phar_main_all_resource_production_port_coast_2"] = { "phar_main_rare_27", "phar_main_rare_40", "phar_sea_common_2", },
+     --royal goldsmiths
+     ["phar_main_all_resource_production_modifier_gold_3"] = { "phar_main_rare_24", "phar_main_rare_28" },
+     ["phar_main_tausret_resource_production_modifier_gold_3"] = { "phar_main_rare_24", "phar_main_rare_28" },
+     --smuggler port
+     ["phar_main_all_resource_production_port_coast_derivative_type_a_1"] = { "phar_main_common_general_1", "phar_main_common_general_19", "phar_main_common_general_2", "phar_main_common_general_8", "phar_main_rare_12", "phar_main_rare_14", "phar_main_rare_9", },
+     --stonecarver district
+     ["phar_main_all_resource_production_stone_mine_derivative_type_a_1"] = { "phar_main_common_general_21", "phar_main_rare_32" },
+     ["phar_main_irsu_resource_production_stone_mine_derivative_type_a_1"] = { "phar_main_common_general_21", "phar_main_rare_32" },
+     --Visitors quarters
+     ["phar_main_all_province_management_roads_3"] = { "phar_main_common_general_22", "phar_main_common_general_24", "phar_main_common_general_28", "phar_main_common_general_7", "phar_main_common_general_9", "phar_main_rare_1", },
+     ["phar_map_bab_province_management_influence_roads_type_a_3"] = { "phar_main_common_general_22", "phar_main_common_general_24", "phar_main_common_general_28", "phar_main_common_general_7", "phar_main_common_general_9", "phar_main_rare_1", },
+     ["phar_map_myc_province_management_roads_3"] = { "phar_main_common_general_22", "phar_main_common_general_24", "phar_main_common_general_28", "phar_main_common_general_7", "phar_main_common_general_9", "phar_main_rare_1", },
+     ["phar_sea_peleset_province_management_movement_production_boost_3"] = { "phar_sea_rare_9", "phar_main_common_general_22", "phar_main_common_general_24", "phar_main_common_general_28", "phar_main_common_general_7", "phar_main_common_general_9", "phar_main_rare_1", },
+     --royal jeweller
+     ["phar_main_all_resource_production_gold_mine_derivative_type_b_1"] = { "phar_main_rare_30", "phar_main_rare_38", "phar_main_rare_43", "phar_main_rare_49", },
+     ["phar_main_irsu_resource_production_gold_mine_derivative_type_b_1"] = { "phar_main_rare_30", "phar_main_rare_38", "phar_main_rare_43", "phar_main_rare_49", },
+     --drinking establishments
+     ["phar_main_all_province_management_happiness_type_c_3"] = { "phar_main_common_general_12", "phar_main_rare_19", "phar_main_rare_31", "phar_main_rare_42", "phar_main_rare_7", },
+     ["phar_main_ram_province_management_production_boost_happiness_3"] = { "phar_main_common_general_12", "phar_main_rare_19", "phar_main_rare_31", "phar_main_rare_42", "phar_main_rare_7", },
+     --granary
+     ["phar_main_all_resource_production_modifier_food_3"] = { "phar_main_common_general_23", "phar_main_common_general_29", "phar_main_common_general_3", "phar_sea_common_6", },
+     ["phar_main_tausret_resource_production_modifier_food_3"] = { "phar_main_common_general_23", "phar_main_common_general_29", "phar_main_common_general_3", "phar_sea_common_6", },
+     --bazaars
+     ["phar_main_all_resource_production_fruit_oasis_derivative_type_a_1"] = { "phar_main_common_general_20", "phar_main_rare_10", "phar_main_rare_13", },
+     ["phar_main_irsu_resource_production_fruit_oasis_derivative_type_a_1"] = { "phar_main_common_general_20", "phar_main_rare_10", "phar_main_rare_13", },
+     --southern natives
+     ["phar_main_all_military_native_type_a_kush_4"] = { "phar_main_rare_4" },
+     ["phar_main_all_military_native_type_a_nubia_4"] = { "phar_main_rare_4" },
+     --meso natives
+     ["phar_map_all_military_native_type_a_haltamti_4"] = { "phar_main_rare_3", "phar_main_rare_5", },
+     ["phar_map_all_military_native_type_a_mat_assur_4"] = { "phar_main_rare_3", "phar_main_rare_5", },
+     ["phar_map_all_military_native_type_a_mat_tamti_4"] = { "phar_main_rare_3", "phar_main_rare_5", },
+     --cult centres
+     ["phar_main_religion_cult_center_grand_temple_amun_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_anubis_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_arinna_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_asherah_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_aten_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_baal_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_el_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_horus_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_isis_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_kumarbi_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_kurunta_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_moloch_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_osiris_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_ptah_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_ra_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_set_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_shaushka_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_tarhunz_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_thoth_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_yamm_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_aphrodite_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_apollo_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_ares_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_ashur_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_inshushinak_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_ishtar_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_marduk_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_ninurta_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_poseidon_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_zeus_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     --royal bronzeworks
+     ["phar_main_all_resource_production_modifier_bronze_3"] = { "phar_main_common_armour_heavy", "phar_main_common_armour_light", "phar_main_common_armour_medium", },
+     ["phar_main_tausret_resource_production_modifier_bronze_3"] = { "phar_main_common_armour_heavy", "phar_main_common_armour_light", "phar_main_common_armour_medium", },
+     --champions hall
+     ["phar_main_amenmesse_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_bay_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_canaan_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_hatti_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_irsu_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_kemet_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_kuru_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_kurunta_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_ramesses_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_seti_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_suppiluliuma_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_tausret_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_achean_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_ash_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_bab_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_elam_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_luwian_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_meso_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_mycenae_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_thracian_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_urartu_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_wilusa_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     --Woodcutters districts
+     ["phar_main_all_resource_production_wood_canaan_type_a_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
+     ["phar_main_all_resource_production_wood_hatti_derivative_2"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
+     ["phar_map_all_resource_production_wood_mesopotamia_type_a_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
+     ["phar_map_wood_production_aegean_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
+     ["phar_map_wood_production_assuwa_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
+     ["phar_map_wood_production_thrace_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
+}
+
+local building_spawn_chance = {
+     --["building_id"] = number
+     ["phar_main_all_resource_production_bronze_mine_derivative_type_a_2"] = 3,
+     ["phar_main_all_resource_production_modifier_bronze_3"] = 3,
+     ["phar_main_tausret_resource_production_modifier_bronze_3"] = 3,
+     ["phar_main_amenmesse_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_bay_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_canaan_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_hatti_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_irsu_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_kemet_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_kuru_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_kurunta_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_ramesses_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_seti_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_suppiluliuma_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_tausret_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_map_achean_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_map_ash_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_map_bab_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_map_elam_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_map_luwian_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_map_meso_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_map_mycenae_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_map_thracian_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_map_urartu_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_map_wilusa_military_administration_unit_training_type_b_1"] = 3,
+     ["phar_main_all_resource_production_wood_canaan_type_a_derivative_1"] = 3,
+     ["phar_main_all_resource_production_wood_hatti_derivative_2"] = 2,
+     ["phar_map_all_resource_production_wood_mesopotamia_type_a_derivative_1"] = 3,
+     ["phar_map_wood_production_aegean_derivative_1"] = 3,
+     ["phar_map_wood_production_assuwa_derivative_1"] = 3,
+     ["phar_map_wood_production_thrace_derivative_1"] = 3,
+     ["phar_main_all_province_management_main_building_poc_legitimacy_influence_boost_3"] = 3,
+     ["phar_main_all_province_management_main_building_poc_happiness_boost_1"] = 3,
+     ["phar_main_all_province_management_growth_type_a_3"] = 3,
+     ["phar_map_bab_province_management_happiness_growth_type_a_3"] = 3,
+     ["phar_main_all_resource_production_port_coast_2"] = 3,
+     ["phar_main_all_resource_production_modifier_gold_3"] = 3,
+     ["phar_main_tausret_resource_production_modifier_gold_3"] = 3,
+     ["phar_main_all_resource_production_port_coast_derivative_type_a_1"] = 3,
+     ["phar_main_all_resource_production_stone_mine_derivative_type_a_1"] = 3,
+     ["phar_main_irsu_resource_production_stone_mine_derivative_type_a_1"] = 3,
+     ["phar_main_all_province_management_roads_3"] = 3,
+     ["phar_map_bab_province_management_influence_roads_type_a_3"] = 3,
+     ["phar_map_myc_province_management_roads_3"] = 3,
+     ["phar_sea_peleset_province_management_movement_production_boost_3"] = 3,
+     ["phar_main_all_resource_production_gold_mine_derivative_type_b_1"] = 3,
+     ["phar_main_irsu_resource_production_gold_mine_derivative_type_b_1"] = 3,
+     ["phar_main_all_province_management_happiness_type_c_3"] = 3,
+     ["phar_main_ram_province_management_production_boost_happiness_3"] = 3,
+     ["phar_main_all_resource_production_modifier_food_3"] = 3,
+     ["phar_main_tausret_resource_production_modifier_food_3"] = 3,
+     ["phar_main_all_military_native_type_a_kush_4"] = 3,
+     ["phar_main_all_military_native_type_a_nubia_4"] = 3,
+     ["phar_map_all_military_native_type_a_haltamti_4"] = 3,
+     ["phar_map_all_military_native_type_a_mat_assur_4"] = 3,
+     ["phar_map_all_military_native_type_a_mat_tamti_4"] = 3,
+     ["phar_main_all_resource_production_fruit_oasis_derivative_type_a_1"] = 5,
+     ["phar_main_irsu_resource_production_fruit_oasis_derivative_type_a_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_amun_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_anubis_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_arinna_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_asherah_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_aten_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_baal_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_el_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_horus_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_isis_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_kumarbi_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_kurunta_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_moloch_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_osiris_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_ptah_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_ra_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_set_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_shaushka_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_tarhunz_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_thoth_1"] = 5,
+     ["phar_main_religion_cult_center_grand_temple_yamm_1"] = 5,
+     ["phar_map_religion_cult_center_grand_temple_aphrodite_1"] = 5,
+     ["phar_map_religion_cult_center_grand_temple_apollo_1"] = 5,
+     ["phar_map_religion_cult_center_grand_temple_ares_1"] = 5,
+     ["phar_map_religion_cult_center_grand_temple_ashur_1"] = 5,
+     ["phar_map_religion_cult_center_grand_temple_inshushinak_1"] = 5,
+     ["phar_map_religion_cult_center_grand_temple_ishtar_1"] = 5,
+     ["phar_map_religion_cult_center_grand_temple_marduk_1"] = 5,
+     ["phar_map_religion_cult_center_grand_temple_ninurta_1"] = 5,
+     ["phar_map_religion_cult_center_grand_temple_poseidon_1"] = 5,
+     ["phar_map_religion_cult_center_grand_temple_zeus_1"] = 5,
+     ["phar_main_all_landmark_production_boost_tarsus_1"] = 8,
+}
+
+core:add_listener(
+     "forge_detect",
+     "FactionTurnStart",
+     function(context)
+          out("anc_mod: INIT2.")
+          for building, anc_list in pairs(ancillary_master_list) do
+               if context:faction():building_exists(building) then
+                    out("anc_mod: " .. building .. " detected for " .. context:faction():name())
+                    return true
+               end
+          end
+          out("anc_mod: " .. context:faction():name() .. " has no tracked buildings.")
+          return false
+     end,
+     function(context)
+          out("anc_mod: Faction has at least one tracked building, but we need to check for others.")
+          local region_list = context:faction():region_list()
+
+          for building, anc_list in pairs(ancillary_master_list) do
+               out("anc_mod: checks for building " .. building)
+               local chances_to_spawn = return_building_number(building, region_list)
+               spawn_ancillaries(context:faction():name(), chances_to_spawn, anc_list, building)
+          end
+     end,
+     true
+)
+
+
+function return_building_number(building_key, region_list)
+     out("anc_mod: func called to find number of " .. building_key)
+     local number_to_return = 0
+     for i = 0, region_list:num_items() - 1 do
+          this_region = region_list:item_at(i)
+
+          if this_region:building_exists(building_key) then
+               --out("anc_mod: "..building_key.."detected in region")
+               local this_slot_list = this_region:slot_list()
+
+               for j = 0, this_slot_list:num_items() - 1 do
+                    local this_slot = this_slot_list:item_at(j)
+
+                    if this_slot:has_building() and this_slot:building():name() == building_key then
+                         out("anc_mod: " .. building_key .. "detected in slot")
+                         number_to_return = number_to_return + 1
+                    end
+               end
+          end
+     end
+     out("anc_mod: returning value of " .. number_to_return)
+     return number_to_return
+end
+
+function spawn_ancillaries(faction, chances, ancillary_list, building)
+     out("anc_mod: func called to spawn ancillaries")
+     if chances == 0 then
+          out("anc_mod: no buildings, no chance - ending script")
+          return
+     end
+     local dice_roll = building_spawn_chance[building]
+     out("anc_mod: func called to spawn ancillaries2")
+     out("anc_mod: func called to spawn ancillaries2" .. dice_roll)
+
+     for i = 1, chances do
+          if cm:model():random_percent(dice_roll) then
+               local random_number = cm:model():random_int(1, #ancillary_list)
+               out("anc_mod: Awarding ancillary: " .. ancillary_list[random_number])
+               cm:add_ancillary_to_faction(faction, ancillary_list[random_number], true)
+          end
+     end
+end
+
+
+
+
+
+
+
+
+--[[
+                                             !!!!!BOOKMARK BULDING NAMES!!!!!
+                                             !!!!!BOOKMARK BULDING NAMES!!!!!
+                                             !!!!!BOOKMARK BULDING NAMES!!!!!
+                                             !!!!!BOOKMARK BULDING NAMES!!!!!
+                                             !!!!!BOOKMARK BULDING NAMES!!!!!
+                                             !!!!!BOOKMARK BULDING NAMES!!!!!
+                                             !!!!!BOOKMARK BULDING NAMES!!!!!
+                                             !!!!!BOOKMARK BULDING NAMES!!!!!
+                                             !!!!!BOOKMARK BULDING NAMES!!!!!
+                                             !!!!!BOOKMARK BULDING NAMES!!!!!
+
+
+
+
+
+                                             ? Culture Variant Versions
+
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_a_hattusa_derivative_1_title	Bakery
+ui_text_replacements_localised_text_phar_main_all_resource_production_bronze_mine_derivative_type_a_1_title	Bronze Proving Hall
+ui_text_replacements_localised_text_phar_main_all_resource_production_bronze_mine_derivative_type_a_2_title	Bronze Proving Hall
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_a_canaan_derivative__1_title	Fig Farm
+ui_text_replacements_localised_text_phar_main_all_resource_production_fruit_oasis_derivative_type_a_1_title	Grand Bazaar
+ui_text_replacements_localised_text_phar_main_all_resource_production_wood_hatti_derivative_1_title	Lumber Mill
+ui_text_replacements_localised_text_phar_main_all_resource_production_wood_hatti_derivative_2_title	Lumber Mill Complex
+ui_text_replacements_localised_text_phar_main_bay_resource_production_port_coast_derivative_type_a_2_title	Not-Bay's Smugglers
+ui_text_replacements_localised_text_phar_main_all_resource_production_stone_mine_derivative_type_b_1_title	Obelisk
+ui_text_replacements_localised_text_phar_main_all_resource_production_gold_mine_derivative_type_b_1_title	Royal Jeweller
+ui_text_replacements_localised_text_phar_main_bay_resource_production_port_coast_derivative_type_a_1_title	Smugglers' Bay
+ui_text_replacements_localised_text_phar_main_all_resource_production_port_coast_derivative_type_a_1_title	Smugglers' Market
+ui_text_replacements_localised_text_phar_main_all_resource_production_stone_mine_derivative_type_a_1_title	Stone Carvers' District
+ui_text_replacements_localised_text_phar_sea_all_resource_production_stone_mine_derivative_type_b_1_title	Stone Statue
+ui_text_replacements_localised_text_phar_main_all_resource_production_wood_canaan_type_a_derivative_1_title	Woodcutters' District
+
+                                             ? Culture Variant Versions
+
+ui_text_replacements_localised_text_phar_main_all_resource_production_bronze_mine_nile_1_title	A Bronze Tool Facility
+building_culture_variants_name_troy_main_global_recruitment_achilles_5	Achilles' War Circle
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_1_egy_title	Administration Centre
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_2_egy_title	Administrative Complex
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_bronze_1_title	Advanced Bronzework Pipeline
+building_culture_variants_name_phar_main_ers_monument_level_1_aeg	Aegaean Monument
+building_culture_variants_name_phar_main_ers_trading_post_level_1_aeg	Aegaean Trading Post
+ui_text_replacements_localised_text_phar_main_sea_aegean_armoured_archers_title	Aegean Armoured Archers
+ui_text_replacements_localised_text_phar_main_sea_aegean_armoured_javelin_throwers_title	Aegean Armoured Javelin
+ui_text_replacements_localised_text_phar_main_sea_aegean_armoured_raiders_title	Aegean Armoured Raiders
+ui_text_replacements_localised_text_phar_main_sea_aegean_fameseekers_title	Aegean Fameseekers
+building_culture_variants_name_phar_map_ers_fort_aber_nahra_aeg_1troy_main_clt_danaans	Aegean Fort
+ui_text_replacements_localised_text_phar_main_sea_aegean_light_archers_title	Aegean Light Archers
+ui_text_replacements_localised_text_phar_main_sea_aegean_panoply_spearmen_title	Aegean Panoply Spearmen
+ui_text_replacements_localised_text_phar_main_sea_aegean_spear_chargers_title	Aegean Spear Chargers
+building_culture_variants_name_phar_map_ers_waystation_level_1_aegtroy_main_clt_danaans	Aegean Waystation
+building_culture_variants_name_troy_main_global_recruitment_aeneas_5	Aeneas' Chosen
+building_culture_variants_name_troy_rem_aethiopia_horde_military_aethiopia_5troy_rem_sbc_hordes_aethiopians	Aethiopian Chief
+building_culture_variants_name_troy_rem_aethiopia_horde_military_aethiopia_3troy_rem_sbc_hordes_aethiopians	Aethiopian Master Trainer
+building_culture_variants_name_troy_rem_aethiopia_horde_military_aethiopia_2troy_rem_sbc_hordes_aethiopians	Aethiopian Training Range
+building_culture_variants_name_troy_main_global_recruitment_agamemnon_5	Agamemnon's Host
+ui_text_replacements_localised_text_phar_main_rare_equipment_small_shield_7_title	Agile Shield
+building_culture_variants_name_troy_adi_special_ajax_retinue_5	Ajax's Retinue
+building_culture_variants_name_troy_main_religion_aphrodite_2	Altar of Aphrodite
+building_culture_variants_name_troy_main_religion_apollo_2	Altar of Apollo
+building_culture_variants_name_troy_rem_religion_apollo_2	Altar of Apollo
+building_culture_variants_name_troy_main_religion_ares_2	Altar of Ares
+building_culture_variants_name_troy_main_religion_artemis_2	Altar of Artemis
+building_culture_variants_name_troy_main_religion_athens_2	Altar of Athena
+building_culture_variants_name_troy_main_menelaus_dike_1	Altar of Dike
+building_culture_variants_name_troy_hep_religion_hephaestus_2	Altar of Hephaestus
+building_culture_variants_name_troy_main_religion_hera_2	Altar of Hera
+building_culture_variants_name_troy_mth_horde_special_cerberus_5	Altar of Oblations
+building_culture_variants_name_troy_mth_special_cerberus_5	Altar of Oblations
+building_culture_variants_name_troy_main_religion_poseidon_2	Altar of Poseidon
+building_culture_variants_name_troy_main_religion_zeus_2	Altar of Zeus
+building_culture_variants_name_troy_amazons_special_hippolyta_mounds_3	Amazon Funerary Mounds
+building_culture_variants_name_troy_amazons_penthesilea_horde_main_5troy_amazons_sbc_horde_amazons	Amazon Horde
+building_culture_variants_name_troy_amazons_penthesilea_horde_main_4troy_amazons_sbc_horde_amazons	Amazon Host
+ui_text_replacements_localised_text_phar_main_rare_equipment_swords_2_title	Anatolian Dirk
+building_culture_variants_name_troy_main_food_elite_2	Apoikia
+building_culture_variants_name_phar_map_all_resource_production_food_farm_type_b_mesopotamia_derivative_1	Apple Orchard
+building_culture_variants_name_troy_main_bronze_support_1	Apprentice Armourer
+ui_text_replacements_localised_text_phar_main_all_resource_production_modifier_bronze_1_title	Apprentice Bronzeworker
+building_culture_variants_name_troy_main_wood_support_1	Apprentice Fletcher
+ui_text_replacements_localised_text_phar_main_all_resource_production_modifier_gold_1_title	Apprentice Goldsmith
+building_culture_variants_name_troy_amazons_penthesilea_horde_upgrades_1troy_amazons_sbc_horde_amazons	Apprentice Smiths
+building_culture_variants_name_troy_main_food_production_main_1	Arable Land
+building_culture_variants_name_phar_map_ash_military_administration_unit_training_type_a_3	Arena of Trials
+building_culture_variants_name_troy_adi_special_ajax_military_elite_5	Arena of the Mighty
+building_culture_variants_name_troy_amazons_penthesilea_horde_military_5troy_amazons_sbc_horde_amazons	Ares War Cult
+building_culture_variants_name_troy_mth_horde_special_griffin_arimaspoi_3	Arimaspoi Barracks
+building_culture_variants_name_troy_mth_special_griffin_arimaspoi_3	Arimaspoi Barracks
+building_culture_variants_name_troy_mth_horde_special_griffin_arimaspoi_1	Arimaspoi Camp
+building_culture_variants_name_troy_mth_special_griffin_arimaspoi_1	Arimaspoi Camp
+building_culture_variants_name_troy_rem_aethiopia_horde_military_warrior_specialization_5troy_rem_sbc_hordes_aethiopians	Armour Inspector
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_bronze_2_title	Armour Outfitter
+building_culture_variants_name_troy_main_bronze_support_2	Armourer
+building_culture_variants_name_troy_main_military_elite_5	Armoury
+building_culture_variants_name_troy_adi_special_diomedes_army_supplier_3	Army Supplier
+ui_text_replacements_localised_text_phar_main_suppi_military_administration_army_buff_2_title	Army Supply Centre
+ui_text_replacements_localised_text_phar_main_all_province_management_happiness_type_c_2_title	Art School
+building_culture_variants_name_troy_main_gold_elite_2	Artisan Goldsmith
+building_culture_variants_name_troy_main_bronze_elite_2	Artisan's Forge
+ui_text_replacements_localised_text_phar_main_all_province_management_happiness_type_c_1_title	Artisan's Workshop
+ui_text_replacements_localised_text_phar_main_rare_equipment_light_armour_1_title	Ashen Armour
+ui_text_replacements_localised_text_phar_main_rare_equipment_large_shield_2_title	Aspis
+ui_text_replacements_localised_text_phar_main_rare_10_title	Avid Collector
+building_culture_variants_name_phar_map_major_poc_main_building_mat_tamti_babylon_2	Babylon the Backwater
+building_culture_variants_name_phar_map_major_poc_main_building_mat_tamti_babylon_1	Babylon the Empty
+building_culture_variants_name_phar_map_major_poc_main_building_mat_tamti_babylon_5	Babylon the Glorious
+building_culture_variants_name_phar_map_major_poc_main_building_mat_tamti_babylon_4	Babylon the Strong
+building_culture_variants_name_phar_map_major_poc_main_building_mat_tamti_babylon_3	Babylon the Unprepossessing
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_a_hattusa_derivative_1_title	Bakery
+ui_text_replacements_localised_text_phar_main_rare_equipment_small_shield_6_title	Balanced Shield
+building_culture_variants_name_troy_rem_special_rhesus_drinking_hub_2	Banquet
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_a_hattusa_1_title	Barley Field
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_a_hattusa_2_title	Barley Plantation
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_minor_1_can_title	Barracks
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_minor_1_egy_title	Barracks
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_minor_1_hit_title	Barracks
+building_culture_variants_name_troy_main_special_pylos_baths_3	Baths
+ui_text_replacements_localised_text_phar_main_rare_equipment_axes_5_title	Battle Axe
+building_culture_variants_name_troy_amazons_penthesilea_horde_military_1troy_amazons_sbc_horde_amazons	Battle Mentors
+ui_text_replacements_localised_text_phar_main_all_province_management_happiness_type_c_3_title	Bazaar of the Arts
+building_culture_variants_name_troy_main_ody_port_3	Beach Warehouse
+building_culture_variants_name_phar_main_all_province_management_happiness_type_b_2phar_main_sbc_sea_peoples_sea_wanderers	Beer Hall
+ui_text_replacements_localised_text_phar_main_all_province_management_happiness_egy_type_b_2_title	Beer Hall
+building_culture_variants_name_phar_main_all_province_management_happiness_type_b_1phar_main_sbc_sea_peoples_sea_wanderers	Beer Hut
+ui_text_replacements_localised_text_phar_main_rare_equipment_small_shield_3_title	Better Than Nothing
+ui_text_replacements_localised_text_phar_main_rare_16_title	Blind Veteran
+ui_text_replacements_localised_text_phar_main_rare_equipment_culbs_5_title	Bludgeon
+building_culture_variants_name_troy_main_ody_port_1	Boat Stands
+building_culture_variants_name_troy_main_port_1	Boat Stands
+building_culture_variants_name_troy_main_ody_port_2	Boathouse
+building_culture_variants_name_troy_main_bowyer_3	Bowyer
+ui_text_replacements_localised_text_phar_main_rare_equipment_medium_shield_4_title	Bracing Shield
+ui_text_replacements_localised_text_phar_main_rare_equipment_axes_1_title	Bronze Axe
+ui_text_replacements_localised_text_phar_main_rare_equipment_heavy_armour_7_title	Bronze Cuirass & Greaves
+building_culture_variants_name_troy_main_bronze_mod_wood_1	Bronze Fire Pit
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_centaurs_3	Bronze Forge
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_giants_3	Bronze Forge
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_harpies_3	Bronze Forge
+building_culture_variants_name_troy_main_ody_settlement_bronze_3	Bronze Forge
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_centaurs_3	Bronze Forge
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_giants_3	Bronze Forge
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_harpies_3	Bronze Forge
+building_culture_variants_name_troy_main_ody_settlement_bronze_sea_3	Bronze Forge
+building_culture_variants_name_troy_main_settlement_bronze_3	Bronze Forge
+building_culture_variants_name_troy_main_settlement_bronze_sea_3	Bronze Forge
+building_culture_variants_name_troy_main_trj_settlement_bronze_3	Bronze Forge
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_centaurs_3	Bronze Forge
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_giants_3	Bronze Forge
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_harpies_3	Bronze Forge
+building_culture_variants_name_troy_main_trj_settlement_bronze_sea_3	Bronze Forge
+ui_text_replacements_localised_text_phar_main_all_resource_production_bronze_mine_2_title	Bronze Foundry
+building_culture_variants_name_troy_main_bronze_mod_wood_3	Bronze Furnace
+ui_text_replacements_localised_text_phar_main_all_resource_production_bronze_mine_1_title	Bronze Furnace
+ui_text_replacements_localised_text_phar_main_rare_equipment_spears_6_title	Bronze Halberd
+building_culture_variants_name_troy_main_bronze_mod_wood_2	Bronze Kilns
+building_culture_variants_name_troy_main_bronze_market_3	Bronze Merchant
+ui_text_replacements_localised_text_phar_main_rare_equipment_medium_armour_3_title	Bronze Panoply
+ui_text_replacements_localised_text_phar_main_all_resource_production_bronze_mine_derivative_type_a_1_title	Bronze Proving Hall
+ui_text_replacements_localised_text_phar_main_all_resource_production_bronze_mine_derivative_type_a_2_title	Bronze Proving Hall
+ui_text_replacements_localised_text_phar_main_rare_equipment_large_shield_3_title	Bronze Shield
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_centaurs_1	Bronze Smelter
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_giants_1	Bronze Smelter
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_harpies_1	Bronze Smelter
+building_culture_variants_name_troy_main_ody_settlement_bronze_1	Bronze Smelter
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_centaurs_1	Bronze Smelter
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_giants_1	Bronze Smelter
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_harpies_1	Bronze Smelter
+building_culture_variants_name_troy_main_ody_settlement_bronze_sea_1	Bronze Smelter
+building_culture_variants_name_troy_main_settlement_bronze_1	Bronze Smelter
+building_culture_variants_name_troy_main_settlement_bronze_sea_1	Bronze Smelter
+building_culture_variants_name_troy_main_trj_settlement_bronze_1	Bronze Smelter
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_centaurs_1	Bronze Smelter
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_giants_1	Bronze Smelter
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_harpies_1	Bronze Smelter
+building_culture_variants_name_troy_main_trj_settlement_bronze_sea_1	Bronze Smelter
+building_culture_variants_name_troy_main_bronze_market_2	Bronze Trader
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_centaurs_2	Bronze Workshop
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_giants_2	Bronze Workshop
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_harpies_2	Bronze Workshop
+building_culture_variants_name_troy_main_ody_settlement_bronze_2	Bronze Workshop
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_centaurs_2	Bronze Workshop
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_giants_2	Bronze Workshop
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_harpies_2	Bronze Workshop
+building_culture_variants_name_troy_main_ody_settlement_bronze_sea_2	Bronze Workshop
+building_culture_variants_name_troy_main_settlement_bronze_2	Bronze Workshop
+building_culture_variants_name_troy_main_settlement_bronze_sea_2	Bronze Workshop
+building_culture_variants_name_troy_main_trj_settlement_bronze_2	Bronze Workshop
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_centaurs_2	Bronze Workshop
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_giants_2	Bronze Workshop
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_harpies_2	Bronze Workshop
+building_culture_variants_name_troy_main_trj_settlement_bronze_sea_2	Bronze Workshop
+ui_text_replacements_localised_text_phar_main_rare_equipment_spears_3_title	Bronze-tipped Thrusting Spear
+ui_text_replacements_localised_text_phar_main_rare_equipment_small_shield_5_title	Bronzened Shield
+building_culture_variants_name_troy_main_bronze_reckless_1	Bronzesmith's Lodge
+ui_text_replacements_localised_text_phar_main_all_resource_production_modifier_bronze_2_title	Bronzeworker
+building_culture_variants_name_phar_map_myc_resource_production_bronze_minor_1	Bronzeworker Kerosiya
+ui_text_replacements_localised_text_phar_main_all_resource_production_bronze_mine_type_b_1_title	Bronzeworkers' District
+ui_text_replacements_localised_text_phar_main_all_resource_production_bronze_mine_3_title	Bronzeworking Complex
+building_culture_variants_name_troy_main_stone_support_1	Builders Quarters
+building_culture_variants_name_troy_main_farm_bull_3	Bull Leapers' Arena
+building_culture_variants_name_troy_rem_aethiopia_horde_military_canaan_3troy_rem_sbc_hordes_aethiopians	Canaanite Quartermaster
+ui_text_replacements_localised_text_phar_main_rare_equipment_khopesh_2_title	Canaanite Sickle-sword
+building_culture_variants_name_phar_map_bab_military_siluhu_type_a_2	Canal Gangs Quarters
+building_culture_variants_name_phar_map_bab_province_management_workforce_build_time_1	Canal Workers' Housing
+building_culture_variants_name_troy_amazons_penthesilea_horde_growth_1troy_amazons_sbc_horde_amazons	Captured Slaves
+building_culture_variants_name_troy_main_special_sarpedon_caravan_4	Caravan Station
+ui_text_replacements_localised_text_phar_main_all_province_management_roads_2_title	Caravanserai
+building_culture_variants_name_troy_main_wood_elite_2	Carpenter
+building_culture_variants_name_phar_map_all_resource_production_wood_mesopotamia_type_a_derivative_1	Cedar Warehouse
+building_culture_variants_name_troy_main_military_myth_centaurs_3	Centaur Pasture
+building_culture_variants_name_troy_main_military_myth_centaurs_1	Centaur Plains
+building_culture_variants_name_troy_main_military_myth_centaurs_5	Centaur Training Field
+building_culture_variants_name_troy_amazons_penthesilea_horde_military_3troy_amazons_sbc_horde_amazons	Champion's Assembly
+building_culture_variants_name_troy_main_special_agamemnon_champion_4	Champion's Hall
+ui_text_replacements_localised_text_phar_main_all_military_administration_unit_training_type_b_1_title	Champion's Hall
+building_culture_variants_name_troy_amazons_special_hippolyta_chariot_5troy_amazons_trj_hippolyta	Chariot Arena
+building_culture_variants_name_troy_main_chariot_3	Chariot Assembly
+building_culture_variants_name_troy_rem_rhesus_military_chariot_4	Chariot Assembly
+building_culture_variants_name_phar_map_bab_military_mounted_type_a_1	Chariot Emporium
+ui_text_replacements_localised_text_phar_main_ramesses_military_mounted_type_a_1_title	Chariot Makers' Workshop
+ui_text_replacements_localised_text_phar_main_seti_military_mounted_type_a_1_title	Chariot Makers' Workshop
+ui_text_replacements_localised_text_phar_main_suppiluliuma_military_mounted_type_a_1_title	Chariot Makers' Workshop
+ui_text_replacements_localised_text_phar_main_tausret_military_mounted_type_a_1_title	Chariot Makers' Workshop
+building_culture_variants_name_troy_amazons_special_hippolyta_chariot_3troy_amazons_trj_hippolyta	Chariot Proving Grounds
+ui_text_replacements_localised_text_phar_main_tausret_military_mounted_type_a_3_title	Chariot Racing Stadium
+building_culture_variants_name_troy_main_chariot_4	Chariot Workshop
+building_culture_variants_name_troy_rem_rhesus_military_chariot_3	Chariot Workshop
+building_culture_variants_name_phar_map_military_mounted_type_a_wilusa_faction_2	Chariot-making Complex
+building_culture_variants_name_phar_map_military_mounted_type_a_wilusa_faction_1	Chariot-making Workshops
+building_culture_variants_name_troy_amazons_penthesilea_horde_cavalry_chariot_4troy_amazons_sbc_horde_amazons	Charioteer Ceremonies
+ui_text_replacements_localised_text_phar_main_ramesses_military_mounted_type_a_2_title	Charioteer Complex
+ui_text_replacements_localised_text_phar_main_suppiluliuma_military_mounted_type_a_2_title	Charioteer Complex
+ui_text_replacements_localised_text_phar_main_tausret_military_mounted_type_a_2_title	Charioteer Complex
+building_culture_variants_name_phar_map_ash_military_mounted_type_a_1	Charioteer Workshop
+building_culture_variants_name_phar_map_all_province_management_main_building_major_thrace_4	Chieftain's Compound
+building_culture_variants_name_phar_map_all_province_management_main_building_major_thrace_5	Chieftain's Estate
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_5_can_title	Chieftain's Estate
+building_culture_variants_name_troy_main_influence_1	Chieftain's Hall
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_4_can_title	Chieftan's Compound
+building_culture_variants_name_phar_map_ers_unique_chogha_zanbil	Chogha Zanbil
+ui_text_replacements_localised_text_phar_main_rare_equipment_heavy_armour_6_title	Choke Point Plate Armour
+building_culture_variants_name_troy_main_dan_settlement_major_myth_centaurs_3	Citadel
+building_culture_variants_name_troy_main_dan_settlement_major_myth_giants_3	Citadel
+building_culture_variants_name_troy_main_dan_settlement_major_myth_harpies_3	Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_3	Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_centaurs_3	Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_giants_3	Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_harpies_3	Citadel
+building_culture_variants_name_troy_main_settlement_major_3	Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_3	Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_centaurs_3	Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_giants_3	Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_harpies_3	Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_sea_3	Citadel
+building_culture_variants_name_troy_main_settlement_major_sea_3	Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_sea_3	Citadel
+building_culture_variants_name_phar_map_all_landmark_unique_major_assuwa_wilusa_1	Citadel of Troy
+building_culture_variants_name_phar_map_bab_military_citizen_type_a_1	Citizen Army Barracks
+building_culture_variants_name_phar_map_bab_military_citizen_type_a_2	Citizen Army Headquarters
+ui_text_replacements_localised_text_phar_main_all_military_administration_garrison_type_a_2_title	City Guard Compound
+building_culture_variants_name_phar_map_ash_military_garrison_type_a_1	City Guard Station
+ui_text_replacements_localised_text_phar_main_all_military_administration_garrison_type_a_1_title	City Guard Station
+building_culture_variants_name_phar_map_bab_province_management_main_building_poc_production_influence_1	City Trade Records
+building_culture_variants_name_troy_main_ody_special_settlement_mycenae_4troy_main_dan_ithaca	City of Mycenae
+building_culture_variants_name_troy_main_special_settlement_mycenae_4	City of Mycenae
+building_culture_variants_name_troy_main_ody_citizen_1	Cob Houses
+building_culture_variants_name_troy_main_ody_major_mod_resources_1	Collector's Office
+building_culture_variants_name_troy_main_ody_major_mod_resources_3	Collector's Quarter
+ui_text_replacements_localised_text_phar_main_rare_equipment_chariots_2_title	Comfortable Chariot
+ui_text_replacements_localised_text_phar_main_ram_province_management_influence_happiness_1_title	Commoner's Graveyard
+ui_text_replacements_localised_text_phar_main_rare_equipment_medium_armour_1_title	Commoner's Hauberk
+ui_text_replacements_localised_text_phar_main_rare_equipment_light_armour_9_title	Composite Armour
+ui_text_replacements_localised_text_phar_main_rare_equipment_bows_7_title	Composite Bow
+ui_text_replacements_localised_text_phar_main_rare_equipment_large_shield_1_title	Cowhide Shield
+building_culture_variants_name_phar_map_bab_province_management_workforce_build_time_2	Crafters' Guild
+building_culture_variants_name_troy_main_wood_mod_bronze_2	Craftsman's House
+building_culture_variants_name_troy_main_wood_mod_bronze_1	Craftsman's Hut
+building_culture_variants_name_troy_main_wood_mod_bronze_3	Craftsman's Workshop
+building_culture_variants_name_troy_adi_special_ajax_makers_camp_3	Craftsmen's Square
+ui_text_replacements_localised_text_phar_main_rare_equipment_axes_4_title	Crescent-Shaped Axe
+building_culture_variants_name_troy_main_major_research_1	Crier's Square
+ui_text_replacements_localised_text_phar_main_rare_equipment_khopesh_1_title	Crude Khopesh
+ui_text_replacements_localised_text_phar_main_rare_equipment_culbs_4_title	Cudgel
+building_culture_variants_name_troy_main_dan_settlement_major_myth_centaurs_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_dan_settlement_major_myth_giants_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_dan_settlement_major_myth_harpies_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_centaurs_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_giants_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_harpies_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_sea_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_settlement_major_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_centaurs_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_giants_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_harpies_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_settlement_major_sea_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_sea_5	Cyclopean Citadel
+building_culture_variants_name_troy_main_special_mycenae_walls_5	Cyclopean Wall
+building_culture_variants_name_phar_map_all_landmark_unique_major_achaea_mycenae_1	Cyclopean Walls
+building_culture_variants_name_troy_main_military_myth_cyclops_5	Cyclops Cave
+building_culture_variants_name_phar_map_myc_province_management_eqeta_2	Damokoros' Residence
+building_culture_variants_name_phar_map_myc_province_management_roads_3	Damokoros' Road Infrastructure
+building_culture_variants_name_phar_map_myc_resource_production_food_farm_minor_2	Damos Farming Community
+ui_text_replacements_localised_text_phar_main_all_resource_production_fruit_oasis_2_title	Date Farm
+ui_text_replacements_localised_text_phar_main_all_resource_production_fruit_oasis_1_title	Date Grove
+building_culture_variants_name_phar_map_all_landmark_gold_happiness_tushhan_1	Decorated Pottery Workshop
+ui_text_replacements_localised_text_phar_main_all_landmark_growth_happiness_ashkelon_1_title	Deep Groundwater Supply
+building_culture_variants_name_phar_map_ash_military_garrison_type_a_3	Defenders' Fortress
+ui_text_replacements_localised_text_phar_main_rare_equipment_light_armour_8_title	Desert Armour
+building_culture_variants_name_phar_map_bab_province_management_happiness_influence_type_b_1	Dice Tavern
+building_culture_variants_name_troy_adi_special_diomedes_military_retinue_5	Diomedes' Retinue
+ui_text_replacements_localised_text_phar_main_rare_11_title	Diplomat
+building_culture_variants_name_troy_rem_aethiopia_horde_military_resource_specialization_3troy_rem_sbc_hordes_aethiopians	Distributor of Spoils
+building_culture_variants_name_troy_mth_special_garden_zeus_2	Divine Garden of Zeus
+building_culture_variants_name_troy_main_ody_port_4	Docks
+building_culture_variants_name_phar_map_myc_resource_production_food_farm_minor_1	Doero Farms
+building_culture_variants_name_troy_rem_special_rhesus_ritual_ground_4	Dolmen Complex
+building_culture_variants_name_troy_rem_special_rhesus_ritual_ground_3	Dolmen Shrine
+building_culture_variants_name_troy_main_ody_major_food_3	Dorian Labourers' Camp
+building_culture_variants_name_troy_main_ody_major_food_5	Dorian Labourers' Houses
+building_culture_variants_name_troy_main_ody_major_food_1	Dorian Labourers' Tents
+ui_text_replacements_localised_text_phar_main_rare_equipment_swords_4_title	Double-edged Sword
+building_culture_variants_name_troy_rem_aethiopia_horde_military_warrior_specialization_4troy_rem_sbc_hordes_aethiopians	Drillmaster
+ui_text_replacements_localised_text_phar_main_rare_15_title	Duellist
+ui_text_replacements_localised_text_phar_main_rare_equipment_light_armour_7_title	Dune Armour
+building_culture_variants_name_phar_map_religion_dwelling_ashur_1	Dwelling of Ashur
+building_culture_variants_name_phar_map_religion_dwelling_inshushinak_1	Dwelling of Inshushinak
+building_culture_variants_name_phar_map_religion_dwelling_ishtar_1	Dwelling of Ishtar
+building_culture_variants_name_phar_map_religion_dwelling_marduk_1	Dwelling of Marduk
+building_culture_variants_name_phar_map_religion_dwelling_ninurta_1	Dwelling of Ninurta
+building_culture_variants_name_troy_rem_aethiopia_horde_military_canaan_5troy_rem_sbc_hordes_aethiopians	Eastern Tactician
+building_culture_variants_name_troy_rem_aethiopia_horde_military_susa_5troy_rem_sbc_hordes_aethiopians	Eastern Traders
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_aphrodite_3troy_amazons_sbc_horde_amazons	Effigy of Aphrodite
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_aphrodite_3troy_rem_sbc_hordes_aethiopians	Effigy of Aphrodite
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_apollo_3troy_amazons_sbc_horde_amazons	Effigy of Apollo
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_apollo_3troy_rem_sbc_hordes_aethiopians	Effigy of Apollo
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_ares_3troy_amazons_sbc_horde_amazons	Effigy of Ares
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_ares_3troy_rem_sbc_hordes_aethiopians	Effigy of Ares
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_artemis_3troy_amazons_sbc_horde_amazons	Effigy of Artemis
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_artemis_3troy_rem_sbc_hordes_aethiopians	Effigy of Artemis
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_athena_3troy_amazons_sbc_horde_amazons	Effigy of Athena
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_athena_3troy_rem_sbc_hordes_aethiopians	Effigy of Athena
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_haphaestus_3troy_rem_sbc_hordes_aethiopians	Effigy of Haephestus
+building_culture_variants_name_troy_hep_amazons_penthesilea_horde_religion_hephaestus_3troy_amazons_sbc_horde_amazons	Effigy of Hephaestus
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_hera_3troy_amazons_sbc_horde_amazons	Effigy of Hera
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_hera_3troy_rem_sbc_hordes_aethiopians	Effigy of Hera
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_poseidon_3troy_amazons_sbc_horde_amazons	Effigy of Poseidon
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_poseidon_3troy_rem_sbc_hordes_aethiopians	Effigy of Poseidon
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_zeus_3troy_amazons_sbc_horde_amazons	Effigy of Zeus
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_zeus_3troy_rem_sbc_hordes_aethiopians	Effigy of Zeus
+building_culture_variants_name_troy_rem_aethiopia_horde_special_egyptian_school_3troy_rem_sbc_hordes_aethiopians	Egyptian Chest of Knowledge
+building_culture_variants_name_troy_rem_aethiopia_horde_special_egyptian_school_2troy_rem_sbc_hordes_aethiopians	Egyptian Scrolls of Knowledge
+ui_text_replacements_localised_text_phar_main_rare_equipment_swords_3_title	Egyptian Short Sword
+building_culture_variants_name_troy_rem_aethiopia_horde_special_egyptian_school_4troy_rem_sbc_hordes_aethiopians	Egyptian Tent Library
+building_culture_variants_name_phar_map_all_province_management_main_building_minor_thrace_bronze_1	Elders' Council
+ui_text_replacements_localised_text_phar_main_rare_equipment_chariots_4_title	Elite Warhorse Chariot
+building_culture_variants_name_troy_main_supply_base_6troy_main_sbc_danaan_achaeans	Elite's Campsite
+building_culture_variants_name_troy_rem_aethiopia_horde_special_mythic_units_1troy_rem_sbc_hordes_aethiopians	Emissaries
+building_culture_variants_name_phar_map_all_resource_production_food_farm_type_b_mesopotamia_1	Emmer Farm
+building_culture_variants_name_phar_map_all_resource_production_food_farm_type_b_mesopotamia_2	Emmer Fields
+building_culture_variants_name_troy_main_special_menelaus_envoy_3	Envoy Residence
+building_culture_variants_name_phar_map_ers_unique_etemenanki	Etemenanki
+building_culture_variants_name_troy_main_special_sarpedon_exotic_5	Exotic Goods Market
+building_culture_variants_name_troy_main_special_sarpedon_exotic_1	Exotic Goods Storage
+building_culture_variants_name_troy_main_special_sarpedon_exotic_3	Exotic Goods Trader
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_b_nile_2_title	Expanded Farmland
+building_culture_variants_name_troy_main_food_mod_stone_2	Farming Agora
+building_culture_variants_name_troy_main_dan_farm_myth_harpies_3	Farming City
+building_culture_variants_name_troy_main_dan_settlement_farm_myth_giants_3	Farming City
+building_culture_variants_name_troy_main_dan_settlement_farm_myth_sirens_3	Farming City
+building_culture_variants_name_troy_main_ody_farm_myth_harpies_3	Farming City
+building_culture_variants_name_troy_main_ody_settlement_farm_3	Farming City
+building_culture_variants_name_troy_main_ody_settlement_farm_myth_giants_3	Farming City
+building_culture_variants_name_troy_main_ody_settlement_farm_myth_sirens_3	Farming City
+building_culture_variants_name_troy_main_ody_settlement_farm_sea_3	Farming City
+building_culture_variants_name_troy_main_settlement_farm_3	Farming City
+building_culture_variants_name_troy_main_settlement_farm_sea_3	Farming City
+building_culture_variants_name_troy_main_trj_farm_myth_harpies_3	Farming City
+building_culture_variants_name_troy_main_trj_settlement_farm_3	Farming City
+building_culture_variants_name_troy_main_trj_settlement_farm_myth_giants_3	Farming City
+building_culture_variants_name_troy_main_trj_settlement_farm_myth_sirens_3	Farming City
+building_culture_variants_name_troy_main_trj_settlement_farm_sea_3	Farming City
+building_culture_variants_name_troy_main_dan_farm_myth_harpies_2	Farming Town
+building_culture_variants_name_troy_main_dan_settlement_farm_myth_giants_2	Farming Town
+building_culture_variants_name_troy_main_dan_settlement_farm_myth_sirens_2	Farming Town
+building_culture_variants_name_troy_main_ody_farm_myth_harpies_2	Farming Town
+building_culture_variants_name_troy_main_ody_settlement_farm_2	Farming Town
+building_culture_variants_name_troy_main_ody_settlement_farm_myth_giants_2	Farming Town
+building_culture_variants_name_troy_main_ody_settlement_farm_myth_sirens_2	Farming Town
+building_culture_variants_name_troy_main_ody_settlement_farm_sea_2	Farming Town
+building_culture_variants_name_troy_main_settlement_farm_2	Farming Town
+building_culture_variants_name_troy_main_settlement_farm_sea_2	Farming Town
+building_culture_variants_name_troy_main_trj_farm_myth_harpies_2	Farming Town
+building_culture_variants_name_troy_main_trj_settlement_farm_2	Farming Town
+building_culture_variants_name_troy_main_trj_settlement_farm_myth_giants_2	Farming Town
+building_culture_variants_name_troy_main_trj_settlement_farm_myth_sirens_2	Farming Town
+building_culture_variants_name_troy_main_trj_settlement_farm_sea_2	Farming Town
+building_culture_variants_name_troy_main_dan_farm_myth_harpies_1	Farming Village
+building_culture_variants_name_troy_main_dan_settlement_farm_myth_giants_1	Farming Village
+building_culture_variants_name_troy_main_dan_settlement_farm_myth_sirens_1	Farming Village
+building_culture_variants_name_troy_main_ody_farm_myth_harpies_1	Farming Village
+building_culture_variants_name_troy_main_ody_settlement_farm_1	Farming Village
+building_culture_variants_name_troy_main_ody_settlement_farm_myth_giants_1	Farming Village
+building_culture_variants_name_troy_main_ody_settlement_farm_myth_sirens_1	Farming Village
+building_culture_variants_name_troy_main_ody_settlement_farm_sea_1	Farming Village
+building_culture_variants_name_troy_main_settlement_farm_1	Farming Village
+building_culture_variants_name_troy_main_settlement_farm_sea_1	Farming Village
+building_culture_variants_name_troy_main_trj_farm_myth_harpies_1	Farming Village
+building_culture_variants_name_troy_main_trj_settlement_farm_1	Farming Village
+building_culture_variants_name_troy_main_trj_settlement_farm_myth_giants_1	Farming Village
+building_culture_variants_name_troy_main_trj_settlement_farm_myth_sirens_1	Farming Village
+building_culture_variants_name_troy_main_trj_settlement_farm_sea_1	Farming Village
+building_culture_variants_name_troy_main_food_production_main_3	Farmland
+building_culture_variants_name_troy_main_special_menelaus_foreign_barracks_3	Feast Hall
+building_culture_variants_name_troy_amazons_penthesilea_horde_replenishment_4troy_amazons_sbc_horde_amazons	Feasting Tents
+building_culture_variants_name_troy_amazons_penthesilea_horde_missile_5troy_amazons_sbc_horde_amazons	Festivals of Nemesis
+building_culture_variants_name_troy_main_military_myth_spartoi_5	Field of Ares
+ui_text_replacements_localised_text_phar_main_rare_equipment_light_armour_3_title	Fierce Armour
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_a_canaan_derivative__1_title	Fig Farm
+ui_text_replacements_localised_text_phar_main_rare_equipment_medium_armour_5_title	Fine Bronze Armour
+building_culture_variants_name_phar_map_all_resource_production_food_fishery_tigris_euphrates_2	Fish Market
+building_culture_variants_name_phar_map_all_resource_production_food_fishery_tigris_euphrates_1	Fisherman's Docks
+ui_text_replacements_localised_text_phar_main_all_resource_production_port_coast_1_title	Fishing Grounds
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_fishery_nile_2_title	Fishing Port
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_fishery_nile_1_title	Fishing Village
+building_culture_variants_name_troy_main_wood_support_2	Fletcher
+building_culture_variants_name_troy_main_major_food_3	Food Storehouse
+building_culture_variants_name_troy_main_major_food_1	Food Warehouse
+building_culture_variants_name_troy_main_special_menelaus_foreign_barracks_2	Foreign Barracks
+building_culture_variants_name_troy_rem_aethiopia_horde_special_mythic_units_4troy_rem_sbc_hordes_aethiopians	Foreign Council
+building_culture_variants_name_troy_main_special_menelaus_foreign_barracks_1	Foreign Encampment
+building_culture_variants_name_phar_map_bab_province_management_gold_diplomacy_1	Foreign Envoys' Residence
+building_culture_variants_name_phar_map_wil_major_main_building_happiness_boost_1	Foreign Relations Office
+building_culture_variants_name_troy_main_dan_settlement_wood_myth_giants_3	Forest City
+building_culture_variants_name_troy_main_dan_settlement_wood_myth_harpies_3	Forest City
+building_culture_variants_name_troy_main_dan_wood_myth_centaurs_3	Forest City
+building_culture_variants_name_troy_main_ody_settlement_forest_3	Forest City
+building_culture_variants_name_troy_main_ody_settlement_forest_sea_3	Forest City
+building_culture_variants_name_troy_main_ody_settlement_wood_myth_giants_3	Forest City
+building_culture_variants_name_troy_main_ody_settlement_wood_myth_harpies_3	Forest City
+building_culture_variants_name_troy_main_ody_wood_myth_centaurs_3	Forest City
+building_culture_variants_name_troy_main_settlement_forest_3	Forest City
+building_culture_variants_name_troy_main_settlement_forest_sea_3	Forest City
+building_culture_variants_name_troy_main_trj_settlement_forest_3	Forest City
+building_culture_variants_name_troy_main_trj_settlement_forest_sea_3	Forest City
+building_culture_variants_name_troy_main_trj_settlement_wood_myth_giants_3	Forest City
+building_culture_variants_name_troy_main_trj_settlement_wood_myth_harpies_3	Forest City
+building_culture_variants_name_troy_main_trj_wood_myth_centaurs_3	Forest City
+building_culture_variants_name_troy_main_dan_settlement_wood_myth_giants_2	Forest Town
+building_culture_variants_name_troy_main_dan_settlement_wood_myth_harpies_2	Forest Town
+building_culture_variants_name_troy_main_dan_wood_myth_centaurs_2	Forest Town
+building_culture_variants_name_troy_main_ody_settlement_forest_2	Forest Town
+building_culture_variants_name_troy_main_ody_settlement_forest_sea_2	Forest Town
+building_culture_variants_name_troy_main_ody_settlement_wood_myth_giants_2	Forest Town
+building_culture_variants_name_troy_main_ody_settlement_wood_myth_harpies_2	Forest Town
+building_culture_variants_name_troy_main_ody_wood_myth_centaurs_2	Forest Town
+building_culture_variants_name_troy_main_settlement_forest_2	Forest Town
+building_culture_variants_name_troy_main_settlement_forest_sea_2	Forest Town
+building_culture_variants_name_troy_main_trj_settlement_forest_2	Forest Town
+building_culture_variants_name_troy_main_trj_settlement_forest_sea_2	Forest Town
+building_culture_variants_name_troy_main_trj_settlement_wood_myth_giants_2	Forest Town
+building_culture_variants_name_troy_main_trj_settlement_wood_myth_harpies_2	Forest Town
+building_culture_variants_name_troy_main_trj_wood_myth_centaurs_2	Forest Town
+building_culture_variants_name_troy_main_dan_settlement_wood_myth_giants_1	Forest Village
+building_culture_variants_name_troy_main_dan_settlement_wood_myth_harpies_1	Forest Village
+building_culture_variants_name_troy_main_dan_wood_myth_centaurs_1	Forest Village
+building_culture_variants_name_troy_main_ody_settlement_forest_1	Forest Village
+building_culture_variants_name_troy_main_ody_settlement_forest_sea_1	Forest Village
+building_culture_variants_name_troy_main_ody_settlement_wood_myth_giants_1	Forest Village
+building_culture_variants_name_troy_main_ody_settlement_wood_myth_harpies_1	Forest Village
+building_culture_variants_name_troy_main_ody_wood_myth_centaurs_1	Forest Village
+building_culture_variants_name_troy_main_settlement_forest_1	Forest Village
+building_culture_variants_name_troy_main_settlement_forest_sea_1	Forest Village
+building_culture_variants_name_troy_main_trj_settlement_forest_1	Forest Village
+building_culture_variants_name_troy_main_trj_settlement_forest_sea_1	Forest Village
+building_culture_variants_name_troy_main_trj_settlement_wood_myth_giants_1	Forest Village
+building_culture_variants_name_troy_main_trj_settlement_wood_myth_harpies_1	Forest Village
+building_culture_variants_name_troy_main_trj_wood_myth_centaurs_1	Forest Village
+building_culture_variants_name_phar_map_wood_production_thrace_2	Foresters' Houses
+building_culture_variants_name_phar_map_wood_production_thrace_1	Foresters' Huts
+building_culture_variants_name_troy_main_dan_settlement_major_myth_centaurs_1	Fortified Town
+building_culture_variants_name_troy_main_dan_settlement_major_myth_giants_1	Fortified Town
+building_culture_variants_name_troy_main_dan_settlement_major_myth_harpies_1	Fortified Town
+building_culture_variants_name_troy_main_ody_settlement_major_1	Fortified Town
+building_culture_variants_name_troy_main_ody_settlement_major_myth_centaurs_1	Fortified Town
+building_culture_variants_name_troy_main_ody_settlement_major_myth_giants_1	Fortified Town
+building_culture_variants_name_troy_main_ody_settlement_major_myth_harpies_1	Fortified Town
+building_culture_variants_name_troy_main_ody_settlement_major_sea_1	Fortified Town
+building_culture_variants_name_troy_main_settlement_major_1	Fortified Town
+building_culture_variants_name_troy_main_trj_settlement_major_1	Fortified Town
+building_culture_variants_name_troy_main_trj_settlement_major_myth_centaurs_1	Fortified Town
+building_culture_variants_name_troy_main_trj_settlement_major_myth_giants_1	Fortified Town
+building_culture_variants_name_troy_main_trj_settlement_major_myth_harpies_1	Fortified Town
+building_culture_variants_name_troy_main_trj_settlement_major_sea_1	Fortified Town
+building_culture_variants_name_troy_main_settlement_major_sea_1	Fortified Town
+building_culture_variants_name_phar_map_all_landmark_unique_major_achaea_ithaca_1	Fortress of Ithaca
+building_culture_variants_name_troy_main_gold_support_3	Fresco Masters
+building_culture_variants_name_phar_map_farm_assuwa_derivative_1	Fruit Gardens
+ui_text_replacements_localised_text_phar_main_rare_equipment_medium_armour_6_title	Fulcrum Armour
+ui_text_replacements_localised_text_phar_main_suppi_military_administration_garrison_type_b_1_title	Garrison Quarters
+ui_text_replacements_localised_text_phar_main_suppi_military_administration_garrison_type_a_1_title	Garrison Station
+building_culture_variants_name_troy_main_garrison_4	Gate Bastion
+ui_text_replacements_localised_text_phar_main_rare_13_title	Gem Merchant
+building_culture_variants_name_troy_main_military_myth_giants_5	Giant's Fighting Pit
+building_culture_variants_name_troy_main_military_myth_giants_1	Giant's Meeting Place
+building_culture_variants_name_troy_main_military_myth_giants_3	Giant's Tavern
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_gold_1_title	Gold Appraiser
+building_culture_variants_name_troy_main_gold_support_1	Gold Gilders
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_centaurs_2	Gold Mine
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_giants_2	Gold Mine
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_harpies_2	Gold Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_2	Gold Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_centaurs_2	Gold Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_giants_2	Gold Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_harpies_2	Gold Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_sea_2	Gold Mine
+building_culture_variants_name_troy_main_settlement_gold_2	Gold Mine
+building_culture_variants_name_troy_main_settlement_gold_sea_2	Gold Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_2	Gold Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_centaurs_2	Gold Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_giants_2	Gold Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_harpies_2	Gold Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_sea_2	Gold Mine
+ui_text_replacements_localised_text_phar_main_all_resource_production_gold_mine_1_title	Gold Mine
+ui_text_replacements_localised_text_phar_main_all_resource_production_gold_mine_3_title	Gold Mine Network
+building_culture_variants_name_troy_main_gold_production_main_1	Gold Miner's Tent
+building_culture_variants_name_troy_main_gold_production_main_2	Gold Miners' Camp
+building_culture_variants_name_troy_main_gold_production_main_3	Gold Miners' Houses
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_centaurs_1	Gold Pit
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_giants_1	Gold Pit
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_harpies_1	Gold Pit
+building_culture_variants_name_troy_main_ody_settlement_gold_1	Gold Pit
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_centaurs_1	Gold Pit
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_giants_1	Gold Pit
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_harpies_1	Gold Pit
+building_culture_variants_name_troy_main_ody_settlement_gold_sea_1	Gold Pit
+building_culture_variants_name_troy_main_settlement_gold_1	Gold Pit
+building_culture_variants_name_troy_main_settlement_gold_sea_1	Gold Pit
+building_culture_variants_name_troy_main_trj_settlement_gold_1	Gold Pit
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_centaurs_1	Gold Pit
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_giants_1	Gold Pit
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_harpies_1	Gold Pit
+building_culture_variants_name_troy_main_trj_settlement_gold_sea_1	Gold Pit
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_gold_2_title	Gold Purification Workshop
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_centaurs_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_giants_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_harpies_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_centaurs_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_giants_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_harpies_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_sea_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_settlement_gold_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_settlement_gold_sea_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_centaurs_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_giants_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_harpies_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_sea_3	Gold Shaft Mine
+building_culture_variants_name_troy_main_gold_mod_food_3	Gold Vein Furnace
+building_culture_variants_name_troy_main_gold_mod_food_2	Gold Vein Smelter
+ui_text_replacements_localised_text_phar_main_all_resource_production_gold_mine_nile_1_title	Gold-Sifting Operation
+building_culture_variants_name_troy_main_gold_elite_1	Goldsmith
+ui_text_replacements_localised_text_phar_main_all_resource_production_modifier_gold_2_title	Goldsmith
+building_culture_variants_name_troy_main_myth_gorgon_3	Gorgoneion Cave
+building_culture_variants_name_phar_map_all_province_management_main_building_major_assuwa_1	Governor's House
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_1_hit_title	Governor's House
+building_culture_variants_name_phar_map_all_province_management_main_building_major_assuwa_2	Governor's Residence
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_2_hit_title	Governor's Residence
+building_culture_variants_name_phar_map_all_province_management_main_building_major_assuwa_3	Governor's Villa
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_3_hit_title	Governor's Villa
+building_culture_variants_name_troy_main_food_support_1	Grain Carts
+building_culture_variants_name_troy_main_food_mod_stone_1	Grain Exchange
+building_culture_variants_name_phar_map_food_farm_aegean_2	Grain Farms
+building_culture_variants_name_phar_map_food_farm_aegean_1	Grain Fields
+building_culture_variants_name_troy_main_food_support_2	Grain Pit
+ui_text_replacements_localised_text_phar_main_all_resource_production_modifier_food_2_title	Grain Pit
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_food_1_title	Grain Pit
+ui_text_replacements_localised_text_phar_main_all_resource_production_modifier_food_1_title	Grain Pots
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_food_2_title	Grain Redistribution Hub
+building_culture_variants_name_troy_main_food_support_3	Granary
+ui_text_replacements_localised_text_phar_main_all_resource_production_modifier_food_3_title	Granary
+ui_text_replacements_localised_text_phar_main_all_resource_production_fruit_oasis_derivative_type_a_1_title	Grand Bazaar
+building_culture_variants_name_troy_main_dan_settlement_major_myth_centaurs_4	Grand Citadel
+building_culture_variants_name_troy_main_dan_settlement_major_myth_giants_4	Grand Citadel
+building_culture_variants_name_troy_main_dan_settlement_major_myth_harpies_4	Grand Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_4	Grand Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_centaurs_4	Grand Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_giants_4	Grand Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_harpies_4	Grand Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_sea_4	Grand Citadel
+building_culture_variants_name_troy_main_settlement_major_4	Grand Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_4	Grand Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_centaurs_4	Grand Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_giants_4	Grand Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_harpies_4	Grand Citadel
+building_culture_variants_name_troy_main_settlement_major_sea_4	Grand Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_sea_4	Grand Citadel
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_amun_1_title	Grand Temple of Amun
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_anubis_1_title	Grand Temple of Anubis
+building_culture_variants_name_phar_map_religion_cult_center_grand_temple_aphrodite_1	Grand Temple of Aphrodite
+building_culture_variants_name_phar_map_religion_cult_center_grand_temple_apollo_1	Grand Temple of Apollo
+building_culture_variants_name_phar_map_religion_cult_center_grand_temple_ares_1	Grand Temple of Ares
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_arinna_1_title	Grand Temple of Arinna
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_asherah_1_title	Grand Temple of Asherah
+building_culture_variants_name_phar_map_religion_cult_center_grand_temple_ashur_1	Grand Temple of Ashur
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_aten_1_title	Grand Temple of Aten
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_baal_1_title	Grand Temple of Baal
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_el_1_title	Grand Temple of El
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_horus_1_title	Grand Temple of Horus
+building_culture_variants_name_phar_map_religion_cult_center_grand_temple_inshushinak_1	Grand Temple of Inshushinak
+building_culture_variants_name_phar_map_religion_cult_center_grand_temple_ishtar_1	Grand Temple of Ishtar
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_isis_1_title	Grand Temple of Isis
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_kumarbi_1_title	Grand Temple of Kumarbi
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_kurunta_1_title	Grand Temple of Kurunta
+building_culture_variants_name_phar_map_religion_cult_center_grand_temple_marduk_1	Grand Temple of Marduk
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_moloch_1_title	Grand Temple of Moloch
+building_culture_variants_name_phar_map_religion_cult_center_grand_temple_ninurta_1	Grand Temple of Ninurta
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_osiris_1_title	Grand Temple of Osiris
+building_culture_variants_name_phar_map_religion_cult_center_grand_temple_poseidon_1	Grand Temple of Poseidon
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_ptah_1_title	Grand Temple of Ptah
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_ra_1_title	Grand Temple of Ra
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_set_1_title	Grand Temple of Set
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_shaushka_1_title	Grand Temple of Shaushka
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_tarhunz_1_title	Grand Temple of Tarhunna
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_thoth_1_title	Grand Temple of Thoth
+ui_text_replacements_localised_text_phar_main_religion_cult_center_grand_temple_yamm_1_title	Grand Temple of Yamm
+building_culture_variants_name_phar_map_religion_cult_center_grand_temple_zeus_1	Grand Temple of Zeus
+building_culture_variants_name_phar_map_farm_thrace_derivative_1	Grape Orchards
+building_culture_variants_name_troy_adi_special_ajax_makers_camp_5	Great Artisan Workshop
+ui_text_replacements_localised_text_phar_main_all_resource_production_gold_mine_2_title	Great Gold Mine
+building_culture_variants_name_phar_map_achean_military_mix_3	Great Mustering Hall
+building_culture_variants_name_phar_map_bab_military_mix_3	Great Mustering Hall
+building_culture_variants_name_phar_map_ers_great_obelisk_1	Great Obelisk
+building_culture_variants_name_troy_main_religion_aphrodite_5	Great Temple of Aphrodite
+building_culture_variants_name_troy_main_special_aeneas_aphrodite_5	Great Temple of Aphrodite
+building_culture_variants_name_troy_main_religion_apollo_5	Great Temple of Apollo
+building_culture_variants_name_troy_main_religion_ares_5	Great Temple of Ares
+building_culture_variants_name_troy_main_religion_athens_5	Great Temple of Athena
+building_culture_variants_name_troy_main_religion_hera_5	Great Temple of Hera
+building_culture_variants_name_troy_main_religion_poseidon_5	Great Temple of Poseidon
+building_culture_variants_name_troy_rem_special_rhesus_great_temple_sabazios_3	Great Temple of Sabazios
+building_culture_variants_name_troy_rem_special_rhesus_great_temple_zalmoxis_3	Great Temple of Zalmoxis
+building_culture_variants_name_troy_main_religion_zeus_5	Great Temple of Zeus
+building_culture_variants_name_troy_rem_special_rhesus_great_temple_zibelthiurdos_5	Great Temple of Zibelthiurdos
+building_culture_variants_name_phar_map_ers_unique_great_ziggurat_of_ur	Great Ziggurat of Ur
+ui_text_replacements_localised_text_phar_main_rare_equipment_spears_5_title	Greek Spear
+ui_text_replacements_localised_text_phar_main_rare_equipment_spears_4_title	Greek Trident
+building_culture_variants_name_troy_mth_horde_special_griffin_3	Griffin Aerie
+building_culture_variants_name_troy_mth_special_griffin_3	Griffin Aerie
+building_culture_variants_name_troy_mth_horde_special_griffin_5	Griffin Roost
+building_culture_variants_name_troy_mth_special_griffin_5	Griffin Roost
+building_culture_variants_name_troy_main_garrison_2	Guard House
+ui_text_replacements_localised_text_phar_main_all_military_administration_garrison_type_b_1_title	Guard Tower
+building_culture_variants_name_phar_map_bab_military_mounted_type_a_2	Hall of Chariot Champions
+ui_text_replacements_localised_text_phar_main_all_province_management_influence_type_a_3_title	Hall of Messengers
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_poc_legitimacy_influence_boost_1_title	Hall of Records
+building_culture_variants_name_troy_adi_special_diomedes_military_camp_4	Hall of War
+building_culture_variants_name_troy_main_military_myth_harpies_1	Harpy Lookout
+building_culture_variants_name_troy_main_military_myth_harpies_4	Harpy Nest
+building_culture_variants_name_troy_main_special_aeneas_hasawa_1	Hasawa Hut
+building_culture_variants_name_troy_main_special_aeneas_hasawa_3	Hasawa Village
+building_culture_variants_name_troy_amazons_special_hippolyta_replenishment_2	Healer's Tent
+ui_text_replacements_localised_text_phar_main_all_province_management_growth_type_a_2_title	Healing Hall
+ui_text_replacements_localised_text_phar_main_rare_equipment_heavy_armour_2_title	Heavy Bronze Plate Armour
+ui_text_replacements_localised_text_phar_main_rare_equipment_large_shield_4_title	Heavy Bronze Shield
+ui_text_replacements_localised_text_phar_main_rare_equipment_medium_shield_5_title	Heavy Shield
+building_culture_variants_name_troy_main_global_recruitment_hector_5	Hector's Guard
+building_culture_variants_name_troy_main_special_paris_helen_2	Helen's Gardens
+building_culture_variants_name_troy_main_special_paris_helen_1	Helen's House
+building_culture_variants_name_troy_main_special_paris_helen_3	Helen's Palace
+building_culture_variants_name_troy_hep_special_hephaisteion_3	Hephaisteion
+building_culture_variants_name_troy_amazons_special_hippolyta_replenishment_3	Herbalist's House
+building_culture_variants_name_phar_map_all_resource_production_food_cattle_mesopotamia_2	Herding Plains
+building_culture_variants_name_troy_rem_aethiopia_horde_main_2troy_rem_sbc_hordes_aethiopians	Hero's Escort
+building_culture_variants_name_troy_rem_aethiopia_horde_main_5troy_rem_sbc_hordes_aethiopians	Hero's Pavilion
+building_culture_variants_name_troy_rem_aethiopia_horde_main_4troy_rem_sbc_hordes_aethiopians	Hero's Retinue
+building_culture_variants_name_troy_rem_aethiopia_horde_main_1troy_rem_sbc_hordes_aethiopians	Hero's Seat
+building_culture_variants_name_troy_rem_aethiopia_horde_main_3troy_rem_sbc_hordes_aethiopians	Hero's Tent
+building_culture_variants_name_troy_main_special_hector_heroes_4	Heroes' Hall
+ui_text_replacements_localised_text_phar_main_all_landmark_production_morale_boost_parha_1_title	High Citadel of Parha
+ui_text_replacements_localised_text_phar_main_all_religion_morale_boost_1_title	High Priest's Compound
+building_culture_variants_name_phar_map_all_landmark_unique_major_thrace_ismaros_1	Hilltop Holdfast
+ui_text_replacements_localised_text_phar_main_rare_equipment_heavy_armour_3_title	Horse Whisperer
+building_culture_variants_name_phar_map_bab_province_management_influence_roads_type_a_3	House of Astrologers
+building_culture_variants_name_phar_map_all_landmark_growth_movement_ur_1	House of Ea-nasir
+building_culture_variants_name_phar_map_all_landmark_replenishment_influence_nineveh_1	House of Exorcists
+building_culture_variants_name_phar_map_bab_province_management_happiness_influence_type_b_2	House of Games
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_minor_3_hit_title	House on the Slope
+building_culture_variants_name_troy_amazons_penthesilea_horde_growth_3troy_amazons_sbc_horde_amazons	Household Slaves
+ui_text_replacements_localised_text_phar_main_rare_equipment_heavy_armour_4_title	Human Battering Ram
+building_culture_variants_name_troy_main_food_reckless_1	Hunter's Lodge
+building_culture_variants_name_troy_amazons_penthesilea_horde_resources_2troy_amazons_sbc_horde_amazons	Hunting Party
+building_culture_variants_name_phar_map_all_landmark_food_happiness_terqa_1	Ice House
+building_culture_variants_name_troy_main_ody_major_wood_5	Illyrian Market
+building_culture_variants_name_troy_main_ody_major_wood_1	Illyrian Merchants
+building_culture_variants_name_troy_main_ody_major_wood_3	Illyrian Trading Base
+building_culture_variants_name_troy_main_ody_major_wood_2	Illyrian Trading Post
+building_culture_variants_name_troy_main_ody_major_wood_4	Illyrian Trading Quarters
+ui_text_replacements_localised_text_phar_main_seti_military_infantry_type_a_2_title	Infantry Barracks
+ui_text_replacements_localised_text_phar_main_suppiluliuma_military_infantry_type_a_2_title	Infantry Barracks
+ui_text_replacements_localised_text_phar_main_tausret_military_infantry_type_a_2_title	Infantry Barracks
+ui_text_replacements_localised_text_phar_main_seti_military_infantry_type_a_3_title	Infantry Complex
+ui_text_replacements_localised_text_phar_main_suppiluliuma_military_infantry_type_a_3_title	Infantry Complex
+ui_text_replacements_localised_text_phar_main_tausret_military_infantry_type_a_3_title	Infantry Complex
+building_culture_variants_name_phar_map_military_infantry_type_a_wilusa_faction_5	Infantry Headquarters
+building_culture_variants_name_phar_map_military_infantry_type_a_wilusa_faction_1	Infantry Housing
+ui_text_replacements_localised_text_phar_main_seti_military_infantry_type_a_1_title	Infantry Housing
+ui_text_replacements_localised_text_phar_main_suppiluliuma_military_infantry_type_a_1_title	Infantry Housing
+ui_text_replacements_localised_text_phar_main_tausret_military_infantry_type_a_1_title	Infantry Housing
+building_culture_variants_name_phar_map_military_infantry_type_a_wilusa_faction_2	Infantry Quarters
+building_culture_variants_name_troy_amazons_special_hippolyta_military_3troy_amazons_trj_hippolyta	Initiation Shrine
+building_culture_variants_name_phar_map_ash_military_garrison_type_a_2	Inner Army Headquarters
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_a_nile_2_title	Irrigated Farmland
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_a_nile_1_title	Irrigation Ditch
+ui_text_replacements_localised_text_phar_main_all_province_management_growth_type_b_2_title	Irrigation Network
+ui_text_replacements_localised_text_phar_main_sea_islander_heavy_axemen_title	Islander Heavy Axemen
+ui_text_replacements_localised_text_phar_main_sea_islander_raiders_title	Islander Raiders
+ui_text_replacements_localised_text_phar_main_sea_islander_swordsmen_title	Islander Swordsmen
+ui_text_replacements_localised_text_phar_main_sea_islander_young_spears_title	Islander Young Spears
+building_culture_variants_name_troy_main_supply_base_3troy_main_sbc_danaan_achaeans	Islander's Shack
+building_culture_variants_name_troy_main_supply_base_5troy_main_sbc_danaan_achaeans	Ithacan Cabin
+building_culture_variants_name_phar_map_myc_resource_production_gold_mine_minor_1	Jeweler
+building_culture_variants_name_troy_main_gold_elite_3	Jeweller
+building_culture_variants_name_phar_map_myc_province_management_eqeta_1	Kamaeu's Council
+building_culture_variants_name_phar_map_all_province_management_main_building_major_achaea_1	Kamaeu's Holding
+building_culture_variants_name_troy_rem_aethiopia_horde_special_exotic_servant_2troy_rem_sbc_hordes_aethiopians	Keeper of Battle Stories
+ui_text_replacements_localised_text_phar_main_rare_equipment_khopesh_4_title	Khopesh
+building_culture_variants_name_phar_map_all_province_management_main_building_major_achaea_4	Koretor's Halls
+ui_text_replacements_localised_text_phar_main_rare_equipment_bows_5_title	Kushite Bow
+ui_text_replacements_localised_text_phar_main_rare_equipment_axes_2_title	Kushite Bronze Axe
+ui_text_replacements_localised_text_phar_main_rare_equipment_khopesh_5_title	Kushite Khopesh
+building_culture_variants_name_troy_main_military_myth_minotaur_3	Labyrinth Garden
+building_culture_variants_name_troy_main_military_myth_minotaur_5	Labyrinth Palace
+building_culture_variants_name_troy_main_food_elite_3	Large Apoikia
+building_culture_variants_name_troy_main_stone_elite_3	Large Mountain Apoikia
+building_culture_variants_name_troy_main_dan_stone_myth_centaurs_3	Large Quarry
+building_culture_variants_name_troy_main_dan_stone_myth_giants_3	Large Quarry
+building_culture_variants_name_troy_main_ody_settlement_stone_3	Large Quarry
+building_culture_variants_name_troy_main_ody_settlement_stone_sea_3	Large Quarry
+building_culture_variants_name_troy_main_ody_stone_myth_centaurs_3	Large Quarry
+building_culture_variants_name_troy_main_ody_stone_myth_giants_3	Large Quarry
+building_culture_variants_name_troy_main_settlement_stone_3	Large Quarry
+building_culture_variants_name_troy_main_settlement_stone_sea_3	Large Quarry
+building_culture_variants_name_troy_main_trj_settlement_stone_3	Large Quarry
+building_culture_variants_name_troy_main_trj_settlement_stone_sea_3	Large Quarry
+building_culture_variants_name_troy_main_trj_stone_myth_centaurs_3	Large Quarry
+building_culture_variants_name_troy_main_trj_stone_myth_giants_3	Large Quarry
+building_culture_variants_name_troy_rem_special_rhesus_tribal_district_4	Large Tribal District
+building_culture_variants_name_phar_map_myc_province_management_eqeta_3	Lawagetas' Palace
+building_culture_variants_name_phar_map_ers_unique_lemnos_necropolis	Lemnos Necropolis
+building_culture_variants_name_phar_map_all_resource_production_food_farm_type_a_mesopotamia_derivative_1	Lentil Farm
+ui_text_replacements_localised_text_phar_main_rare_equipment_light_armour_6_title	Libu Cape Armour
+ui_text_replacements_localised_text_phar_main_rare_equipment_small_shield_2_title	Light Shield
+ui_text_replacements_localised_text_phar_main_rare_equipment_chariots_1_title	Lightweight Chariot
+building_culture_variants_name_phar_map_all_landmark_ranged_attack_chariot_speed_irridu_1	Lion Hunting Grounds
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_cattle_hattusa_2_title	Livestock Farm
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_cattle_hattusa_1_title	Livestock Field
+building_culture_variants_name_phar_map_all_resource_production_food_cattle_mesopotamia_1	Livestock Folds
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_cattle_canaan_1_title	Livestock Pasture
+building_culture_variants_name_phar_map_food_cattle_aegean_1	Livestock Pastures
+building_culture_variants_name_phar_map_food_cattle_aegean_2	Livestock Pens
+building_culture_variants_name_phar_map_wood_production_achaea_2	Logger's Square
+building_culture_variants_name_phar_map_wood_production_achaea_1	Logger's Yard
+building_culture_variants_name_troy_main_wood_production_main_2	Loggers' Camp
+building_culture_variants_name_troy_main_wood_production_main_3	Loggers' Houses
+building_culture_variants_name_troy_main_wood_production_main_1	Loggers' Tents
+building_culture_variants_name_phar_map_all_resource_production_wood_mesopotamia_type_a_2	Logging Camp
+building_culture_variants_name_phar_map_all_resource_production_wood_mesopotamia_type_a_1	Logging Grounds
+ui_text_replacements_localised_text_phar_main_rare_equipment_swords_5_title	Long Sword
+building_culture_variants_name_troy_rem_aethiopia_horde_military_resource_specialization_4troy_rem_sbc_hordes_aethiopians	Looting Parties
+ui_text_replacements_localised_text_phar_main_rare_equipment_heavy_armour_1_title	Lucky Cuirass
+building_culture_variants_name_phar_map_wood_production_assuwa_1	Lumber Shacks
+building_culture_variants_name_phar_map_all_resource_production_wood_port_tigris_euphrates_2	Lumber Storehouse
+building_culture_variants_name_troy_main_major_wood_3	Lumber Storehouse
+building_culture_variants_name_troy_main_major_wood_1	Lumber Warehouse
+building_culture_variants_name_phar_map_all_resource_production_wood_port_tigris_euphrates_1	Lumber Waterways
+building_culture_variants_name_phar_map_all_landmark_unique_major_assuwa_telmessos_1	Lycian Stables
+building_culture_variants_name_troy_adi_special_ajax_makers_camp_1	Makers' Camp
+ui_text_replacements_localised_text_phar_main_sea_marauder_slingers_title	Marauder Slingers
+ui_text_replacements_localised_text_phar_main_sea_marauding_axe_chargers_title	Marauding Axe Chargers
+building_culture_variants_name_troy_main_stone_mod_gold_3	Marble Agora
+building_culture_variants_name_troy_main_stone_mod_gold_2	Marble Marketplace
+building_culture_variants_name_troy_main_stone_mod_gold_1	Marble Square
+building_culture_variants_name_troy_rem_aethiopia_horde_military_warrior_specialization_1troy_rem_sbc_hordes_aethiopians	Marching Drums
+building_culture_variants_name_troy_main_missile_4	Marksmen's Range
+building_culture_variants_name_troy_main_stone_support_2	Mason's Workshop
+building_culture_variants_name_troy_main_bronze_support_3	Master Armourer
+building_culture_variants_name_troy_adi_bowyer_4troy_main_dan_salamis	Master Bowyer
+building_culture_variants_name_phar_map_wood_production_aegean_derivative_1	Master Carpenter
+building_culture_variants_name_phar_map_wood_production_assuwa_derivative_1	Master Carpenter
+building_culture_variants_name_phar_map_wood_production_thrace_derivative_1	Master Carpenter
+building_culture_variants_name_troy_main_wood_elite_3	Master Carpenter
+building_culture_variants_name_troy_main_wood_support_3	Master Fletcher
+building_culture_variants_name_troy_amazons_penthesilea_horde_upgrades_5troy_amazons_sbc_horde_amazons	Master Smiths
+building_culture_variants_name_phar_map_bab_province_management_influence_roads_type_a_2	Mathematicians' Guild
+building_culture_variants_name_troy_main_food_production_main_2	Measured Fields
+building_culture_variants_name_troy_main_food_mod_stone_3	Meat, Milk & Millet
+ui_text_replacements_localised_text_phar_main_ramesses_military_infantry_type_a_2_title	Medjay Barracks
+ui_text_replacements_localised_text_phar_main_ramesses_military_infantry_type_a_3_title	Medjay Headquarters
+ui_text_replacements_localised_text_phar_main_ramesses_military_infantry_type_a_1_title	Medjay Office
+ui_text_replacements_localised_text_phar_main_rare_equipment_bows_2_title	Medjayan Bow
+building_culture_variants_name_troy_main_influence_2	Megaron
+building_culture_variants_name_troy_main_global_recruitment_menelaus_5	Menelaus' Sworn Fighters
+building_culture_variants_name_phar_map_bab_province_management_main_building_poc_production_influence_2	Merchants' Guild
+building_culture_variants_name_phar_map_ers_fort_aber_nahra_meso_1phar_map_clt_mesopotamian	Mesopotamian Fort
+building_culture_variants_name_phar_main_ers_monument_level_1_meso	Mesopotamian Monument
+building_culture_variants_name_phar_main_ers_trading_post_level_1_mesophar_map_clt_mesopotamian	Mesopotamian Trading Post
+building_culture_variants_name_phar_map_ers_waystation_level_1_mesophar_map_clt_mesopotamian	Mesopotamian Waystation
+building_culture_variants_name_troy_main_major_research_3	Messenger's Square
+ui_text_replacements_localised_text_phar_main_all_province_management_growth_type_a_1_title	Midwife's House
+ui_text_replacements_localised_text_phar_main_ram_military_administration_hero_training_3_title	Military Academy
+building_culture_variants_name_troy_main_military_elite_3	Military Camp
+building_culture_variants_name_troy_main_special_achilles_myrmidon_3	Military Camp
+building_culture_variants_name_phar_map_ash_military_infantry_type_a_2	Military Compound
+building_culture_variants_name_troy_adi_special_diomedes_military_camp_3	Military Library
+ui_text_replacements_localised_text_phar_main_ram_military_administration_hero_training_1_title	Military Office
+ui_text_replacements_localised_text_phar_main_seti_military_administration_cost_mod_1_title	Military Office
+ui_text_replacements_localised_text_phar_main_ram_military_administration_hero_training_2_title	Military School
+building_culture_variants_name_phar_map_ash_military_infantry_type_a_1	Militia Barracks
+ui_text_replacements_localised_text_phar_main_suppi_military_administration_army_buff_1_title	Militia Gathering Post
+ui_text_replacements_localised_text_phar_main_rare_equipment_spears_1_title	Minoan Spear
+ui_text_replacements_localised_text_phar_main_all_landmark_victory_points_1_title	Monument of Greatness
+building_culture_variants_name_phar_map_all_province_management_main_building_major_achaea_2	Moroqa's Administrative Centre
+building_culture_variants_name_troy_main_stone_elite_2	Mountain Apoikia
+building_culture_variants_name_troy_amazons_penthesilea_horde_scouts_4troy_amazons_sbc_horde_amazons	Mounted Scouts
+building_culture_variants_name_phar_map_ash_military_mounted_type_a_3	Mounted Veterans' Centre
+building_culture_variants_name_phar_map_bab_province_management_happiness_growth_type_a_2	Mud Baths
+building_culture_variants_name_troy_main_citizen_1	Mudbrick Houses
+ui_text_replacements_localised_text_phar_main_sovereign_debuff_bundle_title	Murmurs of the Nobility
+building_culture_variants_name_troy_main_military_1	Muster Field
+building_culture_variants_name_troy_main_ody_military_1	Muster Field
+building_culture_variants_name_phar_map_achean_military_mix_2	Mustering Hall
+building_culture_variants_name_phar_map_bab_military_mix_2	Mustering Hall
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_minor_2_can_title	Mustering Hall
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_minor_2_egy_title	Mustering Hall
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_minor_2_hit_title	Mustering Hall
+ui_text_replacements_localised_text_phar_main_seti_military_administration_cost_mod_recruit_slot_type_b_1_title	Mustering Office 
+building_culture_variants_name_phar_map_achean_military_mix_1	Mustering Yard
+building_culture_variants_name_phar_map_bab_military_mix_1	Mustering Yard
+building_culture_variants_name_troy_main_special_mycenae_walls_3	Mycenaean Fortress
+building_culture_variants_name_troy_main_special_mycenae_walls_1	Mycenaean Walls
+building_culture_variants_name_troy_main_special_achilles_myrmidon_5	Myrmidon Barracks
+building_culture_variants_name_troy_main_special_achilles_myrmidon_4	Myrmidon Camp
+ui_text_replacements_localised_text_phar_main_all_military_native_type_a_all_4_title	Native Barracks (Major Settlement)
+ui_text_replacements_localised_text_phar_main_all_military_native_type_a_all_1_title	Native Muster Field (Major Settlement)
+ui_text_replacements_localised_text_phar_main_all_military_native_type_b_all_1_title	Native Muster Field (Minor Settlement)
+ui_text_replacements_localised_text_phar_main_all_military_native_type_a_all_3_title	Native Recruitment Centre (Major Settlement)
+ui_text_replacements_localised_text_phar_main_all_military_native_type_a_all_2_title	Native Recruitment Office (Major Settlement)
+ui_text_replacements_localised_text_phar_main_all_military_native_type_b_all_2_title	Native Recruitment Office (Minor Settlement)
+ui_text_replacements_localised_text_phar_main_ram_province_management_influence_happiness_3_title	Necropolis of the Honoured Dead
+ui_text_replacements_localised_text_phar_main_all_province_management_influence_type_a_1_title	Newscrier's Stand
+building_culture_variants_name_troy_rem_aethiopia_horde_military_warrior_specialization_3troy_rem_sbc_hordes_aethiopians	Night Watch
+ui_text_replacements_localised_text_phar_main_all_resource_production_gold_mine_nile_2_title	Nile gold mine
+ui_text_replacements_localised_text_phar_main_all_landmark_food_boost_komombo_1_title	Nilometer
+building_culture_variants_name_troy_amazons_penthesilea_horde_cavalry_5troy_amazons_sbc_horde_amazons	Nomadic Sacraments
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_3_egy_title	Nomarch's Office
+building_culture_variants_name_troy_mth_special_garden_zeus_1	Numinous Bowers of Zeus
+building_culture_variants_name_phar_map_wood_production_assuwa_2	Oak Storage
+ui_text_replacements_localised_text_phar_main_rare_equipment_spears_2_title	Obsidian-tipped Thrusting Spear
+building_culture_variants_name_troy_main_ody_happiness_1	Odysseus' Hall
+building_culture_variants_name_troy_main_ody_happiness_2	Odysseus' Megaron
+building_culture_variants_name_troy_main_ody_happiness_4	Odysseus' Palace
+building_culture_variants_name_troy_mth_horde_special_cerberus_3	Offering Pit
+building_culture_variants_name_troy_mth_special_cerberus_3	Offering Pit
+ui_text_replacements_localised_text_phar_main_all_military_administration_hero_training_2_title	Officer School
+ui_text_replacements_localised_text_phar_main_all_military_administration_hero_training_1_title	Officer Training Grounds
+building_culture_variants_name_phar_map_ash_military_administration_hero_training_1	Officers' School
+building_culture_variants_name_troy_rem_special_rhesus_drinking_hub_4	Oinoptai
+building_culture_variants_name_phar_map_farm_achaea_derivative_1	Olive Groves
+ui_text_replacements_localised_text_phar_main_rare_equipment_chariots_5_title	Open-field Chariot
+building_culture_variants_name_troy_main_citizen_3	Opulent Houses
+building_culture_variants_name_troy_main_myth_seer_3	Oracle of Apollo
+building_culture_variants_name_troy_main_gold_mod_food_1	Ore Smelter
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_minor_3_egy_title	Overseer's Office
+building_culture_variants_name_phar_map_all_landmark_happiness_general_rank_mari_1	Palace Archive
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_poc_legitimacy_influence_boost_2_title	Palace of Correspondence
+building_culture_variants_name_phar_map_all_landmark_unique_major_achaea_knossos_1	Palace of Minos
+building_culture_variants_name_phar_map_bab_province_management_happiness_growth_type_a_3	Palace of Pleasures
+building_culture_variants_name_phar_map_ash_military_administration_hero_training_3	Palace of War
+building_culture_variants_name_phar_map_ash_military_mounted_type_a_2	Palatial Stables
+ui_text_replacements_localised_text_phar_main_rare_equipment_medium_shield_1_title	Pallet Shield
+ui_text_replacements_localised_text_phar_main_rare_equipment_axes_6_title	Pangaion Axe
+building_culture_variants_name_troy_main_global_recruitment_paris_5	Paris' Companions
+building_culture_variants_name_troy_main_special_miletus_sacred_way_5	Paved Sacred Way
+building_culture_variants_name_phar_main_ers_fort_fenkhu_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_highlands_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_isuwa_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_kush_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_lower_egypt_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_lowlands_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_nubia_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_retjennu_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_retjennu_egy_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_sinai_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_upper_egypt_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_western_desert_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_fort_yamhad_can_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Fort
+building_culture_variants_name_phar_main_ers_outpost_fenkhu_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_highlands_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_isuwa_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_kush_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_lower_egypt_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_lowlands_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_nubia_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_retjennu_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_sinai_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_upper_egypt_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_western_desert_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_yamhad_1phar_main_sbc_sea_peoples_sea_wanderers	Peleset Lookout Post
+building_culture_variants_name_phar_main_ers_trading_post_level_1_canaphar_main_sbc_sea_peoples_sea_wanderers	Peleset Trading Post
+building_culture_variants_name_phar_sea_ers_nomad_peleset_1	Peleset Village
+building_culture_variants_name_phar_main_ers_waystation_level_1_canaphar_main_sbc_sea_peoples_sea_wanderers	Peleset Waystation
+ui_text_replacements_localised_text_phar_main_all_province_management_happiness_hit_type_b_2_title	Performance Hall
+ui_text_replacements_localised_text_phar_main_rare_equipment_light_armour_2_title	Phantom Armour
+building_culture_variants_name_troy_rem_aethiopia_horde_military_egypt_5troy_rem_sbc_hordes_aethiopians	Pharaoh's Altar
+building_culture_variants_name_troy_rem_aethiopia_horde_military_egypt_3troy_rem_sbc_hordes_aethiopians	Pharaoh's Stele
+building_culture_variants_name_troy_rem_aethiopia_horde_military_egypt_1troy_rem_sbc_hordes_aethiopians	Pharoh's Statue
+building_culture_variants_name_troy_main_watchtower_1	Phryctoria
+building_culture_variants_name_troy_adi_special_ajax_military_elite_4	Pits of Strength
+building_culture_variants_name_troy_main_special_paris_pleasure_3	Pleasure Gardens
+building_culture_variants_name_troy_main_special_paris_pleasure_1	Pleasure House
+building_culture_variants_name_troy_main_special_paris_pleasure_5	Pleasure Palace
+ui_text_replacements_localised_text_phar_main_rare_9_title	Poisoner
+building_culture_variants_name_troy_main_ody_special_settlement_mycenae_5troy_main_dan_ithaca	Polis of Mycenae
+building_culture_variants_name_troy_main_special_settlement_mycenae_5	Polis of Mycenae
+ui_text_replacements_localised_text_phar_main_all_landmark_production_boost_tarsus_1_title	Pottery Markets
+building_culture_variants_name_phar_map_ash_military_administration_unit_training_type_a_1	Practice Halls
+building_culture_variants_name_phar_map_ash_military_ranged_type_a_1	Practice Range
+building_culture_variants_name_troy_main_missile_2	Practice Range
+ui_text_replacements_localised_text_phar_main_seti_military_ranged_type_a_2_title	Practice Range
+ui_text_replacements_localised_text_phar_main_suppiluliuma_military_ranged_type_a_2_title	Practice Range
+building_culture_variants_name_troy_main_special_hector_paris_priam_2	Priam's Gardens
+building_culture_variants_name_troy_main_special_hector_paris_priam_3	Priam's Palace
+building_culture_variants_name_troy_main_special_hector_paris_priam_1	Priam's Residence
+ui_text_replacements_localised_text_phar_main_rare_equipment_culbs_1_title	Primitive Mace
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_aphrodite_5troy_amazons_sbc_horde_amazons	Processions to Aphrodite
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_aphrodite_5troy_rem_sbc_hordes_aethiopians	Processions to Aphrodite
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_apollo_5troy_amazons_sbc_horde_amazons	Processions to Apollo
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_apollo_5troy_rem_sbc_hordes_aethiopians	Processions to Apollo
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_ares_5troy_amazons_sbc_horde_amazons	Processions to Ares
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_ares_5troy_rem_sbc_hordes_aethiopians	Processions to Ares
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_artemis_5troy_amazons_sbc_horde_amazons	Processions to Artemis
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_artemis_5troy_rem_sbc_hordes_aethiopians	Processions to Artemis
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_athena_5troy_amazons_sbc_horde_amazons	Processions to Athena
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_athena_5troy_rem_sbc_hordes_aethiopians	Processions to Athena
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_haphaestus_5troy_rem_sbc_hordes_aethiopians	Processions to Haephestus
+building_culture_variants_name_troy_hep_amazons_penthesilea_horde_religion_hephaestus_5troy_amazons_sbc_horde_amazons	Processions to Hephaestus
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_hera_5troy_amazons_sbc_horde_amazons	Processions to Hera
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_hera_5troy_rem_sbc_hordes_aethiopians	Processions to Hera
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_poseidon_5troy_amazons_sbc_horde_amazons	Processions to Poseidon
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_poseidon_5troy_rem_sbc_hordes_aethiopians	Processions to Poseidon
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_zeus_5troy_amazons_sbc_horde_amazons	Processions to Zeus
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_zeus_5troy_rem_sbc_hordes_aethiopians	Processions to Zeus
+ui_text_replacements_localised_text_phar_main_all_landmark_legitimacy_influence_megiddo_1_title	Professional Scribal Complex
+building_culture_variants_name_phar_map_all_province_management_main_building_major_achaea_5	Prokoretor's Palace
+building_culture_variants_name_troy_adi_special_ajax_military_elite_3	Proving Grounds
+ui_text_replacements_localised_text_phar_main_all_military_administration_unit_training_type_a_1_title	Proving Grounds
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_food_3_title	Provisioning Headquarters
+building_culture_variants_name_phar_map_bab_province_management_happiness_growth_type_a_1	Public Gardens
+ui_text_replacements_localised_text_phar_main_all_province_management_influence_type_a_2_title	Public Square
+building_culture_variants_name_troy_main_military_myth_corybantes_3	Pyrrhichios Arena
+building_culture_variants_name_troy_main_dan_stone_myth_centaurs_2	Quarry
+building_culture_variants_name_troy_main_dan_stone_myth_giants_2	Quarry
+building_culture_variants_name_troy_main_ody_settlement_stone_2	Quarry
+building_culture_variants_name_troy_main_ody_settlement_stone_sea_2	Quarry
+building_culture_variants_name_troy_main_ody_stone_myth_centaurs_2	Quarry
+building_culture_variants_name_troy_main_ody_stone_myth_giants_2	Quarry
+building_culture_variants_name_troy_main_settlement_stone_2	Quarry
+building_culture_variants_name_troy_main_settlement_stone_sea_2	Quarry
+building_culture_variants_name_troy_main_trj_settlement_stone_2	Quarry
+building_culture_variants_name_troy_main_trj_settlement_stone_sea_2	Quarry
+building_culture_variants_name_troy_main_trj_stone_myth_centaurs_2	Quarry
+building_culture_variants_name_troy_main_trj_stone_myth_giants_2	Quarry
+ui_text_replacements_localised_text_phar_main_rare_equipment_culbs_2_title	Raider
+building_culture_variants_name_troy_amazons_penthesilea_horde_resources_3troy_amazons_sbc_horde_amazons	Raiding Party
+ui_text_replacements_localised_text_phar_main_ramesses_bodyguard_unit_title	Ramesses' Elite Corps
+ui_text_replacements_localised_text_phar_main_rare_equipment_medium_armour_4_title	Ranger Armour
+ui_text_replacements_localised_text_phar_main_rare_equipment_bows_4_title	Raptor Bow
+building_culture_variants_name_troy_rem_aethiopia_horde_military_resource_specialization_2troy_rem_sbc_hordes_aethiopians	Rationing Scribe
+ui_text_replacements_localised_text_phar_main_rare_equipment_medium_armour_2_title	Rattle Armour
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_stone_wood_1_title	Raw Materials Stockpile
+ui_text_replacements_localised_text_phar_main_rare_equipment_small_shield_4_title	Razor Shield
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_b_nile_1_title	Reclaimed Farmland
+ui_text_replacements_localised_text_phar_main_seti_military_administration_cost_mod_3_title	Recruitment Administration Centre
+ui_text_replacements_localised_text_phar_main_all_military_administration_cost_mod_1_title	Recruitment Hall
+ui_text_replacements_localised_text_phar_main_seti_military_administration_cost_mod_2_title	Recruitment Office
+ui_text_replacements_localised_text_phar_main_suppi_province_management_growth_1_title	Refugee Centre
+building_culture_variants_name_phar_map_military_infantry_type_a_wilusa_faction_3	Regimental Compound
+building_culture_variants_name_phar_map_all_province_management_main_building_minor_achaea_bronze_2	Regional Administration Centre
+building_culture_variants_name_phar_map_all_province_management_main_building_minor_achaea_bronze_1	Regional Administration Office
+building_culture_variants_name_phar_map_all_province_management_main_building_minor_achaea_bronze_3	Regional Administration Palace
+building_culture_variants_name_phar_main_all_province_management_main_building_minor_ruin	Regional Administration Ruin
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_minor_ruin_title	Regional Administration Ruin
+ui_text_replacements_localised_text_phar_main_rare_equipment_chariots_3_title	Reinforced Chariot
+ui_text_replacements_localised_text_phar_main_rare_equipment_medium_shield_3_title	Reinforced Shield
+ui_text_replacements_localised_text_phar_main_sea_renowned_seafaring_raiders_title	Renowned Seafaring Raiders
+building_culture_variants_name_troy_amazons_penthesilea_horde_cavalry_2troy_amazons_sbc_horde_amazons	Rider's Council
+building_culture_variants_name_troy_rem_special_rhesus_ritual_ground_2	Ritual Ground
+building_culture_variants_name_troy_amazons_penthesilea_horde_missile_3troy_amazons_sbc_horde_amazons	Rituals of the Huntress
+building_culture_variants_name_troy_main_gold_reckless_1	Riverbed Sifters
+building_culture_variants_name_phar_map_myc_province_management_roads_1	Road Administration Office
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_cattle_canaan_2_title	Roaming Livestock Herds
+ui_text_replacements_localised_text_phar_main_all_landmark_happiness_influence_kawa_1_title	Rock Art Site School
+ui_text_replacements_localised_text_phar_main_rare_equipment_chariots_6_title	Rolling Thunder
+ui_text_replacements_localised_text_phar_main_sea_roving_khopesh_warriors_title	Roving Khopesh Warriors
+building_culture_variants_name_troy_main_stone_support_3	Royal Architect
+building_culture_variants_name_phar_map_all_landmark_unique_major_achaea_pteleon_1	Royal Asaminthos
+building_culture_variants_name_troy_main_ody_military_5	Royal Barracks
+building_culture_variants_name_troy_main_special_pylos_baths_5	Royal Baths
+ui_text_replacements_localised_text_phar_main_all_resource_production_modifier_bronze_3_title	Royal Bronzeworker
+building_culture_variants_name_troy_main_ody_major_mod_resources_5	Royal Collectors
+building_culture_variants_name_phar_map_all_province_management_main_building_major_assuwa_5	Royal Estate
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_5_hit_title	Royal Estate
+ui_text_replacements_localised_text_phar_main_all_resource_production_port_coast_2_title	Royal Fishery
+building_culture_variants_name_phar_map_bab_military_garrison_type_b_1	Royal Garrison
+ui_text_replacements_localised_text_phar_main_suppi_military_administration_garrison_type_a_2_title	Royal Garrison Palace
+ui_text_replacements_localised_text_phar_main_all_resource_production_modifier_gold_3_title	Royal Goldsmith
+building_culture_variants_name_phar_map_bab_military_citizen_type_a_3	Royal Guard Quarters
+ui_text_replacements_localised_text_phar_main_seti_military_infantry_type_a_4_title	Royal Infantry Hall
+ui_text_replacements_localised_text_phar_main_suppiluliuma_military_infantry_type_a_4_title	Royal Infantry Hall
+ui_text_replacements_localised_text_phar_main_tausret_military_infantry_type_a_4_title	Royal Infantry Hall
+building_culture_variants_name_phar_map_myc_resource_production_gold_mine_minor_2	Royal Jeweller
+ui_text_replacements_localised_text_phar_main_all_resource_production_gold_mine_derivative_type_b_1_title	Royal Jeweller
+ui_text_replacements_localised_text_phar_main_all_landmark_happiness_hattusa_1_title	Royal Legal Complex
+ui_text_replacements_localised_text_phar_main_all_military_administration_hero_training_3_title	Royal Officer School
+building_culture_variants_name_phar_map_ash_military_administration_hero_training_2	Royal Officers' School
+building_culture_variants_name_phar_map_all_province_management_main_building_major_assuwa_4	Royal Palace
+building_culture_variants_name_troy_main_influence_3	Royal Palace
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_4_hit_title	Royal Palace
+building_culture_variants_name_phar_map_bab_province_management_main_building_poc_production_influence_3	Royal Scribal Archives
+building_culture_variants_name_troy_amazons_special_hippolyta_cavalry_5troy_amazons_trj_hippolyta	Royal Stables
+building_culture_variants_name_phar_map_myc_resource_production_stone_mine_minor_2	Royal Stonecutters
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_production_boost_overall_3_title	Royal Tax Administration
+ui_text_replacements_localised_text_phar_main_all_landmark_production_boost_thebes_1_title	Royal Tax Collector's Office
+ui_text_replacements_localised_text_phar_main_all_landmark_hero_training_memphis_1_title	Royal War Academy
+building_culture_variants_name_phar_map_myc_resource_production_bronze_minor_2	Royal Workshop
+building_culture_variants_name_troy_main_bronze_elite_3	Royal Workshop
+building_culture_variants_name_phar_map_all_province_management_main_building_major_achaea_ruin	Ruined Achaean City
+building_culture_variants_name_phar_map_all_province_management_main_building_minor_achaea_bronze_ruin	Ruined Achaean Village
+building_culture_variants_name_phar_map_all_province_management_main_building_major_assuwa_ruin	Ruined Assuwan City
+building_culture_variants_name_phar_map_all_province_management_main_building_minor_assuwa_bronze_ruin	Ruined Assuwan Village
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_centaurs_ruins	Ruined Bronze Forge
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_giants_ruins	Ruined Bronze Forge
+building_culture_variants_name_troy_main_dan_settlement_bronze_myth_harpies_ruins	Ruined Bronze Forge
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_centaurs_ruins	Ruined Bronze Forge
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_giants_ruins	Ruined Bronze Forge
+building_culture_variants_name_troy_main_ody_settlement_bronze_myth_harpies_ruins	Ruined Bronze Forge
+building_culture_variants_name_troy_main_ody_settlement_bronze_ruin	Ruined Bronze Forge
+building_culture_variants_name_troy_main_ody_settlement_bronze_sea_ruin	Ruined Bronze Forge
+building_culture_variants_name_troy_main_settlement_bronze_ruin	Ruined Bronze Forge
+building_culture_variants_name_troy_main_settlement_bronze_sea_ruin	Ruined Bronze Forge
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_centaurs_ruins	Ruined Bronze Forge
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_giants_ruins	Ruined Bronze Forge
+building_culture_variants_name_troy_main_trj_settlement_bronze_myth_harpies_ruins	Ruined Bronze Forge
+building_culture_variants_name_troy_main_trj_settlement_bronze_ruin	Ruined Bronze Forge
+building_culture_variants_name_troy_main_trj_settlement_bronze_sea_ruin	Ruined Bronze Forge
+building_culture_variants_name_troy_main_dan_settlement_major_myth_centaurs_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_dan_settlement_major_myth_giants_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_dan_settlement_major_myth_harpies_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_centaurs_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_giants_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_myth_harpies_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_ody_settlement_major_sea_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_settlement_major_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_centaurs_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_giants_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_myth_harpies_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_trj_settlement_major_sea_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_settlement_major_sea_ruin	Ruined Citadel
+building_culture_variants_name_troy_main_dan_farm_myth_harpies_ruin	Ruined Farm Settlement
+building_culture_variants_name_troy_main_dan_settlement_farm_myth_giants_ruins	Ruined Farm Settlement
+building_culture_variants_name_troy_main_dan_settlement_farm_myth_sirens_ruins	Ruined Farm Settlement
+building_culture_variants_name_troy_main_ody_farm_myth_harpies_ruin	Ruined Farm Settlement
+building_culture_variants_name_troy_main_ody_settlement_farm_myth_giants_ruins	Ruined Farm Settlement
+building_culture_variants_name_troy_main_ody_settlement_farm_myth_sirens_ruins	Ruined Farm Settlement
+building_culture_variants_name_troy_main_settlement_farm_ruin	Ruined Farm Settlement
+building_culture_variants_name_troy_main_settlement_farm_sea_ruin	Ruined Farm Settlement
+building_culture_variants_name_troy_main_trj_settlement_farm_ruin	Ruined Farm Settlement
+building_culture_variants_name_troy_main_trj_settlement_farm_sea_ruin	Ruined Farm Settlement
+building_culture_variants_name_troy_main_ody_settlement_farm_sea_ruin	Ruined Farm Village
+building_culture_variants_name_troy_main_ody_settlement_farm_ruin	Ruined Farming Village
+building_culture_variants_name_troy_main_trj_farm_myth_harpies_ruin	Ruined Farming Village
+building_culture_variants_name_troy_main_trj_settlement_farm_myth_giants_ruins	Ruined Farming Village
+building_culture_variants_name_troy_main_trj_settlement_farm_myth_sirens_ruins	Ruined Farming Village
+building_culture_variants_name_troy_main_dan_settlement_wood_myth_giants_ruins	Ruined Forest Town
+building_culture_variants_name_troy_main_dan_settlement_wood_myth_harpies_ruins	Ruined Forest Town
+building_culture_variants_name_troy_main_dan_wood_myth_centaurs_ruin	Ruined Forest Town
+building_culture_variants_name_troy_main_ody_settlement_forest_ruin	Ruined Forest Town
+building_culture_variants_name_troy_main_ody_settlement_forest_sea_ruin	Ruined Forest Town
+building_culture_variants_name_troy_main_ody_settlement_wood_myth_giants_ruins	Ruined Forest Town
+building_culture_variants_name_troy_main_ody_settlement_wood_myth_harpies_ruins	Ruined Forest Town
+building_culture_variants_name_troy_main_ody_wood_myth_centaurs_ruin	Ruined Forest Town
+building_culture_variants_name_troy_main_settlement_forest_ruin	Ruined Forest Town
+building_culture_variants_name_troy_main_settlement_forest_sea_ruin	Ruined Forest Town
+building_culture_variants_name_troy_main_trj_settlement_forest_ruin	Ruined Forest Town
+building_culture_variants_name_troy_main_trj_settlement_forest_sea_ruin	Ruined Forest Town
+building_culture_variants_name_troy_main_trj_settlement_wood_myth_giants_ruins	Ruined Forest Town
+building_culture_variants_name_troy_main_trj_settlement_wood_myth_harpies_ruins	Ruined Forest Town
+building_culture_variants_name_troy_main_trj_wood_myth_centaurs_ruin	Ruined Forest Town
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_centaurs_ruins	Ruined Gold Mine
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_giants_ruins	Ruined Gold Mine
+building_culture_variants_name_troy_main_dan_settlement_gold_myth_harpies_ruins	Ruined Gold Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_centaurs_ruins	Ruined Gold Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_giants_ruins	Ruined Gold Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_myth_harpies_ruins	Ruined Gold Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_ruin	Ruined Gold Mine
+building_culture_variants_name_troy_main_ody_settlement_gold_sea_ruin	Ruined Gold Mine
+building_culture_variants_name_troy_main_settlement_gold_ruin	Ruined Gold Mine
+building_culture_variants_name_troy_main_settlement_gold_sea_ruin	Ruined Gold Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_centaurs_ruins	Ruined Gold Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_giants_ruins	Ruined Gold Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_myth_harpies_ruins	Ruined Gold Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_ruin	Ruined Gold Mine
+building_culture_variants_name_troy_main_trj_settlement_gold_sea_ruin	Ruined Gold Mine
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_kush_ruin_title	Ruined Kushite City
+building_culture_variants_name_phar_map_all_province_management_main_building_food_minor_aber_nahra_ruin	Ruined Mesopotamian Village
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_nubia_ruin_title	Ruined Nubian City
+building_culture_variants_name_troy_main_ody_port_ruins	Ruined Port
+building_culture_variants_name_troy_main_port_ruins	Ruined Port
+building_culture_variants_name_troy_main_dan_stone_myth_centaurs_ruin	Ruined Stone Mine
+building_culture_variants_name_troy_main_dan_stone_myth_giants_ruin	Ruined Stone Mine
+building_culture_variants_name_troy_main_ody_settlement_stone_ruin	Ruined Stone Mine
+building_culture_variants_name_troy_main_ody_settlement_stone_sea_ruin	Ruined Stone Mine
+building_culture_variants_name_troy_main_ody_stone_myth_centaurs_ruin	Ruined Stone Mine
+building_culture_variants_name_troy_main_ody_stone_myth_giants_ruin	Ruined Stone Mine
+building_culture_variants_name_troy_main_settlement_stone_ruin	Ruined Stone Mine
+building_culture_variants_name_troy_main_settlement_stone_sea_ruin	Ruined Stone Mine
+building_culture_variants_name_troy_main_trj_settlement_stone_ruin	Ruined Stone Mine
+building_culture_variants_name_troy_main_trj_settlement_stone_sea_ruin	Ruined Stone Mine
+building_culture_variants_name_troy_main_trj_stone_myth_centaurs_ruin	Ruined Stone Mine
+building_culture_variants_name_troy_main_trj_stone_myth_giants_ruin	Ruined Stone Mine
+building_culture_variants_name_phar_map_all_province_management_main_building_minor_thrace_bronze_ruin	Ruined Thracian Village
+building_culture_variants_name_troy_main_ody_special_mycenae_ruintroy_main_dan_ithaca	Ruins of Mycenae
+building_culture_variants_name_troy_main_special_mycenae_ruin	Ruins of Mycenae
+building_culture_variants_name_troy_adi_ody_special_settlement_thebes_ruintroy_main_dan_ithaca	Ruins of Thebes
+building_culture_variants_name_troy_adi_special_settlement_thebes_ruin	Ruins of Thebes
+building_culture_variants_name_troy_main_special_troy_ruins	Ruins of Troy
+ui_text_replacements_localised_text_phar_main_rare_14_title	Saboteur
+building_culture_variants_name_troy_main_myth_satyr_3	Sacred Grove
+building_culture_variants_name_troy_dlc2_myth_orion_3	Sacred Hunting Grounds
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_aphrodite_2troy_amazons_sbc_horde_amazons	Sacred Stone of Aphrodite
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_aphrodite_2troy_rem_sbc_hordes_aethiopians	Sacred Stone of Aphrodite
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_apollo_2troy_amazons_sbc_horde_amazons	Sacred Stone of Apollo
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_apollo_2troy_rem_sbc_hordes_aethiopians	Sacred Stone of Apollo
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_ares_2troy_amazons_sbc_horde_amazons	Sacred Stone of Ares
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_ares_2troy_rem_sbc_hordes_aethiopians	Sacred Stone of Ares
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_artemis_2troy_amazons_sbc_horde_amazons	Sacred Stone of Artemis
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_artemis_2troy_rem_sbc_hordes_aethiopians	Sacred Stone of Artemis
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_athena_2troy_amazons_sbc_horde_amazons	Sacred Stone of Athena
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_athena_2troy_rem_sbc_hordes_aethiopians	Sacred Stone of Athena
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_haphaestus_2troy_rem_sbc_hordes_aethiopians	Sacred Stone of Haephestus
+building_culture_variants_name_troy_hep_amazons_penthesilea_horde_religion_hephaestus_2troy_amazons_sbc_horde_amazons	Sacred Stone of Hephaestus
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_hera_2troy_amazons_sbc_horde_amazons	Sacred Stone of Hera
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_hera_2troy_rem_sbc_hordes_aethiopians	Sacred Stone of Hera
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_poseidon_2troy_amazons_sbc_horde_amazons	Sacred Stone of Poseidon
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_poseidon_2troy_rem_sbc_hordes_aethiopians	Sacred Stone of Poseidon
+building_culture_variants_name_troy_amazons_penthesilea_horde_religion_zeus_2troy_amazons_sbc_horde_amazons	Sacred Stone of Zeus
+building_culture_variants_name_troy_rem_aethiopia_horde_religion_zeus_2troy_rem_sbc_hordes_aethiopians	Sacred Stone of Zeus
+building_culture_variants_name_troy_amazons_special_hippolyta_missile_3troy_amazons_trj_hippolyta	Sacred Woodland
+ui_text_replacements_localised_text_phar_main_suppi_province_management_growth_2_title	Safe Haven
+ui_text_replacements_localised_text_phar_main_all_landmark_food_zippalanda_1_title	Sanctified Cattle Herds
+building_culture_variants_name_troy_main_religion_aphrodite_3	Sanctuary of Aphrodite
+building_culture_variants_name_troy_main_religion_apollo_3	Sanctuary of Apollo
+building_culture_variants_name_troy_rem_religion_apollo_3	Sanctuary of Apollo
+building_culture_variants_name_troy_main_religion_ares_3	Sanctuary of Ares
+building_culture_variants_name_troy_main_religion_artemis_3	Sanctuary of Artemis
+building_culture_variants_name_troy_amazons_special_hippolyta_replenishment_5	Sanctuary of Asclepius
+building_culture_variants_name_troy_main_religion_athens_3	Sanctuary of Athena
+building_culture_variants_name_troy_hep_religion_hephaestus_3	Sanctuary of Hephaestus
+building_culture_variants_name_troy_main_religion_hera_3	Sanctuary of Hera
+building_culture_variants_name_troy_main_religion_poseidon_3	Sanctuary of Poseidon
+building_culture_variants_name_troy_main_religion_zeus_3	Sanctuary of Zeus
+building_culture_variants_name_troy_main_global_recruitment_sarpedon_5	Sarpedon's Retinue
+building_culture_variants_name_troy_amazons_penthesilea_horde_scouts_2troy_amazons_sbc_horde_amazons	Scouts
+building_culture_variants_name_phar_map_bab_province_management_influence_roads_type_a_1	Scribes' Assembly
+building_culture_variants_name_phar_main_ers_fort_fenkhu_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_highlands_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_isuwa_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_kush_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_level_1_hittphar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_lower_egypt_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_lowlands_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_nubia_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_retjennu_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_sinai_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_upper_egypt_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_western_desert_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_fort_yamhad_hitt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Fort
+building_culture_variants_name_phar_main_ers_outpost_fenkhu_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_highlands_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_isuwa_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_kush_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_lower_egypt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_lowlands_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_nubia_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_retjennu_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_sinai_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_upper_egypt_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_western_desert_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_yamhad_1phar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Lookout Post
+building_culture_variants_name_phar_main_ers_trading_post_level_1_hittphar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Trading Post
+building_culture_variants_name_phar_main_ers_waystation_level_1_hittphar_main_sbc_sea_peoples_aegean_sea_raiders	Sea Peoples Waystation
+ui_text_replacements_localised_text_phar_main_sea_seafaring_clubmen_title	Seafaring Clubmen
+ui_text_replacements_localised_text_phar_main_sea_seafaring_javelinmen_title	Seafaring Javelinmen
+ui_text_replacements_localised_text_phar_main_sea_seafaring_raiders_title	Seafaring Raiders
+ui_text_replacements_localised_text_phar_main_sea_seafaring_slings_title	Seafaring Slings
+building_culture_variants_name_troy_main_ody_port_5	Seamarket
+ui_text_replacements_localised_text_phar_main_rare_equipment_bows_1_title	Self Bow
+ui_text_replacements_localised_text_phar_main_all_province_management_happiness_egy_type_b_1_title	Senet House
+ui_text_replacements_localised_text_phar_main_seti_province_management_main_building_legitimacy_influence_boost_1_title	Seti's Office of Relations
+ui_text_replacements_localised_text_phar_main_seti_province_management_main_building_legitimacy_influence_boost_2_title	Seti's Royal Palace
+ui_text_replacements_localised_text_phar_main_seti_bodyguard_unit_title	Seti's Warrior Slaves
+building_culture_variants_name_troy_main_ody_special_settlement_mycenae_2troy_main_dan_ithaca	Settlement of Mycenae
+building_culture_variants_name_troy_main_special_settlement_mycenae_2	Settlement of Mycenae
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_c_nile_1_title	Shadoof Farm
+building_culture_variants_name_troy_main_port_3	Sheltered Ship Stands
+ui_text_replacements_localised_text_phar_main_ramesses_military_infantry_type_b_1_title	Sherden Barracks
+building_culture_variants_name_phar_main_ers_fort_fenkhu_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_highlands_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_isuwa_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_kush_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_level_1_hittphar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_lower_egypt_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_lowlands_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_nubia_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_retjennu_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_sinai_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_upper_egypt_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_western_desert_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+building_culture_variants_name_phar_main_ers_fort_yamhad_hitt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Fort
+ui_text_replacements_localised_text_phar_main_ramesses_military_infantry_type_b_2_title	Sherden Headquarters
+building_culture_variants_name_phar_main_ers_outpost_fenkhu_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_highlands_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_isuwa_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_kush_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_lower_egypt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_lowlands_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_nubia_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_retjennu_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_sinai_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_upper_egypt_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_western_desert_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_outpost_yamhad_1phar_main_sbc_sea_peoples_western_islanders	Sherden Lookout Post
+building_culture_variants_name_phar_main_ers_trading_post_level_1_hittphar_main_sbc_sea_peoples_western_islanders	Sherden Trading Post
+building_culture_variants_name_phar_main_ers_waystation_level_1_hittphar_main_sbc_sea_peoples_western_islanders	Sherden Waystation
+ui_text_replacements_localised_text_phar_main_rare_equipment_culbs_3_title	Shieldbreaker
+building_culture_variants_name_troy_main_port_2	Ship Stands
+ui_text_replacements_localised_text_phar_main_all_landmark_production_boost_emar_1_title	Shipment Redistribution Hub
+ui_text_replacements_localised_text_phar_main_rare_equipment_swords_1_title	Short-handled Spear
+ui_text_replacements_localised_text_phar_main_rare_equipment_khopesh_3_title	Shotel
+building_culture_variants_name_phar_map_ers_shrine_aphrodite	Shrine of Aphrodite
+building_culture_variants_name_phar_map_ers_shrine_aphrodite_fake_help_pages	Shrine of Aphrodite
+building_culture_variants_name_phar_map_ers_shrine_apollo	Shrine of Apollo
+building_culture_variants_name_phar_map_ers_shrine_apollo_fake_help_pages	Shrine of Apollo
+building_culture_variants_name_phar_map_ers_shrine_ares	Shrine of Ares
+building_culture_variants_name_phar_map_ers_shrine_ashur	Shrine of Ashur
+building_culture_variants_name_phar_main_ers_shrine_aten	Shrine of Aten
+building_culture_variants_name_troy_main_menelaus_dike_2	Shrine of Dike
+building_culture_variants_name_phar_map_ers_shrine_inshushinak	Shrine of Inshushinak
+building_culture_variants_name_phar_map_ers_shrine_ishtar	Shrine of Ishtar
+building_culture_variants_name_phar_map_ers_shrine_marduk	Shrine of Marduk
+building_culture_variants_name_phar_map_ers_shrine_ninurta	Shrine of Ninurta
+building_culture_variants_name_phar_map_ers_shrine_poseidon	Shrine of Poseidon
+building_culture_variants_name_phar_map_ers_shrine_poseidon_fake_help_pages	Shrine of Poseidon
+building_culture_variants_name_phar_map_ers_shrine_zeus	Shrine of Zeus
+building_culture_variants_name_phar_map_ers_shrine_zeus_fake_help_pages	Shrine of Zeus
+building_culture_variants_name_phar_map_all_resource_production_food_farm_type_a_mesopotamia_1	Silt Farm Canals
+building_culture_variants_name_phar_map_all_resource_production_food_farm_type_a_mesopotamia_2	Silt Farm Moorland
+ui_text_replacements_localised_text_phar_main_all_province_management_happiness_hit_type_b_1_title	Singing Circle
+building_culture_variants_name_troy_main_military_myth_sirens_3	Sirens' Cove
+building_culture_variants_name_troy_amazons_penthesilea_horde_resources_4troy_amazons_sbc_horde_amazons	Skirmish Party
+ui_text_replacements_localised_text_phar_main_rare_equipment_bows_3_title	Skirmisher Bow
+building_culture_variants_name_troy_main_supply_base_2troy_main_sbc_danaan_achaeans	Skirmisher's Camp
+building_culture_variants_name_phar_map_bab_military_siluhu_type_a_1	Slave Hovels
+building_culture_variants_name_troy_main_food_elite_1	Small Apoikia
+building_culture_variants_name_troy_main_stone_elite_1	Small Mountain Apoikia
+building_culture_variants_name_troy_rem_special_rhesus_tribal_district_3	Small Tribal District
+building_culture_variants_name_troy_main_bronze_elite_1	Smelter's House
+building_culture_variants_name_troy_amazons_penthesilea_horde_upgrades_3troy_amazons_sbc_horde_amazons	Smiths
+ui_text_replacements_localised_text_phar_main_rare_12_title	Smuggler
+ui_text_replacements_localised_text_phar_main_all_resource_production_port_coast_derivative_type_a_1_title	Smugglers' Market
+ui_text_replacements_localised_text_phar_main_rare_equipment_bows_6_title	Sniping Bow
+ui_text_replacements_localised_text_phar_main_rare_8_title	Soothsayer
+ui_text_replacements_localised_text_phar_main_rare_equipment_light_armour_4_title	Stalker's Garb
+building_culture_variants_name_troy_main_special_achilles_statue_2	Statue of Achilles
+building_culture_variants_name_troy_main_special_agamemnon_statue_2	Statue of Agamemnon
+building_culture_variants_name_phar_map_ers_unique_ancient_statue_of_cybele	Statue of Cybele
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_stone_wood_2_title	Stockpile
+building_culture_variants_name_troy_main_citizen_2	Stone Houses
+building_culture_variants_name_troy_main_ody_citizen_5	Stone Houses
+building_culture_variants_name_troy_main_dan_stone_myth_centaurs_1	Stone Mine
+building_culture_variants_name_troy_main_dan_stone_myth_giants_1	Stone Mine
+building_culture_variants_name_troy_main_ody_settlement_stone_1	Stone Mine
+building_culture_variants_name_troy_main_ody_settlement_stone_sea_1	Stone Mine
+building_culture_variants_name_troy_main_ody_stone_myth_centaurs_1	Stone Mine
+building_culture_variants_name_troy_main_ody_stone_myth_giants_1	Stone Mine
+building_culture_variants_name_troy_main_settlement_stone_1	Stone Mine
+building_culture_variants_name_troy_main_settlement_stone_sea_1	Stone Mine
+building_culture_variants_name_troy_main_trj_settlement_stone_1	Stone Mine
+building_culture_variants_name_troy_main_trj_settlement_stone_sea_1	Stone Mine
+building_culture_variants_name_troy_main_trj_stone_myth_centaurs_1	Stone Mine
+building_culture_variants_name_troy_main_trj_stone_myth_giants_1	Stone Mine
+building_culture_variants_name_troy_main_stone_production_main_2	Stone Miners' Camp
+building_culture_variants_name_troy_main_stone_production_main_3	Stone Miners' Houses
+building_culture_variants_name_troy_main_stone_production_main_1	Stone Miners' Tents
+building_culture_variants_name_phar_map_myc_resource_production_stone_mine_minor_1	Stonecutter Kerosiya
+building_culture_variants_name_troy_main_stone_reckless_1	Stonemason's Lodge
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_stone_wood_3_title	Storage Centre
+ui_text_replacements_localised_text_phar_main_rare_19_title	Storyteller
+ui_text_replacements_localised_text_phar_main_all_province_management_happiness_can_type_b_1_title	Storyteller Circle
+building_culture_variants_name_troy_adi_special_diomedes_military_camp_2	Strategic Camp
+ui_text_replacements_localised_text_phar_main_rare_17_title	Strongman
+ui_text_replacements_localised_text_phar_main_all_province_management_happiness_type_a_nile_1_title	Summer Festival Grounds
+ui_text_replacements_localised_text_phar_main_suppiluliuma_bodyguard_unit_title	Suppiluliuma's Oathbound
+ui_text_replacements_localised_text_phar_main_rare_equipment_small_shield_1_title	Support Shield
+ui_text_replacements_localised_text_phar_main_rare_7_title	Supporter
+ui_text_replacements_localised_text_phar_main_all_province_management_growth_type_a_3_title	Surgeon's Practice
+building_culture_variants_name_troy_rem_special_rhesus_drinking_hub_3	Symposium
+building_culture_variants_name_phar_map_myc_province_management_roads_2	Tarasiya Road Network
+building_culture_variants_name_troy_main_missile_3	Target Stands
+building_culture_variants_name_phar_map_ash_military_ranged_type_a_2	Target Towers
+ui_text_replacements_localised_text_phar_main_seti_military_ranged_type_a_1_title	Target Yard
+ui_text_replacements_localised_text_phar_main_suppiluliuma_military_ranged_type_a_1_title	Target Yard
+ui_text_replacements_localised_text_phar_main_tausret_military_ranged_type_a_1_title	Target Yard
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_bronze_3_title	Tausret's Armoury
+ui_text_replacements_localised_text_phar_main_tausret_resource_production_modifier_gold_3_title	Tausret's Goldsmiths
+ui_text_replacements_localised_text_phar_main_tausret_bodyguard_unit_title	Tausret's Most Trusted
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_production_boost_overall_2_title	Tax Administration Centre
+ui_text_replacements_localised_text_phar_main_seti_province_management_main_building_production_boost_overall_1_title	Tax Administration Centre
+ui_text_replacements_localised_text_phar_main_seti_province_management_main_building_production_boost_overall_2_title	Tax Administration Palace
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_production_boost_overall_1_title	Tax Collector's Office
+building_culture_variants_name_phar_map_all_province_management_main_building_major_achaea_3	Telestas' Seat
+ui_text_replacements_localised_text_phar_main_temples_kemet_amun_1_title	Temple of Amun I
+ui_text_replacements_localised_text_phar_main_temples_kemet_amun_2_title	Temple of Amun II
+ui_text_replacements_localised_text_phar_main_temples_kemet_amun_3_title	Temple of Amun III
+ui_text_replacements_localised_text_phar_main_temples_kemet_amun_4_title	Temple of Amun IV
+ui_text_replacements_localised_text_phar_main_temples_kemet_anubis_1_title	Temple of Anubis I
+ui_text_replacements_localised_text_phar_main_temples_kemet_anubis_2_title	Temple of Anubis II
+ui_text_replacements_localised_text_phar_main_temples_kemet_anubis_3_title	Temple of Anubis III
+building_culture_variants_name_troy_main_religion_aphrodite_4	Temple of Aphrodite
+building_culture_variants_name_phar_map_religion_temple_aegean_aphrodite_1	Temple of Aphrodite I
+building_culture_variants_name_phar_map_religion_temple_aegean_aphrodite_2	Temple of Aphrodite II
+building_culture_variants_name_troy_main_religion_apollo_4	Temple of Apollo
+building_culture_variants_name_troy_rem_religion_apollo_4	Temple of Apollo
+building_culture_variants_name_phar_map_religion_temple_aegean_apollo_1	Temple of Apollo I
+building_culture_variants_name_phar_map_religion_temple_aegean_apollo_2	Temple of Apollo II
+building_culture_variants_name_troy_main_religion_ares_4	Temple of Ares
+building_culture_variants_name_phar_map_religion_temple_aegean_ares_1	Temple of Ares I
+building_culture_variants_name_phar_map_religion_temple_aegean_ares_2	Temple of Ares II
+ui_text_replacements_localised_text_phar_main_temples_hatti_arinna_1_title	Temple of Arinna I
+ui_text_replacements_localised_text_phar_main_temples_hatti_arinna_2_title	Temple of Arinna II
+ui_text_replacements_localised_text_phar_main_temples_hatti_arinna_3_title	Temple of Arinna III
+building_culture_variants_name_troy_main_religion_artemis_4	Temple of Artemis
+ui_text_replacements_localised_text_phar_main_temples_canaan_asherah_1_title	Temple of Asherah I
+ui_text_replacements_localised_text_phar_main_temples_canaan_asherah_2_title	Temple of Asherah II
+ui_text_replacements_localised_text_phar_main_temples_canaan_asherah_3_title	Temple of Asherah III
+building_culture_variants_name_phar_map_religion_temple_mesopotamian_ashur_1	Temple of Ashur I
+building_culture_variants_name_phar_map_religion_temple_mesopotamian_ashur_2	Temple of Ashur II
+building_culture_variants_name_phar_main_religion_temple_kemet_type_j_1	Temple of Aten I
+ui_text_replacements_localised_text_phar_main_religion_temple_kemet_type_j_1_title	Temple of Aten I
+building_culture_variants_name_phar_main_religion_temple_kemet_type_j_2	Temple of Aten II
+ui_text_replacements_localised_text_phar_main_religion_temple_kemet_type_j_2_title	Temple of Aten II
+building_culture_variants_name_troy_main_religion_athens_4	Temple of Athena
+ui_text_replacements_localised_text_phar_main_temples_canaan_baal_1_title	Temple of Baal I
+ui_text_replacements_localised_text_phar_main_temples_canaan_baal_2_title	Temple of Baal II
+ui_text_replacements_localised_text_phar_main_temples_canaan_baal_3_title	Temple of Baal III
+building_culture_variants_name_troy_main_menelaus_dike_3	Temple of Dike
+ui_text_replacements_localised_text_phar_main_temples_canaan_el_1_title	Temple of El I
+ui_text_replacements_localised_text_phar_main_temples_canaan_el_2_title	Temple of El II
+ui_text_replacements_localised_text_phar_main_temples_canaan_el_3_title	Temple of El III
+building_culture_variants_name_troy_hep_religion_hephaestus_4	Temple of Hephaestus
+building_culture_variants_name_troy_main_religion_hera_4	Temple of Hera
+ui_text_replacements_localised_text_phar_main_temples_kemet_horus_1_title	Temple of Horus I
+ui_text_replacements_localised_text_phar_main_temples_kemet_horus_2_title	Temple of Horus II
+ui_text_replacements_localised_text_phar_main_temples_kemet_horus_3_title	Temple of Horus III
+building_culture_variants_name_phar_map_religion_temple_mesopotamian_inshushinak_1	Temple of Inshushinak I
+building_culture_variants_name_phar_map_religion_temple_mesopotamian_inshushinak_2	Temple of Inshushinak II
+building_culture_variants_name_phar_map_religion_temple_mesopotamian_ishtar_1	Temple of Ishtar I
+building_culture_variants_name_phar_map_religion_temple_mesopotamian_ishtar_2	Temple of Ishtar II
+ui_text_replacements_localised_text_phar_main_temples_kemet_isis_1_title	Temple of Isis I
+ui_text_replacements_localised_text_phar_main_temples_kemet_isis_2_title	Temple of Isis II
+ui_text_replacements_localised_text_phar_main_temples_kemet_isis_3_title	Temple of Isis III
+ui_text_replacements_localised_text_phar_main_temples_hatti_kumarbi_1_title	Temple of Kumarbi I
+ui_text_replacements_localised_text_phar_main_temples_hatti_kumarbi_2_title	Temple of Kumarbi II
+ui_text_replacements_localised_text_phar_main_temples_hatti_kumarbi_3_title	Temple of Kumarbi III
+ui_text_replacements_localised_text_phar_main_temples_hatti_kurunta_1_title	Temple of Kurunta I
+ui_text_replacements_localised_text_phar_main_temples_hatti_kurunta_2_title	Temple of Kurunta II
+ui_text_replacements_localised_text_phar_main_temples_hatti_kurunta_3_title	Temple of Kurunta III
+building_culture_variants_name_phar_map_religion_temple_mesopotamian_marduk_1	Temple of Marduk I
+building_culture_variants_name_phar_map_religion_temple_mesopotamian_marduk_2	Temple of Marduk II
+ui_text_replacements_localised_text_phar_main_temples_canaan_moloch_1_title	Temple of Moloch I
+ui_text_replacements_localised_text_phar_main_temples_canaan_moloch_2_title	Temple of Moloch II
+ui_text_replacements_localised_text_phar_main_temples_canaan_moloch_3_title	Temple of Moloch III
+building_culture_variants_name_troy_amazons_special_hippolyta_military_5troy_amazons_trj_hippolyta	Temple of Mysteries
+building_culture_variants_name_phar_map_religion_temple_mesopotamian_ninurta_1	Temple of Ninurta I
+building_culture_variants_name_phar_map_religion_temple_mesopotamian_ninurta_2	Temple of Ninurta II
+ui_text_replacements_localised_text_phar_main_temples_kemet_osiris_1_title	Temple of Osiris I
+ui_text_replacements_localised_text_phar_main_temples_kemet_osiris_2_title	Temple of Osiris II
+ui_text_replacements_localised_text_phar_main_temples_kemet_osiris_3_title	Temple of Osiris III
+building_culture_variants_name_troy_main_religion_poseidon_4	Temple of Poseidon
+building_culture_variants_name_phar_map_religion_temple_aegean_poseidon_1	Temple of Poseidon I
+building_culture_variants_name_phar_map_religion_temple_aegean_poseidon_2	Temple of Poseidon II
+ui_text_replacements_localised_text_phar_main_temples_kemet_ptah_1_title	Temple of Ptah I
+ui_text_replacements_localised_text_phar_main_temples_kemet_ptah_2_title	Temple of Ptah II
+ui_text_replacements_localised_text_phar_main_temples_kemet_ptah_3_title	Temple of Ptah III
+ui_text_replacements_localised_text_phar_main_temples_kemet_ra_1_title	Temple of Ra I
+ui_text_replacements_localised_text_phar_main_temples_kemet_ra_2_title	Temple of Ra II
+ui_text_replacements_localised_text_phar_main_temples_kemet_ra_3_title	Temple of Ra III
+ui_text_replacements_localised_text_phar_main_temples_kemet_set_1_title	Temple of Set I
+ui_text_replacements_localised_text_phar_main_temples_kemet_set_2_title	Temple of Set II
+ui_text_replacements_localised_text_phar_main_temples_kemet_set_3_title	Temple of Set III
+ui_text_replacements_localised_text_phar_main_temples_hatti_shaushka_1_title	Temple of Shaushka I
+ui_text_replacements_localised_text_phar_main_temples_hatti_shaushka_2_title	Temple of Shaushka II
+ui_text_replacements_localised_text_phar_main_temples_hatti_shaushka_3_title	Temple of Shaushka III
+ui_text_replacements_localised_text_phar_main_temples_hatti_tarhunna_1_title	Temple of Tarhunna I
+ui_text_replacements_localised_text_phar_main_temples_hatti_tarhunna_2_title	Temple of Tarhunna II
+ui_text_replacements_localised_text_phar_main_temples_hatti_tarhunna_3_title	Temple of Tarhunna III
+ui_text_replacements_localised_text_phar_main_temples_kemet_thoth_1_title	Temple of Thoth I
+ui_text_replacements_localised_text_phar_main_temples_kemet_thoth_2_title	Temple of Thoth II
+ui_text_replacements_localised_text_phar_main_temples_kemet_thoth_3_title	Temple of Thoth III
+ui_text_replacements_localised_text_phar_main_temples_canaan_yam_1_title	Temple of Yamm I
+ui_text_replacements_localised_text_phar_main_temples_canaan_yam_2_title	Temple of Yamm II
+ui_text_replacements_localised_text_phar_main_temples_canaan_yam_3_title	Temple of Yamm III
+building_culture_variants_name_troy_main_religion_zeus_4	Temple of Zeus
+building_culture_variants_name_phar_map_religion_temple_aegean_zeus_1	Temple of Zeus I
+building_culture_variants_name_phar_map_religion_temple_aegean_zeus_2	Temple of Zeus II
+building_culture_variants_name_troy_rem_aethiopia_horde_special_mythic_units_3troy_rem_sbc_hordes_aethiopians	Tent for High Guests
+building_culture_variants_name_troy_mth_horde_special_hydra_priest_5	The Deeper Vessel
+building_culture_variants_name_troy_mth_special_hydra_priest_5	The Deeper Vessel
+building_culture_variants_name_troy_mth_horde_special_hydra_defenders_1	The Enduring Flesh
+building_culture_variants_name_troy_mth_special_hydra_defenders_1	The Enduring Flesh
+building_culture_variants_name_troy_mth_horde_special_hydra_archers_3	The Flood
+building_culture_variants_name_troy_mth_special_hydra_archers_3	The Flood
+building_culture_variants_name_troy_mth_horde_special_hydra_archers_1	The Flow
+building_culture_variants_name_troy_mth_special_hydra_archers_1	The Flow
+building_culture_variants_name_troy_mth_horde_special_hydra_drinkers_of_venom_1	The Giving Hand
+building_culture_variants_name_troy_mth_special_hydra_drinkers_of_venom_1	The Giving Hand
+ui_text_replacements_localised_text_phar_main_all_landmark_legitimacy_influence_amarna_1_title	The Great Archives
+building_culture_variants_name_troy_mth_horde_special_hydra_defenders_3	The Immortal Flesh
+building_culture_variants_name_troy_mth_special_hydra_defenders_3	The Immortal Flesh
+ui_text_replacements_localised_text_phar_main_all_landmark_food_bahariya_oasis_1_title	The Northern Oasis Fields
+building_culture_variants_name_troy_mth_horde_special_hydra_priest_3	The Overflowing Cup
+building_culture_variants_name_troy_mth_special_hydra_priest_3	The Overflowing Cup
+building_culture_variants_name_phar_map_major_poc_main_building_mat_tamti_babylon_ruin	The Ruins of Babylon
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_poc_major_highlands_hattussa_ruin_title	The Ruins of Hattusa
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_poc_major_lower_egypt_memphis_ruin_title	The Ruins of Mennefer
+building_culture_variants_name_phar_map_all_province_management_major_main_building_poc_mycenae_ruin	The Ruins of Mycenae
+building_culture_variants_name_phar_map_all_province_management_major_main_building_thebes_ruin	The Ruins of Thebes
+building_culture_variants_name_phar_map_all_province_management_major_main_building_poc_troy_ruin	The Ruins of Troy
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_poc_major_upper_egypt_thebes_ruin_title	The Ruins of Waset
+building_culture_variants_name_phar_map_all_province_management_main_building_poc_major_achaea_ruin	The Ruins of a Great Achaean City
+building_culture_variants_name_phar_map_all_province_management_main_building_poc_major_assuwa_ruin	The Ruins of a Great Assuwan City
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_poc_major_ruins_title	The Ruins of a Great City
+building_culture_variants_name_phar_map_all_province_management_main_building_poc_major_zagros_ruin	The Ruins of a Great Mesopotamian City
+building_culture_variants_name_phar_map_all_province_management_main_building_poc_major_thrace_ruin	The Ruins of a Great Thracian City
+building_culture_variants_name_phar_map_all_landmark_unique_major_assuwa_ephesos_1	The Sacred Way
+building_culture_variants_name_troy_main_special_miletus_sacred_way_3	The Sacred Way
+building_culture_variants_name_troy_mth_horde_special_hydra_drinkers_of_venom_3	The Taking Hand
+building_culture_variants_name_troy_mth_special_hydra_drinkers_of_venom_3	The Taking Hand
+ui_text_replacements_localised_text_phar_main_all_landmark_food_ugarit_1_title	The White Harbour
+building_culture_variants_name_troy_rem_special_rhesus_thracian_stables_3	Thracian Horse Barn
+building_culture_variants_name_troy_rem_special_rhesus_thracian_stables_2	Thracian Stables
+building_culture_variants_name_troy_main_bronze_production_main_3	Tin Market
+building_culture_variants_name_troy_main_bronze_production_main_2	Tin Merchant
+building_culture_variants_name_troy_main_bronze_production_main_1	Tin Trader
+building_culture_variants_name_troy_main_special_agamemnon_tomb_5	Tomb of Kings
+ui_text_replacements_localised_text_phar_main_all_resource_production_bronze_mine_nile_2_title	Toolsmithing Complex
+building_culture_variants_name_troy_main_ody_special_settlement_mycenae_3troy_main_dan_ithaca	Town of Mycenae
+building_culture_variants_name_troy_main_special_settlement_mycenae_3	Town of Mycenae
+building_culture_variants_name_troy_main_special_sarpedon_caravan_2	Trading Post
+building_culture_variants_name_phar_map_ash_military_administration_unit_training_type_a_2	Training Compound
+ui_text_replacements_localised_text_phar_main_all_military_administration_unit_training_type_a_2_title	Training Grounds
+building_culture_variants_name_troy_amazons_special_hippolyta_missile_1troy_amazons_trj_hippolyta	Training Range
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_poc_happiness_boost_1_title	Translators' Quarters
+ui_text_replacements_localised_text_phar_main_all_province_management_roads_1_title	Traveller's Inn
+building_culture_variants_name_troy_amazons_special_hippolyta_missile_5troy_amazons_trj_hippolyta	Trial Gardens
+building_culture_variants_name_phar_map_all_province_management_main_building_minor_thrace_bronze_2	Tribal Assembly
+building_culture_variants_name_phar_map_all_province_management_main_building_minor_thrace_bronze_3	Tribal Great Hall
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_minor_3_can_title	Tribal Great Hall
+building_culture_variants_name_phar_map_all_province_management_main_building_major_thrace_1	Tribal Leader's House
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_1_can_title	Tribal Leader's House
+building_culture_variants_name_phar_map_all_province_management_main_building_major_thrace_3	Tribal Leader's Palace
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_3_can_title	Tribal Leader's Palace
+building_culture_variants_name_phar_map_all_province_management_main_building_major_thrace_2	Tribal Leader's Residence
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_2_can_title	Tribal Leader's Residence
+building_culture_variants_name_troy_main_special_hector_garrison_3	Trojan Gate
+building_culture_variants_name_phar_map_wil_landmark_victory_points_1	Trojan Monument
+building_culture_variants_name_troy_main_special_hector_garrison_1	Trojan Tower
+building_culture_variants_name_troy_main_special_hector_garrison_5	Trojan Walls
+building_culture_variants_name_troy_main_special_settlement_troy_troy_sea_	Troy
+building_culture_variants_name_troy_rem_aethiopia_horde_military_canaan_4troy_rem_sbc_hordes_aethiopians	Ugarit Companions
+ui_text_replacements_localised_text_phar_main_rare_equipment_heavy_armour_5_title	Ugly & Reliable
+building_culture_variants_name_troy_rem_aethiopia_horde_special_exotic_servant_4troy_rem_sbc_hordes_aethiopians	Veteran Tutor
+building_culture_variants_name_troy_main_supply_base_4troy_main_sbc_danaan_achaeans	Veteran's Encampment
+building_culture_variants_name_troy_main_ody_special_settlement_mycenae_1troy_main_dan_ithaca	Village of Mycenae
+building_culture_variants_name_troy_main_special_settlement_mycenae_1	Village of Mycenae
+building_culture_variants_name_troy_main_happiness_1	Vineyard
+ui_text_replacements_localised_text_phar_main_ram_province_management_production_boost_happiness_2_title	Vintner
+ui_text_replacements_localised_text_phar_main_all_province_management_roads_3_title	Visitor's Quarters
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_5_egy_title	Vizier's Palace
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_major_4_egy_title	Vizier's Residence
+building_culture_variants_name_troy_main_gold_support_2	Wall Painters
+building_culture_variants_name_phar_map_military_infantry_type_a_wilusa_faction_4	Walled Barracks
+building_culture_variants_name_troy_main_dan_settlement_major_myth_centaurs_2	Walled City
+building_culture_variants_name_troy_main_dan_settlement_major_myth_giants_2	Walled City
+building_culture_variants_name_troy_main_dan_settlement_major_myth_harpies_2	Walled City
+building_culture_variants_name_troy_main_ody_settlement_major_2	Walled City
+building_culture_variants_name_troy_main_ody_settlement_major_myth_centaurs_2	Walled City
+building_culture_variants_name_troy_main_ody_settlement_major_myth_giants_2	Walled City
+building_culture_variants_name_troy_main_ody_settlement_major_myth_harpies_2	Walled City
+building_culture_variants_name_troy_main_settlement_major_2	Walled City
+building_culture_variants_name_troy_main_trj_settlement_major_2	Walled City
+building_culture_variants_name_troy_main_trj_settlement_major_myth_centaurs_2	Walled City
+building_culture_variants_name_troy_main_trj_settlement_major_myth_giants_2	Walled City
+building_culture_variants_name_troy_main_trj_settlement_major_myth_harpies_2	Walled City
+building_culture_variants_name_troy_main_trj_settlement_major_sea_2	Walled City
+building_culture_variants_name_troy_main_ody_settlement_major_sea_2	Walled City
+building_culture_variants_name_troy_main_settlement_major_sea_2	Walled City
+building_culture_variants_name_troy_amazons_penthesilea_horde_main_3troy_amazons_sbc_horde_amazons	War Camp
+building_culture_variants_name_troy_amazons_penthesilea_horde_main_1troy_amazons_sbc_horde_amazons	War Circle
+ui_text_replacements_localised_text_phar_main_all_military_administration_cost_mod_3_title	War Coffers
+building_culture_variants_name_phar_map_ash_military_administration_cost_mod_3	War Council
+ui_text_replacements_localised_text_phar_main_all_military_administration_cost_mod_2_title	War Council
+building_culture_variants_name_troy_amazons_special_hippolyta_military_1troy_amazons_trj_hippolyta	War Field
+building_culture_variants_name_troy_amazons_penthesilea_horde_missile_1troy_amazons_sbc_horde_amazons	War Games
+building_culture_variants_name_phar_map_ash_military_infantry_type_a_3	War Quarters
+building_culture_variants_name_troy_amazons_penthesilea_horde_growth_2troy_amazons_sbc_horde_amazons	War Slaves
+building_culture_variants_name_phar_map_ash_military_administration_cost_mod_1	War Stockpiles
+building_culture_variants_name_troy_amazons_penthesilea_horde_main_2troy_amazons_sbc_horde_amazons	War Tents
+building_culture_variants_name_phar_map_ash_military_administration_cost_mod_2	War Treasury
+building_culture_variants_name_troy_amazons_penthesilea_horde_replenishment_5troy_amazons_sbc_horde_amazons	Wardance Circles
+building_culture_variants_name_phar_map_ash_military_infantry_type_a_4	Warfare Lodge
+building_culture_variants_name_troy_amazons_special_hippolyta_cavalry_3troy_amazons_trj_hippolyta	Warhorse Field
+building_culture_variants_name_troy_main_supply_base_1troy_main_sbc_danaan_achaeans	Warrior's Lodge
+ui_text_replacements_localised_text_phar_main_rare_equipment_medium_shield_2_title	Warrior's Shield
+building_culture_variants_name_phar_map_military_major_secondary_factions_4	Warriors' Assembly
+ui_text_replacements_localised_text_phar_main_ram_province_management_influence_happiness_2_title	Warriors' Cemetery
+building_culture_variants_name_troy_main_watchtower_2	Watchtower
+building_culture_variants_name_troy_main_watchtower_3	Watchtower Patrols
+ui_text_replacements_localised_text_phar_main_all_province_management_growth_type_b_1_title	Water Well
+ui_text_replacements_localised_text_phar_main_rare_equipment_light_armour_5_title	Weathered Armour
+ui_text_replacements_localised_text_phar_main_rare_equipment_axes_3_title	Weighted Axe
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_a_canaan_1_title	Wheat Field
+ui_text_replacements_localised_text_phar_main_all_resource_production_food_farm_type_a_canaan_2_title	Wheat Mill
+building_culture_variants_name_troy_rem_rhesus_military_chariot_2	Wheelwright
+building_culture_variants_name_phar_map_ers_unique_white_temple_of_anu	White Temple of Anu
+ui_text_replacements_localised_text_phar_main_rare_equipment_large_shield_6_title	Wicker Shield
+building_culture_variants_name_troy_amazons_penthesilea_horde_replenishment_2troy_amazons_sbc_horde_amazons	Wine Cup Bearers
+building_culture_variants_name_phar_main_all_province_management_happiness_type_b_2phar_main_sbc_sea_peoples_western_islanders	Wine Hall
+ui_text_replacements_localised_text_phar_main_all_province_management_happiness_can_type_b_2_title	Wine Hall
+building_culture_variants_name_phar_main_all_province_management_happiness_type_b_1phar_main_sbc_sea_peoples_western_islanders	Wine Hut
+ui_text_replacements_localised_text_phar_main_ram_province_management_production_boost_happiness_3_title	Wine Market
+building_culture_variants_name_troy_main_happiness_3	Wine Merchant
+building_culture_variants_name_troy_main_happiness_2	Winemaker
+ui_text_replacements_localised_text_phar_main_ram_province_management_production_boost_happiness_1_title	Winery
+ui_text_replacements_localised_text_phar_main_all_province_management_main_building_poc_legitimacy_influence_boost_3_title	Wisdom Codices
+ui_text_replacements_localised_text_phar_main_rare_18_title	Wise Nobleman
+building_culture_variants_name_troy_main_wood_reckless_1	Woodcutter's Lodge
+building_culture_variants_name_troy_main_ody_citizen_3	Wooden Houses
+ui_text_replacements_localised_text_phar_main_rare_equipment_large_shield_5_title	Wooden Shield
+building_culture_variants_name_troy_main_wood_elite_1	Woodworker
+building_culture_variants_name_phar_map_myc_resource_production_wood_minor_2	Woodworker Brigades
+building_culture_variants_name_phar_map_myc_resource_production_wood_minor_1	Woodworker Kerosiya
+building_culture_variants_name_phar_map_ers_unique_ziggurat_of_enlil	Ziggurat of Enlil
+
+
+
+
+
+                                                  !!!!!BOOKMARK NAMES!!!!!
+                                                  !!!!!BOOKMARK NAMES!!!!!
+                                                  !!!!!BOOKMARK NAMES!!!!!
+                                                  !!!!!BOOKMARK NAMES!!!!!
+                                                  !!!!!BOOKMARK NAMES!!!!!
+                                                  !!!!!BOOKMARK NAMES!!!!!
+                                                  !!!!!BOOKMARK NAMES!!!!!
+                                                  !!!!!BOOKMARK NAMES!!!!!
+                                                  !!!!!BOOKMARK NAMES!!!!!
+
+
+
 
 
 ui_text_replacements_localised_text_mount_chariot_archer_ammo_name	Large Archer Chariot
@@ -308,16 +2281,98 @@ ui_text_replacements_localised_text_troy_mth_quest_battle_hydra_name	The Mother'
 ui_text_replacements_localised_text_troy_rem_trait_expeditionary_commander_name	Expedition Commander
 
 
-                              !!!!!BOOKMARK TITLES!!!!!
-                              !!!!!BOOKMARK TITLES!!!!!
-                              !!!!!BOOKMARK TITLES!!!!!
-                              !!!!!BOOKMARK TITLES!!!!!
-                              !!!!!BOOKMARK TITLES!!!!!
-                              !!!!!BOOKMARK TITLES!!!!!
-                              !!!!!BOOKMARK TITLES!!!!!
-                              !!!!!BOOKMARK TITLES!!!!!
-                              !!!!!BOOKMARK TITLES!!!!!
-                              !!!!!BOOKMARK TITLES!!!!!
+
+
+
+                                                  !!!!!BOOKMARK ITEM NAMES!!!!!
+                                                  !!!!!BOOKMARK ITEM NAMES!!!!!
+                                                  !!!!!BOOKMARK ITEM NAMES!!!!!
+                                                  !!!!!BOOKMARK ITEM NAMES!!!!!
+                                                  !!!!!BOOKMARK ITEM NAMES!!!!!
+                                                  !!!!!BOOKMARK ITEM NAMES!!!!!
+                                                  !!!!!BOOKMARK ITEM NAMES!!!!!
+                                                  !!!!!BOOKMARK ITEM NAMES!!!!!
+                                                  !!!!!BOOKMARK ITEM NAMES!!!!!
+                                                  !!!!!BOOKMARK ITEM NAMES!!!!!
+
+
+
+
+
+ui_text_replacements_localised_text_phar_map_ancillaries_common_follower_aeg_consort_title	Aegean Consort
+ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_ahlamu_scout_title	Ahlamu Scout
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_alcmaeon_the_sellsword_title	Alcmaeon the Sellsword
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_amadocus_the_wheelwright_title	Amadocus the Wheelwright
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_aramu_the_bonecarver_title	Aramu the Bonecarver
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_armanani_the_artisan_title	Armanani the Artisan
+ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_assyrian_builders_title	Assyrian Builders
+ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_assyrian_mason_title	Assyrian Mason
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_assyrian_mercenary_title	Assyrian Mercenary
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_baboons_title	Baboons
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_babylonian_healer_title	Babylonian Healer
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_bakanu_the_sculptor_title	Bakanu the Sculptor
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_canaanite_consort__title	Canaanite Consort
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_cook_title	Cook
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_dancer_title	Dancer
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_dancing_dwarf_title	Dancing Dwarf
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_danel_the_angler_title	Danel the Angler
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_devoted_taskmaster_title	Devoted Taskmaster
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_djedeni_the_ropemaker_title	Djedeni the Ropemaker
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_ea_nasir_the_merchant_title	Ea-Nasir the Merchant
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_egyptian_consort__title	Egyptian Consort
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_egyptian_healer_title	Egyptian Healer
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_farmer_title	Farmer
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_field_advisor_title	Field Advisor
+ui_text_replacements_localised_text_phar_mer_fac_setn_followers_of_amun_title	Followers of Amun
+ui_text_replacements_localised_text_hp_title_unit_followers_of_artemis	Followers of Artemis
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_giraffes_title	Giraffes
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_healer_title	Healer
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_hishur_the_metalworker_title	Hishur the Metalworker
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_hittite_consort__title	Hittite Consort
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_hothu_the_foreman_title	Hothu the Foreman
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_itthobaal_the_shipwright_title	Itthobaal the Shipwright
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_hothu_the_ivoryworker_title	Karepe the Ivoryworker
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_kushite_guards_title	Kushite Guards
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_libu_tracker_title	Libu Tracker
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_lions_title	Lions
+ui_text_replacements_localised_text_phar_map_ancillaries_common_follower_mes_consort_title	Mesopotamian Consort
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_mitanni_horse_trainer_title	Mitanni Horse Trainer
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_mutahuy_the_builder_title	Mutahuy the Builder
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_naaman_the_hookmaker_title	Naaman the Hookmaker
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_nebaendjau_the_traveller_title	Nebaendjau the Traveller
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_nefankhui_the_farmer_title	Nefankhui the Farmer
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_nutesh_the_warrior_title	Nutesh the Warrior
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_pamuna_the_digger_title	Pamuna the Digger
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_phainos_the_fisherman_title	Phainos the Fisherman
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_pickpocket_title	Pickpocket
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_pragmatic_scavenger_title	Pragmatic Scavenger
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_purveyor_of_scavenged_goods_title	Purveyor of Scavenged Goods
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_tabrimmon_the_wayfarer_title	Tabrimmon the Wayfarer
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_tanni_the_woodworker_title	Tanni the Woodworker
+ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_theban_veteran_title	Theban Veteran
+ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_thracian_forresters_title	Thracian Forresters
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_tracker_title	Tracker
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_trapper_title	Trapper
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_veteran_soldier_title	Veteran Soldier
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_zuuthusu_the_brickmaker_title	Zuuthusu the Brickmaster
+
+
+
+
+
+                                                  !!!!!BOOKMARK TITLES!!!!!
+                                                  !!!!!BOOKMARK TITLES!!!!!
+                                                  !!!!!BOOKMARK TITLES!!!!!
+                                                  !!!!!BOOKMARK TITLES!!!!!
+                                                  !!!!!BOOKMARK TITLES!!!!!
+                                                  !!!!!BOOKMARK TITLES!!!!!
+                                                  !!!!!BOOKMARK TITLES!!!!!
+                                                  !!!!!BOOKMARK TITLES!!!!!
+                                                  !!!!!BOOKMARK TITLES!!!!!
+                                                  !!!!!BOOKMARK TITLES!!!!!
+
+
+
 
 
 ui_text_replacements_localised_text_aegea_legitimacy_war_ended_notification_title_key	Majestic Tyrant
@@ -1629,7 +3684,6 @@ ui_text_replacements_localised_text_hp_title_unit_exemplary_ambushers	Exemplary 
 ui_text_replacements_localised_text_hp_title_unit_exemplary_trojan_slingers	Exemplary Trojan Slingers
 ui_text_replacements_localised_text_hp_title_unit_experience	Unit Experience
 ui_text_replacements_localised_text_hp_title_unit_fearless_swordsmen	Fearless Swordsmen
-ui_text_replacements_localised_text_hp_title_unit_followers_of_artemis	Followers of Artemis
 ui_text_replacements_localised_text_hp_title_unit_giant_bowmen	Giant Bowmen
 ui_text_replacements_localised_text_hp_title_unit_giant_bowmen_myth_dlc	Giant Bowmen
 ui_text_replacements_localised_text_hp_title_unit_giant_champions	Giant Champions
@@ -2213,21 +4267,6 @@ ui_text_replacements_localised_text_phar_main_amenmesse_resource_production_gold
 ui_text_replacements_localised_text_phar_main_amenmesse_resource_production_multiple_resource_1_title	Gold Market
 ui_text_replacements_localised_text_phar_main_amenmesse_resource_production_multiple_resource_2_title	The Hidden Rooms
 ui_text_replacements_localised_text_phar_main_ancillaries_commands_amenmesse_mask_title	Golden Mask
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_canaanite_consort__title	Canaanite Consort
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_cook_title	Cook
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_dancer_title	Dancer
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_devoted_taskmaster_title	Devoted Taskmaster
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_egyptian_consort__title	Egyptian Consort
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_farmer_title	Farmer
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_field_advisor_title	Field Advisor
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_healer_title	Healer
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_hittite_consort__title	Hittite Consort
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_pickpocket_title	Pickpocket
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_pragmatic_scavenger_title	Pragmatic Scavenger
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_purveyor_of_scavenged_goods_title	Purveyor of Scavenged Goods
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_tracker_title	Tracker
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_trapper_title	Trapper
-ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_veteran_soldier_title	Veteran Soldier
 ui_text_replacements_localised_text_phar_main_ancillaries_common_item_canopic_jar_title	Canopic Jar
 ui_text_replacements_localised_text_phar_main_ancillaries_common_item_clay_tablet_title	Clay Tablet
 ui_text_replacements_localised_text_phar_main_ancillaries_common_item_incense_title	Incense
@@ -2244,16 +4283,6 @@ ui_text_replacements_localised_text_phar_main_ancillaries_rare_equipment_anatoli
 ui_text_replacements_localised_text_phar_main_ancillaries_rare_equipment_kushite_bows_title	Kushite Bows
 ui_text_replacements_localised_text_phar_main_ancillaries_rare_equipment_kushite_bronze_axes_title	Kushite Bronze Axes
 ui_text_replacements_localised_text_phar_main_ancillaries_rare_equipment_minoan_bronzeworks_title	Minoan Bronzeworks
-ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_assyrian_mercenary_title	Assyrian Mercenary
-ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_baboons_title	Baboons
-ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_babylonian_healer_title	Babylonian Healer
-ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_dancing_dwarf_title	Dancing Dwarf
-ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_egyptian_healer_title	Egyptian Healer
-ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_giraffes_title	Giraffes
-ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_kushite_guards_title	Kushite Guards
-ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_libu_tracker_title	Libu Tracker
-ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_lions_title	Lions
-ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_mitanni_horse_trainer_title	Mitanni Horse Trainer
 ui_text_replacements_localised_text_phar_main_ancillaries_rare_item_assyrian_bronzeworks_title	Assyrian Bronzeworks
 ui_text_replacements_localised_text_phar_main_ancillaries_rare_item_assyrian_veils_title	Assyrian Veils
 ui_text_replacements_localised_text_phar_main_ancillaries_rare_item_babylonian_statuettes_title	Babylonian Statuettes
@@ -2289,19 +4318,6 @@ ui_text_replacements_localised_text_phar_main_ancillaries_rare_item_senet_game_s
 ui_text_replacements_localised_text_phar_main_ancillaries_rare_item_set_of_beads_title	Set of Beads
 ui_text_replacements_localised_text_phar_main_ancillaries_rare_item_turquoise_jewelry_title	Turquoise Jewellery
 ui_text_replacements_localised_text_phar_main_ancillaries_rare_item_vial_of_cedarwood_oil_title	Vial of Cedarwood Oil
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_armanani_the_artisan_title	Armanani the Artisan
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_bakanu_the_sculptor_title	Bakanu the Sculptor
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_danel_the_angler_title	Danel the Angler
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_djedeni_the_ropemaker_title	Djedeni the Ropemaker
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_hothu_the_foreman_title	Hothu the Foreman
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_hothu_the_ivoryworker_title	Karepe the Ivoryworker
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_itthobaal_the_shipwright_title	Itthobaal the Shipwright
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_mutahuy_the_builder_title	Mutahuy the Builder
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_naaman_the_hookmaker_title	Naaman the Hookmaker
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_nebaendjau_the_traveller_title	Nebaendjau the Traveller
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_nefankhui_the_farmer_title	Nefankhui the Farmer
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_pamuna_the_digger_title	Pamuna the Digger
-ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_tanni_the_woodworker_title	Tanni the Woodworker
 ui_text_replacements_localised_text_phar_main_ancillaries_unique_item_ceremonial_sword_of_adad-narari_title	Ceremonial Sword of Adad-narari I
 ui_text_replacements_localised_text_phar_main_ancillaries_unique_item_epic_of_gilgamesh_title	Epic of Gilgamesh
 ui_text_replacements_localised_text_phar_main_bay_bodyguard_unit_title	Bay's Company
@@ -2759,15 +4775,6 @@ ui_text_replacements_localised_text_phar_main_fac_sum_native_units_title	Native 
 ui_text_replacements_localised_text_phar_main_fac_sum_realm_title	Realm
 ui_text_replacements_localised_text_phar_main_fac_sum_redir_help_titles	Right-click to redirect to Titles in the Encyclopaedia
 ui_text_replacements_localised_text_phar_main_fac_sum_terrain_weather_title	Terrain & Weather
-ui_text_replacements_localised_text_phar_main_fac_sum_titles_amenmesse	As Amenmesse, your [[b]]Titles[[/b]] exchange [[img:icon_pr_gold_small]][[/img]][[b]]Gold[[/b]] for campaign and battle bonuses. You can use them to specialise in [[b]]Nubian or Kushite Units[[/b]]. In campaign, you can improve [[img:icon_pr_gold_small]][[/img]][[b]]Gold[[/b]] income and [[b]]Influence[[/b]].
-ui_text_replacements_localised_text_phar_main_fac_sum_titles_bay	As Bay, your [[b]]Titles[[/b]] provide [[b]]Influence[[/b]] on the campaign map, bonuses to ranged [[b]]Units[[/b]] in battle and grant [[b]]Abilities[[/b]] that enable [[b]]Ambushing[[/b]], such as [[b]]Vanguard Deployment[[/b]].
-ui_text_replacements_localised_text_phar_main_fac_sum_titles_gen	Each [[b]]Character[[/b]] is defined by their [[tooltip:phar_main_traits_tooltip]][[url:hpl_help_factions_character_panel_traits]][[b]]Traits[[/b]][[/url]][[/tooltip]], [[tooltip:phar_main_competences_tooltip]][[url:hpl_help_factions_character_panel_titles_competences]][[b]]Competencies and Titles[[/b]][[/url]][[/tooltip]]. [[b]]Traits[[/b]] are granted to [[b]]Characters[[/b]] as a result of their actions in battle and on the campaign map. A general's [[b]]Competencies[[/b]] increase with each [[b]]Rank[[/b]] gained. Specific [[b]]Titles[[/b]] are unlocked by various levels/combinations of [[b]]Competencies[[/b]].
-ui_text_replacements_localised_text_phar_main_fac_sum_titles_irsu	As Irsu, your [[b]]Titles[[/b]] reduce your faction's [[b]]Happiness[[/b]] in exchange for various bonuses. Your armies can cause fear in enemy [[b]]Units[[/b]] and you gain more loot from winning battles, especially [[b]]Sieges[[/b]].
-ui_text_replacements_localised_text_phar_main_fac_sum_titles_kurunta	As Kurunta, your [[b]]Titles[[/b]] allow your armies to specialise in [[b]]Kaskian[[/b]] and [[b]]Phrygian Units[[/b]]. You can unlock the [[b]]Shadow Stance[[/b]] for your [[b]]Generals[[/b]] and allow them to reduce [[img:icon_public_order]][[/img]][[b]]Happiness[[/b]] in their location.
-ui_text_replacements_localised_text_phar_main_fac_sum_titles_ramesses	As Ramesses, your selection of [[b]]Titles[[/b]] allows your [[b]]Generals[[/b]] to specialise in various types of [[b]]Units[[/b]], such as [[b]]Medjay[[/b]], [[b]]Sherden[[/b]] or [[b]]Chariots[[/b]].
-ui_text_replacements_localised_text_phar_main_fac_sum_titles_seti	As Seti, your [[b]]Titles[[/b]] favour lower-tier [[b]]Units[[/b]] and [[b]]General Bodyguards[[/b]] in battle. They also support aggression on the campaign map, preventing enemy retreat and enabling attacks from the [[b]]March Stance[[/b]].
-ui_text_replacements_localised_text_phar_main_fac_sum_titles_suppi	As Suppiluliuma, your [[b]]Titles[[/b]] increase your armies' [[b]]Defence[[/b]] and [[b]]Replenishment[[/b]], and help you keep your [[b]]Provinces[[/b]] stable in campaign.
-ui_text_replacements_localised_text_phar_main_fac_sum_titles_tausret	As Tausret, your [[b]]Titles[[/b]] favour [[b]]Chariots[[/b]]. They also provide defensive bonuses in battle and improve [[b]]Province Management[[/b]] in campaign.
 ui_text_replacements_localised_text_phar_main_fac_sum_titles_title	Titles
 ui_text_replacements_localised_text_phar_main_fac_sum_units_title	Faction Units
 ui_text_replacements_localised_text_phar_main_fac_sum_victory_title	Objectives
@@ -2904,7 +4911,6 @@ ui_text_replacements_localised_text_phar_main_help_pages_faction_tausret_title	T
 ui_text_replacements_localised_text_phar_main_help_pages_factions_canaanite_title	Canaanites
 ui_text_replacements_localised_text_phar_main_help_pages_factions_character_panel_rank_skill_points_title	Rank & Skill Points
 ui_text_replacements_localised_text_phar_main_help_pages_factions_character_panel_title	Character Panel
-ui_text_replacements_localised_text_phar_main_help_pages_factions_character_panel_titles_competences_desc_1	The [[b]]Skill Points[[/b]] your general acquires as they increase in rank can be invested in three types of [[b]]Competencies[[/b]]: Presence, Fortitude, and Ardour.\\n\\n[[img:phar_main_icon_presence]][[/img]][[b]]Presence[[/b]] decreases the [[b]]Upkeep[[/b]] cost of the general's army, and give bonuses to [[b]]Melee Attack[[/b]] and [[b]]Morale[[/b]] at milestone points.\\n\\n[[img:phar_main_icon_fortitude]][[/img]][[b]]Fortitude[[/b]] increases [[b]]Replenishement[[/b]] of the general's army, and gives bonuses to [[b]]Melee Defence[[/b]] and [[b]]Fatigue Build-up[[/b]] at milestone points.\\n\\n[[img:phar_main_icon_ardour]][[/img]][[b]]Ardour[[/b]] increases [[b]]Movement[[/b]] of the general's army, and gives bonuses to [[b]]Charge[[/b]] and battle [[b]]Speed[[/b]] at milestone points.\\n\\nNote that your generals will not be able to gain maximum competency in all categories, so plan how you would like to specialize them accordingly.\\n\\nCompetencies are also used to unlock [[b]]Titles[[/b]]. Each Title has a required level of Competence to unlock. Some Titles require a combination of 2 or 3 Competencies at a given level to be unlocked.\\n\\nOnce unlocked, Titles can be assigned in the title slots at the top of the section. Titles take effect on the next turn. Generals begin with only 1 title slot unlocked, with additional slots becoming available at Rank 8, 16 and 27, for a total of 4 maximum slots.
 ui_text_replacements_localised_text_phar_main_help_pages_factions_character_panel_titles_competences_title	Titles & Competencies
 ui_text_replacements_localised_text_phar_main_help_pages_factions_egyptian_ramesses_iii_campaign_potential_title	Campaign Potential
 ui_text_replacements_localised_text_phar_main_help_pages_factions_egyptian_ramesses_iii_characteristics_title	Characteristics
@@ -3852,13 +5858,6 @@ ui_text_replacements_localised_text_phar_map_ambition_havetotalrangedunitsmesopo
 ui_text_replacements_localised_text_phar_map_ambition_politicalmarriage_title	Love Conquers All
 ui_text_replacements_localised_text_phar_map_ambition_scionconqueror_title	Like Father, Like Son
 ui_text_replacements_localised_text_phar_map_ambition_scionincourt_title	Royal Nepotism
-ui_text_replacements_localised_text_phar_map_ancillaries_common_follower_aeg_consort_title	Aegean Consort
-ui_text_replacements_localised_text_phar_map_ancillaries_common_follower_mes_consort_title	Mesopotamian Consort
-ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_ahlamu_scout_title	Ahlamu Scout
-ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_assyrian_builders_title	Assyrian Builders
-ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_assyrian_mason_title	Assyrian Mason
-ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_theban_veteran_title	Theban Veteran
-ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_thracian_forresters_title	Thracian Forresters
 ui_text_replacements_localised_text_phar_map_ancillaries_rare_item_alabaster_figurines_title	Alabaster Figurines
 ui_text_replacements_localised_text_phar_map_ancillaries_rare_item_cylinder_seal_title	Cylinder Seal
 ui_text_replacements_localised_text_phar_map_ancillaries_rare_item_embroidered_kithon_title	Embroidered Kithon
@@ -3871,15 +5870,6 @@ ui_text_replacements_localised_text_phar_map_ancillaries_rare_item_stone_idols_t
 ui_text_replacements_localised_text_phar_map_ancillaries_rare_item_teracotta_statue_title	Terracotta Statue
 ui_text_replacements_localised_text_phar_map_ancillaries_rare_item_thracian_horn_title	Thracian Horn
 ui_text_replacements_localised_text_phar_map_ancillaries_rare_item_thracian_syrinx_title	Thracian Syrinx
-ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_alcmaeon_the_sellsword_title	Alcmaeon the Sellsword
-ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_amadocus_the_wheelwright_title	Amadocus the Wheelwright
-ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_aramu_the_bonecarver_title	Aramu the Bonecarver
-ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_ea_nasir_the_merchant_title	Ea-Nasir the Merchant
-ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_hishur_the_metalworker_title	Hishur the Metalworker
-ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_nutesh_the_warrior_title	Nutesh the Warrior
-ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_phainos_the_fisherman_title	Phainos the Fisherman
-ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_tabrimmon_the_wayfarer_title	Tabrimmon the Wayfarer
-ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_zuuthusu_the_brickmaker_title	Zuuthusu the Brickmaster
 ui_text_replacements_localised_text_phar_map_ancillaries_unique_item_realm_aber_nahra_title	Standard of Aber Nahra
 ui_text_replacements_localised_text_phar_map_ancillaries_unique_item_realm_achaea_title	Standard of Achaea
 ui_text_replacements_localised_text_phar_map_ancillaries_unique_item_realm_assuwa_title	Standard of Assuwa
@@ -3926,7 +5916,6 @@ ui_text_replacements_localised_text_phar_map_court_oracle_character_bundle_title
 ui_text_replacements_localised_text_phar_map_court_oracle_faction_bundle_title	PH AEGEA
 ui_text_replacements_localised_text_phar_map_court_oracle_large_request_title	PH AEGEA
 ui_text_replacements_localised_text_phar_map_court_oracle_small_request_title	PH AEGEA
-ui_text_replacements_localised_text_phar_map_deity_legitimacy_patron_deity_tooltip_title	Patron Deity - %1%|| ||[[b]]%2%[[/b]]||
 ui_text_replacements_localised_text_phar_map_dynasty_aspect_guile_title	Shrewdness
 ui_text_replacements_localised_text_phar_map_dynasty_aspect_nobility_title	Nobility
 ui_text_replacements_localised_text_phar_map_dynasty_aspect_piety_title	Piety
@@ -3990,10 +5979,6 @@ ui_text_replacements_localised_text_phar_map_fac_sum_starting_advice_title	ADVIC
 ui_text_replacements_localised_text_phar_map_fac_sum_starting_diplomacy_title	STARTING DIPLOMACY
 ui_text_replacements_localised_text_phar_map_fac_sum_starting_economy_title	STARTING ECONOMY
 ui_text_replacements_localised_text_phar_map_fac_sum_starting_regions_title	STARTING TERRITORY
-ui_text_replacements_localised_text_phar_map_fac_sum_titles_adad_shuma	As Adad-Shuma-Usur, your [[b]]Titles[[/b]] focus on defending your [[b]]Provinces[[/b]] by increasing army [[b]]Movement[[/b]], [[b]]Replenishment[[/b]] and [[b]]Morale[[/b]] and reducing [[b]]Enemy Movement[[/b]] in your lands. You can also gain large bonuses to your [[b]]Influence[[/b]].
-ui_text_replacements_localised_text_phar_map_fac_sum_titles_agamemnon	As Agamemnon, your [[b]]Titles[[/b]] grant bonuses to smaller armies with high tier units, lowering their [[b]]Upkeep[[/b]] and increasing their [[b]]Movement[[/b]] and [[b]]Damage[[/b]] in combat.
-ui_text_replacements_localised_text_phar_map_fac_sum_titles_ninurta	As Ninurta-Apal-Ekur, your [[b]]Titles[[/b]] will help you to amass bigger and stronger armies with bonuses to [[b]]Ranged[[/b]] and [[b]]Mounted[[/b]] units, and to easily chase down slower and weaker enemies.
-ui_text_replacements_localised_text_phar_map_fac_sum_titles_priam	As Priam, your [[b]]Titles[[/b]] allow you to [[b]]Raid[[/b]] enemy territories more effectively and increase the combat capabilities of your [[b]]Ranged Units[[/b]]. You can also gain bonuses from [[b]]Alliances[[/b]] or decrease costs of your [[b]]Production Buildings[[/b]].
 ui_text_replacements_localised_text_phar_map_hammurabi_action_research_any_technology_confirm_box_title	Confirm Royal Decree?
 ui_text_replacements_localised_text_phar_map_hammurabi_action_research_any_technology_tooltip_title	Will of the King
 ui_text_replacements_localised_text_phar_map_hammurabi_category_civil_title	Civic
@@ -4158,7 +6143,6 @@ ui_text_replacements_localised_text_phar_mer_fac_setn_expeditionary_defenders_ti
 ui_text_replacements_localised_text_phar_mer_fac_setn_expeditionary_recruits_title	Expeditionary Recruits
 ui_text_replacements_localised_text_phar_mer_fac_setn_expeditionary_slinger_recruits_title	Expeditionary Slinger Recruits
 ui_text_replacements_localised_text_phar_mer_fac_setn_expeditionary_veteran_spearmen_title	Expeditionary Veteran Spearmen
-ui_text_replacements_localised_text_phar_mer_fac_setn_followers_of_amun_title	Followers of Amun
 ui_text_replacements_localised_text_phar_mer_fac_setn_red_land_ambushers_title	Red Land Ambushers
 ui_text_replacements_localised_text_phar_mer_fac_setn_red_land_marauders_title	Red Land Marauders
 ui_text_replacements_localised_text_phar_mer_fac_setn_red_land_tribesmen_title	Red Land Tribesmen
@@ -4278,8 +6262,6 @@ ui_text_replacements_localised_text_phar_sea_fac_sum_deities_isul_title	Worship:
 ui_text_replacements_localised_text_phar_sea_fac_sum_deities_kuvava_title	Worship: Kuvava
 ui_text_replacements_localised_text_phar_sea_fac_sum_forge_your_own_path_title	Forge Your Own Path
 ui_text_replacements_localised_text_phar_sea_fac_sum_hybrid_gameplay_title	Hybrid Gameplay
-ui_text_replacements_localised_text_phar_sea_fac_sum_titles_iolaos	As Iolaos, your [[b]]Titles[[/b]] allow you to bolster the strength of your [[b]]Generals[[/b]], [[b]]Horde[[/b]] or [[b]]Settled Units[[/b]]. They allow you to focus on specific types of [[b]]Units[[/b]] and allow you both to empower your own armies and hinder the enemy's. You can use the [[b]]Follower of Isul Title[[/b]]  to terrorise any [[b]]Region[[/b]] in which you are present.\\n\\n
-ui_text_replacements_localised_text_phar_sea_fac_sum_titles_walwetes	As [[b]]Walwetes[[/b]], your [[b]]Titles[[/b]] can empower both your [[b]]Generals[[/b]], [[b]]Horde[[/b]], [[b]]Settled[[/b]], and [[b]]Native Units[[/b]] through [[b]]Attributes[[/b]] and [[b]]Abilities[[/b]]. Some [[b]]Titles[[/b]] provide useful [[b]]Civic[[/b]] or [[b]]Economic[[/b]] effects that are useful if you decide to settle down and conquer some lands. You will also be able to empower your [[b]]Raiding[[/b]] stance and use it to terrorize your enemies.
 ui_text_replacements_localised_text_phar_sea_generic_military_infantry_type_a_1_title	Mustering Officers
 ui_text_replacements_localised_text_phar_sea_generic_military_infantry_type_a_2_title	Combat Trainers
 ui_text_replacements_localised_text_phar_sea_generic_military_infantry_type_a_3_title	Formation Training
@@ -4596,7 +6578,6 @@ ui_text_replacements_localised_text_troy_adi_hp_troy_adi_salamis_swordsmen_title
 ui_text_replacements_localised_text_troy_adi_hp_troy_adi_teucer_bowmen_title	Teucer's Bowmen
 ui_text_replacements_localised_text_troy_adi_hp_troy_adi_veteran_locrian_slingers_title	Veteran Locrian Slingers
 ui_text_replacements_localised_text_troy_adi_incident_divine_will_ash_cloud_title	The Artificer's Ire
-ui_text_replacements_localised_text_troy_adi_title_hold_celebration	Host a [[url:script_link_troy_adi_ajax_fm_renown]]Celebration[[/url]]
 ui_text_replacements_localised_text_troy_adi_whats_new_mechanics_title	New Faction Mechanics
 ui_text_replacements_localised_text_troy_adi_whats_new_missions_title	New Epic Missions
 ui_text_replacements_localised_text_troy_adi_whats_new_title	Ajax & Diomedes
@@ -5145,3 +7126,65 @@ ui_text_replacements_localised_text_war_games_tooltip_title_4	War Games IV
 ui_text_replacements_localised_text_wh2_intro_campaign_attacking_title	Attacking
 ui_text_replacements_localised_text_wh2_intro_campaign_income_title	Predicted Income
 ui_text_replacements_localised_text_wh2_intro_campaign_treasury_title	Treasury
+
+
+
+ITEMS
+
+ui_text_replacements_localised_text_phar_map_ancillaries_common_follower_aeg_consort_title	Aegean Consort
+ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_ahlamu_scout_title	Ahlamu Scout
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_alcmaeon_the_sellsword_title	Alcmaeon the Sellsword
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_amadocus_the_wheelwright_title	Amadocus the Wheelwright
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_aramu_the_bonecarver_title	Aramu the Bonecarver
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_armanani_the_artisan_title	Armanani the Artisan
+ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_assyrian_builders_title	Assyrian Builders
+ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_assyrian_mason_title	Assyrian Mason
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_assyrian_mercenary_title	Assyrian Mercenary
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_baboons_title	Baboons
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_babylonian_healer_title	Babylonian Healer
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_bakanu_the_sculptor_title	Bakanu the Sculptor
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_canaanite_consort__title	Canaanite Consort
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_cook_title	Cook
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_dancer_title	Dancer
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_dancing_dwarf_title	Dancing Dwarf
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_danel_the_angler_title	Danel the Angler
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_devoted_taskmaster_title	Devoted Taskmaster
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_djedeni_the_ropemaker_title	Djedeni the Ropemaker
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_ea_nasir_the_merchant_title	Ea-Nasir the Merchant
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_egyptian_consort__title	Egyptian Consort
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_egyptian_healer_title	Egyptian Healer
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_farmer_title	Farmer
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_field_advisor_title	Field Advisor
+ui_text_replacements_localised_text_phar_mer_fac_setn_followers_of_amun_title	Followers of Amun
+ui_text_replacements_localised_text_hp_title_unit_followers_of_artemis	Followers of Artemis
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_giraffes_title	Giraffes
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_healer_title	Healer
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_hishur_the_metalworker_title	Hishur the Metalworker
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_hittite_consort__title	Hittite Consort
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_hothu_the_foreman_title	Hothu the Foreman
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_itthobaal_the_shipwright_title	Itthobaal the Shipwright
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_hothu_the_ivoryworker_title	Karepe the Ivoryworker
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_kushite_guards_title	Kushite Guards
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_libu_tracker_title	Libu Tracker
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_lions_title	Lions
+ui_text_replacements_localised_text_phar_map_ancillaries_common_follower_mes_consort_title	Mesopotamian Consort
+ui_text_replacements_localised_text_phar_main_ancillaries_rare_follower_mitanni_horse_trainer_title	Mitanni Horse Trainer
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_mutahuy_the_builder_title	Mutahuy the Builder
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_naaman_the_hookmaker_title	Naaman the Hookmaker
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_nebaendjau_the_traveller_title	Nebaendjau the Traveller
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_nefankhui_the_farmer_title	Nefankhui the Farmer
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_nutesh_the_warrior_title	Nutesh the Warrior
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_pamuna_the_digger_title	Pamuna the Digger
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_phainos_the_fisherman_title	Phainos the Fisherman
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_pickpocket_title	Pickpocket
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_pragmatic_scavenger_title	Pragmatic Scavenger
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_purveyor_of_scavenged_goods_title	Purveyor of Scavenged Goods
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_tabrimmon_the_wayfarer_title	Tabrimmon the Wayfarer
+ui_text_replacements_localised_text_phar_main_ancillaries_unique_follower_tanni_the_woodworker_title	Tanni the Woodworker
+ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_theban_veteran_title	Theban Veteran
+ui_text_replacements_localised_text_phar_map_ancillaries_rare_follower_thracian_forresters_title	Thracian Forresters
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_tracker_title	Tracker
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_trapper_title	Trapper
+ui_text_replacements_localised_text_phar_main_ancillaries_common_follower_veteran_soldier_title	Veteran Soldier
+ui_text_replacements_localised_text_phar_map_ancillaries_unique_follower_zuuthusu_the_brickmaker_title	Zuuthusu the Brickmaster
+]]--

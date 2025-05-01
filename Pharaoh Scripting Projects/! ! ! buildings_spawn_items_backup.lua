@@ -1,4 +1,3 @@
-
 --[[
 
                          ? This is a guide for what buildings make what items. I've kept the db tag for the buildings
@@ -117,7 +116,7 @@ Woodcutter's District - (phar_map_wood_production_assuwa_derivative_1): phar_mai
 Woodcutter's District - (phar_map_wood_production_thrace_derivative_1): phar_main_common_equipment_bow, phar_main_common_equipment_chariot, phar_main_common_shield_large, phar_main_common_shield_medium, phar_main_common_shield_small
 
 Wine Market - (phar_main_ram_province_management_production_boost_happiness_3): phar_main_common_general_12, phar_main_rare_19, phar_main_rare_31, phar_main_rare_42, phar_main_rare_7
-]]--
+]] --
 
 
 
@@ -7112,4 +7111,4 @@ common_follower_tracker_title: Tracker
 common_follower_trapper_title: Trapper
 common_follower_veteran_soldier_title: Veteran Soldier
 unique_follower_zuuthusu_the_brickmaker_title: Zuuthusu the Brickmaster
-]]--
+]] --
