@@ -1,4 +1,5 @@
 {
+    "explorer.sortOrder": "foldersFirst",
     "Lua.workspace.library": [
         "../warhammer_3/tw_autogen/global",
         "../warhammer_3/tw_autogen/campaign/",

@@ -106,7 +106,7 @@ Diplomat (phar_main_rare_11)
 
 Visitor's Quarters - (phar_main_all_province_management_roads_3): phar_main_common_general_22, phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
 
-Wisdom Codecs - (phar_main_all_province_management_main_building_poc_legitimacy_influence_boost_3): Field Advisor (phar_main_ancillaries_common_follower_field_advisor), Wise Nobleman (phar_main_rare_18) Soothsayer (phar_main_rare_8)
+Wisdom Codecs - (phar_main_all_province_management_main_building_poc_legitimacy_influence_boost_3): Field Advisor (phar_main_common_general_16), Wise Nobleman (phar_main_rare_18) Soothsayer (phar_main_rare_8)
 
 Woodcutters' District - (phar_main_all_resource_production_wood_canaan_type_a_derivative_1): phar_main_common_equipment_bow, phar_main_common_equipment_chariot, phar_main_common_shield_large, phar_main_common_shield_medium, phar_main_common_shield_small
 Woodcutter's District - (phar_main_all_resource_production_wood_canaan_type_a_derivative_1): phar_main_common_equipment_bow, phar_main_common_equipment_chariot, phar_main_common_shield_large, phar_main_common_shield_medium, phar_main_common_shield_small
