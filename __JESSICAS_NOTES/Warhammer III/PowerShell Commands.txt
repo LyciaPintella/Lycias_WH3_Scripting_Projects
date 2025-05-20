@@ -4,3 +4,7 @@ https://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html#junctions
 
 
 Get-ChildItem -Recurse | Select-String "land_units_onscreen_name_wh2_main_hef_inf_archers_1" -List | Select Path
+
+Get all junctions in OneDrive
+
+Get-ChildItem -Path "c:\OneDrive" -Recurse -Force | Where-Object { $_.LinkType -ne $null -or $_.Attributes -match "Junction" } | ft FullName,Length,Attributes,Linktype,Target
