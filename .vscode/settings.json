@@ -1,12 +1,12 @@
 {
     "explorer.sortOrder": "foldersFirst",
     "Lua.workspace.library": [
-        "../warhammer_3/tw_autogen/global",
-        "../warhammer_3/tw_autogen/campaign/",
-        "../warhammer_3/tw_autogen/frontend/",
-        "../warhammer_3/tw_autogen/battle/",
-        "C:/Users/Jessica Murphy/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/argparse/module/library"
-    ],
+	"../warhammer_3/tw_autogen/global/",
+	"../warhammer_3/tw_autogen/autogen/",
+     "../warhammer_3/tw_autogen/campaign/",
+     "../warhammer_3/tw_autogen/frontend/",
+     "../warhammer_3/tw_autogen/battle/"
+	],
     "Lua.diagnostics.workspaceDelay": 500,
     "Lua.diagnostics.workspaceRate": 20,
     "Lua.runtime.version": "Lua 5.1",
@@ -36,7 +36,7 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "html.format.wrapLineLength": 160,
+    "html.format.wrapLineLength": 170,
     "Lua.diagnostics.disable": [
         "lowercase-global",
         "trailing-space",
@@ -44,7 +44,7 @@
         "param-type-mismatch",
         "redundant-parameter"
     ],
-    "editor.wordWrapColumn": 160,
+    "editor.wordWrapColumn": 170,
     "files.exclude": {
         "**/.git": false,
         "**/.git*": true,
