@@ -601,9 +601,9 @@ cm:add_first_tick_callback(function()
                --     [1] = { trait = "phar_main_trait_hesitant", points = 2 },
                -- },
 
-               --[[character_did_not_fight_battles = {
+               character_did_not_fight_battles = {
                 [1] = {trait = "phar_main_trait_hesitant", points = 2},
-            },--]]
+            },
                --character_recruited_khopeshi={
                --[1] = {trait = "phar_main_trait_brave", points = 2},
                --},
@@ -640,7 +640,7 @@ cm:add_first_tick_callback(function()
 
 
 
-               --[[character_battle_completed_lost_siege_battle = {
+               character_battle_completed_lost_siege_battle = {
                 [1] = {trait = "phar_main_trait_respectful", points = 2},
                 [1] = {trait = "phar_main_trait_hesitant", points = 2},
             },
@@ -666,21 +666,21 @@ cm:add_first_tick_callback(function()
                 [1] = {trait = "phar_main_trait_ambitious", points = 2},
                 [2] = {trait = "phar_main_trait_reckless", points = 2},
                 [3] = {trait = "phar_main_trait_irreverent", points = 2},
-            },]]
+            },
 
-               -- character_routed_in_battle = {
-               --     [3] = {trait = "phar_main_trait_cowardly", points = 2},
-               -- },
+                character_routed_in_battle = {
+                    [3] = {trait = "phar_main_trait_cowardly", points = 2},
+                },
 
-               --[[character_won_battle_decisive_victory = {
+               character_won_battle_decisive_victory = {
                 [1] = {trait = "phar_main_trait_brave", points = 2},
                 [2] = {trait = "phar_main_trait_confident", points = 2},
                 [3] = {trait = "phar_main_trait_ramesses", points = 0},
-            },]]
+            },
 
-               -- character_post_battle_enslave_generic = {
-               --     [1] = { trait = "phar_main_trait_materialistic", points = 4 },
-               -- },
+                character_post_battle_enslave_generic = {
+                    [1] = { trait = "phar_main_trait_materialistic", points = 4 },
+                },
 
 
           }
@@ -2368,7 +2368,7 @@ core:add_listener(
           ----------------------------------
           for i = 1, #SELF_PERPETUATING_TRAITS do
                if character:has_trait(SELF_PERPETUATING_TRAITS[i]) then
-                    hcp_main_give_trait(character, SELF_PERPETUATING_TRAITS[i], 20, 5)
+                    hcp_main_give_trait(character, SELF_PERPETUATING_TRAITS[i], 15, 3)
                     out("HCP_CHARACTER_" ..
                          character:onscreen_name() .. " HAS SELF PERPETUATING TRAIT: " .. SELF_PERPETUATING_TRAITS[i])
                end
