@@ -136,8 +136,7 @@ local SELF_PERPETUATING_TRAITS = {
      -- "hcp_trait_liberal",
      "hcp_trait_fertile",
      "hcp_trait_barren",
-    "hcp_trait_blind",
-     "hcp_trait_heretic"
+     "hcp_trait_blind",
 }
 -- Traits allowed to trigger for any character on any given turn
 local RANDOM_TRAITS_LIST = {
@@ -602,9 +601,9 @@ cm:add_first_tick_callback(function()
                --     [1] = { trait = "phar_main_trait_hesitant", points = 2 },
                -- },
 
-               character_did_not_fight_battles = {
+               --[[character_did_not_fight_battles = {
                 [1] = {trait = "phar_main_trait_hesitant", points = 2},
-            },
+            },--]]
                --character_recruited_khopeshi={
                --[1] = {trait = "phar_main_trait_brave", points = 2},
                --},
@@ -641,7 +640,7 @@ cm:add_first_tick_callback(function()
 
 
 
-               character_battle_completed_lost_siege_battle = {
+               --[[character_battle_completed_lost_siege_battle = {
                 [1] = {trait = "phar_main_trait_respectful", points = 2},
                 [1] = {trait = "phar_main_trait_hesitant", points = 2},
             },
@@ -667,21 +666,21 @@ cm:add_first_tick_callback(function()
                 [1] = {trait = "phar_main_trait_ambitious", points = 2},
                 [2] = {trait = "phar_main_trait_reckless", points = 2},
                 [3] = {trait = "phar_main_trait_irreverent", points = 2},
-            },
+            },]]
 
-                character_routed_in_battle = {
-                    [3] = {trait = "phar_main_trait_cowardly", points = 2},
-                },
+               -- character_routed_in_battle = {
+               --     [3] = {trait = "phar_main_trait_cowardly", points = 2},
+               -- },
 
-               character_won_battle_decisive_victory = {
+               --[[character_won_battle_decisive_victory = {
                 [1] = {trait = "phar_main_trait_brave", points = 2},
                 [2] = {trait = "phar_main_trait_confident", points = 2},
                 [3] = {trait = "phar_main_trait_ramesses", points = 0},
-            },
+            },]]
 
-                character_post_battle_enslave_generic = {
-                    [1] = { trait = "phar_main_trait_materialistic", points = 4 },
-                },
+               -- character_post_battle_enslave_generic = {
+               --     [1] = { trait = "phar_main_trait_materialistic", points = 4 },
+               -- },
 
 
           }
