@@ -99,6 +99,8 @@ Smugglers' Market - (phar_main_all_resource_production_port_coast_derivative_typ
 Stone Carvers' District - (phar_main_all_resource_production_stone_mine_derivative_type_a_1): phar_main_common_general_21, phar_main_rare_32
 Stone Carvers' District - (phar_main_irsu_resource_production_stone_mine_derivative_type_a_1): phar_main_common_general_21, phar_main_rare_32
 
+phar_main_common_general_10: -20% General Fatigue Buildup, 
+phar_main_rare_2: +5 Rel with Kemet factions, 5% Cmp Replen. phar_main_rare_6: +5 Relationship with Babylonian factions, 5% Cmp Replen. phar_sea_rare_8: -40% Bodyguard Fatigue Buildup.
 Surgeon's Practice - (phar_main_all_province_management_growth_type_a_3): phar_main_common_general_10, phar_main_rare_2, phar_main_rare_6, phar_sea_common_1, phar_sea_rare_8
 
 Translators Quarters - (phar_main_all_province_management_main_building_poc_happiness_boost_1): phar_main_common_general__17, phar_main_common_general__25, phar_main_common_general__26, phar_main_common_general__27,
