@@ -2369,7 +2369,7 @@ core:add_listener(
           ----------------------------------
           for i = 1, #SELF_PERPETUATING_TRAITS do
                if character:has_trait(SELF_PERPETUATING_TRAITS[i]) then
-                    hcp_main_give_trait(character, SELF_PERPETUATING_TRAITS[i], 20, 5)
+                    hcp_main_give_trait(character, SELF_PERPETUATING_TRAITS[i], 20, 3)
                     out("HCP_CHARACTER_" ..
                          character:onscreen_name() .. " HAS SELF PERPETUATING TRAIT: " .. SELF_PERPETUATING_TRAITS[i])
                end
