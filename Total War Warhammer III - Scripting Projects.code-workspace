@@ -229,5 +229,6 @@
           "editor.defaultFormatter": "sumneko.lua"
      },
      "files.autoSave": "afterDelay",
+     "github.copilot.selectedCompletionModel": "",
     },
 }
