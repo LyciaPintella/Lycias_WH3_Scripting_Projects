@@ -484,9 +484,13 @@ ancient_legacy_hammurabi = {
 
      -- private function
      on_turn_start = function(self)
-          if self.persistent.law_being_researched then
-               self:advance_law_being_researched()
-          end
+        if self.persistent.law_being_researched then
+            self:advance_law_being_researched()
+        end
+
+          --Lycia Bookmark - made the removal of laws option reset each turn.
+          self.persistent.law_removals_count = self.persistent.law_removals_count + self.config.law_removals_gained_for_leader_change
+          core:trigger_event("ScriptEventHammurabiLawRemovalsIncreased", { faction_name = self.persistent.faction_key })
 
           local active_faction = cm:get_faction(self.persistent.faction_key)
           if not active_faction:is_null_interface() and not active_faction:is_human() then
@@ -494,12 +498,10 @@ ancient_legacy_hammurabi = {
           end
      end,
 
-     --[[Lycia Bookmark - made the removal of laws option reset each turn.
-     on_turn_start = function(self)
+     on_new_faction_leader = function(self)
           self.persistent.law_removals_count = self.persistent.law_removals_count + self.config.law_removals_gained_for_leader_change
           core:trigger_event("ScriptEventHammurabiLawRemovalsIncreased", { faction_name = self.persistent.faction_key })
      end,
-     ]]--
 
      perform_ai_turn = function(self, active_faction)
           self:ai_attempt_law_research()
