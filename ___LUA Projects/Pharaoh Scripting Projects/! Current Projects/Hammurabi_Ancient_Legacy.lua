@@ -114,8 +114,12 @@ ancient_legacy_hammurabi = {
                     return nil
                end
 
-               return { effect_type_config = effect_type_config, parameter_config = parameter_config, value_config =
-               value_config }
+               return {
+                    effect_type_config = effect_type_config,
+                    parameter_config = parameter_config,
+                    value_config =
+                        value_config
+               }
           end,
 
           get_effect_type_config = function(id)
@@ -158,7 +162,7 @@ ancient_legacy_hammurabi = {
                local required_resource_amount = (turns_to_research * action_config.cost_per_turn)
                if not (faction:is_technology_available(technology_key) or faction:active_research_technology() == technology_key) then
                     required_resource_amount = required_resource_amount +
-                    action_config.unfulfilled_prerequisites_additional_cost
+                        action_config.unfulfilled_prerequisites_additional_cost
                end
 
                return required_resource_amount
@@ -181,7 +185,7 @@ ancient_legacy_hammurabi = {
           iterate_effects_plain_data = function(effects_plain_data, callback)
                for _, effect_plain_data in ipairs(effects_plain_data) do
                     local effect_full_config = ancient_legacy_hammurabi.utility.get_effect_full_config(
-                    effect_plain_data.effect_type, effect_plain_data.parameter, effect_plain_data.value)
+                         effect_plain_data.effect_type, effect_plain_data.parameter, effect_plain_data.value)
                     if effect_full_config then
                          callback(effect_full_config, effect_plain_data)
                     end
@@ -192,7 +196,7 @@ ancient_legacy_hammurabi = {
                local custom_effect_bundle = cm:create_new_custom_effect_bundle(effect_bundle_key)
                if custom_effect_bundle:is_null_interface() then
                     script_error("Hammurabi: (create_custom_effect_bundle) couldn't create effect bundle with key: " ..
-                    effect_bundle_key)
+                         effect_bundle_key)
                     return nil
                end
 
@@ -217,7 +221,7 @@ ancient_legacy_hammurabi = {
 
                local current_historical_year = cm:model():current_historical_year()
                local date_string_key = current_historical_year >= 0 and ancient_legacy_hammurabi_config.ad_text or
-               ancient_legacy_hammurabi_config.bc_text
+                   ancient_legacy_hammurabi_config.bc_text
                local date_string = common.get_localised_string(date_string_key)
                local title_localised = common.get_localised_string(title)
                return common.string_safe_format(title_localised, math.abs(current_historical_year), date_string), title
@@ -235,10 +239,10 @@ ancient_legacy_hammurabi = {
 
                local current_historical_year = cm:model():current_historical_year()
                local date_string_key = current_historical_year >= 0 and ancient_legacy_hammurabi_config.ad_text or
-               ancient_legacy_hammurabi_config.bc_text
+                   ancient_legacy_hammurabi_config.bc_text
                local date_string = common.get_localised_string(date_string_key)
                local law_default_description = common.get_localised_string(ancient_legacy_hammurabi_config
-               .law_default_description)
+                    .law_default_description)
                return common.string_safe_format(law_default_description, math.abs(current_historical_year), date_string,
                     leader_name)
           end,
@@ -490,12 +494,12 @@ ancient_legacy_hammurabi = {
           end
      end,
 
-     --Lycia Bookmark - made the removal of laws option reset each turn.
+     --[[Lycia Bookmark - made the removal of laws option reset each turn.
      on_turn_start = function(self)
-          self.persistent.law_removals_count = self.persistent.law_removals_count +
-          self.config.law_removals_gained_for_leader_change
+          self.persistent.law_removals_count = self.persistent.law_removals_count + self.config.law_removals_gained_for_leader_change
           core:trigger_event("ScriptEventHammurabiLawRemovalsIncreased", { faction_name = self.persistent.faction_key })
      end,
+     ]]--
 
      perform_ai_turn = function(self, active_faction)
           self:ai_attempt_law_research()
@@ -598,17 +602,17 @@ ancient_legacy_hammurabi = {
           for _, effect in ipairs(effects) do
                if effect.effect_type_config.level_requirement > current_category_level then
                     script_error("Hammurabi: (research_law) effect type " ..
-                    effect.effect_type_config.id .. " has higher level requirement than current category level")
+                         effect.effect_type_config.id .. " has higher level requirement than current category level")
                     return
                end
                if effect.parameter_config.level_requirement > current_category_level then
                     script_error("Hammurabi: (research_law) parameter " ..
-                    effect.parameter_config.id .. " has higher level requirement than current category level")
+                         effect.parameter_config.id .. " has higher level requirement than current category level")
                     return
                end
                if effect.value_config.level_requirement > current_category_level then
                     script_error("Hammurabi: (research_law) value " ..
-                    effect.value_config.id .. " has higher level requirement than current category level")
+                         effect.value_config.id .. " has higher level requirement than current category level")
                     return
                end
           end
@@ -636,14 +640,18 @@ ancient_legacy_hammurabi = {
           local effects_plain_data = {}
           for _, effect in ipairs(effects) do
                table.insert(effects_plain_data,
-                    { effect_type = effect.effect_type_config.id, parameter = effect.parameter_config.id, value = effect
-                    .value_config.id })
+                    {
+                         effect_type = effect.effect_type_config.id,
+                         parameter = effect.parameter_config.id,
+                         value = effect
+                             .value_config.id
+                    })
           end
 
           local current_historical_year = cm:model():current_historical_year()
           local faction_leader = active_faction:faction_leader()
           local faction_leader_cqi = not faction_leader:is_null_interface() and
-          faction_leader:family_member():command_queue_index() or 0
+              faction_leader:family_member():command_queue_index() or 0
 
           self.persistent.law_being_researched = {
                id = law_id,
@@ -680,7 +688,7 @@ ancient_legacy_hammurabi = {
           local bundle_to_apply = self.utility.create_custom_effect_bundle(effect_bundle_key, effects_plain_data)
           if not bundle_to_apply then
                script_error("Hammurabi: (activate_researched_law) couldn't create effect bundle with key: " ..
-               effect_bundle_key)
+                    effect_bundle_key)
                return false
           end
 
@@ -721,7 +729,7 @@ ancient_legacy_hammurabi = {
           else
                local historical_year = law_being_researched.historical_year
                local date_string_key = historical_year >= 0 and ancient_legacy_hammurabi_config.ad_text or
-               ancient_legacy_hammurabi_config.bc_text
+                   ancient_legacy_hammurabi_config.bc_text
                cm:add_event_feed_event(category_config.event_for_predefined_description_key, self.persistent.faction_key,
                     0, date_string_key, "", "", law_being_researched.faction_leader_cqi, math.abs(historical_year))
           end
@@ -755,12 +763,11 @@ ancient_legacy_hammurabi = {
 
      -- private function
      remove_active_law = function(self, active_law)
-          --[[ Lycia bookmark
           if self.persistent.law_removals_count <= 0 then
-			script_error("Hammurabi: (remove_active_law) not enough law removals")
-			return
-		end
-          ]] --
+               script_error("Hammurabi: (remove_active_law) not enough law removals")
+               return
+          end
+
 
           if active_law.is_divine then
                script_error("Hammurabi: (remove_active_law) can't remove a divine law")
@@ -787,7 +794,7 @@ ancient_legacy_hammurabi = {
 
           if active_faction:has_technology(technology_key) then
                script_error("Hammurabi: (instant_research_any_technology_action) technology was already researched " ..
-               technology_key)
+                    technology_key)
                return
           end
 
@@ -854,7 +861,7 @@ ancient_legacy_hammurabi = {
 
           local last_attempted_research_category_id = self.persistent.ai.last_attempted_research_category_id
           local next_category_index = last_attempted_research_category_id == nil and 1 or
-          (self.utility.get_category_config_index(last_attempted_research_category_id) + 1)
+              (self.utility.get_category_config_index(last_attempted_research_category_id) + 1)
           if next_category_index > #self.config.categories then
                next_category_index = 1
           end
@@ -942,8 +949,12 @@ ancient_legacy_hammurabi = {
           local value_index = get_random_in_range(1, #viable_parameter.values)
           local value_config = viable_parameter.values[value_index]
 
-          return { effect_type_config = viable_effect_type.config, parameter_config = viable_parameter.config, value_config =
-          value_config }
+          return {
+               effect_type_config = viable_effect_type.config,
+               parameter_config = viable_parameter.config,
+               value_config =
+                   value_config
+          }
      end,
 
      -- private function
@@ -989,9 +1000,9 @@ ancient_legacy_hammurabi = {
                               if parameter_config.level_requirement <= current_category_level then
                                    for _, value_config in ipairs(parameter_config.values) do
                                         local meets_level_criteria = value_config.level_requirement <=
-                                        current_category_level
+                                            current_category_level
                                         local meets_positivity_criteria = not only_beneficial or
-                                        self.utility.is_beneficial_parameter_value(parameter_config, value_config)
+                                            self.utility.is_beneficial_parameter_value(parameter_config, value_config)
                                         if meets_level_criteria and meets_positivity_criteria then
                                              if not table_contains(ignored_effect_types, effect_type_config.id) and
                                                  not (ignored_effects and
@@ -1045,7 +1056,7 @@ ancient_legacy_hammurabi = {
                if effect then
                     table.insert(effects, effect)
                     self:add_ignored_effect(all_ignored_effects, effect.effect_type_config.id, effect.parameter_config
-                    .id, effect.value_config.id)
+                         .id, effect.value_config.id)
                end
           end
 
@@ -1095,7 +1106,7 @@ ancient_legacy_hammurabi = {
                          effect_plain_data.parameter, effect_plain_data.value)
                     if effect_config then
                          local active_effect_is_beneficial_parameter_value = self.utility.is_beneficial_parameter_value(
-                         effect_config.parameter_config, effect_config.value_config)
+                              effect_config.parameter_config, effect_config.value_config)
                          if effect_plain_data.effect_type == effect_type_config.id and
                              effect_plain_data.parameter == parameter_config.id and
                              is_beneficial_parameter_value == active_effect_is_beneficial_parameter_value and -- each beneficial type handles the cost differently and the number of active effects shouldn't be shared between both types
@@ -1111,7 +1122,7 @@ ancient_legacy_hammurabi = {
                return value_config.time_cost * (effect_active_law_occurences + 1), effect_active_law_occurences > 0
           else
                local new_cost = math.round(value_config.time_cost *
-               math.pow(self.config.repeated_effect_non_beneficial_exponent_base, effect_active_law_occurences))
+                    math.pow(self.config.repeated_effect_non_beneficial_exponent_base, effect_active_law_occurences))
                return math.min(-1, new_cost), effect_active_law_occurences > 0
           end
 
@@ -1215,7 +1226,7 @@ ancient_legacy_hammurabi = {
                                    table.insert(effects, effect_full_config)
                               else
                                    script_error("Hammurabi: invalid config for effect type " ..
-                                   effect_type_id .. " or parameter " .. parameter_id .. " or value " .. value_id)
+                                        effect_type_id .. " or parameter " .. parameter_id .. " or value " .. value_id)
                               end
                          end
 
@@ -1244,8 +1255,8 @@ ancient_legacy_hammurabi = {
                          local category_config = self.utility.get_category_config(category_id)
                          if not category_config then
                               script_error(
-                              "Hammurabi: tried to level up category, but not config was found for category with id " ..
-                              category_id)
+                                   "Hammurabi: tried to level up category, but not config was found for category with id " ..
+                                   category_id)
                               return
                          end
 
@@ -1392,7 +1403,7 @@ ancient_legacy_hammurabi = {
 
                          local faction = cm:model():faction_for_command_queue_index(context:faction_cqi())
                          return faction and not faction:is_null_interface() and
-                         self.persistent.faction_key == faction:name()
+                             self.persistent.faction_key == faction:name()
                     end,
                     callback = function(self, context)
                          local trigger = context:trigger():split(":")
@@ -1412,7 +1423,7 @@ ancient_legacy_hammurabi = {
                               cheat_finish_researched_law()
                          elseif cheat_id == "AddLawRemovals" then
                               self.persistent.law_removals_count = self.persistent.law_removals_count +
-                              self.config.law_removals_gained_for_leader_change
+                                  self.config.law_removals_gained_for_leader_change
                               core:trigger_event("ScriptEventHammurabiLawRemovalsIncreased",
                                    { faction_name = self.persistent.faction_key })
                          elseif cheat_id == "AddRandomLaw" then
@@ -1420,7 +1431,7 @@ ancient_legacy_hammurabi = {
                               cheat_finish_researched_law()
 
                               local category_index = cm:model():random_int(1, #ancient_legacy_hammurabi_config
-                              .categories)
+                                   .categories)
                               local category_config = ancient_legacy_hammurabi_config.categories[category_index]
                               local target_count_effects = cm:model():random_int(1, self.config.max_effects_per_law)
                               local effects = self:generate_random_effects(target_count_effects, category_config, {},
@@ -1443,16 +1454,15 @@ ancient_legacy_hammurabi = {
      on_loading_game = function(self, faction_key)
           -- it's possible that between different versions of the game new categories get added, so we need to add those categories to the persistent data
           self:initialize_missing_categories()
-          --Lycia bookmark 2
-          self.persistent.law_removals_count = self.persistent.law_removals_count +
-          self.config.law_removals_gained_for_leader_change
-          core:trigger_event("ScriptEventHammurabiLawRemovalsIncreased", { faction_name = self.persistent.faction_key })
 
           if not is_table(self.persistent.ui) then
                self.persistent.ui = {
                     show_newly_activated_law_notification = false,
                }
           end
+          --Lycia bookmark 2
+          self.persistent.law_removals_count = self.persistent.law_removals_count + self.config.law_removals_gained_for_leader_change
+          core:trigger_event("ScriptEventHammurabiLawRemovalsIncreased", { faction_name = self.persistent.faction_key })
      end,
 
 }
