@@ -6,6 +6,8 @@
 
 Bronze Proving Hall - (phar_main_all_resource_production_bronze_mine_derivative_type_a_2): phar_main_common_equipment_axe, phar_main_common_equipment_club, phar_main_common_equipment_spear, phar_main_common_equipment_khopesh, phar_main_common_equipment_sword
 
+Cedar Warehouse - Small and Medium sheilds, and common chariots.
+
 Champion's Hall - (phar_main_amenmesse_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
 Champion's Hall - (phar_main_bay_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
 Champion's Hall - (phar_main_canaan_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
@@ -91,15 +93,15 @@ Tausret's Goldsmiths - (phar_main_tausret_resource_production_modifier_gold_3): 
 
 Royal Fishery - (phar_main_all_resource_production_port_coast_2): phar_main_rare_27, phar_main_rare_40, phar_sea_common_2
 
-Royal Jeweller - (phar_main_all_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30, phar_main_rare_38, phar_main_rare_43, phar_main_rare_49
+Royal Jeweller - (phar_main_all_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30 (sucks),  (sucks), phar_main_rare_43 (ranged upkeep reduction), phar_main_rare_49 (workforce cost reduction for resource production buildings.)
 Royal Jeweller - (phar_main_irsu_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30, phar_main_rare_38, phar_main_rare_43, phar_main_rare_49
 
 Smugglers' Market - (phar_main_all_resource_production_port_coast_derivative_type_a_1): phar_main_common_general_1, phar_main_common_general_19, phar_main_common_general_2, phar_main_common_general_8, Smuggler (phar_main_rare_12), Saboteur (phar_main_rare_14), phar_main_rare_9
 
-Stone Carvers' District - (phar_main_all_resource_production_stone_mine_derivative_type_a_1): phar_main_common_general_21, phar_main_rare_32
+Stone Carvers' District - (phar_main_all_resource_production_stone_mine_derivative_type_a_1): phar_main_common_general_21 (sucks), phar_main_rare_32 32 (sucks)
 Stone Carvers' District - (phar_main_irsu_resource_production_stone_mine_derivative_type_a_1): phar_main_common_general_21, phar_main_rare_32
 
-phar_main_common_general_10: -20% General Fatigue Buildup, 
+phar_main_common_general_10: -20% General Fatigue Buildup,
 phar_main_rare_2: +5 Rel with Kemet factions, 5% Cmp Replen. phar_main_rare_6: +5 Relationship with Babylonian factions, 5% Cmp Replen. phar_sea_rare_8: -40% Bodyguard Fatigue Buildup.
 Surgeon's Practice - (phar_main_all_province_management_growth_type_a_3): phar_main_common_general_10, phar_main_rare_2, phar_main_rare_6, phar_sea_common_1, phar_sea_rare_8
 
@@ -232,7 +234,7 @@ local ancillary_master_list = {
      --Woodcutters districts
      ["phar_main_all_resource_production_wood_canaan_type_a_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
      ["phar_main_all_resource_production_wood_hatti_derivative_2"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
-     ["phar_map_all_resource_production_wood_mesopotamia_type_a_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
+     ["phar_map_all_resource_production_wood_mesopotamia_type_a_derivative_1"] --[[Cedar Warehouse]] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
      ["phar_map_wood_production_aegean_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
      ["phar_map_wood_production_assuwa_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
      ["phar_map_wood_production_thrace_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
