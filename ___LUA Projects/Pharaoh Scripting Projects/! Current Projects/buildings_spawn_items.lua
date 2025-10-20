@@ -96,10 +96,10 @@ Royal Fishery - (phar_main_all_resource_production_port_coast_2): phar_main_rare
 Royal Jeweller - (phar_main_all_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30 (sucks),  (sucks), phar_main_rare_43 (ranged upkeep reduction), phar_main_rare_49 (workforce cost reduction for resource production buildings.)
 Royal Jeweller - (phar_main_irsu_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30, phar_main_rare_38, phar_main_rare_43, phar_main_rare_49
 
-Smugglers' Market - (phar_main_all_resource_production_port_coast_derivative_type_a_1): phar_main_common_general_1, phar_main_common_general_19, phar_main_common_general_2, phar_main_common_general_8, Smuggler (phar_main_rare_12), Saboteur (phar_main_rare_14), phar_main_rare_9
+Smugglers' Market - (phar_main_all_resource_production_port_coast_derivative_type_a_1): phar_main_common_general_1 (sucks), phar_main_common_general_19 (sucks), phar_main_common_general_2 (5% rare ancillary chance), phar_main_common_general_8 (5% ancillary steal), Smuggler (phar_main_rare_12 - 35% LOS 5% ancillary steal), Saboteur (phar_main_rare_14 - Reduces enemy army movement in region), Poisoner (phar_main_rare_9 - reduces enemy army movement + bodyguard lethality.)
 
 Stone Carvers' District - (phar_main_all_resource_production_stone_mine_derivative_type_a_1): phar_main_common_general_21 (sucks), phar_main_rare_32 32 (sucks)
-Stone Carvers' District - (phar_main_irsu_resource_production_stone_mine_derivative_type_a_1): phar_main_common_general_21, phar_main_rare_32
+Stone Carvers' District - (phar_main_irsu_resource_production_stone_mine_derivative_type_a_1): phar_main_common_general_21 (sucks), phar_main_rare_32 32 (sucks)
 
 phar_main_common_general_10: -20% General Fatigue Buildup,
 phar_main_rare_2: +5 Rel with Kemet factions, 5% Cmp Replen. phar_main_rare_6: +5 Relationship with Babylonian factions, 5% Cmp Replen. phar_sea_rare_8: -40% Bodyguard Fatigue Buildup.
