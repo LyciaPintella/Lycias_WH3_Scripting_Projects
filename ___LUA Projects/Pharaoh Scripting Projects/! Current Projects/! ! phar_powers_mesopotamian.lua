@@ -62,19 +62,19 @@ local meso_powers_config = {
                     enable_ers_construction = false,
                },
                [2] = {
-                    cooldown = 5,
+                    cooldown = 4,
                     max_building_level = 3,
                     build_time_reduction = 1,
                     enable_ers_construction = false,
                },
                [3] = {
-                    cooldown = 4,
+                    cooldown = 3,
                     max_building_level = 4,
                     build_time_reduction = 2,
                     enable_ers_construction = false,
                },
                [4] = {
-                    cooldown = 3,
+                    cooldown = 2,
                     max_building_level = 5,
                     build_time_reduction = 3,
                     enable_ers_construction = true,
@@ -251,12 +251,12 @@ local meso_powers_config = {
                     discount = 1.0,
                },
                [3] = {
-                    cooldown = 10,
+                    cooldown = 9,
                     base_cost = 1200,
                     discount = 0.9,
                },
                [4] = {
-                    cooldown = 9,
+                    cooldown = 6,
                     base_cost = 1000,
                     discount = 0.8,
                },

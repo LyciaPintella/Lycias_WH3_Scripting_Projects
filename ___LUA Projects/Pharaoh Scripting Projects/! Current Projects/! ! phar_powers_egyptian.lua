@@ -41,19 +41,19 @@ local pharaohs_powers_config = {
                     enable_ers_construction = false,
                },
                [2] = {
-                    cooldown = 5,
+                    cooldown = 4,
                     max_building_level = 3,
                     build_time_reduction = 1,
                     enable_ers_construction = false,
                },
                [3] = {
-                    cooldown = 4,
+                    cooldown = 3,
                     max_building_level = 4,
                     build_time_reduction = 2,
                     enable_ers_construction = false,
                },
                [4] = {
-                    cooldown = 3,
+                    cooldown = 2,
                     max_building_level = 5,
                     build_time_reduction = 3,
                     enable_ers_construction = true,
