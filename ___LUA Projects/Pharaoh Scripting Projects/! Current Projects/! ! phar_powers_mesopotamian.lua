@@ -91,17 +91,17 @@ local meso_powers_config = {
                },
                [2] = {
                     cooldown = 11,
-                    duration = 6,
+                    duration = 5,
                     effect_bundle_key = "phar_main_great_king_powers_raise_armies_tier_2",
                },
                [3] = {
                     cooldown = 9,
-                    duration = 6,
+                    duration = 8,
                     effect_bundle_key = "phar_main_great_king_powers_raise_armies_tier_3",
                },
                [4] = {
                     cooldown = 6,
-                    duration = 9,
+                    duration = 12,
                     effect_bundle_key = "phar_main_great_king_powers_raise_armies_tier_4",
                },
           }
@@ -116,23 +116,23 @@ local meso_powers_config = {
           tiers = {
                [1] = {
                     cooldown = 12,
-                    duration = 6,
+                    duration = 8,
                     base_effect_strength = -10,
                },
                [2] = {
                     cooldown = 11,
-                    duration = 7,
-                    base_effect_strength = -10,
+                    duration = 11,
+                    base_effect_strength = -11,
                },
                [3] = {
                     cooldown = 9,
-                    duration = 8,
-                    base_effect_strength = -10,
+                    duration = 13,
+                    base_effect_strength = -13,
                },
                [4] = {
                     cooldown = 6,
-                    duration = 9,
-                    base_effect_strength = -10,
+                    duration = 15,
+                    base_effect_strength = -15,
                },
           },
      },
