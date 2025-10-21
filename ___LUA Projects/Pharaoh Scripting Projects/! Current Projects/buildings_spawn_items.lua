@@ -8,28 +8,28 @@ Bronze Proving Hall - (phar_main_all_resource_production_bronze_mine_derivative_
 
 Cedar Warehouse - Small and Medium sheilds, and common chariots.
 
-Champion's Hall - (phar_main_amenmesse_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_main_bay_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_main_canaan_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_main_hatti_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_main_irsu_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_main_kemet_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_main_kuru_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_main_kurunta_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_main_ramesses_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_main_seti_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_main_suppiluliuma_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_main_tausret_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_map_achean_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_map_ash_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_map_bab_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_map_elam_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_map_luwian_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_map_meso_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_map_mycenae_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_map_thracian_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_map_urartu_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
-Champion's Hall - (phar_map_wilusa_military_administration_unit_training_type_b_1): phar_main_common_general_11, Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_amenmesse_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_bay_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_canaan_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_hatti_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_irsu_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_kemet_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_kuru_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_kurunta_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_ramesses_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_seti_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_suppiluliuma_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_main_tausret_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_map_achean_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_map_ash_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_map_bab_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_map_elam_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_map_luwian_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_map_meso_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_map_mycenae_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_map_thracian_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_map_urartu_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
+Champion's Hall - (phar_map_wilusa_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
 
 Grand Temple of Amun - (phar_main_religion_cult_center_grand_temple_amun_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
 Grand Temple of Anubis - (phar_main_religion_cult_center_grand_temple_anubis_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
@@ -132,14 +132,14 @@ local ancillary_master_list = {
      --bronze proofing hall
      ["phar_main_all_resource_production_bronze_mine_derivative_type_a_2"] = { "phar_main_common_equipment_axe", "phar_main_common_equipment_club", "phar_main_common_equipment_spear", "phar_main_common_equipment_khopesh", "phar_main_common_equipment_sword", },
      --wisdom codices
-     ["phar_main_all_province_management_main_building_poc_legitimacy_influence_boost_3"] = { "phar_main_common_general_16", "phar_main_rare_18", "phar_main_rare_8", },
+     ["phar_main_all_province_management_main_building_poc_legitimacy_influence_boost_3"] = { "phar_main_rare_8", },
      --translators quarters
-     ["phar_main_all_province_management_main_building_poc_happiness_boost_1"] = { "phar_main_common_general_17", "phar_main_common_general_25", "phar_main_common_general_26", "phar_main_common_general_27", "phar_main_rare_11", },
+     ["phar_main_all_province_management_main_building_poc_happiness_boost_1"] = {"phar_main_common_general_25", "phar_main_common_general_26", "phar_main_common_general_27", "phar_main_rare_11", },
      --tarsus pottery landmark
      ["phar_main_all_landmark_production_boost_tarsus_1"] = { "phar_main_rare_37" },
      --healer buildings
-     ["phar_main_all_province_management_growth_type_a_3"] = { "phar_main_common_general_10", "phar_main_rare_2", "phar_main_rare_6", "phar_sea_common_1", "phar_sea_rare_8", },
-     ["phar_map_bab_province_management_happiness_growth_type_a_3"] = { "phar_main_common_general_10", "phar_main_rare_6", "phar_main_rare_6", "phar_sea_common_1", "phar_sea_rare_8", },
+     ["phar_main_all_province_management_growth_type_a_3"] = { "phar_main_rare_2", "phar_main_rare_6", "phar_sea_common_1", "phar_sea_rare_8", },
+     ["phar_map_bab_province_management_happiness_growth_type_a_3"] = {"phar_main_rare_6", "phar_sea_common_1", "phar_sea_rare_8", },
      --royal fisheries
      ["phar_main_all_resource_production_port_coast_2"] = { "phar_main_rare_27", "phar_main_rare_40", "phar_sea_common_2", },
      --royal goldsmiths
@@ -148,96 +148,96 @@ local ancillary_master_list = {
      --smuggler port
      ["phar_main_all_resource_production_port_coast_derivative_type_a_1"] = { "phar_main_common_general_1", "phar_main_common_general_19", "phar_main_common_general_2", "phar_main_common_general_8", "phar_main_rare_12", "phar_main_rare_14", "phar_main_rare_9", },
      --stonecarver district
-     ["phar_main_all_resource_production_stone_mine_derivative_type_a_1"] = { "phar_main_common_general_21", "phar_main_rare_32" },
-     ["phar_main_irsu_resource_production_stone_mine_derivative_type_a_1"] = { "phar_main_common_general_21", "phar_main_rare_32" },
+     ["phar_main_all_resource_production_stone_mine_derivative_type_a_1"] = {"phar_main_rare_32" },
+     ["phar_main_irsu_resource_production_stone_mine_derivative_type_a_1"] = {"phar_main_rare_32" },
      --Visitors quarters
      ["phar_main_all_province_management_roads_3"] = { "phar_main_common_general_22", "phar_main_common_general_24", "phar_main_common_general_28", "phar_main_common_general_7", "phar_main_common_general_9", "phar_main_rare_1", },
      ["phar_map_bab_province_management_influence_roads_type_a_3"] = { "phar_main_common_general_22", "phar_main_common_general_24", "phar_main_common_general_28", "phar_main_common_general_7", "phar_main_common_general_9", "phar_main_rare_1", },
      ["phar_map_myc_province_management_roads_3"] = { "phar_main_common_general_22", "phar_main_common_general_24", "phar_main_common_general_28", "phar_main_common_general_7", "phar_main_common_general_9", "phar_main_rare_1", },
      ["phar_sea_peleset_province_management_movement_production_boost_3"] = { "phar_sea_rare_9", "phar_main_common_general_22", "phar_main_common_general_24", "phar_main_common_general_28", "phar_main_common_general_7", "phar_main_common_general_9", "phar_main_rare_1", },
      --royal jeweller
-     ["phar_main_all_resource_production_gold_mine_derivative_type_b_1"] = { "phar_main_rare_30", "phar_main_rare_38", "phar_main_rare_43", "phar_main_rare_49", },
-     ["phar_main_irsu_resource_production_gold_mine_derivative_type_b_1"] = { "phar_main_rare_30", "phar_main_rare_38", "phar_main_rare_43", "phar_main_rare_49", },
+     ["phar_main_all_resource_production_gold_mine_derivative_type_b_1"] = { "phar_main_rare_30", "phar_main_rare_38", "phar_main_rare_49", },
+     ["phar_main_irsu_resource_production_gold_mine_derivative_type_b_1"] = { "phar_main_rare_30", "phar_main_rare_38", "phar_main_rare_49", },
      --drinking establishments
      ["phar_main_all_province_management_happiness_type_c_3"] = { "phar_main_common_general_12", "phar_main_rare_19", "phar_main_rare_31", "phar_main_rare_42", "phar_main_rare_7", },
      ["phar_main_ram_province_management_production_boost_happiness_3"] = { "phar_main_common_general_12", "phar_main_rare_19", "phar_main_rare_31", "phar_main_rare_42", "phar_main_rare_7", },
      --granary
-     ["phar_main_all_resource_production_modifier_food_3"] = { "phar_main_common_general_23", "phar_main_common_general_29", "phar_main_common_general_3", "phar_sea_common_6", },
-     ["phar_main_tausret_resource_production_modifier_food_3"] = { "phar_main_common_general_23", "phar_main_common_general_29", "phar_main_common_general_3", "phar_sea_common_6", },
+     ["phar_main_all_resource_production_modifier_food_3"] = {"phar_main_common_general_22", },
+     ["phar_main_tausret_resource_production_modifier_food_3"] = { "phar_main_common_general_22", },
      --bazaars
-     ["phar_main_all_resource_production_fruit_oasis_derivative_type_a_1"] = { "phar_main_common_general_20", "phar_main_rare_10", "phar_main_rare_13", },
-     ["phar_main_irsu_resource_production_fruit_oasis_derivative_type_a_1"] = { "phar_main_common_general_20", "phar_main_rare_10", "phar_main_rare_13", },
+     ["phar_main_all_resource_production_fruit_oasis_derivative_type_a_1"] = {"phar_main_rare_10", "phar_main_rare_13", },
+     ["phar_main_irsu_resource_production_fruit_oasis_derivative_type_a_1"] = {"phar_main_rare_10", "phar_main_rare_13", },
      --southern natives
-     ["phar_main_all_military_native_type_a_kush_4"] = { "phar_main_rare_4" },
+     ["phar_main_all_military_native_type_a_kush_4"] = { "phar_main_common_general_12", },
      ["phar_main_all_military_native_type_a_nubia_4"] = { "phar_main_rare_4" },
      --meso natives
-     ["phar_map_all_military_native_type_a_haltamti_4"] = { "phar_main_rare_3", "phar_main_rare_5", },
-     ["phar_map_all_military_native_type_a_mat_assur_4"] = { "phar_main_rare_3", "phar_main_rare_5", },
-     ["phar_map_all_military_native_type_a_mat_tamti_4"] = { "phar_main_rare_3", "phar_main_rare_5", },
+     ["phar_map_all_military_native_type_a_haltamti_4"] = { "phar_main_rare_3", },
+     ["phar_map_all_military_native_type_a_mat_assur_4"] = { "phar_main_rare_3", },
+     ["phar_map_all_military_native_type_a_mat_tamti_4"] = { "phar_main_rare_3", },
      --cult centres
-     ["phar_main_religion_cult_center_grand_temple_amun_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_anubis_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_arinna_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_asherah_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_aten_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_baal_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_el_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_horus_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_isis_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_kumarbi_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_kurunta_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_moloch_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_osiris_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_ptah_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_ra_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_set_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_shaushka_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_tarhunz_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_thoth_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_main_religion_cult_center_grand_temple_yamm_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_map_religion_cult_center_grand_temple_aphrodite_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_map_religion_cult_center_grand_temple_apollo_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_map_religion_cult_center_grand_temple_ares_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_map_religion_cult_center_grand_temple_ashur_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_map_religion_cult_center_grand_temple_inshushinak_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_map_religion_cult_center_grand_temple_ishtar_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_map_religion_cult_center_grand_temple_marduk_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_map_religion_cult_center_grand_temple_ninurta_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_map_religion_cult_center_grand_temple_poseidon_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
-     ["phar_map_religion_cult_center_grand_temple_zeus_1"] = { "phar_main_common_general_14", "phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_amun_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_anubis_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_arinna_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_asherah_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_aten_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_baal_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_el_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_horus_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_isis_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_kumarbi_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_kurunta_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_moloch_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_osiris_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_ptah_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_ra_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_set_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_shaushka_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_tarhunz_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_thoth_1"] = {"phar_main_common_general_15", },
+     ["phar_main_religion_cult_center_grand_temple_yamm_1"] = {"phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_aphrodite_1"] = {"phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_apollo_1"] = {"phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_ares_1"] = {"phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_ashur_1"] = {"phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_inshushinak_1"] = {"phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_ishtar_1"] = {"phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_marduk_1"] = {"phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_ninurta_1"] = {"phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_poseidon_1"] = {"phar_main_common_general_15", },
+     ["phar_map_religion_cult_center_grand_temple_zeus_1"] = {"phar_main_common_general_15", },
      --royal bronzeworks
-     ["phar_main_all_resource_production_modifier_bronze_3"] = { "phar_main_common_armour_heavy", "phar_main_common_armour_light", "phar_main_common_armour_medium", },
-     ["phar_main_tausret_resource_production_modifier_bronze_3"] = { "phar_main_common_armour_heavy", "phar_main_common_armour_light", "phar_main_common_armour_medium", },
+     ["phar_main_all_resource_production_modifier_bronze_3"] = { "phar_main_common_armour_heavy","phar_main_common_armour_medium", },
+     ["phar_main_tausret_resource_production_modifier_bronze_3"] = { "phar_main_common_armour_heavy","phar_main_common_armour_medium", },
      --champions hall
-     ["phar_main_amenmesse_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_main_bay_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_main_canaan_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_main_hatti_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_main_irsu_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_main_kemet_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_main_kuru_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_main_kurunta_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_main_ramesses_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_main_seti_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_main_suppiluliuma_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_main_tausret_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_map_achean_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_map_ash_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_map_bab_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_map_elam_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_map_luwian_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_map_meso_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_map_mycenae_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_map_thracian_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_map_urartu_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
-     ["phar_map_wilusa_military_administration_unit_training_type_b_1"] = { "phar_main_common_general_11", "phar_main_rare_15", "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_amenmesse_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_bay_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_canaan_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_hatti_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_irsu_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_kemet_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_kuru_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_kurunta_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_ramesses_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_seti_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_suppiluliuma_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_main_tausret_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_achean_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_ash_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_bab_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_elam_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_luwian_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_meso_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_mycenae_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_thracian_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_urartu_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
+     ["phar_map_wilusa_military_administration_unit_training_type_b_1"] = { "phar_main_rare_16", "phar_main_rare_17", },
      --Woodcutters districts
-     ["phar_main_all_resource_production_wood_canaan_type_a_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
-     ["phar_main_all_resource_production_wood_hatti_derivative_2"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
-     ["phar_map_all_resource_production_wood_mesopotamia_type_a_derivative_1"] --[[Cedar Warehouse]] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
-     ["phar_map_wood_production_aegean_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
-     ["phar_map_wood_production_assuwa_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
-     ["phar_map_wood_production_thrace_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", "phar_main_common_shield_small", },
+     ["phar_main_all_resource_production_wood_canaan_type_a_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", },
+     ["phar_main_all_resource_production_wood_hatti_derivative_2"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", },
+     ["phar_map_all_resource_production_wood_mesopotamia_type_a_derivative_1"] --[[Cedar Warehouse]] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", },
+     ["phar_map_wood_production_aegean_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", },
+     ["phar_map_wood_production_assuwa_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", },
+     ["phar_map_wood_production_thrace_derivative_1"] = { "phar_main_common_equipment_bow", "phar_main_common_equipment_chariot", "phar_main_common_shield_large", "phar_main_common_shield_medium", },
 }
 
 local building_spawn_chance = {
