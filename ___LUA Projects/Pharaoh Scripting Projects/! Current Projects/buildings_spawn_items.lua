@@ -94,6 +94,7 @@ Tausret's Goldsmiths - (phar_main_tausret_resource_production_modifier_gold_3): 
 Royal Fishery - (phar_main_all_resource_production_port_coast_2): phar_main_rare_27, phar_main_rare_40, phar_sea_common_2
 
 Royal Jeweller - (phar_main_all_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30 (sucks),  (sucks), phar_main_rare_43 (ranged upkeep reduction), phar_main_rare_49 (workforce cost reduction for resource production buildings.)
+               ? These are all workforce reduction items for construction
 Royal Jeweller - (phar_main_irsu_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30, phar_main_rare_38, phar_main_rare_43, phar_main_rare_49
 
 Smugglers' Market - (phar_main_all_resource_production_port_coast_derivative_type_a_1): phar_main_common_general_1 (sucks), phar_main_common_general_19 (sucks), phar_main_common_general_2 (5% rare ancillary chance), phar_main_common_general_8 (5% ancillary steal), Smuggler (phar_main_rare_12 - 35% LOS 5% ancillary steal), Saboteur (phar_main_rare_14 - Reduces enemy army movement in region), Poisoner (phar_main_rare_9 - reduces enemy army movement + bodyguard lethality.)
