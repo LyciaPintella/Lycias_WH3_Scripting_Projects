@@ -100,7 +100,7 @@ local meso_powers_config = {
                     effect_bundle_key = "phar_main_great_king_powers_raise_armies_tier_3",
                },
                [4] = {
-                    cooldown = 6,
+                    cooldown = 7,
                     duration = 12,
                     effect_bundle_key = "phar_main_great_king_powers_raise_armies_tier_4",
                },
