@@ -31,36 +31,36 @@ Champion's Hall - (phar_map_thracian_military_administration_unit_training_type_
 Champion's Hall - (phar_map_urartu_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
 Champion's Hall - (phar_map_wilusa_military_administration_unit_training_type_b_1): phar_main_common_general_11 (sucks!), Duellist (phar_main_rare_15), Blind Veteran (phar_main_rare_16), phar_main_rare_17
 
-Grand Temple of Amun - (phar_main_religion_cult_center_grand_temple_amun_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Anubis - (phar_main_religion_cult_center_grand_temple_anubis_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Arinna - (phar_main_religion_cult_center_grand_temple_arinna_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Asherah - (phar_main_religion_cult_center_grand_temple_asherah_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Aten - (phar_main_religion_cult_center_grand_temple_aten_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Baal - (phar_main_religion_cult_center_grand_temple_baal_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of El - (phar_main_religion_cult_center_grand_temple_el_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Horus - (phar_main_religion_cult_center_grand_temple_horus_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Isis - (phar_main_religion_cult_center_grand_temple_isis_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Kumarbi - (phar_main_religion_cult_center_grand_temple_kumarbi_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Kurunta - (phar_main_religion_cult_center_grand_temple_kurunta_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Moloch - (phar_main_religion_cult_center_grand_temple_moloch_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Osiris - (phar_main_religion_cult_center_grand_temple_osiris_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Ptah - (phar_main_religion_cult_center_grand_temple_ptah_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Ra - (phar_main_religion_cult_center_grand_temple_ra_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Set - (phar_main_religion_cult_center_grand_temple_set_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Shaushka - (phar_main_religion_cult_center_grand_temple_shaushka_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Tarhunz - (phar_main_religion_cult_center_grand_temple_tarhunz_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Thoth - (phar_main_religion_cult_center_grand_temple_thoth_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Yamm - (phar_main_religion_cult_center_grand_temple_yamm_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Aphrodite - (phar_map_religion_cult_center_grand_temple_aphrodite_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Apollo - (phar_map_religion_cult_center_grand_temple_apollo_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Ares - (phar_map_religion_cult_center_grand_temple_ares_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Ashur - (phar_map_religion_cult_center_grand_temple_ashur_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Inshushinak - (phar_map_religion_cult_center_grand_temple_inshushinak_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Ishtar - (phar_map_religion_cult_center_grand_temple_ishtar_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Marduk - (phar_map_religion_cult_center_grand_temple_marduk_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Ninurta - (phar_map_religion_cult_center_grand_temple_ninurta_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Poseidon - (phar_map_religion_cult_center_grand_temple_poseidon_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
-Grand Temple of Zeus - (phar_map_religion_cult_center_grand_temple_zeus_1): phar_main_common_general_14 (sucks), Small Alter (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Amun - (phar_main_religion_cult_center_grand_temple_amun_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Anubis - (phar_main_religion_cult_center_grand_temple_anubis_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Arinna - (phar_main_religion_cult_center_grand_temple_arinna_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Asherah - (phar_main_religion_cult_center_grand_temple_asherah_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Aten - (phar_main_religion_cult_center_grand_temple_aten_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Baal - (phar_main_religion_cult_center_grand_temple_baal_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of El - (phar_main_religion_cult_center_grand_temple_el_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Horus - (phar_main_religion_cult_center_grand_temple_horus_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Isis - (phar_main_religion_cult_center_grand_temple_isis_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Kumarbi - (phar_main_religion_cult_center_grand_temple_kumarbi_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Kurunta - (phar_main_religion_cult_center_grand_temple_kurunta_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Moloch - (phar_main_religion_cult_center_grand_temple_moloch_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Osiris - (phar_main_religion_cult_center_grand_temple_osiris_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Ptah - (phar_main_religion_cult_center_grand_temple_ptah_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Ra - (phar_main_religion_cult_center_grand_temple_ra_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Set - (phar_main_religion_cult_center_grand_temple_set_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Shaushka - (phar_main_religion_cult_center_grand_temple_shaushka_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Tarhunz - (phar_main_religion_cult_center_grand_temple_tarhunz_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Thoth - (phar_main_religion_cult_center_grand_temple_thoth_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Yamm - (phar_main_religion_cult_center_grand_temple_yamm_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Aphrodite - (phar_map_religion_cult_center_grand_temple_aphrodite_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Apollo - (phar_map_religion_cult_center_grand_temple_apollo_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Ares - (phar_map_religion_cult_center_grand_temple_ares_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Ashur - (phar_map_religion_cult_center_grand_temple_ashur_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Inshushinak - (phar_map_religion_cult_center_grand_temple_inshushinak_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Ishtar - (phar_map_religion_cult_center_grand_temple_ishtar_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Marduk - (phar_map_religion_cult_center_grand_temple_marduk_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Ninurta - (phar_map_religion_cult_center_grand_temple_ninurta_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Poseidon - (phar_map_religion_cult_center_grand_temple_poseidon_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
+Grand Temple of Zeus - (phar_map_religion_cult_center_grand_temple_zeus_1): Small Altar (phar_main_common_general_15 - +1 prayer duration)
 
 Native Barracks (Major Settlement) - (phar_main_all_military_native_type_a_kush_4 as phar_main_all_military_native_type_a_all_4_title): phar_main_rare_4
 Native Barracks (Major Settlement) - (phar_main_all_military_native_type_a_nubia_4 as phar_main_all_military_native_type_a_all_4_title): phar_main_rare_4
@@ -83,7 +83,7 @@ House of Astrologers - (phar_map_bab_province_management_influence_roads_type_a_
 
 Palace of Pleasures - (phar_map_bab_province_management_happiness_growth_type_a_3): phar_main_common_general_10, phar_main_rare_6, phar_main_rare_6, phar_sea_common_1, phar_sea_rare_8
 
-Pottery Markets - (phar_main_all_landmark_production_boost_tarsus_1): phar_main_rare_37
+Pottery Markets - (phar_main_all_landmark_production_boost_tarsus_1): phar_main_rare_37 (reduces upkeep of native units.)
 
 Royal Bronze Worker - (phar_main_all_resource_production_modifier_bronze_3): phar_main_common_armour_heavy, phar_main_common_armour_light, phar_main_common_armour_medium
 Royal Bronze Worker - Tausret - (phar_main_tausret_resource_production_modifier_bronze_3): phar_main_common_armour_heavy, phar_main_common_armour_light, phar_main_common_armour_medium
