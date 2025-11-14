@@ -3554,14 +3554,6 @@ ancient_legacy_hammurabi_config = {
                },
         },
 
-
-
-
-
-
-
-
-
 --Lycia Bookmark!
           replenishment = {
                level_requirement = 6,
@@ -3740,18 +3732,6 @@ ancient_legacy_hammurabi_config = {
                },
           },
         --Lycia Bookmark - End Replenishment Section
-
-
-
-
-
-
-
-
-
-
-
-
 
           reload_time = {
                level_requirement = 9,
