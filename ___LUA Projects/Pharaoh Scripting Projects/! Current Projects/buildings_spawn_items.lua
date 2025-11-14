@@ -93,7 +93,7 @@ Tausret's Goldsmiths - (phar_main_tausret_resource_production_modifier_gold_3): 
 
 Royal Fishery - (phar_main_all_resource_production_port_coast_2): phar_main_rare_27, phar_main_rare_40, phar_sea_common_2
 
-Royal Jeweller - (phar_main_all_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30 (sucks),  (sucks), phar_main_rare_43 (ranged upkeep reduction), phar_main_rare_49 (workforce cost reduction for resource production buildings.)
+Royal Jeweller - (phar_main_all_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30 (sucks), phar_main_rare_43 (ranged upkeep reduction), phar_main_rare_49 (workforce cost reduction for resource production buildings.)
                ? These are all workforce reduction items for construction
 Royal Jeweller - (phar_main_irsu_resource_production_gold_mine_derivative_type_b_1): phar_main_rare_30, phar_main_rare_38, phar_main_rare_43, phar_main_rare_49
 
