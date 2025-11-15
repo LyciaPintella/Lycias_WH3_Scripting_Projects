@@ -70,8 +70,8 @@ Native Barracks (Major Settlement) - (phar_map_all_military_native_type_a_mat_ta
 
 
 Bazaar of the Arts - (phar_main_all_province_management_happiness_type_c_3): phar_main_common_general_12, phar_main_rare_19, phar_main_rare_31, phar_main_rare_42, phar_main_rare_7
-Damokoros' Road Infrastructure - (phar_map_myc_province_management_roads_3): phar_main_common_general_22, phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
-Oxen Cart Assembly - (phar_sea_peleset_province_management_movement_production_boost_3):  phar_sea_rare_9, phar_main_common_general_22, phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
+Damokoros' Road Infrastructure - (phar_map_myc_province_management_roads_3): phar_main_common_general_22 (scout), phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
+Oxen Cart Assembly - (phar_sea_peleset_province_management_movement_production_boost_3):  phar_sea_rare_9, phar_main_common_general_22 (scout), phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
 
 Granary - (phar_main_all_resource_production_modifier_food_3): phar_main_common_general_23, phar_main_common_general_29, phar_main_common_general_3, phar_sea_common_6
 Provisioning Headquarters - (phar_main_tausret_resource_production_modifier_food_3): phar_main_common_general_23, phar_main_common_general_29, phar_main_common_general_3, phar_sea_common_6
@@ -79,7 +79,7 @@ Provisioning Headquarters - (phar_main_tausret_resource_production_modifier_food
 Grand Bazaar - (phar_main_all_resource_production_fruit_oasis_derivative_type_a_1): phar_main_common_general_20, Avid Collector (phar_main_rare_10), Gem Merchant
 Grand Bazaar - (phar_main_irsu_resource_production_fruit_oasis_derivative_type_a_1): phar_main_common_general_20, Avid Collector (phar_main_rare_10), Gem Merchant (phar_main_rare_13)
 
-House of Astrologers - (phar_map_bab_province_management_influence_roads_type_a_3): phar_main_common_general_22, phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
+House of Astrologers - (phar_map_bab_province_management_influence_roads_type_a_3): phar_main_common_general_22 (scout), phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
 
 Palace of Pleasures - (phar_map_bab_province_management_happiness_growth_type_a_3): phar_main_common_general_10, phar_main_rare_6, phar_main_rare_6, phar_sea_common_1, phar_sea_rare_8
 
@@ -109,7 +109,7 @@ Surgeon's Practice - (phar_main_all_province_management_growth_type_a_3): phar_m
 Translators Quarters - (phar_main_all_province_management_main_building_poc_happiness_boost_1): phar_main_common_general__25, phar_main_common_general__26, phar_main_common_general__27,
 Diplomat (phar_main_rare_11)
 
-Visitor's Quarters - (phar_main_all_province_management_roads_3): phar_main_common_general_22, phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
+Visitor's Quarters - (phar_main_all_province_management_roads_3): phar_main_common_general_22 (scout), phar_main_common_general_24, phar_main_common_general_28, phar_main_common_general_7, phar_main_common_general_9, phar_main_rare_1
 
 Wisdom Codecs - (phar_main_all_province_management_main_building_poc_legitimacy_influence_boost_3): Field Advisor (phar_main_common_general_16), Wise Nobleman (phar_main_rare_18) Soothsayer (phar_main_rare_8)
 
@@ -162,7 +162,7 @@ local ancillary_master_list = {
      --drinking establishments
      ["phar_main_all_province_management_happiness_type_c_3"] = { "phar_main_common_general_12", "phar_main_rare_19", "phar_main_rare_31", "phar_main_rare_42", "phar_main_rare_7", },
      ["phar_main_ram_province_management_production_boost_happiness_3"] = { "phar_main_common_general_12", "phar_main_rare_19", "phar_main_rare_31", "phar_main_rare_42", "phar_main_rare_7", },
-     --granary
+     --granary (scout)
      ["phar_main_all_resource_production_modifier_food_3"] = {"phar_main_common_general_22", },
      ["phar_main_tausret_resource_production_modifier_food_3"] = { "phar_main_common_general_22", },
      --bazaars
